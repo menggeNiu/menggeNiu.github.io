@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>JS中各种size总结 | 程序媛小菜鸟养成ing</title>
+  <title>总结第二弹-光标形状 | 程序媛小菜鸟养成ing</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -197,67 +197,58 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-01-02T03:08:40.000Z" itemprop="datePublished">
-          2016-01-02
+      <time datetime="2016-01-18T12:51:36.000Z" itemprop="datePublished">
+          2016-01-18
       </time>
     
 </span>
-                <h1>JS中各种size总结</h1>
+                <h1>总结第二弹-光标形状</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>最近在做项目中，涉及到获取浏览器和元素的高宽以及相关size。用的时候有些会有混淆，所以今天就来总结一下~</p>
-<hr>
-<h2 id="一-window对象"><a href="#一-window对象" class="headerlink" title="一.    window对象"></a>一.    window对象</h2><p>window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth 浏览器视口宽度（不包括工具栏和滚动条）</p>
-<p>window.inneHeight || document.documentElement.clientHeight || document.body.clientHeight 浏览器视口高度（不包括工具栏和滚动条）</p>
-<p>window.outerWidth  浏览器窗口的宽度(包含地址栏工具栏)(IE没有提供取得当前浏览器窗口尺寸的属性)</p>
-<p>window.outerHeight 浏览器窗口的高度 (包含地址栏工具栏)(IE没有提供取得当前浏览器窗口尺寸的属性)</p>
-<p>screen.width 显示屏幕的宽度</p>
-<p>screen.height 显示屏幕的高度</p>
-<p>screen.availHeight 返回显示屏幕的高度 (除 Windows 任务栏之外)</p>
-<p>screen.availWidth 返回显示屏幕的宽度 (除 Windows 任务栏之外)</p>
-<p>[转]<br>页可见区域宽： document.body.clientWidth;</p>
-<p>网页可见区域高： document.body.clientHeight;</p>
-<p>网页可见区域宽： document.body.offsetWidth   （包含边线的宽）;</p>
-<p>网页可见区域高： document.body.offsetHeight （包含边线的宽）;</p>
-<p>网页正文全文宽： document.body.scrollWidth;</p>
-<p>网页正文全文高： document.body.scrollHeight;</p>
-<p>网页被卷去的高： document.body.scrollTop;</p>
-<p>网页被卷去的左： document.body.scrollLeft;</p>
-<p>网页正文项目组上： window.screenTop;</p>
-<p>网页正文项目组左： window.screenLeft;</p>
-<p>屏幕辨别率的高： window.screen.height;</p>
-<p>屏幕辨别率的宽： window.screen.width;</p>
-<p>屏幕可用工作区高度： window.screen.availHeight;</p><p></p>
-<hr>
-<h2 id="二-元素"><a href="#二-元素" class="headerlink" title="二.  元素"></a>二.  元素</h2><p><img src="http://a3.qpic.cn/psb?/V12O5OuB1fjn3R/L3znwnldi4Bjj*5zpOqyLFePGlGTPeAZABCkU8MSZ1M!/b/dOMAAAAAAAAA&amp;bo=YQJaAgAAAAABBxs!&amp;rf=viewer_4" alt=""><br>在网上找到这个图。</p>
-<p>event.clientX 相对文档的水平座标</p>
-<p>event.clientY 相对文档的垂直座标</p>
-<p>event.offsetX 相对容器的水平坐标</p>
-<p>event.offsetY 相对容器的垂直坐标</p>
-<p>element.offsetWidth,element.offsetHeight: box 的总大小。包括 border, padding, content。不包括 margin</p>
-<p>element.clientWidth,element.clientHeight: box 中内容区域的大小。包括 padding, content不包括 margin, border</p>
-<p>scrollTop：已滚动过去的高度</p>
-<p>scrollHeight：可滚动内容的总高度</p>
-<p>offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置</p>
-<p>offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置</p>
-<hr>
-<p>错误之处，还请大家多多指教~~</p>
-
+      		<h2 id="小总结第二弹，今天来对光标形状进行下总结，光标形状有如下，上代码"><a href="#小总结第二弹，今天来对光标形状进行下总结，光标形状有如下，上代码" class="headerlink" title="小总结第二弹，今天来对光标形状进行下总结，光标形状有如下，上代码~~"></a>小总结第二弹，今天来对光标形状进行下总结，光标形状有如下，上代码~~</h2><hr>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;p&gt;Mouse over the words to change the cursor.&lt;/p&gt;
+    &lt;span style=&quot;cursor:auto&quot;&gt;auto&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:crosshair&quot;&gt;crosshair&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:default&quot;&gt;default&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:e-resize&quot;&gt;e-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:help&quot;&gt;help&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:move&quot;&gt;move&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:n-resize&quot;&gt;n-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:ne-resize&quot;&gt;ne-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:nw-resize&quot;&gt;nw-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:pointer&quot;&gt;pointer&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:progress&quot;&gt;progress&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:s-resize&quot;&gt;s-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:se-resize&quot;&gt;se-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:sw-resize&quot;&gt;sw-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:text&quot;&gt;text&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:w-resize&quot;&gt;w-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:wait&quot;&gt;wait&lt;/span&gt;&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="小伙伴们可以直接还是可以直接粘去看效果的-今天的总结就这么多啦"><a href="#小伙伴们可以直接还是可以直接粘去看效果的-今天的总结就这么多啦" class="headerlink" title="小伙伴们可以直接还是可以直接粘去看效果的~~~今天的总结就这么多啦"></a>小伙伴们可以直接还是可以直接粘去看效果的~~~今天的总结就这么多啦</h3>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/01/07/css样式命名整理/" style="float: left;">
-        ← css样式命名整理
+    <a class="pull-left" href="/2016/01/20/js各种size/" style="float: left;">
+        ← JS中各种size总结
     </a>
     
+    
+    <a class="pull-right" href="/2016/01/15/列表样式总结/">
+        列表样式总结 →
+    </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/01/02/js各种size/" data-title="JS中各种size总结" data-url="http://yoursite.com/2016/01/02/js各种size/"></div>
+<div class="ds-thread" data-thread-key="2016/01/18/总结第二弹-光标形状/" data-title="总结第二弹-光标形状" data-url="http://yoursite.com/2016/01/18/总结第二弹-光标形状/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo_name"};
 (function() {
