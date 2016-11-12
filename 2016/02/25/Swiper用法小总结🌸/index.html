@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>Swiper用法小总结🌸 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" class="animsition-link">pybyongbo</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-02-25T14:10:19.000Z" itemprop="datePublished">
+          2016-02-25
+      </time>
+    
+</span>
+                <h1>Swiper用法小总结🌸</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="最近用swiper做了个h5小项目-项目地址是-https-github-com-menggeNiu-swiper-有兴趣的小伙伴可以看下效果。在使用的过程中对swiper有个更具体的了解。下面就让我们来看看swiper吧"><a href="#最近用swiper做了个h5小项目-项目地址是-https-github-com-menggeNiu-swiper-有兴趣的小伙伴可以看下效果。在使用的过程中对swiper有个更具体的了解。下面就让我们来看看swiper吧" class="headerlink" title="最近用swiper做了个h5小项目,项目地址是 https://github.com/menggeNiu/swiper ,有兴趣的小伙伴可以看下效果。在使用的过程中对swiper有个更具体的了解。下面就让我们来看看swiper吧~"></a>最近用swiper做了个h5小项目,项目地址是 <code>https://github.com/menggeNiu/swiper</code> ,有兴趣的小伙伴可以看下效果。在使用的过程中对swiper有个更具体的了解。下面就让我们来看看swiper吧~</h3><hr>
+<h4 id="关于swiper"><a href="#关于swiper" class="headerlink" title="关于swiper"></a>关于swiper</h4><p> Swiper 是一款免费以及轻量级的移动设备触控滑块的js框架,使用硬件加速过渡（如果该设备支持的话）。主要使用于移动端的网站、移动web apps,native apps和hybrid apps。主要是为IOS而设计的,同时,在Android、WP8系统也有着良好的用户体验,Swiper从3.0开始不再全面支持PC端。因此,如需在PC上兼容更多的浏览器,可以选择Swiper2.x（甚至支持IE7）。(转自官网)</p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><h5 id="1-大家可以在-http-www-swiper-com-cn-官方文档中查看swiper的用法和下载swiper文件。"><a href="#1-大家可以在-http-www-swiper-com-cn-官方文档中查看swiper的用法和下载swiper文件。" class="headerlink" title="1.大家可以在 http://www.swiper.com.cn 官方文档中查看swiper的用法和下载swiper文件。"></a>1.大家可以在 <code>http://www.swiper.com.cn</code> 官方文档中查看swiper的用法和下载swiper文件。</h5><h5 id="2-Swiper使用"><a href="#2-Swiper使用" class="headerlink" title="2.Swiper使用"></a>2.Swiper使用</h5><h6 id="2-1-加载swiper插件"><a href="#2-1-加载swiper插件" class="headerlink" title="2.1 加载swiper插件"></a>2.1 加载swiper插件</h6><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    ...
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/swiper.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    ...
+    &lt;script src=&quot;path/to/swiper.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h6 id="2-2-html内容"><a href="#2-2-html内容" class="headerlink" title="2.2 html内容"></a>2.2 html内容</h6><pre><code>&lt;div class=&quot;swiper-container&quot;&gt;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;
+        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 1&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 2&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 如果需要分页器 --&gt;
+    &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- 如果需要导航按钮 --&gt;
+    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- 如果需要滚动条 --&gt;
+    &lt;div class=&quot;swiper-scrollbar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+导航等组件可以放在container之外
+</code></pre><h6 id="2-3-swiper初始化"><a href="#2-3-swiper初始化" class="headerlink" title="2.3 swiper初始化"></a>2.3 swiper初始化</h6><pre><code>&lt;script&gt;        
+  var mySwiper = new Swiper (&apos;.swiper-container&apos;, {
+    direction: &apos;vertical&apos;,
+    loop: true,
+
+    // 如果需要分页器
+    pagination: &apos;.swiper-pagination&apos;,
+
+    // 如果需要前进后退按钮
+    nextButton: &apos;.swiper-button-next&apos;,
+    prevButton: &apos;.swiper-button-prev&apos;,
+
+    // 如果需要滚动条
+    scrollbar: &apos;.swiper-scrollbar&apos;,
+  })        
+  &lt;/script&gt;
+</code></pre><h5 id="3-Swiper-Animate使用方法"><a href="#3-Swiper-Animate使用方法" class="headerlink" title="3.Swiper Animate使用方法"></a>3.Swiper Animate使用方法</h5><h6 id="3-1-使用Swiper-Animate需要加载swiper-animate-min-js和animate-min-css-初始化代码如下"><a href="#3-1-使用Swiper-Animate需要加载swiper-animate-min-js和animate-min-css-初始化代码如下" class="headerlink" title="3.1 使用Swiper Animate需要加载swiper.animate.min.js和animate.min.css,初始化代码如下"></a>3.1 使用Swiper Animate需要加载swiper.animate.min.js和animate.min.css,初始化代码如下</h6><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    ...
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/swiper.min.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/animate.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    ...
+    &lt;script src=&quot;path/to/swiper.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;path/to/swiper.animate.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h6 id="3-2-初始化时隐藏元素并在需要开始的时刻开始动画"><a href="#3-2-初始化时隐藏元素并在需要开始的时刻开始动画" class="headerlink" title="3.2 初始化时隐藏元素并在需要开始的时刻开始动画"></a>3.2 初始化时隐藏元素并在需要开始的时刻开始动画</h6><pre><code>&lt;script&gt;        
+  var mySwiper = new Swiper (&apos;.swiper-container&apos;, {
+  onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+    swiperAnimateCache(swiper); //隐藏动画元素 
+    swiperAnimate(swiper); //初始化完成开始动画
+  }, 
+  onSlideChangeEnd: function(swiper){ 
+    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+  } 
+  })        
+ &lt;/script&gt;
+</code></pre><h6 id="3-3-在需要运动的元素上面增加类名ani-Swiper-Animate需要指定几个参数："><a href="#3-3-在需要运动的元素上面增加类名ani-Swiper-Animate需要指定几个参数：" class="headerlink" title="3.3 在需要运动的元素上面增加类名ani,Swiper Animate需要指定几个参数："></a>3.3 在需要运动的元素上面增加类名ani,Swiper Animate需要指定几个参数：</h6><p>swiper-animate-effect：切换效果,例如 fadeInUp </p>
+<p>swiper-animate-duration：可选,动画持续时间（单位秒）,例如 0.5s</p>
+<p>swiper-animate-delay：可选,动画延迟时间（单位秒）,例如 0.3s</p>
+<pre><code>&lt;div class=&quot;swiper-slide&quot;&gt;
+    &lt;p class=&quot;ani&quot; swiper-animate-effect=&quot;fadeInUp&quot; swiper-animate-duration=&quot;0.5s&quot; swiper-animate-delay=&quot;0.3s&quot;&gt;内容&lt;/p&gt;
+&lt;/div&gt; 
+</code></pre><h6 id="3-4-动画效果可参考Animate-css-如果里面的效果都不是我们想要的-我们可以仿照Animate-css的格式仿写其他效果-我在做这个项目的时候就是自己写了些动画进去"><a href="#3-4-动画效果可参考Animate-css-如果里面的效果都不是我们想要的-我们可以仿照Animate-css的格式仿写其他效果-我在做这个项目的时候就是自己写了些动画进去" class="headerlink" title="3.4 动画效果可参考Animate.css,如果里面的效果都不是我们想要的,我们可以仿照Animate.css的格式仿写其他效果,我在做这个项目的时候就是自己写了些动画进去"></a>3.4 动画效果可参考Animate.css,如果里面的效果都不是我们想要的,我们可以仿照Animate.css的格式仿写其他效果,我在做这个项目的时候就是自己写了些动画进去</h6><p><br></p>
+<h3 id="下面就项目中遇到的小技巧-自己稍微总结一下"><a href="#下面就项目中遇到的小技巧-自己稍微总结一下" class="headerlink" title="下面就项目中遇到的小技巧,自己稍微总结一下~"></a>下面就项目中遇到的小技巧,自己稍微总结一下~</h3><p><br></p>
+<h4 id="1-swiper中-如果设置为loop时-控制前后的按钮中index值就不好用-因为循环找不到开始和结束-如果设置为loop-前后按钮就没有颜色的变化。"><a href="#1-swiper中-如果设置为loop时-控制前后的按钮中index值就不好用-因为循环找不到开始和结束-如果设置为loop-前后按钮就没有颜色的变化。" class="headerlink" title="1.swiper中,如果设置为loop时,控制前后的按钮中index值就不好用,因为循环找不到开始和结束,如果设置为loop,前后按钮就没有颜色的变化。"></a>1.swiper中,如果设置为loop时,控制前后的按钮中index值就不好用,因为循环找不到开始和结束,如果设置为loop,前后按钮就没有颜色的变化。</h4><h4 id="2-使用swiper插件的时候-如果想要对一个元素进行多个动画-则可以加多个父级div等-对div进行动画的添加-从而达到想要实现的动画效果。"><a href="#2-使用swiper插件的时候-如果想要对一个元素进行多个动画-则可以加多个父级div等-对div进行动画的添加-从而达到想要实现的动画效果。" class="headerlink" title="2.使用swiper插件的时候,如果想要对一个元素进行多个动画,则可以加多个父级div等,对div进行动画的添加,从而达到想要实现的动画效果。"></a>2.使用swiper插件的时候,如果想要对一个元素进行多个动画,则可以加多个父级div等,对div进行动画的添加,从而达到想要实现的动画效果。</h4><h4 id="3-嵌套swiper的时候如果到添加的swiper出现-原来的swiper不能滑动-则在添加swiper上加swiper-no-swiping-noSwiping-false-原来的swiper-的-js里面添加noSwiping-true-属性。"><a href="#3-嵌套swiper的时候如果到添加的swiper出现-原来的swiper不能滑动-则在添加swiper上加swiper-no-swiping-noSwiping-false-原来的swiper-的-js里面添加noSwiping-true-属性。" class="headerlink" title="3.嵌套swiper的时候如果到添加的swiper出现,原来的swiper不能滑动,则在添加swiper上加swiper-no-swiping,noSwiping:false, 原来的swiper,的,js里面添加noSwiping:true,属性。"></a>3.嵌套swiper的时候如果到添加的swiper出现,原来的swiper不能滑动,则在添加swiper上加swiper-no-swiping,noSwiping:false, 原来的swiper,的,js里面添加noSwiping:true,属性。</h4><h4 id="4-swiper1-slideTo-index-swiper滑动到第index页的函数。"><a href="#4-swiper1-slideTo-index-swiper滑动到第index页的函数。" class="headerlink" title="4.swiper1._slideTo(index);swiper滑动到第index页的函数。"></a>4.swiper1._slideTo(index);swiper滑动到第index页的函数。</h4>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/02/18/使用GitHub来搭建Hexo博客/">
+        使用GitHub来搭建Hexo博客 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/02/25/Swiper用法小总结🌸/" data-title="Swiper用法小总结🌸" data-url="http://yoursite.com/2016/02/25/Swiper用法小总结🌸/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
