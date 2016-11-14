@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>CSS最佳实践——成为CSS忍者的十四步下😎 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
+                    
+                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-03-12T13:57:50.000Z" itemprop="datePublished">
+          2016-03-12
+      </time>
+    
+</span>
+                <h1>CSS最佳实践——成为CSS忍者的十四步下😎</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>前言<br><br>继续上一篇的内容，本篇由@安生翻译分享。<br><br>正文从这开始~<br><br>下边的CSS最佳实践会帮助你掌握CSS，让你从专业人员过渡到CSS忍者。第二部分你会先学习到如何设置你的排版，然后掌握CSS类的命名约定。你还会学到模块化和DRY原则，最后你会找到如何解决CSS前缀问题的方法。<br></p>
+<h3 id="第七条：一次性搞定排版"><a href="#第七条：一次性搞定排版" class="headerlink" title="第七条：一次性搞定排版"></a>第七条：一次性搞定排版</h3><p>这一条实践是关于排版的。经常阅读我博客的人可能知道我是个排版狂热爱好者。我相信排版是Web设计中最难的部分之一。学好它已经很难了，更别说掌握。数字化排版包含了很多细节，根据我的经验之谈，如果不清楚这些细节的话就没有办法设计得很好。<br><br>不管怎么说，掌握排版不是我们现在要探讨的问题。我写了篇文章<code>《crafting perfect web typography》</code>，如果你想深入了解网页排版的话可以阅读看看。对于CSS最佳实践，我们则是要坚持一条简单的规则，你应该一次性搞定好排版。不应该去覆盖你设过的默认排版风格。如果有特殊状况需要修改的话，修改一两次是可以接受的。<br></p>
+<h4 id="有例外吗？"><a href="#有例外吗？" class="headerlink" title="有例外吗？"></a>有例外吗？</h4><p>那么什么时候可以不遵循这一条实践呢？我的回答是当你没有其他选择的时候。意思就是，假定你在设计一个博客，受Material design风格的影响可能会采用卡片布局，你可以通过这篇文章<code>《complete guide to Material design》</code>学习如何操作。由于每张卡片都是独立的模块，我们可以使用article元素来包装每张卡片的内容，内容包括标题、缩略图和文本。<br><br>每张卡片，或者说每篇文章，是页面中的一个包含独立内容的组件。理论上它们的内容之间是没有依赖关系的。换句话说，每张卡片都是不同的博文。因此我们可以给卡片的标题设置一个<code>h1</code>标签，通常情况下你应该只在一个页面中出现一个<code>h1</code>，但这只适合于充斥着div元素的旧HTML结构。<code>div</code>是没有语义的，所以当你在一个<code>div</code>中放入一个<code>h1</code>，它没有任何意义。<br><br>除此之外，它还会有些不同。简单地说，浏览器会将这个标题h1解释为<code>article</code>的一部分，而不是页面中的其他地方。所以如果你在这个页面中有五个<code>article</code>，理论上你可以有五个<code>h1</code>。因此我们就能给每张博文卡片的标题各设置一个<code>h1</code>了。这么并不会违背<code>HTML5</code>和其语义。但不好的一面是它可能会造成一个问题。<br></p>
+<h4 id="有时候标题过大"><a href="#有时候标题过大" class="headerlink" title="有时候标题过大"></a>有时候标题过大</h4><p>我们经常在内容里划出一大块区域来定义标题。以一篇博文为例。即使是非常大的标题也是有足够的空间可以容纳的，假设你想让标题h1设为5.063rem（在font-size:16px的情况下），那么就是说标题的字体大小为80px，这对一篇博文来说是没有问题的，但如果它是在一张博文卡片里面呢？<br><br>这个标题大小会变得不成比例地大。那么有三种方案你可以采用。第一，改变全局的h1设置，代价是这个站点的每个页面都会受到影响。所有的标题都将小得多，这不是我们想要的。那么来看下其他的方案。<br><br>第二，改变标题标签。 没有人规定说博文卡片必须使用h1作为标题吧。当然从语义化的角度讲最好从<code>h1</code>的标题开始。但是使用<code>h2</code>、<code>h3</code>、<code>h4</code>甚至<code>h5</code>也是可以的。这种方案的好处在于不用重新定义全局排版设置了。因此也不会影响到站点里的其他页面。<br></p>
+<h4 id="语义化，CSS最佳实践和例外"><a href="#语义化，CSS最佳实践和例外" class="headerlink" title="语义化，CSS最佳实践和例外"></a>语义化，CSS最佳实践和例外</h4><p>但当你又想语义化又想遵循CSS最佳实践时，你可以选择第三种方案。我们可以使用一条CSS样式覆盖博文卡片中标题所占据的空间。我会建议用一个特定的class来完成这件事。否则用元素选择器覆盖标题的话，如果有使用CSSLint则会出现警告。这个方案的坏处是我们会破坏掉另一条最佳实践。<br><br>和一两条实践起冲突也不是什么大事，而且当利大于弊时，破坏一两条实践也是件好事。首先你不用改变全局设置了，也就不用担心破坏其他页面的布局。其次你能使你的HTML保持语义化。所以当你用在线工具测试你的HTML代码时，测试会是通过的。<br></p>
+<h4 id="遵循CSS最佳实践排版设置"><a href="#遵循CSS最佳实践排版设置" class="headerlink" title="遵循CSS最佳实践排版设置"></a>遵循CSS最佳实践排版设置</h4><p>把所有需要排版的元素给它们定义一个默认样式。你可以把这些样式赋在标题、段落、粗体、链接、列表等等。然后在理想状况下你就不需要再覆盖这些样式了，实现设计的一致性。<br></p>
+<h3 id="第八条：使用描述性的类名"><a href="#第八条：使用描述性的类名" class="headerlink" title="第八条：使用描述性的类名"></a>第八条：使用描述性的类名</h3><p>这条最佳实践是要让你的CSS变得更清晰。清晰的意思就是有着更容易理解的类名。经常有些只有作者才能理解的CSS类名的例子。我做过很多项目，在极端情况下，没有前边开发者或者文档的帮助我是看不懂CSS的。这显然不是一个合理的方式。<br></p>
+<h4 id="起些是人都可以明白的类名"><a href="#起些是人都可以明白的类名" class="headerlink" title="起些是人都可以明白的类名"></a>起些是人都可以明白的类名</h4><p>当你起一个CSS类名时你应该考虑下别人容不容易理解。一个好的class应该是看过去就能猜出大概来。而且明白什么时候应该使用和如何去使用。但也不是说你应该把每个小细节都描述出来。而是应该在不依赖文档和询问别人的情况下，这个CSS类名才算起得具有描述性。<br><br>比方你有一个样式化按钮的<code>class</code>，它应该带有像btn或者<code>button</code>的字符。许多框架都会用像<code>btn-primary</code>、<code>btn-secondary</code>、<code>btn-danger</code>、<code>btn-success</code>的类名。你就不需要知道关于框架或者开发者的额外信息了。而且你还能清楚使用这些按钮的场景。这同样适用于网站里的其他组件。你可以使用<code>.heading-big</code>、<code>.heading-small</code>、<code>.nav</code>、<code>.nav-primary</code>、<code>.nav-social</code>、<code>.link-active</code>、<code>.link-inactive</code>。<br><br>这些例子都有一个共同点，都能表明应该在什么场景下使用。我想你对<code>.btn-primary</code>、<code>nav-main</code>、<code>text-uppercase</code>不会使用不当。所有这些类名都很直观。即使你不懂英语只有一本字典，也可以理解得到大多数这些类名。<br></p>
+<h4 id="不止是CSS最佳实践"><a href="#不止是CSS最佳实践" class="headerlink" title="不止是CSS最佳实践"></a>不止是CSS最佳实践</h4><p>如果你的类名外人不容易理解，你应该做出改变了。你需要把这条列入你的CSS最佳实践。不止是CSS，你写的任何代码都应该加上这条建议。如果你在JS，那么其他开发者应该不需要文档或者问你就能理解。测试的方法就是把你的代码给其他人看看，听听他们会怎么说。<br></p>
+<h4 id="不要走极端"><a href="#不要走极端" class="headerlink" title="不要走极端"></a>不要走极端</h4><p>最后一点我想要说明的是不要走极端。对于描述性类名来说，在简洁和过细之间有一条边界。但要平衡好是不容易的事。一些类名像<code>.btn-danger</code>或者<code>.link-inactive</code>，只用了两个单词来描述；其他的类名可能需要三个或更多的单词，像<code>.progress-meter-text</code>、<code>.stacked-for-medium</code>、<code>.footer-button-to-top</code>。<br><br>找到边界的唯一途径就是实验。最好就是尝试不同的类名然后问下别人的建议。花点时间练习你就能拥有起个漂亮类名的技能。<br></p>
+<h3 id="第九条：遵循一个命名约定"><a href="#第九条：遵循一个命名约定" class="headerlink" title="第九条：遵循一个命名约定"></a>第九条：遵循一个命名约定</h3><p>让我们再说点关于CSS类名的。CSS最佳实践的一个目标是让你的CSS变得可维护。可以通过命名约定来做到这点。上边我提过的类名都是用破折号来断字的，而没有出现过下划线的例子。而且所有例子都是小写，也都是元素后边跟着修饰词的结构(<code>.btn-primary</code>、<code>.nav-main</code>)。<br><br>所以这些让CSS变得可维护起来。这些特性让CSS可预测和可跟进。这样当别人加入你的团队就也能很快上手了。而且当坚持一种风格时，你也不用去时时查看别人的工作，不论她的技能如何或者对项目的熟悉程序。如果她遵循同一条命名规范，你们的CSS就会看起来没有区别。<br><br>即使你是独自工作的，遵循一种命名约定也是有用处的。你不用再想说应该用什么结构，用破折号还是下划线，用大写小写还是驼峰写法。只要你遵循一个命名约定并运用在你每个项目中，你就能空出一些时间来设计或者写代码来。<br></p>
+<h3 id="第十条：使用BEM"><a href="#第十条：使用BEM" class="headerlink" title="第十条：使用BEM"></a>第十条：使用BEM</h3><p>使用BEM标记法可能看起来和CSS最佳实践没什么关系。但它还是和命名约定相关的。所以我简单地提及一下。BEM可以用来对CSS类名进行命名约定。<code>BEM</code>是<code>block</code>、<code>element</code>、<code>modifier</code>的缩写。它也使用了破折号和下划线。BEM旨在帮助开发者理解HTML和CSS之间的关系。<br><br>它是通过三个构建块和两个符号实现的。在<code>BEM</code>里，<code>block</code>是组件里的最高级别。可以是<code>.nav</code>、<code>sidebar</code>、<code>btn（navigation、sidebar、button）</code>。你可以认为这些块是父元素，之后就是子元素element了。这些元素采用父块名字加上两个下划线再加上子元素的名字。比如<code>.sidebar__list</code>、<code>.nav__link</code>、<code>.btn__icon</code>。<br><br>接着我们来解释下<code>modifier</code>。它在不改变组件本身的情况下改变<code>block</code>或者<code>element</code>的属性。换句话说，它允许你在不触及默认样式的情况下样式化组件。你需要做的就是在block和element后添加两个连字符。比如<code>.btn--primary</code>、<code>.list--inline</code>、<code>.icon--small</code>、<code>.heading--big</code>。这可能比较难理解。<br><br>你可以通过我这篇文章来了解<code>crash course on BEM》</code>。你可以掌握一切关于BEM的东西，或许之后你就会把这条CSS最佳实践列在执行之列。</p>
+<h3 id="第十一条：让你的代码保持DRY"><a href="#第十一条：让你的代码保持DRY" class="headerlink" title="第十一条：让你的代码保持DRY"></a>第十一条：让你的代码保持DRY</h3><p>我想编程的人都听说过DRY这个缩略词。它是一条经验丰富的程序员给初学者的建议，因此它被列入CSS最佳实践里。DRY这个词是”Dont’t Repeat Yourself”（不要重复粘贴你的代码）的缩写。这很容易做到，这条实践的一点是还需要<code>定期重构</code>你的代码。也就是说通过浏览一遍你的代码然后找到你重复过的东西。<br><br>当你发现一些重复的代码，你应该把它变成可复用性的东西。在CSS中，你可以创建一个新的class然后把这些样式一并放入。然后你就不必经常重复写这些样式而是通过class来调取。当然这一条实践也有受限之处，你不用给那些只重复两三次的样式设置新class，不然都被类填满了，请看下一条吧。<br></p>
+<h3 id="第十二条：模块化"><a href="#第十二条：模块化" class="headerlink" title="第十二条：模块化"></a>第十二条：模块化</h3><p>这是让你的CSS变得DRY又理性的方式。你应该把页面上的大部分元素看成一个模块或者组件。实际上这也是很多框架像Bootstrao和Foundation所遵循的。按钮、卡片、列表、模态、表格、提示信息，都是模块或者组件的例子。它们都有着一个关键特征，都是可复用的。列表、按钮或者模态的样式都不是局限在一个页面之中，你可以在任何地方使用它们。<br><br>这意味着你不用一次又一次地写相同的CSS代码。只要你使用正确的class你的工作便完成了。有许多方法可以模块化CSS。像SMACSS、OOCSS、ITCSS、Atomic design。大多数都很容易学习上手，有一些可能就难点。不同的方法可能适应不同的需求，所以没有说哪一种是最好的。<br><br>但我可以告诉你我最近使用哪一款。我用的是Atomic Design，我的博客读者可能知道这一点。我不久前写过这篇文章<code>《crash course on Atomic Design》</code>，如果你要使用这一款的话，这篇文章可以帮助你上手。无论使用哪种方法，你的目标都是减少你的CSS代码，从这个意义上说，模块化和DRY实践是一样的。<br></p>
+<h3 id="第十三条：经常检查你的前缀"><a href="#第十三条：经常检查你的前缀" class="headerlink" title="第十三条：经常检查你的前缀"></a>第十三条：经常检查你的前缀</h3><p>你多久使用一次前缀？如果你经常尝试前沿的CSS技术，答案可能就是经常使用。那么你多久会检查一下这些前缀呢？前缀只是使用CSS最新特性的暂时性解决方案。一旦浏览器实现了一些特性，它们就会忽略掉关于这个特性的前缀。结果就是这前缀没有作用了。而且所有这些过时的前缀可能会影响到性能表现。<br><br>这不是说你应该停止使用前缀或者不使用前沿特性。这么做只会延缓这些特性的被采用。因为它们更少地被使用。因此为了促进这些特性的被录用我们应该使用它们。但这不能解决过时前缀带来的臃肿CSS，我们要做些什么呢？<br><br>你应该定期检查你的CSS然后移除那些没有用的前缀。但对于大项目来说可能就会变得很浪费时间。那么你就可能借助一些工具像autoprefixer或者prefix-free。这些工具不仅能给试验性CSS特性加上前缀，而且可以移除掉过时的前缀。自动化整个过程让CSS最佳实践执行起来更容易。<br></p>
+<h3 id="第十四条：验证你的CSS"><a href="#第十四条：验证你的CSS" class="headerlink" title="第十四条：验证你的CSS"></a>第十四条：验证你的CSS</h3><p>最后一条非常简单，经常去校验你的CSS。CSS validator可以帮你不出错。而且CSS validator遵循W3C的规范。所以在你提交代码给客户或者老板之前先测试下。你的代码输出应该是有效且没有错误的。<br></p>
+<h3 id="附一：你需要预处理器吗"><a href="#附一：你需要预处理器吗" class="headerlink" title="附一：你需要预处理器吗"></a>附一：你需要预处理器吗</h3><p>Sass，Less，PostCSS，你至少听过一种吧。CSS预处理器存在有一阵子了。许多开发者都在使用，我现在用着Sass。但我对PostCSS也很感兴趣。言归正传，我想说的是，你并不需要预处理器。<br><br>人们经常热衷于问说什么预处理器对Web设计来说是最好的。使用Sass，Stylus还是Less或者PostCSS？在回答之前，我们需要认清一件事，你对CSS的了解有多少，许多人想通过掌握预处理器而去取代掌握好CSS。你会想在学会开车之前先去开赛车吗?<br><br>假设你知道怎么使用踏板、方向盘和启动引擎，你会直接上跑道去开赛车吗？你可能开不到太远或者直接挂掉。那么对CSS来说也是如此，不要误会我的意思，我喜欢预处理器，它很强大，能改善你的工作流程和提高工作效率。<br></p>
+<h4 id="能力越大，责任越大"><a href="#能力越大，责任越大" class="headerlink" title="能力越大，责任越大"></a>能力越大，责任越大</h4><p>能力伴随着责任。当你不大清楚CSS的基础时，你的代码可能写得不大好。当你添加了预处理器那么代码的糟糕性会有指数倍上升的危险。最简单普遍的例子来解释预处理器的强大就是嵌套。在纯CSS里，你不能嵌套选择器，你只能连续使用多个选择器来实现。但如果你用预处理器的话就很容易实现。<br><br>我看过有人嵌套超过五层，结果可能就像是<code>html .wrapper header .nav li a {...}</code>，问题就是当你用预处理器的时候你是意识不到这一点的。所以经常会很极端地去嵌套。这就是一个预处理器为何会失去控制的一个例子。所以我想在使用预处理器之前，你应该先好好地掌握CSS。<br></p>
+<h4 id="你真的需要一个预处理器吗？"><a href="#你真的需要一个预处理器吗？" class="headerlink" title="你真的需要一个预处理器吗？"></a>你真的需要一个预处理器吗？</h4><p>让我们回到开头的问题，你真的需要使用预处理器吗？我的回答是不需要。如果你不想的话完全可以不用。这是自愿的选择，和你的技能水平没有任何关系。如果你没有使用也不用觉得尴尬。我身边很多很棒的Web开发者都用的纯CSS。无论你用了多少预处理器，你都达不到他们的水平。<br><br>我想这个问题可以引申到其他工具。你是不是会经常问别人用什么工具去做一件什么事最好？这些问题的初衷是什么？是我们想要找到一样可以把我们的技能提升10倍的工具吗？如果是这样的话那么妄想。能力不取决于工具，如果你会画画，无论你是用钢笔，铅笔，刷子还是棍子都一样。这些工具不会提升或者削弱你的技能。<br><br>你可能需要时间来适应你的新工具。假设你从使用PS到换成sketch，那么你开头可能运用地不是很好，但是这并不会让你的技能变糟糕。你只是还没适应这个新工具。当你知道怎么操作，你的技能依旧摆在那里。明白了你的能力和工具是没有关系的话，你就不用纠结于是否一定要去使用预处理器了。<br><br>如果你的CSS不好，预处理器并不能拯救你，如果你是CSS大神，不使用预处理器也不会让你变得不强大，所以你没有必要使用预处理器。<br></p>
+<h3 id="附二：你应该lint吗？"><a href="#附二：你应该lint吗？" class="headerlink" title="附二：你应该lint吗？"></a>附二：你应该lint吗？</h3><p>这也是一个一直受到热议的问题。在这篇文章里我们将只讨论CSS和JS。赞成的人说它会让你的代码更简洁和更少漏洞。反对的人则说它的规则太严格约束了。是的当你想要使用某种工具时你必须受限于它的规则。但是这些规则有多严格取决于两个因素。<br></p>
+<h4 id="你要记住的两个因素"><a href="#你要记住的两个因素" class="headerlink" title="你要记住的两个因素"></a>你要记住的两个因素</h4><p>第一个是你要运用的是哪种工具。假设是JS，现在有JSLint，JSHint,ESLint。JSLint是最老牌和最严格的，它的好处是它已配置好，你可以立刻上手。坏处是你不能改变它的配置。所以如果你不喜欢某条规则的话，你只能适应它或者换别的工具。<br><br>JSHint和ESLint允许你自定义。因此你可以讨厌某条规则，你只需要创建个性化的配置来使用。对于CSSLint来说也是如此，你可以随意改变规则，遵循定制化的CSS最佳实践。<br><br>第二个因素决定规则有多严格的是你自己。只有你可以决定你要跟进多严格的规则。当然有些工具不允许你自行配置，那么你可以不使用它们，它们可以互相取代的。如果不行你可以自己造轮子嘛。<br></p>
+<h4 id="我们回答错问题了吗？"><a href="#我们回答错问题了吗？" class="headerlink" title="我们回答错问题了吗？"></a>我们回答错问题了吗？</h4><p>我想我们回答错问题了。我们不应该讨论使用代码检测是好还是坏。它只是一条CSS最佳实践。我们应该问的是我们是否理解了这些规则。检测你的代码和改正错误或者警告是一件事，另一件事是要明白为什么这些改变是有用的。当你决定去改变一些东西的时，你应该知道你为什么要这样做，这很重要。<br><br>这就是为什么我不能站在任何一边的原因。我不认为他们指向了问题的正确所在。他们试图找到方法来编写简洁的代码，但问题并不在于混乱或是错误的代码，而是知识。想想为什么你经常犯错，这发生在你对它认识不深的状况下。<br><br>诚然它可以让代码变得简洁和零失误，但不会告诉你为什么。这就是我们需要关注的问题所在。我经常鼓励开发者使用lint，但是这是在他们经常会去弄清为什么那些代码会抛出错误的情况下。不然的话就没有意义了。我的意思就是说这样你学不到任何东西，你可能记住了这些规则，但和完全理解它是不同的。<br></p>
+<h4 id="所以，你需要lint吗？"><a href="#所以，你需要lint吗？" class="headerlink" title="所以，你需要lint吗？"></a>所以，你需要lint吗？</h4><p>你应该有能力去判断你是否应该改变你的代码。所以我对这个问题的回答是肯定的。用它来校验你的代码可能可以保持一个很好的状态。但你需要知道你为什么要遵循这些规则。对于这些CSS最佳实践来说都是如此，首先你要明白为什么，清楚它们的背景，然后你就可以自行决定了。在你可以理解的范围内它就是好的。<br></p>
+<h4 id="不要想CSS最佳实践了"><a href="#不要想CSS最佳实践了" class="headerlink" title="不要想CSS最佳实践了"></a>不要想CSS最佳实践了</h4><p>我希望这十四条实践对你有所帮助。CSS有很多可说的，我选择了可以帮你解决重大困惑和让你的CSS看起来更佳的实践。最后我要说的是，你自己决定要选择哪些CSS最佳实践吧，CSS可以是美妙的。<br><br>最后<br><br>@安生曾经分享过的文章：<br><br>【第526期】提高你的Javascript水平<br><br>【第730期】提升你的CSS<br><br></p>
+<p>关于本文<br><br>译者：@安生<br><br>原文：<a href="http://blog.alexdevero.com/css-best-practices-become-css-ninja-pt2/" target="_blank" rel="external">http://blog.alexdevero.com/css-best-practices-become-css-ninja-pt2/</a><br><br>转自：前端早读课</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/03/10/10/">
+        CSS最佳实践——成为CSS忍者的十四步上😎 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/03/12/CSS最佳实践——成为CSS忍者的十四步下😎/" data-title="CSS最佳实践——成为CSS忍者的十四步下😎" data-url="https://menggeniu.github.io/2016/03/12/CSS最佳实践——成为CSS忍者的十四步下😎/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.
+                </p>
+                <p>To make each day count.</p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
