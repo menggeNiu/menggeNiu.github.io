@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>JS家的排序算法🎵 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
+                    
+                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-03-25T14:56:53.000Z" itemprop="datePublished">
+          2016-03-25
+      </time>
+    
+</span>
+                <h1>JS家的排序算法🎵</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h3><p>有句话怎么说来着：<br><br><code>雷锋推倒雷峰塔，Java implements JavaScript.</code><br><br>当年，想凭借抱Java大腿火一把而不惜把自己名字给改了的JavaScript（原名LiveScript），如今早已光芒万丈。node JS的出现更是让JavaScript可以前后端通吃。虽然Java依然制霸企业级软件开发领域（C/C + +的大神们不要打我。。。），但在Web的江湖，JavaScript可谓风头无两，坐上了头把交椅。<br><br>然而，在传统的计算机算法和数据结构领域，大多数专业教材和书籍的默认语言都是Java或者C/C+ +。这给最近想恶补算法和数据结构知识的我造成了一定困扰，因为我想寻找一本以JavaScript为默认语言的算法书籍。当我了解到O’REILLY家的动物丛书系列里有一本叫做《数据结构与算法JavaScript描述》时，便兴奋的花了两天时间把这本书从头到尾读了一遍。它是一本很好的针对前端开发者们的入门算法书籍，可是，它有一个很大的缺陷，就是里面有很多明显的小错误，明显到就连我这种半路出家的程序猿都能一眼看出来。还有一个问题是，很多重要的算法和数据结构知识并没有在这本书里被提到。这些问题对于作为一个晚期强迫症患者的我来说简直不能忍。于是乎，一言不合我就决定自己找资料总结算法。那么，我就从算法领域里最基础的知识点——排序算法总结起好了。<br><br>我相信以下的代码里一定会有某些bug或错误或语法不规范等问题是我自己无法发现的，所以敬请各位大神能够指出错误，因为只有在不断改错的道路上我才能取得长久的进步。<br></p>
+<h3 id="十大经典算法排序总结对比"><a href="#十大经典算法排序总结对比" class="headerlink" title="十大经典算法排序总结对比"></a>十大经典算法排序总结对比</h3><p>一张图概括：<br><br><img src="http://upload-images.jianshu.io/upload_images/1867034-1d3e43cdb301fc9b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><br>主流排序算法概览<br></p>
+<h4 id="名词解释："><a href="#名词解释：" class="headerlink" title="名词解释："></a>名词解释：</h4><p><strong>n</strong>: 数据规模<br><br><strong>k</strong>: “桶”的个数<br><br><strong>In-place</strong>: 占用常数内存，不占用额外内存<br><br><strong>Out-place</strong>: 占用额外内存<br><br><strong>稳定性</strong>：排序后2个相等键值的顺序和排序之前它们的顺序相同<br></p>
+<h3 id="冒泡排序（Bubble-Sort）"><a href="#冒泡排序（Bubble-Sort）" class="headerlink" title="冒泡排序（Bubble Sort）"></a>冒泡排序（Bubble Sort）</h3><h4 id="冒泡排序须知："><a href="#冒泡排序须知：" class="headerlink" title="冒泡排序须知："></a>冒泡排序须知：</h4><p>作为最简单的排序算法之一，冒泡排序给我的感觉就像Abandon在单词书里出现的感觉一样，每次都在第一页第一位，所以最熟悉。。。冒泡排序还有一种优化算法，就是立一个flag，当在一趟序列遍历中元素没有发生交换，则证明该序列已经有序。但这种改进对于提升性能来说并没有什么太大作用。。。<br></p>
+<h4 id="什么时候最快（Best-Cases）："><a href="#什么时候最快（Best-Cases）：" class="headerlink" title="什么时候最快（Best Cases）："></a>什么时候最快（Best Cases）：</h4><p>当输入的数据已经是正序时（都已经是正序了，我还要你冒泡排序有何用啊。。。。）<br></p>
+<h4 id="什么时候最慢（Worst-Cases）："><a href="#什么时候最慢（Worst-Cases）：" class="headerlink" title="什么时候最慢（Worst Cases）："></a>什么时候最慢（Worst Cases）：</h4><p>当输入的数据是反序时（写一个for循环反序输出数据不就行了，干嘛要用你冒泡排序呢，我是闲的吗。。。）<br></p>
+<h4 id="冒泡排序动图演示："><a href="#冒泡排序动图演示：" class="headerlink" title="冒泡排序动图演示："></a>冒泡排序动图演示：</h4><p><img src="http://upload-images.jianshu.io/upload_images/1867034-e19840224b331fae.gif?imageMogr2/auto-orient/strip" alt=""><br></p>
+<h4 id="冒泡排序JavaScript代码实现："><a href="#冒泡排序JavaScript代码实现：" class="headerlink" title="冒泡排序JavaScript代码实现："></a>冒泡排序JavaScript代码实现：</h4><pre><code>function bubbleSort(arr) {
+    var len = arr.length;
+    for (var i = 0; i &lt; len; i++) {
+        for (var j = 0; j &lt; len - 1 - i; j++) {
+            if (arr[j] &gt; arr[j+1]) {        //相邻元素两两对比
+                var temp = arr[j+1];        //元素交换
+                arr[j+1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+}
+</code></pre><h3 id="选择排序（Selection-Sort）"><a href="#选择排序（Selection-Sort）" class="headerlink" title="选择排序（Selection Sort）"></a>选择排序（Selection Sort）</h3><h4 id="选择排序须知："><a href="#选择排序须知：" class="headerlink" title="选择排序须知："></a>选择排序须知：</h4><p>在时间复杂度上表现最稳定的排序算法之一，因为无论什么数据进去都是O(n²)的时间复杂度。。。所以用到它的时候，数据规模越小越好。唯一的好处可能就是不占用额外的内存空间了吧。<br></p>
+<h4 id="选择排序动图演示："><a href="#选择排序动图演示：" class="headerlink" title="选择排序动图演示："></a>选择排序动图演示：</h4><p><img src="http://upload-images.jianshu.io/upload_images/1867034-c6cc220cfb2b9ac8.gif?imageMogr2/auto-orient/strip" alt=""><br><br>Selection Sort 动图演示 算法可视化来源：<a href="http://visualgo.net/" target="_blank" rel="external">http://visualgo.net/</a>“<br></p>
+<h3 id="插入排序（Insertion-Sort）"><a href="#插入排序（Insertion-Sort）" class="headerlink" title="插入排序（Insertion Sort）"></a>插入排序（Insertion Sort）</h3><h4 id="插入排序须知："><a href="#插入排序须知：" class="headerlink" title="插入排序须知："></a>插入排序须知：</h4><p>插入排序的代码实现虽然没有冒泡排序和选择排序那么简单粗暴，但它的原理应该是最容易理解的了，因为只要打过扑克牌的人都应该能够秒懂。当然，如果你说你打扑克牌摸牌的时候从来不按牌的大小整理牌，那估计这辈子你对插入排序的算法都不会产生任何兴趣了。。。<br><br>插入排序和冒泡排序一样，也有一种优化算法，叫做拆半插入。对于这种算法，得了懒癌的我就套用教科书上的一句经典的话吧：感兴趣的同学可以在课后自行研究。。。<br></p>
+<h4 id="插入排序动图演示："><a href="#插入排序动图演示：" class="headerlink" title="插入排序动图演示："></a>插入排序动图演示：</h4><p><img src="http://upload-images.jianshu.io/upload_images/1867034-d1537e355abdd298.gif?imageMogr2/auto-orient/strip" alt=""><br></p>
+<h4 id="插入排序JavaScript代码实现："><a href="#插入排序JavaScript代码实现：" class="headerlink" title="插入排序JavaScript代码实现："></a>插入排序JavaScript代码实现：</h4><pre><code>function insertionSort(arr) {
+    var len = arr.length;
+    var preIndex, current;
+    for (var i = 1; i &lt; len; i++) {
+        preIndex = i - 1;
+        current = arr[i];
+        while(preIndex &gt;= 0 &amp;&amp; arr[preIndex] &gt; current) {
+            arr[preIndex+1] = arr[preIndex];
+            preIndex--;
+        }
+        arr[preIndex+1] = current;
+    }
+    return arr;
+}
+</code></pre><h3 id="希尔排序（Shell-Sort）"><a href="#希尔排序（Shell-Sort）" class="headerlink" title="希尔排序（Shell Sort）"></a>希尔排序（Shell Sort）</h3><h4 id="希尔排序须知："><a href="#希尔排序须知：" class="headerlink" title="希尔排序须知："></a>希尔排序须知：</h4><p>希尔排序是插入排序的一种更高效率的实现。它与插入排序的不同之处在于，它会优先比较距离较远的元素。希尔排序的核心在于间隔序列的设定。既可以提前设定好间隔序列，也可以动态的定义间隔序列。动态定义间隔序列的算法是《算法（第4版》的合著者Robert Sedgewick提出的。在这里，我就使用了这种方法。<br></p>
+<h4 id="希尔排序JavaScript代码实现："><a href="#希尔排序JavaScript代码实现：" class="headerlink" title="希尔排序JavaScript代码实现："></a>希尔排序JavaScript代码实现：</h4><pre><code>function shellSort(arr) {
+    var len = arr.length,
+        temp,
+        gap = 1;
+    while(gap &lt; len/3) {          //动态定义间隔序列
+        gap =gap*3+1;
+    }
+    for (gap; gap &gt; 0; gap = Math.floor(gap/3)) {
+        for (var i = gap; i &lt; len; i++) {
+            temp = arr[i];
+            for (var j = i-gap; j &gt;= 0 &amp;&amp; arr[j] &gt; temp; j-=gap) {
+                arr[j+gap] = arr[j];
+            }
+            arr[j+gap] = temp;
+        }
+    }
+    return arr;
+}
+</code></pre><h3 id="归并排序（Merge-Sort）"><a href="#归并排序（Merge-Sort）" class="headerlink" title="归并排序（Merge Sort）"></a>归并排序（Merge Sort）</h3><h4 id="归并排序须知："><a href="#归并排序须知：" class="headerlink" title="归并排序须知："></a>归并排序须知：</h4><p>作为一种典型的分而治之思想的算法应用，归并排序的实现由两种方法：<br></p>
+<p>1.自上而下的递归（所有递归的方法都可以用迭代重写，所以就有了第2种方法）<br><br>2.自下而上的迭代<br><br>在《数据结构与算法JavaScript描述》中，作者给出了自下而上的迭代方法。但是对于递归法，作者却认为：<br><br><code>However, it is not possible to do so in JavaScript, as the recursion goes too deep
+for the language to handle.</code><br><br><code>然而,在 JavaScript 中这种方式不太可行,因为这个算法的递归深度对它来讲太深了。 &lt;br&gt;</code><br>更新：<br><br>在《JavaScript语言精粹》的第四章里提到了递归问题。对我之前的疑问进行了解答：<br><br><code>Some languages offer the tail recursion optimization. This means that if a function returns the result of invoking itself recursively, then the invocation is replaced with a loop, which can significantly speed things up. Unfortunately, JavaScript does not currently provide tail recursion optimization. Functions that recurse very deeply can fail by exhausting the return stack.</code><br><br><code>一些语言提供了尾递归优化。这意味着如果一个函数返回自身递归调用的结果，那么调用的过程会被替换为一个循环，它可以显著提高速度。遗憾的是，JavaScript当前并没有提供尾递归优化。深度递归的函数可能会因为堆栈溢出而运行失败。</code><br><br>再次更新：<br><br>好消息！好消息！ES6已经添加了对尾递归优化的支持，妈妈再也不用担心我用JavaScript写递归了。不过，需要注意的是，ES6的尾递归优化只在严格模式下才会开启。这样规定的原因在阮一峰的《ECMAScript6 入门》里解释得很清楚：<br></p>
+<pre><code>正常模式下，函数内部有两个变量，可以跟踪函数的调用栈。
+func.arguments：返回调用时函数的参数。
+func.caller：返回调用当前函数的那个函数。
+尾调用优化发生时，函数的调用栈会改写，因此上面两个变量就会失真。严格模式禁用这两个变量，所以尾调用模式仅在严格模式下生效。
+</code></pre><p>和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是O(n log n）的时间复杂度。代价是需要额外的内存空间。<br></p>
+<h4 id="归并排序动图演示："><a href="#归并排序动图演示：" class="headerlink" title="归并排序动图演示："></a>归并排序动图演示：</h4><p><img src="http://upload-images.jianshu.io/upload_images/1867034-18c70f637b5c01c2.gif?imageMogr2/auto-orient/strip" alt=""><br><br>Merge Sort 动图演示 算法可视化来源：<a href="http://visualgo.net/" target="_blank" rel="external">http://visualgo.net/</a><br></p>
+<h4 id="归并排序JavaScript代码实现："><a href="#归并排序JavaScript代码实现：" class="headerlink" title="归并排序JavaScript代码实现："></a>归并排序JavaScript代码实现：</h4><pre><code>function mergeSort(arr) {  //采用自上而下的递归方法
+    var len = arr.length;
+    if(len &lt; 2) {
+        return arr;
+    }
+    var middle = Math.floor(len / 2),
+        left = arr.slice(0, middle),
+        right = arr.slice(middle);
+    return merge(mergeSort(left), mergeSort(right));
+}
+
+function merge(left, right)
+{
+    var result = [];
+
+    while (left.length &amp;&amp; right.length) {
+        if (left[0] &lt;= right[0]) {
+            result.push(left.shift());
+        } else {
+            result.push(right.shift());
+        }
+    }
+
+    while (left.length)
+        result.push(left.shift());
+
+    while (right.length)
+        result.push(right.shift());
+
+    return result;
+}
+</code></pre><h3 id="快速排序（Quick-Sort）"><a href="#快速排序（Quick-Sort）" class="headerlink" title="快速排序（Quick Sort）"></a>快速排序（Quick Sort）</h3><h4 id="快速排序须知："><a href="#快速排序须知：" class="headerlink" title="快速排序须知："></a>快速排序须知：</h4><p>又是一种分而治之思想在排序算法上的典型应用。本质上来看，快速排序应该算是在冒泡排序基础上的递归分治法。<br><br>快速排序的名字起的是简单粗暴，因为一听到这个名字你就知道它存在的意义，就是快，而且效率高! 它是处理大数据最快的排序算法之一了。虽然Worst Case的时间复杂度达到了O(n²)，但是人家就是优秀，在大多数情况下都比平均时间复杂度为O(n log n) 的排序算法表现要更好，可是这是为什么呢，我也不知道。。。好在我的强迫症又犯了，查了N多资料终于在《算法艺术与信息学竞赛》上找到了满意的答案：<br></p>
+<pre><code>快速排序的最坏运行情况是O(n²)，比如说顺序数列的快排。但它的平摊期望时间是O(n log n) ，且O(n log n)记号中隐含的常数因子很小，比复杂度稳定等于O(n log n)的归并排序要小很多。所以，对绝大多数顺序性较弱的随机数列而言，快速排序总是优于归并排序。
+</code></pre><p>更新：<br><br>《算法 第四版》里对于快速排序的优缺点进行了更加明确的解释：<br></p>
+<pre><code>快速排序的内循环比大多数排序算法都要短小，这意味着它无论是在理论上还是在实际中都要更快。它的主要缺点是非常脆弱，在实现时要非常小心才能避免低劣的性能。
+</code></pre><h4 id="快速排序动图演示："><a href="#快速排序动图演示：" class="headerlink" title="快速排序动图演示："></a>快速排序动图演示：</h4><p><img src="http://upload-images.jianshu.io/upload_images/1867034-cd65e35d7dce5045.gif?imageMogr2/auto-orient/strip" alt=""><br><br>Quick Sort 动图演示 算法可视化来源：<a href="http://visualgo.net/" target="_blank" rel="external">http://visualgo.net/</a><br></p>
+<h4 id="快速排序JavaScript代码实现："><a href="#快速排序JavaScript代码实现：" class="headerlink" title="快速排序JavaScript代码实现："></a>快速排序JavaScript代码实现：</h4><pre><code>function quickSort(arr, left, right) {
+    var len = arr.length,
+        partitionIndex,
+        left = typeof left != &apos;number&apos; ? 0 : left,
+        right = typeof right != &apos;number&apos; ? len - 1 : right;
+
+    if (left &lt; right) {
+        partitionIndex = partition(arr, left, right);
+        quickSort(arr, left, partitionIndex-1);
+        quickSort(arr, partitionIndex+1, right);
+    }
+    return arr;
+}
+
+function partition(arr, left ,right) {     //分区操作
+    var pivot = left,                      //设定基准值（pivot）
+        index = pivot + 1;
+    for (var i = index; i &lt;= right; i++) {
+        if (arr[i] &lt; arr[pivot]) {
+            swap(arr, i, index);
+            index++;
+        }        
+    }
+    swap(arr, pivot, index - 1);
+    return index-1;
+}
+
+function swap(arr, i, j) {
+    var temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
+</code></pre><h3 id="堆排序（Heap-Sort）"><a href="#堆排序（Heap-Sort）" class="headerlink" title="堆排序（Heap Sort）"></a>堆排序（Heap Sort）</h3><h4 id="堆排序须知："><a href="#堆排序须知：" class="headerlink" title="堆排序须知："></a>堆排序须知：</h4><p>堆排序可以说是一种利用堆的概念来排序的选择排序。分为两种方法：<br><br>1.大顶堆：每个节点的值都大于或等于其子节点的值，在堆排序算法中用于升序排列<br><br>2.小顶堆：每个节点的值都小于或等于其子节点的值，在堆排序算法中用于降序排列<br></p>
+<h4 id="堆排序动图演示："><a href="#堆排序动图演示：" class="headerlink" title="堆排序动图演示："></a>堆排序动图演示：</h4><p><img src="http://upload-images.jianshu.io/upload_images/1867034-bf2472770e2258a9.gif?imageMogr2/auto-orient/strip" alt=""><br><br>Heap Sort 动图演示 算法可视化来源：<a href="http://www.ee.ryerson.ca/~courses/coe428/sorting/heapsort.html" target="_blank" rel="external">http://www.ee.ryerson.ca/~courses/coe428/sorting/heapsort.html</a><br></p>
+<h4 id="堆排序JavaScript代码实现："><a href="#堆排序JavaScript代码实现：" class="headerlink" title="堆排序JavaScript代码实现："></a>堆排序JavaScript代码实现：</h4><pre><code>var len;    //因为声明的多个函数都需要数据长度，所以把len设置成为全局变量
+
+function buildMaxHeap(arr) {   //建立大顶堆
+    len = arr.length;
+    for (var i = Math.floor(len/2); i &gt;= 0; i--) {
+        heapify(arr, i);
+    }
+}
+
+function heapify(arr, i) {     //堆调整
+    var left = 2 * i + 1,
+        right = 2 * i + 2,
+        largest = i;
+
+    if (left &lt; len &amp;&amp; arr[left] &gt; arr[largest]) {
+        largest = left;
+    }
+
+    if (right &lt; len &amp;&amp; arr[right] &gt; arr[largest]) {
+        largest = right;
+    }
+
+    if (largest != i) {
+        swap(arr, i, largest);
+        heapify(arr, largest);
+    }
+}
+
+function swap(arr, i, j) {
+    var temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
+
+function heapSort(arr) {
+    buildMaxHeap(arr);
+
+    for (var i = arr.length-1; i &gt; 0; i--) {
+        swap(arr, 0, i);
+        len--;
+        heapify(arr, 0);
+    }
+    return arr;
+}
+</code></pre><h3 id="计数排序（Counting-Sort）"><a href="#计数排序（Counting-Sort）" class="headerlink" title="计数排序（Counting Sort）"></a>计数排序（Counting Sort）</h3><h4 id="计数排序须知："><a href="#计数排序须知：" class="headerlink" title="计数排序须知："></a>计数排序须知：</h4><p>计数排序的核心在于将输入的数据值转化为键存储在额外开辟的数组空间中。<br><br>作为一种线性时间复杂度的排序，计数排序要求输入的数据必须是有确定范围的整数。<br></p>
+<h4 id="计数排序动图演示："><a href="#计数排序动图演示：" class="headerlink" title="计数排序动图演示："></a>计数排序动图演示：</h4><p><img src="http://upload-images.jianshu.io/upload_images/1867034-14067a57dd338fe3.gif?imageMogr2/auto-orient/strip" alt=""><br><br>Counting Sort 动图演示 算法可视化来源：<a href="http://visualgo.net/" target="_blank" rel="external">http://visualgo.net/</a><br></p>
+<h4 id="计数排序JavaScript代码实现："><a href="#计数排序JavaScript代码实现：" class="headerlink" title="计数排序JavaScript代码实现："></a>计数排序JavaScript代码实现：</h4><pre><code>function countingSort(arr, maxValue) {
+    var bucket = new Array(maxValue+1),
+        sortedIndex = 0;
+        arrLen = arr.length,
+        bucketLen = maxValue + 1;
+
+    for (var i = 0; i &lt; arrLen; i++) {
+        if (!bucket[arr[i]]) {
+            bucket[arr[i]] = 0;
+        }
+        bucket[arr[i]]++;
+    }
+
+    for (var j = 0; j &lt; bucketLen; j++) {
+        while(bucket[j] &gt; 0) {
+            arr[sortedIndex++] = j;
+            bucket[j]--;
+        }
+    }
+
+    return arr;
+}
+</code></pre><h3 id="桶排序（Bucket-Sort）"><a href="#桶排序（Bucket-Sort）" class="headerlink" title="桶排序（Bucket Sort）"></a>桶排序（Bucket Sort）</h3><h4 id="桶排序须知："><a href="#桶排序须知：" class="headerlink" title="桶排序须知："></a>桶排序须知：</h4><p>桶排序是计数排序的升级版。它利用了函数的映射关系，高效与否的关键就在于这个映射函数的确定。<br><br>为了使桶排序更加高效，我们需要做到这两点：<br><br>1.在额外空间充足的情况下，尽量增大桶的数量<br><br>2.使用的映射函数能够将输入的N个数据均匀的分配到K个桶中<br><br>同时，对于桶中元素的排序，选择何种比较排序算法对于性能的影响至关重要。<br></p>
+<h4 id="什么时候最快（Best-Cases）：-1"><a href="#什么时候最快（Best-Cases）：-1" class="headerlink" title="什么时候最快（Best Cases）："></a>什么时候最快（Best Cases）：</h4><p>当输入的数据可以均匀的分配到每一个桶中<br></p>
+<h4 id="什么时候最慢（Worst-Cases）：-1"><a href="#什么时候最慢（Worst-Cases）：-1" class="headerlink" title="什么时候最慢（Worst Cases）："></a>什么时候最慢（Worst Cases）：</h4><p>当输入的数据被分配到了同一个桶中<br></p>
+<h4 id="桶排序JavaScript代码实现："><a href="#桶排序JavaScript代码实现：" class="headerlink" title="桶排序JavaScript代码实现："></a>桶排序JavaScript代码实现：</h4><pre><code>function bucketSort(arr, bucketSize) {
+if (arr.length === 0) {
+  return arr;
+}
+
+var i;
+var minValue = arr[0];
+var maxValue = arr[0];
+for (i = 1; i &lt; arr.length; i++) {
+  if (arr[i] &lt; minValue) {
+      minValue = arr[i];                //输入数据的最小值
+  } else if (arr[i] &gt; maxValue) {
+      maxValue = arr[i];                //输入数据的最大值
+  }
+}
+
+//桶的初始化
+var DEFAULT_BUCKET_SIZE = 5;            //设置桶的默认数量为5
+bucketSize = bucketSize || DEFAULT_BUCKET_SIZE;
+var bucketCount = Math.floor((maxValue - minValue) / bucketSize) + 1;   
+var buckets = new Array(bucketCount);
+for (i = 0; i &lt; buckets.length; i++) {
+    buckets[i] = [];
+}
+
+//利用映射函数将数据分配到各个桶中
+for (i = 0; i &lt; arr.length; i++) {
+    buckets[Math.floor((arr[i] - minValue) / bucketSize)].push(arr[i]);
+}
+
+arr.length = 0;
+for (i = 0; i &lt; buckets.length; i++) {
+    insertionSort(buckets[i]);                      //对每个桶进行排序，这里使用了插入排序
+    for (var j = 0; j &lt; buckets[i].length; j++) {
+        arr.push(buckets[i][j]);                      
+    }
+}    
+
+    return arr;
+}
+</code></pre><h3 id="基数排序（Radix-Sort）"><a href="#基数排序（Radix-Sort）" class="headerlink" title="基数排序（Radix Sort）"></a>基数排序（Radix Sort）</h3><h4 id="基数排序须知："><a href="#基数排序须知：" class="headerlink" title="基数排序须知："></a>基数排序须知：</h4><p>基数排序有两种方法：<br><br>1.MSD 从高位开始进行排序<br><br>2.LSD 从低位开始进行排序 <br></p>
+<h4 id="基数排序-vs-计数排序-vs-桶排序"><a href="#基数排序-vs-计数排序-vs-桶排序" class="headerlink" title="基数排序 vs 计数排序 vs 桶排序"></a>基数排序 vs 计数排序 vs 桶排序</h4><p>这三种排序算法都利用了桶的概念，但对桶的使用方法上有明显差异：<br><br>基数排序：根据键值的每位数字来分配桶<br><br>计数排序：每个桶只存储单一键值<br><br>桶排序：每个桶存储一定范围的数值<br></p>
+<h4 id="LSD基数排序动图演示："><a href="#LSD基数排序动图演示：" class="headerlink" title="LSD基数排序动图演示："></a>LSD基数排序动图演示：</h4><p><img src="http://upload-images.jianshu.io/upload_images/1867034-54e33db459fca54f.gif?imageMogr2/auto-orient/strip" alt=""><br><br>Radix Sort 动图演示 算法可视化来源：<a href="http://visualgo.net/" target="_blank" rel="external">http://visualgo.net/</a><br></p>
+<h4 id="基数排序JavaScript代码实现："><a href="#基数排序JavaScript代码实现：" class="headerlink" title="基数排序JavaScript代码实现："></a>基数排序JavaScript代码实现：</h4><pre><code>//LSD Radix Sort
+var counter = [];
+function radixSort(arr, maxDigit) {
+    var mod = 10;
+    var dev = 1;
+    for (var i = 0; i &lt; maxDigit; i++, dev *= 10, mod *= 10) {
+        for(var j = 0; j &lt; arr.length; j++) {
+            var bucket = parseInt((arr[j] % mod) / dev);
+            if(counter[bucket]==null) {
+                counter[bucket] = [];
+            }
+            counter[bucket].push(arr[j]);
+        }
+        var pos = 0;
+        for(var j = 0; j &lt; counter.length; j++) {
+            var value = null;
+            if(counter[j]!=null) {
+                while ((value = counter[j].shift()) != null) {
+                      arr[pos++] = value;
+                }
+          }
+        }
+    }
+    return arr;
+}
+</code></pre><h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>排序算法实在是博大精深，还有hin多hin多我没有总结到或者我自己还没弄明白的算法，仅仅是总结这十种排序算法都把我写哭了。。。<br><br>因此，以后如果我掌握了更多的排序姿势，我一定还会回来的！<br></p>
+<p>转自：<a href="http://www.jianshu.com/p/1b4068ccd505" target="_blank" rel="external">http://www.jianshu.com/p/1b4068ccd505</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/03/25/14/" style="float: left;">
+        ← TCP/IP🌿
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/03/18/13/">
+        🍀 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/03/25/JS家的排序算法🎵/" data-title="JS家的排序算法🎵" data-url="https://menggeniu.github.io/2016/03/25/JS家的排序算法🎵/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.
+                </p>
+                <p>To make each day count.</p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
