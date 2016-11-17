@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>本地存储小结💘 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
+                    
+                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-03-28T14:10:54.000Z" itemprop="datePublished">
+          2016-03-28
+      </time>
+    
+</span>
+                <h1>本地存储小结💘</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>总括：详细讲述<code>Cookie</code>,<code>LocalStorge</code>,<code>SesstionStorge</code>的区别和用法。<br></p>
+<h4 id="人生如画，岁月如歌。"><a href="#人生如画，岁月如歌。" class="headerlink" title="人生如画，岁月如歌。"></a>人生如画，岁月如歌。</h4><p>原文博客地址：<a href="http://damonare.github.io/2016/11/16/Javascript%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%E5%B0%8F%E7%BB%93/#more" target="_blank" rel="external">Javascript本地存储小结</a><br><br>知乎专栏&amp;&amp;简书专题：<a href="https://zhuanlan.zhihu.com/damonare" target="_blank" rel="external">前端进击者（知乎）</a>&amp;&amp;<a href="http://www.jianshu.com/collection/bbaa63e264f5" target="_blank" rel="external">前端进击者（简书）</a><br></p>
+<h4 id="1-各种存储方案的简单对比"><a href="#1-各种存储方案的简单对比" class="headerlink" title="1. 各种存储方案的简单对比"></a>1. 各种存储方案的简单对比</h4><ul>
+<li>Cookies：浏览器均支持，容量为4KB</li>
+<li>UserData：仅IE支持，容量为64KB</li>
+<li>Flash：100KB，非HTML原生，需要插件支持</li>
+<li>Google Gears SQLite ：需要插件支持，容量无限制</li>
+<li>LocalStorage：HTML5，容量为5M</li>
+<li>SesstionStorage：HTML5，容量为5M</li>
+<li>globalStorage：Firefox独有的，Firefox13开始就不再支持这个方法</li>
+</ul>
+<p>UserData仅IE支持， Google Gears SQLite需要插件，Flash已经伴随着HTML5的出现渐渐退出了历史舞台，因此今天我们的主角只有他们三个：<code>Cookie</code>,<code>LocalStorge</code>,<code>SesstionStorge</code>;<br></p>
+<h4 id="2-Cookie"><a href="#2-Cookie" class="headerlink" title="2. Cookie"></a>2. Cookie</h4><p>作为一个前端和Cookie打交道的次数肯定不会少了，Cookie算是比较古老的技术了。<br><br>1993 年，网景公司雇员 Lou Montulli 为了让用户在访问某网站时，进一步提高访问速度，同时也为了进一步实现个人化网络，发明了今天广泛使用的 Cookie。<br></p>
+<ul>
+<li>1）cookie的大小受限制，cookie大小被限制在4KB，不能接受像大文件或邮件那样的大数据。</li>
+<li>2）只要有请求涉及cookie，cookie就要在服务器和浏览器之间来回传送（这解释为什么本地文件不能测试cookie）。而且cookie数据始终在同源的http请求中携带（即使不需要），这也是Cookie不能太大的重要原因。正统的cookie分发是通过扩展HTTP协议来实现的，服务器通过在HTTP的响应头中加上一行特殊的指示以提示浏览器按照指示生成相应的cookie。</li>
+<li>3）用户每请求一次服务器数据，cookie则会随着这些请求发送到服务器，服务器脚本语言如PHP等能够处理cookie发送的数据，可以说是非常方便的。当然前端也是可以生成Cookie的，用js对cookie的操作相当的繁琐，浏览器只提供document.cookie这样一个对象，对cookie的赋值，获取都比较麻烦。而在PHP中，我们可以通过setcookie()来设置cookie，通过$_COOKIE这个超全局数组来获取cookie。</li>
+</ul>
+<p>cookie的内容主要包括：名字，值，过期时间，路径和域。路径与域一起构成cookie的作用范围。若不设置过期时间，则表示这个cookie的生命期为浏览器会话期间，关闭浏览器窗口，cookie就消失。这种生命期为浏览器会话期的cookie被称为会话cookie。会话cookie一般不存储在硬盘上而是保存在内存里，当然这种行为并不是规范规定的。若设置了过期时间，浏览器就会把cookie保存到硬盘上，关闭后再次打开浏览器，这些cookie仍然有效直到超过设定的过期时间。存储在硬盘上的cookie可以在不同的浏览器进程间共享，比如两个IE窗口。而对于保存在内存里的cookie，不同的浏览器有不同的处理方式。</p>
+<h5 id="2-2-Session"><a href="#2-2-Session" class="headerlink" title="2.2 Session"></a>2.2 Session</h5><p>说到Cookie就不能不说Session。<br></p>
+<p>Session机制。session机制是一种服务器端的机制，服务器使用一种类似于散列表的结构（也可能就是使用散列表）来保存信息。当程序需要为某个客户端的请求创建一个session时，服务器首先检查这个客户端的请求里是否已包含了一个session标识（称为session id），如果已包含则说明以前已经为此客户端创建过session，服务器就按照session id把这个session检索出来使用（检索不到，会新建一个），如果客户端请求不包含session id，则为此客户端创建一个session并且生成一个与此session相关联的session id，session id的值应该是一个既不会重复，又不容易被找到规律以仿造的字符串，这个session id将被在本次响应中返回给客户端保存。保存这个session id的方式可以采用cookie，这样在交互过程中浏览器可以自动的按照规则把这个标识发送给服务器。一般这个cookie的名字都是类似于SEEESIONID。但cookie可以被人为的禁止，则必须有其他机制以便在cookie被禁止时仍然能够把session id传递回服务器。经常被使用的一种技术叫做URL重写，就是把session id直接附加在URL路径的后面。比如：<code>http://damonare.cn?sessionid=123456</code>还有一种技术叫做表单隐藏字段。就是服务器会自动修改表单，添加一个隐藏字段，以便在表单提交时能够把session id传递回服务器。比如：<br></p>
+<pre><code>&lt;form name=&quot;testform&quot; action=&quot;/xxx&quot;&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;sessionid&quot; value=&quot;123456&quot;&gt;
+    &lt;input type=&quot;text&quot;&gt;
+&lt;/form&gt;
+</code></pre><p>实际上这种技术可以简单的用对action应用URL重写来代替。<br></p>
+<h5 id="2-3-Cookie和Session简单对比"><a href="#2-3-Cookie和Session简单对比" class="headerlink" title="2.3 Cookie和Session简单对比"></a>2.3 Cookie和Session简单对比</h5><h6 id="Cookie和Session-的区别："><a href="#Cookie和Session-的区别：" class="headerlink" title="Cookie和Session 的区别："></a>Cookie和Session 的区别：</h6><p>1）cookie数据存放在客户的浏览器上，session数据放在服务器上。<br><br>2）cookie不是很安全，别人可以分析存放在本地的cookie并进行cookie欺骗，考虑到安全应当使用session。<br><br>3）session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能考虑到减轻服务器性能方面，应当使用cookie。<br><br> 4）单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。<br><br>5）所以建议：a.将登陆信息等重要信息存放为SESSION b.其他信息如果需要保留，可以放在cookie中<br></p>
+<h5 id="2-4-document-cookie的属性"><a href="#2-4-document-cookie的属性" class="headerlink" title="2.4 document.cookie的属性"></a>2.4 document.cookie的属性</h5><h6 id="expires属性"><a href="#expires属性" class="headerlink" title="expires属性"></a>expires属性</h6><p>指定了coolie的生存期，默认情况下coolie是暂时存在的，他们存储的值只在浏览器会话期间存在，当用户推出浏览器后这些值也会丢失，如果想让cookie存在一段时间，就要为expires属性设置为未来的一个过期日期。现在已经被max-age属性所取代，max-age用秒来设置cookie的生存期。<br></p>
+<h6 id="path属性"><a href="#path属性" class="headerlink" title="path属性"></a>path属性</h6><p>它指定与cookie关联在一起的网页。在默认的情况下cookie会与创建它的网页，该网页处于同一目录下的网页以及与这个网页所在目录下的子目录下的网页关联。<br></p>
+<h6 id="domain属性"><a href="#domain属性" class="headerlink" title="domain属性"></a>domain属性</h6><p>domain属性可以使多个web服务器共享cookie。domain属性的默认值是创建cookie的网页所在服务器的主机名。不能将一个cookie的域设置成服务器所在的域之外的域。例如让位于order.damonare.cn的服务器能够读取catalog.damonare.cn设置的cookie值。如果catalog.damonare.cn的页面创建的cookie把自己的path属性设置为“/”，把domain属性设置成“.damonare.cn”，那么所有位于catalog.damonare.cn的网页和所有位于orlders.damonare.cn的网页，以及位于damonare.cn域的其他服务器上的网页都可以访问这个cookie。<br></p>
+<h6 id="secure属性"><a href="#secure属性" class="headerlink" title="secure属性"></a>secure属性</h6><p>它是一个布尔值，指定在网络上如何传输cookie，默认是不安全的，通过一个普通的http连接传输。<br></p>
+<h5 id="2-5-cookie实战"><a href="#2-5-cookie实战" class="headerlink" title="2.5 cookie实战"></a>2.5 cookie实战</h5><p>这里我们使用javascript来写一段cookie,借用w3cschool的demo:<br></p>
+<pre><code>function getCookie(c_name){
+    if (document.cookie.length&gt;0){
+        c_start=document.cookie.indexOf(c_name + &quot;=&quot;)
+        if (c_start!=-1){
+            c_start=c_start + c_name.length+1
+            c_end=document.cookie.indexOf(&quot;;&quot;,c_start)
+            if (c_end==-1) c_end=document.cookie.length
+            return unescape(document.cookie.substring(c_start,c_end))
+        }
+    }
+    return &quot;&quot;;
+}
+
+function setCookie(c_name,value,expiredays){
+    var exdate=new Date()
+    exdate.setDate(exdate.getDate()+expiredays)
+    document.cookie=c_name+ &quot;=&quot; +escape(value)+
+            ((expiredays==null) ? &quot;&quot; : &quot;; expires=&quot;+exdate.toUTCString())
+}
+function checkCookie(){
+    username=getCookie(&apos;username&apos;)
+    if(username!=null &amp;&amp; username!=&quot;&quot;){alert(&apos;Welcome again &apos;+username+&apos;!&apos;)}
+    else{
+        username=prompt(&apos;Please enter your name:&apos;,&quot;&quot;)
+        if (username!=null &amp;&amp; username!=&quot;&quot;){
+            setCookie(&apos;username&apos;,username,355)
+        }
+    }
+}
+</code></pre><p>注意这里对Cookie的生存期进行了定义，也就是355天<br></p>
+<h4 id="3-localStorage"><a href="#3-localStorage" class="headerlink" title="3. localStorage"></a>3. localStorage</h4><p>这是一种持久化的存储方式，也就是说如果不手动清除，数据就永远不会过期。<br>它也是采用Key - Value的方式存储数据，底层数据接口是sqlite，按域名将数据分别保存到对应数据库文件里。它能保存更大的数据（IE8上是10MB，Chrome是5MB），同时保存的数据不会再发送给服务器，避免带宽浪费。<br></p>
+<h5 id="3-1-localStorage的属性方法"><a href="#3-1-localStorage的属性方法" class="headerlink" title="3.1 localStorage的属性方法"></a>3.1 localStorage的属性方法</h5><p>下表是localStorge的一些属性和方法<br></p>
+<table>
+<thead>
+<tr>
+<th>属性方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>localStorage.length</td>
+<td>获得storage中的个数</td>
+<td></td>
+</tr>
+<tr>
+<td>localStorage.key(n)</td>
+<td>获得storage中第n个元素对的键值（第一个元素是0）</td>
+<td></td>
+</tr>
+<tr>
+<td>localStorage.getItem(key)</td>
+<td>获取键值key对应的值</td>
+<td></td>
+</tr>
+<tr>
+<td>localStorage.key</td>
+<td>获取键值key对应的值</td>
+<td></td>
+</tr>
+<tr>
+<td>localStorage.setItem(key, value)</td>
+<td>添加数据，键值为key，值为value</td>
+<td></td>
+</tr>
+<tr>
+<td>localStorage.removeItem(key)</td>
+<td>移除键值为key的数据</td>
+<td></td>
+</tr>
+<tr>
+<td>localStorage.clear()</td>
+<td>清除所有数据</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="3-2-localStorage的缺点"><a href="#3-2-localStorage的缺点" class="headerlink" title="3.2 localStorage的缺点"></a>3.2 localStorage的缺点</h5><p>① localStorage大小限制在500万字符左右，各个浏览器不一致<br><br>② localStorage在隐私模式下不可读取<br><br>③ localStorage本质是在读写文件，数据多的话会比较卡（firefox会一次性将数据导入内存，想想就觉得吓人啊）<br><br>④ localStorage不能被爬虫爬取，不要用它完全取代URL传参<br></p>
+<h4 id="4-sessionStorage"><a href="#4-sessionStorage" class="headerlink" title="4. sessionStorage"></a>4. sessionStorage</h4><p>和服务器端使用的session类似，是一种会话级别的缓存，关闭浏览器会数据会被清除。不过有点特别的是它的作用域是窗口级别的，也就是说不同窗口间的sessionStorage数据不能共享的。使用方法（和localStorage完全相同）：<br></p>
+<table>
+<thead>
+<tr>
+<th>属性方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sessionStorage.length</td>
+<td>获得storage中的个数</td>
+<td></td>
+</tr>
+<tr>
+<td>sessionStorage.key(n)</td>
+<td>获得storage中第n个元素对的键值（第一个元素是0）</td>
+<td></td>
+</tr>
+<tr>
+<td>sessionStorage.getItem(key)</td>
+<td>获取键值key对应的值</td>
+<td></td>
+</tr>
+<tr>
+<td>sessionStorage.key</td>
+<td>获取键值key对应的值</td>
+<td></td>
+</tr>
+<tr>
+<td>sessionStorage.setItem(key, value)</td>
+<td>添加数据，键值为key，值为value</td>
+<td></td>
+</tr>
+<tr>
+<td>sessionStorage.removeItem(key)</td>
+<td>移除键值为key的数据</td>
+<td></td>
+</tr>
+<tr>
+<td>sessionStorage.clear()</td>
+<td>清除所有数据</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="5-sessionStorage和localStorage的区别"><a href="#5-sessionStorage和localStorage的区别" class="headerlink" title="5. sessionStorage和localStorage的区别"></a>5. sessionStorage和localStorage的区别</h4><p>1.sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。当用户关闭浏览器窗口后，数据立马会被删除。<br><br>2.localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。第二天、第二周或下一年之后，数据依然可用。<br></p>
+<h5 id="5-1-测试"><a href="#5-1-测试" class="headerlink" title="5.1 测试"></a>5.1 测试</h5><h6 id="sessionStorage"><a href="#sessionStorage" class="headerlink" title="sessionStorage:"></a>sessionStorage:</h6><pre><code>if (sessionStorage.pagecount){
+sessionStorage.pagecount=Number(sessionStorage.pagecount) +1;
+}else{
+      sessionStorage.pagecount=1;
+}
+console.log(&quot;Visits &quot;+ sessionStorage.pagecount + &quot; time(s).&quot;);
+</code></pre><h6 id="测试过程：我们在控制台输入上述代码查看打印结果"><a href="#测试过程：我们在控制台输入上述代码查看打印结果" class="headerlink" title="测试过程：我们在控制台输入上述代码查看打印结果"></a>测试过程：我们在控制台输入上述代码查看打印结果</h6><h6 id="控制台首次输入代码："><a href="#控制台首次输入代码：" class="headerlink" title="控制台首次输入代码："></a>控制台首次输入代码：</h6><p><img src="http://ac-myg6wstv.clouddn.com/34ec5d30041c0ead9c6c" alt=""><br><br>关闭窗口，控制台再次输入代码：<br><br><img src="http://ac-myg6wstv.clouddn.com/34ec5d30041c0ead9c6c" alt=""><br><br><strong>所谓的关闭窗口即销毁，就是这样，关闭窗口重新打开输入代码输出结果还是上面图片的样子，也就是说关闭窗口后sessionStorage.pagecount即被销毁，除非重心创建。或者从历史记录进入才会相关数据才会存在。好的，我们再来看下localStorge表现：</strong><br></p>
+<pre><code>if (localStorage.pagecount){
+localStorage.pagecount=Number(localStorage.pagecount) +1;
+}else{
+    localStorage.pagecount=1;
+ }
+console.log(&quot;Visits &quot;+ localStorage.pagecount + &quot; time(s).&quot;);
+</code></pre><h6 id="控制台首次输入代码：-1"><a href="#控制台首次输入代码：-1" class="headerlink" title="控制台首次输入代码："></a>控制台首次输入代码：</h6><p><img src="http://ac-myg6wstv.clouddn.com/7228ef55d946a6e5a715" alt=""><br><br>localStorage测试结果1<br></p>
+<h6 id="关闭窗口，控制台再次输入代码："><a href="#关闭窗口，控制台再次输入代码：" class="headerlink" title="关闭窗口，控制台再次输入代码："></a>关闭窗口，控制台再次输入代码：</h6><p><img src="http://ac-myg6wstv.clouddn.com/d81641bc27deaf3b3191" alt=""><br><br>localStorage测试结果2<br></p>
+<h4 id="6-web-Storage和cookie的区别"><a href="#6-web-Storage和cookie的区别" class="headerlink" title="6. web Storage和cookie的区别"></a>6. web Storage和cookie的区别</h4><p>Web Storage(localStorage和sessionStorage)的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽，另外cookie还需要指定作用域，不可以跨域调用。<br><br>除此之外，Web Storage拥有setItem,getItem,removeItem,clear等方法，不像cookie需要前端开发者自己封装setCookie，getCookie。<br><br>但是Cookie也是不可以或缺的：Cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在 ，而Web Storage仅仅是为了在本地“存储”数据而生<br></p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>博主尽可能思路清晰的理了一遍cookie，session，localStorage，sessionStorage之间的区别和联系，希望可以帮到大家。<br><br>参考文章：<br><br><a href="http://www.cnblogs.com/shiyangxt/archive/2008/10/07/1305506.html" target="_blank" rel="external">cookie</a> 和<a href="http://www.cnblogs.com/shiyangxt/archive/2008/10/07/1305506.html" target="_blank" rel="external">session</a> 的区别详解<br></p>
+<p>转自：<a href="http://gold.xitu.io/post/582c7d330ce463006ce33838" target="_blank" rel="external">http://gold.xitu.io/post/582c7d330ce463006ce33838</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/03/25/14/">
+        TCP/IP🌿 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/03/28/16/" data-title="本地存储小结💘" data-url="https://menggeniu.github.io/2016/03/28/16/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.
+                </p>
+                <p>To make each day count.</p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
