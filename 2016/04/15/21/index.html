@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>利用Gulp优化部署Web项目👗 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
+                    
+                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-04-15T12:11:09.000Z" itemprop="datePublished">
+          2016-04-15
+      </time>
+    
+</span>
+                <h1>利用Gulp优化部署Web项目👗</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="Gulp"><a href="#Gulp" class="headerlink" title="Gulp"></a>Gulp</h3><p><a href="http://gulpjs.com/" target="_blank" rel="external">Gulp</a>是一款项目自动化的构建工具，与<a href="http://gruntjs.com/" target="_blank" rel="external">Grunt</a>一样可以通过创建任务（Task）来帮助我们自动完成一些工作流的内容。当然，今天我们的内容并不是讨论这二者的区别，仅仅是介绍介绍如何利用Gulp来优化我们的Web项目中前端自动化工作流。<br></p>
+<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>相信不少人看过百度大牛<a href="https://github.com/fouber" target="_blank" rel="external">张云龙</a>的那篇讲解<a href="https://github.com/fouber/blog/issues/6" target="_blank" rel="external">大公司里怎样开发和部署前端代码?</a>的文章，如果没有阅读的朋友请戳。由于在项目部署时，我们需要对项目js，css,image等文件进行压缩，合并处理，从而减少客户端对服务Http请求，已达到增强页面的加载速度，优化服务器带宽压力等等目的。所以本文主要讲的是利用Gulp优化我们Web部署优化工作。<br></p>
+<h4 id="安装-amp-初始化"><a href="#安装-amp-初始化" class="headerlink" title="安装&amp;初始化"></a>安装&amp;初始化</h4><p>首先你得确保你的电脑上面是否已经安装了Nodejs, 如果没有安装的话，那么请<a href="https://nodejs.org/en/" target="_blank" rel="external">移步</a>。假定有如下一个Nodejs的Web项目（当然你也可以是其他的例如Java，.Net的Web项目，且具体开发目录如下：<br></p>
+<pre><code>|- project
+|- src // 前端项目的源文件
+    |- js 
+    |- html
+    |- images
+    |- css
+    |- bower_component // bower 前端依赖包管理
+    |- node_component // nodejs 插件
+|- server
+    |- api
+    |- views
+        |- app
+    |- assets // 前端静态文件存放目录
+        |- js
+        |- css
+        |- images
+        |- templates
+    |- ... // 其他目录就不一一列出了
+</code></pre><p><code>src</code>文件夹为前端的<code>js</code>，<code>css</code>, <code>html</code>, <code>image</code>的开发目录, 我们会通过<code>gulp</code>将这些源文件进行压缩合并后打包到目标目录，也就是<code>assets</code>目录下相应的<code>js</code>,<code>css</code>目录，<code>html</code>视图文件会打包到<code>views</code>下的<code>app</code>文件夹和<code>assets</code>下的<code>templates</code>模板文件夹，具体视情况而定。其中的<code>bower_component</code>为<a href="https://bower.io/" target="_blank" rel="external">bower</a>前端包管理，我们可以用<code>bower</code>直接下载几乎任何我们前端日常所需的库，框架,而且可以任选版本，例如<code>JQuery</code>,<code>Bootstrap</code>,<code>Angular</code>，只需执行<code>bower install packageName</code>即可，不同版本只需<code>bower install packageName#version</code>,更多内容，可以去<a href="https://bower.io/" target="_blank" rel="external">官网</a>自行查阅，这里就不展开了。至于node_component 文件夹即是用npm安装的我们打包会用到的插件资源了。<br></p>
+<h5 id="1-全局安装Gulp"><a href="#1-全局安装Gulp" class="headerlink" title="1.全局安装Gulp"></a>1.全局安装Gulp</h5><pre><code>$ npm install --global gulp
+</code></pre><h5 id="2-安装Gulp到开发项目中"><a href="#2-安装Gulp到开发项目中" class="headerlink" title="2.安装Gulp到开发项目中"></a>2.安装Gulp到开发项目中</h5><pre><code>$ npm install --save-dev gulp
+</code></pre><h5 id="3-在src创建gulpfile-js文件，这个文件用来配置我们所需的task-接下来会具体讲解。"><a href="#3-在src创建gulpfile-js文件，这个文件用来配置我们所需的task-接下来会具体讲解。" class="headerlink" title="3.在src创建gulpfile.js文件，这个文件用来配置我们所需的task,接下来会具体讲解。"></a>3.在<code>src</code>创建<code>gulpfile.js</code>文件，这个文件用来配置我们所需的<code>task</code>,接下来会具体讲解。</h5><h5 id="4-执行"><a href="#4-执行" class="headerlink" title="4.执行"></a>4.执行</h5><pre><code>$ gulp 
+或者
+$ gulp taskName
+</code></pre><p>gulp会执行gulpfile.js文件下定义的default任务，如果我们需要执行特定的task，则需要执行下面的命令<br></p>
+<h4 id="gulpfile-js文件"><a href="#gulpfile-js文件" class="headerlink" title="gulpfile.js文件"></a>gulpfile.js文件</h4><p><code>gulpfile.js</code>用来定义我们需要自动化的任务，里面包含了很多依赖关系。这里我们会创建4个<code>Task</code>，第一个<code>develop task</code>,用于开发时使用，另一个<code>release task</code>,用于部署发布时用的，还有一个<code>watch task</code>, 用于实时监听文件修改行为，可及时打包，最后一个<code>default task</code>, <code>gulp</code>默认执行的<code>task</code>.<br></p>
+<h4 id="创建Default-Task"><a href="#创建Default-Task" class="headerlink" title="创建Default Task"></a>创建Default Task</h4><pre><code> var gulp = require(&apos;gulp&apos;);
+
+gulp.task(&apos;default&apos;, function() {
+  // place code for your default task here
+});
+
+// 如果默认情况下我们会执行一个叫develop的task，则这么写，执行gulp命令时，
+// 会自动调用develop
+gulp.task(&apos;default&apos;, [&apos;develop&apos;]);
+</code></pre><h4 id="创建Develop-Task"><a href="#创建Develop-Task" class="headerlink" title="创建Develop Task"></a>创建Develop Task</h4><h4 id="创建develop-task前，先介绍下我们今天要用到的一些插件"><a href="#创建develop-task前，先介绍下我们今天要用到的一些插件" class="headerlink" title="创建develop task前，先介绍下我们今天要用到的一些插件"></a>创建develop task前，先介绍下我们今天要用到的一些插件</h4><p>1.<a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external">gulp-uglify</a> Js压缩插件<br><br>2.<a href="https://github.com/jonathanepollack/gulp-minify-css" target="_blank" rel="external">gulp-minify-css</a> Css压缩插件<br><br>3.<a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="external">gulp-imagemin</a>图片压缩插件，支持格式： PNG, JPEG, GIF and SVG images<br><br>4.<a href="https://github.com/sindresorhus/gulp-strip-debug" target="_blank" rel="external">gulp-strip-debug</a>清除源文件console,debugger代码<br><br>5.<a href="https://github.com/jonkemp/gulp-useref" target="_blank" rel="external">gulp-useref</a>合并压缩html文件中的文件<br><br>以上列出的插件为我个人常用的一些插件，如果你还有fonts文件的话，也可以添加进去，gulp有很多其他或者相似的插件，都可以去google搜索。安装方法则是正常的npm安装，可以戳进官网去查看。<br><br><strong>首先我们需要为我们要压缩的源文件配置路径以及导入插件，假设我们bower里面已有jquery和bootstrap插件，以及其他源文件目录，如下：</strong><br></p>
+<pre><code>// 引入插件
+var uglify = require(&apos;gulp-uglify&apos;); // 压缩
+var minifyCss = require(&apos;gulp-minify-css&apos;);
+var stripDebug = require(&apos;gulp-strip-debug&apos;); // 该插件用来去掉console和debugger语句
+var useref = require(&apos;gulp-useref&apos;);
+var imagemin = require(&apos;gulp-imagemin&apos;);
+var pngquant = require(&apos;imagemin-pngquant&apos;);
+
+// 任务处理的文件路径配置
+var paths = {
+    js: [ // js目录
+        &apos;app/*&apos;
+    ],
+    css: [
+         &apos;css/*&apos;
+    ],
+    img: [
+         &apos;images/*&apos;
+    ],
+    html: [
+        &apos;html/*&apos;
+    ],
+    lib: { // 第三方依赖文件
+        js: [
+            &apos;bower_components/bootstrap/dist/js/bootstrap.js&apos;,
+            &apos;bower_components/jquery/jquery.js&apos;
+        ],
+        css: [
+            &apos;bower_components/bootstrap/dist/css/bootstrap.css&apos;
+        ],
+        img: [
+            &apos;bower_components/bootstrap/dist/images/*&apos;
+        ]
+    }
+};
+</code></pre><p><strong>定义develop task</strong></p>
+<pre><code>var output = &quot;../server/assets/&quot;; // output 
+
+/* 开发环境 */
+gulp.task(&apos;develop&apos;, function() {
+gulp.src(paths.js)
+    .pipe(gulp.dest(output + &apos;/js&apos;));
+
+gulp.src(paths.lib.js)
+    .pipe(gulp.dest(output + &apos;/js&apos;));
+
+gulp.src(paths.css)
+    .pipe(gulp.dest(output + &apos;/css&apos;));
+
+gulp.src(paths.lib.css)
+    .pipe(gulp.dest(output + &apos;/css&apos;));
+
+gulp.src(paths.img)
+    .pipe(gulp.dest(output + &apos;/images&apos;)); 
+
+gulp.src(paths.lib.img)
+    .pipe(gulp.dest(output + &apos;/images&apos;));
+});
+</code></pre><p>上面的<strong>develop task</strong>直接将代码都输出到了我们的<strong>server</strong>目录下，并未通过插件进行相应的处理，主要是因为我们等会还会创建<strong>release task</strong>， 当真正部署的时候我们才进行压缩合并这些处理。<br><br><strong>定义release task</strong></p>
+<pre><code>/* 部署环境 */
+    gulp.task(&apos;release&apos;, function() {
+gulp.src(paths.js)
+    .pipe(stripDebug())
+    .pipe(gulp.dest(output + &apos;/js&apos;));
+
+gulp.src(paths.lib.js)
+    .pipe(stripDebug())
+    .pipe(gulp.dest(output + &apos;/js&apos;));
+
+gulp.src(paths.css)
+    .pipe(gulp.dest(output + &apos;/css&apos;));
+
+gulp.src(paths.lib.css)
+    .pipe(gulp.dest(output + &apos;/css&apos;));
+
+gulp.src(paths.img)
+    .pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngquant()]
+    }))
+    .pipe(gulp.dest(output + &apos;/images&apos;)); 
+
+gulp.src(paths.lib.img)
+     .pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngquant()]
+    }))
+    .pipe(gulp.dest(output + &apos;/images&apos;));
+
+var assets = useref.assets();
+gulp.src(paths.html)
+ .pipe(assets)
+    .pipe(gulpif(&apos;*.js&apos;, uglify()))
+    .pipe(gulpif(&apos;*.css&apos;, minifyCss()))
+    .pipe(assets.restore())
+    .pipe(useref())
+    .pipe(gulp.dest(output + &apos;/templates&apos;));
+});
+</code></pre><p>上面的代码首先是先打包静态文件到指定包，去掉多余的console,debugger,给图片文件进行压缩处理，最后利用useref插件对ejs视图文件中的js,css进行压缩合并处理，并打包到指定目录。<br><br>利用<code>useref</code>对<code>html</code>内部的文件进行压缩合并<br><br>上面的<code>release</code>中我们以及定义了对<code>app</code>目录下<code>html</code>文件内部的<code>js</code>，<code>css</code>进行压缩何必，仅仅配置<code>task</code>是还不够的，我还需要在html内部做如下配置：<br></p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;!-- build:css css/main.css --&gt;
+    &lt;link href=&quot;css/style.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;css/bootstrap.cs.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;!-- endbuild --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- build:js scripts/main.js --&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;js/bootstrap.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- endbuild --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>经过合并后的文件：<br></p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;/&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;js/main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/htm&gt;
+</code></pre><p>更多关于<a href="https://github.com/jonkemp/gulp-useref" target="_blank" rel="external">gulp-useref</a>的使用方法<a href="https://github.com/jonkemp/gulp-useref" target="_blank" rel="external">请戳</a>。<br><br><strong>定义watch Task</strong><br><code>watch task</code> 是为了监听文件发生改变后立即触发的任务，已便于我们开发。代码如下：<br></p>
+<pre><code>var watcher = gulp.watch(paths.scripts, [&apos;develop&apos;]);
+watcher.on(&apos;change&apos;, function (event) {
+   console.log(&apos;Event type: &apos; + event.type); // added, changed, or deleted
+   console.log(&apos;Event path: &apos; + event.path); // The path of the modified file
+});
+</code></pre><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>以上基本介绍了如何使用gulp来自动完成打包，压缩，合并文件等任务，Gulp插件非常多，本文只是简单的介绍了几种基本的。总之，使用gulp，只需要几行命令便可以完成以上任务，使很多优化工作变得十分简单。<br></p>
+<ul>
+<li>原文地址：<a href="http://imziv.com/blog/article/read.htm?id=60" target="_blank" rel="external">http://imziv.com/blog/article/read.htm?id=60</a></li>
+<li>作者： <a href="http://imziv.com/blog/article/index.htm" target="_blank" rel="external">Ziv小威</a></li>
+</ul>
+<p>转自：<a href="http://www.imziv.com/blog/article/read.htm?id=60" target="_blank" rel="external">http://www.imziv.com/blog/article/read.htm?id=60</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/04/11/20/">
+        回味js基础:call/bind🍕 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/04/15/21/" data-title="利用Gulp优化部署Web项目👗" data-url="https://menggeniu.github.io/2016/04/15/21/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.
+                </p>
+                <p>To make each day count.</p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
