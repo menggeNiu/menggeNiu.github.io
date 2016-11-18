@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>移动前端知识总结🌟 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
+                    
+                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-04-18T13:55:54.000Z" itemprop="datePublished">
+          2016-04-18
+      </time>
+    
+</span>
+                <h1>移动前端知识总结🌟</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="meta基础知识"><a href="#meta基础知识" class="headerlink" title="meta基础知识"></a>meta基础知识</h3><h4 id="H5页面窗口自动调整到设备宽度，并禁止用户缩放页面"><a href="#H5页面窗口自动调整到设备宽度，并禁止用户缩放页面" class="headerlink" title="H5页面窗口自动调整到设备宽度，并禁止用户缩放页面"></a>H5页面窗口自动调整到设备宽度，并禁止用户缩放页面</h4><pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; /&gt;
+</code></pre><h4 id="忽略将页面中的数字识别为电话号码"><a href="#忽略将页面中的数字识别为电话号码" class="headerlink" title="忽略将页面中的数字识别为电话号码"></a>忽略将页面中的数字识别为电话号码</h4><pre><code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&gt;
+</code></pre><h4 id="忽略Android平台中对邮箱地址的识别"><a href="#忽略Android平台中对邮箱地址的识别" class="headerlink" title="忽略Android平台中对邮箱地址的识别"></a>忽略Android平台中对邮箱地址的识别</h4><pre><code>&lt;meta name=&quot;format-detection&quot; content=&quot;email=no&quot; /&gt;
+</code></pre><h4 id=""><a href="#" class="headerlink" title=""></a><meta name="format-detection" content="email=no"></h4><pre><code>&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;
+&lt;!-- ios7.0版本以后，safari上已看不到效果 --&gt;
+</code></pre><h4 id="将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式"><a href="#将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式" class="headerlink" title="将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式"></a>将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式</h4><pre><code>&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot; /&gt;
+&lt;!-- 可选default、black、black-translucent --&gt;
+</code></pre><h3 id="viewport模板"><a href="#viewport模板" class="headerlink" title="viewport模板"></a>viewport模板</h3><h4 id="viewport模板——通用"><a href="#viewport模板——通用" class="headerlink" title="viewport模板——通用"></a>viewport模板——通用</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; name=&quot;viewport&quot;&gt;
+&lt;meta content=&quot;yes&quot; name=&quot;apple-mobile-web-app-capable&quot;&gt;
+&lt;meta content=&quot;black&quot; name=&quot;apple-mobile-web-app-status-bar-style&quot;&gt;
+&lt;meta content=&quot;telephone=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;meta content=&quot;email=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;title&gt;标题&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;index.css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+这里开始内容
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><p>viewport模板 – target-densitydpi=device-dpi，android 2.3.5以下版本不支持<br></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=750, user-scalable=no, target-densitydpi=device-dpi&quot;&gt;&lt;!-- width取值与页面定义的宽度一致 --&gt;
+&lt;meta content=&quot;yes&quot; name=&quot;apple-mobile-web-app-capable&quot;&gt;
+&lt;meta content=&quot;black&quot; name=&quot;apple-mobile-web-app-status-bar-style&quot;&gt;
+&lt;meta content=&quot;telephone=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;meta content=&quot;email=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;title&gt;标题&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;index.css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+这里开始内容
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><p>参考案例：<a href="http://action.weixin.qq.com/payact/readtemplate?t=Mobile/2015/wxzfsht/index_tmpl" target="_blank" rel="external">http://action.weixin.qq.com/payact/readtemplate?t=Mobile/2015/wxzfsht/index_tmpl</a><br></p>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><h4 id="移动端如何定义字体font-family"><a href="#移动端如何定义字体font-family" class="headerlink" title="移动端如何定义字体font-family"></a>移动端如何定义字体font-family</h4><p>中文字体使用系统默认即可，英文用Helvetica<br></p>
+<pre><code>/* 移动端定义字体的代码 */
+body{font-family:Helvetica;}
+</code></pre><p><strong>参考《移动端使用字体的思考》<br></strong></p>
+<h4 id="移动端字体单位font-size选择px还是rem"><a href="#移动端字体单位font-size选择px还是rem" class="headerlink" title="移动端字体单位font-size选择px还是rem"></a>移动端字体单位font-size选择px还是rem</h4><p>对于只需要适配少部分手机设备，且分辨率对页面影响不大的，使用px即可<br><br>著作权归作者所有。<br>商业转载请联系作者获得授权,非商业转载请注明出处。<br>链接:<a href="http://caibaojian.com/mobile-knowledge.html" target="_blank" rel="external">http://caibaojian.com/mobile-knowledge.html</a><br>来源:<a href="http://caibaojian.com" target="_blank" rel="external">http://caibaojian.com</a></p>
+<p>对于需要适配各种移动设备，使用rem，例如只需要适配iphone和iPad等分辨率差别比较挺大的设备rem配置参考：<br></p>
+<pre><code>html{font-size:10px}
+@media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:12px}}
+@media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}
+@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}
+@media screen and (min-width:800px){html{font-size:25px}}
+</code></pre><h4 id="移动端touch事件-区分webkit-和-winphone"><a href="#移动端touch事件-区分webkit-和-winphone" class="headerlink" title="移动端touch事件(区分webkit 和 winphone)"></a>移动端touch事件(区分webkit 和 winphone)</h4><p>当用户手指放在移动设备在屏幕上滑动会触发的touch事件<br><br>以下支持webkit<br><br>1.touchstart——当手指触碰屏幕时候发生。不管当前有多少只手指<br><br>2.touchmove——当手指在屏幕上滑动时连续触发。通常我们再滑屏页面，会调用event的preventDefault()可以阻止默认情况的发生：阻止页面滚动<br><br>3.touchend——当手指离开屏幕时触发<br><br>4.touchcancel——系统停止跟踪触摸时候会触发。例如在触摸过程中突然页面alert()一个提示框，此时会触发该事件，这个事件比较少用<br><br><strong>TouchEvent</strong><br><br>1.touches：屏幕上所有手指的信息<br><br>2.targetTouches：手指在目标区域的手指信息<br><br>3.changedTouches：最近一次触发该事件的手指信息<br><br>4.touchend时，touches与targetTouches信息会被删除，changedTouches保存的最后一次的信息，最好用于计算手指信息<br><br><strong>参数信息(changedTouches[0])</strong><br><br>1.clientX、clientY在显示区的坐标<br><br>2.target：当前元素<br><br>参考：<a href="https://developer.mozilla.org/en-US/docs/web/API/TouchEvent" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/web/API/TouchEvent</a><br><br><strong>以下支持winphone 8</strong><br><br>1.MSPointerDown——当手指触碰屏幕时候发生。不管当前有多少只手指<br><br>2.MSPointerMove——当手指在屏幕上滑动时连续触发。通常我们再滑屏页面，会调用css的html{-ms-touch-action: none;}可以阻止默认情况的发生：阻止页面滚动<br><br>3.MSPointerUp——当手指离开屏幕时触发<br></p>
+<h4 id="移动端click屏幕产生200-300-ms的延迟响应"><a href="#移动端click屏幕产生200-300-ms的延迟响应" class="headerlink" title="移动端click屏幕产生200-300 ms的延迟响应"></a>移动端click屏幕产生200-300 ms的延迟响应</h4><p>移动设备上的web网页是有300ms延迟的，玩玩会造成按钮点击延迟甚至是点击失效。<br><br>以下是历史原因，来源一个公司内一个同事的分享：<br><br>2007年苹果发布首款iphone上IOS系统搭载的safari为了将适用于PC端上大屏幕的网页能比较好的展示在手机端上，使用了双击缩放(double tap to zoom)的方案，比如你在手机上用浏览器打开一个PC上的网页，你可能在看到页面内容虽然可以撑满整个屏幕，但是字体、图片都很小看不清，此时可以快速双击屏幕上的某一部分，你就能看清该部分放大后的内容，再次双击后能回到原始状态。<br><br>双击缩放是指用手指在屏幕上快速点击两次，iOS 自带的 Safari 浏览器会将网页缩放至原始比例。<br><br>原因就出在浏览器需要如何判断快速点击上，当用户在屏幕上单击某一个元素时候，例如跳转链接<a href="”#”"></a>，此处浏览器会先捕获该次单击，但浏览器不能决定用户是单纯要点击链接还是要双击该部分区域进行缩放操作，所以，捕获第一次单击后，浏览器会先Hold一段时间t，如果在t时间区间里用户未进行下一次点击，则浏览器会做单击跳转链接的处理，如果t时间里用户进行了第二次单击操作，则浏览器会禁止跳转，转而进行对该部分区域页面的缩放操作。那么这个时间区间t有多少呢？在IOS safari下，大概为300毫秒。这就是延迟的由来。造成的后果用户纯粹单击页面，页面需要过一段时间才响应，给用户慢体验感觉，对于web开发者来说是，页面JS捕获click事件的回调函数处理，需要300ms后才生效，也就间接导致影响其他业务逻辑的处理。<br><br><strong>解决方案：</strong><br><br>1.fastclick可以解决在手机上点击事件的300ms延迟<br><br>2.zepto的touch模块，tap事件也是为了解决在click的延迟问题<br><br><strong>触摸事件的响应顺序</strong><br><br>1.ontouchstart<br><br>2.ontouchmove<br><br>3.ontouchend<br><br>4.onclick<br><br>解决300ms延迟的问题，也可以通过绑定ontouchstart事件，加快对事件的响应<br></p>
+<h4 id="什么是Retina-显示屏，带来了什么问题"><a href="#什么是Retina-显示屏，带来了什么问题" class="headerlink" title="什么是Retina 显示屏，带来了什么问题"></a>什么是Retina 显示屏，带来了什么问题</h4><p>retina：一种具备超高像素密度的液晶屏，同样大小的屏幕上显示的像素点由1个变为多个，如在同样带下的屏幕上，苹果设备的retina显示屏中，像素点1个变为4个<br><br>在高清显示屏中的位图被放大，图片会变得模糊，因此移动端的视觉稿通常会设计为传统PC的2倍<br><br>那么，前端的应对方案是：<br><br>设计稿切出来的图片长宽保证为偶数，并使用backgroud-size把图片缩小为原来的1/2<br><br>//例如图片宽高为：200px*200px，那么写法如下<br></p>
+<pre><code>.css{width:100px;height:100px;background-size:100px 100px;}
+</code></pre><p>其它元素的取值为原来的1/2，例如视觉稿40px的字体，使用样式的写法为20px<br></p>
+<pre><code>.css{font-size:20px}
+</code></pre><p><strong>参考《高清显示屏原理及设计方案》</strong><br><br>ios系统中元素被触摸时产生的半透明灰色遮罩怎么去掉<br><br>ios用户点击一个链接，会出现一个半透明灰色遮罩, 如果想要禁用，可设置-webkit-tap-highlight-color的alpha值为0，也就是属性值的最后一位设置为0就可以去除半透明灰色遮罩<br></p>
+<pre><code>a,button,input,textarea{-webkit-tap-highlight-color: rgba(0,0,0,0;)}
+</code></pre><p>部分android系统中元素被点击时产生的边框怎么去掉<br><br>android用户点击一个链接，会出现一个边框或者半透明灰色遮罩, 不同生产商定义出来额效果不一样，可设置-webkit-tap-highlight-color的alpha值为0去除部分机器自带的效果<br></p>
+<pre><code>a,button,input,textarea{
+-webkit-tap-highlight-color: rgba(0,0,0,0;)
+-webkit-user-modify:read-write-plaintext-only;
+}
+</code></pre><p>-webkit-user-modify有个副作用，就是输入法不再能够输入多个字符<br><br>另外，有些机型去除不了，如小米2<br><br>对于按钮类还有个办法，不使用a或者input标签，直接用div标签<br><br><strong>参考《如何去除android上a标签产生的边框》</strong><br><br><strong>winphone系统a、input标签被点击时产生的半透明灰色背景怎么去掉</strong><br></p>
+<pre><code>&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;
+</code></pre><p><strong>webkit表单元素的默认外观怎么重置</strong><br></p>
+<pre><code>.css{-webkit-appearance:none;}
+</code></pre><p><strong>webkit表单输入框placeholder的颜色值能改变么</strong><br></p>
+<pre><code>input::-webkit-input-placeholder{color:#AAAAAA;}
+input:focus::-webkit-input-placeholder{color:#EEEEEE;}
+</code></pre><p><strong>webkit表单输入框placeholder的文字能换行么</strong><br><br>ios可以，android不行~<br><br>在textarea标签下都可以换行~<br><br><strong>IE10（winphone8）表单元素默认外观如何重置</strong><br><br><strong>禁用 select 默认下拉箭头</strong><br><br>::-ms-expand 适用于表单选择控件下拉箭头的修改，有多个属性值，设置它隐藏 (display:none) 并使用背景图片来修饰可得到我们想要的效果。<br></p>
+<pre><code>select::-ms-expand {
+display: none;
+}
+</code></pre><p><strong>禁用 radio 和 checkbox 默认样式</strong><br><br>::-ms-check 适用于表单复选框或单选按钮默认图标的修改，同样有多个属性值，设置它隐藏 (display:none) 并使用背景图片来修饰可得到我们想要的效果。<br></p>
+<pre><code>input[type=radio]::-ms-check,
+input[type=checkbox]::-ms-check
+{
+display: none;
+}
+</code></pre><h4 id="禁用PC端表单输入框默认清除按钮"><a href="#禁用PC端表单输入框默认清除按钮" class="headerlink" title="禁用PC端表单输入框默认清除按钮"></a>禁用PC端表单输入框默认清除按钮</h4><p>当表单文本输入框输入内容后会显示文本清除按钮，::-ms-clear 适用于该清除按钮的修改，同样设置使它隐藏 (display:none) 并使用背景图片来修饰可得到我们想要的效果。<br></p>
+<pre><code>input[type=text]::-ms-clear,
+input[type=tel]::-ms-clear,
+input[type=number]::-ms-clear
+{
+display: none;
+}
+</code></pre><h4 id="禁止ios-长按时不触发系统的菜单，禁止ios-amp-android长按时下载图片"><a href="#禁止ios-长按时不触发系统的菜单，禁止ios-amp-android长按时下载图片" class="headerlink" title="禁止ios 长按时不触发系统的菜单，禁止ios&amp;android长按时下载图片"></a>禁止ios 长按时不触发系统的菜单，禁止ios&amp;android长按时下载图片</h4><pre><code>.css{-webkit-touch-callout: none}
+</code></pre><h4 id="禁止ios和android用户选中文字"><a href="#禁止ios和android用户选中文字" class="headerlink" title="禁止ios和android用户选中文字"></a>禁止ios和android用户选中文字</h4><pre><code>.css{-webkit-user-select:none}
+</code></pre><p><strong>参考《如何改变表单元素的外观(for Webkit and IE10)</strong><br></p>
+<h3 id="打电话发短信写邮件怎么实现"><a href="#打电话发短信写邮件怎么实现" class="headerlink" title="打电话发短信写邮件怎么实现"></a>打电话发短信写邮件怎么实现</h3><h4 id="打电话"><a href="#打电话" class="headerlink" title="打电话"></a>打电话</h4><pre><code>&lt;a href=&quot;tel:0755-10086&quot;&gt;打电话给:0755-10086&lt;/a&gt;
+</code></pre><h4 id="发短信，winphone系统无效"><a href="#发短信，winphone系统无效" class="headerlink" title="发短信，winphone系统无效"></a>发短信，winphone系统无效</h4><pre><code>&lt;a href=&quot;sms:10086&quot;&gt;发短信给: 10086&lt;/a&gt;
+</code></pre><h4 id="写邮件，可参考《移动web页面给用户发送邮件的方法》"><a href="#写邮件，可参考《移动web页面给用户发送邮件的方法》" class="headerlink" title="写邮件，可参考《移动web页面给用户发送邮件的方法》"></a>写邮件，可参考《移动web页面给用户发送邮件的方法》</h4><pre><code>&lt;a href=&quot;mailto:peun@foxmail.com&quot;&gt;peun@foxmail.com&lt;/a&gt;
+</code></pre><h4 id="模拟按钮hover效果"><a href="#模拟按钮hover效果" class="headerlink" title="模拟按钮hover效果"></a>模拟按钮hover效果</h4><p>移动端触摸按钮的效果，可明示用户有些事情正要发生，是一个比较好体验，但是移动设备中并没有鼠标指针，使用css的hover并不能满足我们的需求，还好国外有个激活css的active效果，代码如下，<br></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; name=&quot;viewport&quot;&gt;
+&lt;meta content=&quot;yes&quot; name=&quot;apple-mobile-web-app-capable&quot;&gt;
+&lt;meta content=&quot;black&quot; name=&quot;apple-mobile-web-app-status-bar-style&quot;&gt;
+&lt;meta content=&quot;telephone=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;meta content=&quot;email=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+a{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.btn-blue{display:block;height:42px;line-height:42px;text-align:center;border-radius:4px;font-size:18px;color:#FFFFFF;background-color: #4185F3;}
+.btn-blue:active{background-color: #357AE8;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;btn-blue&quot;&gt;按钮&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+document.addEventListener(&quot;touchstart&quot;, function(){}, true)
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>兼容性ios5+、部分android 4+、winphone 8<br><br>要做到全兼容的办法，可通过绑定ontouchstart和ontouchend来控制按钮的类名<br></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; name=&quot;viewport&quot;&gt;
+&lt;meta content=&quot;yes&quot; name=&quot;apple-mobile-web-app-capable&quot;&gt;
+&lt;meta content=&quot;black&quot; name=&quot;apple-mobile-web-app-status-bar-style&quot;&gt;
+&lt;meta content=&quot;telephone=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;meta content=&quot;email=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+a{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.btn-blue{display:block;height:42px;line-height:42px;text-align:center;border-radius:4px;font-size:18px;color:#FFFFFF;background-color: #4185F3;}
+.btn-blue-on{background-color: #357AE8;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;btn-blue&quot;&gt;按钮&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+var btnBlue = document.querySelector(&quot;.btn-blue&quot;);
+btnBlue.ontouchstart = function(){
+this.className = &quot;btn-blue btn-blue-on&quot;
+}
+btnBlue.ontouchend = function(){
+this.className = &quot;btn-blue&quot;
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h4 id="屏幕旋转的事件和样式"><a href="#屏幕旋转的事件和样式" class="headerlink" title="屏幕旋转的事件和样式"></a>屏幕旋转的事件和样式</h4><p><strong>事件</strong><br><br><strong>window.orientation，取值：正负90表示横屏模式、0和180表现为竖屏模式；</strong><br></p>
+<pre><code>window.onorientationchange = function(){
+switch(window.orientation){
+case -90:
+case 90:
+alert(&quot;横屏:&quot; + window.orientation);
+case 0:
+case 180:
+alert(&quot;竖屏:&quot; + window.orientation);
+break;
+}
+}
+</code></pre><p><strong>样式</strong><br></p>
+<pre><code>//竖屏时使用的样式
+@media all and (orientation:portrait) {
+.css{}
+}
+
+//横屏时使用的样式
+@media all and (orientation:landscape) {
+.css{}
+}
+</code></pre><p><strong>audio元素和video元素在ios和andriod中无法自动播放</strong><br><br><strong>应对方案：触屏即播</strong><br></p>
+<pre><code>$(&apos;html&apos;).one(&apos;touchstart&apos;,function(){
+audio.play()
+})
+</code></pre><p>可参考《无法自动播放的audio元素》<br></p>
+<h3 id="摇一摇功能"><a href="#摇一摇功能" class="headerlink" title="摇一摇功能"></a>摇一摇功能</h3><p>HTML5 deviceMotion：封装了运动传感器数据的事件，可以获取手机运动状态下的运动加速度等数据。<br><br><strong>手机拍照和上传图片</strong><br></p>
+<pre><code>&lt;input type=”file”&gt;的accept 属性&lt;br&gt;
+&lt;!-- 选择照片 --&gt;
+&lt;input type=file accept=&quot;image/*&quot;&gt;
+&lt;!-- 选择视频 --&gt;
+&lt;input type=file accept=&quot;video/*&quot;&gt;
+</code></pre><h4 id="使用总结："><a href="#使用总结：" class="headerlink" title="使用总结："></a>使用总结：</h4><p>ios 有拍照、录像、选取本地图片功能<br><br>部分android只有选取本地图片功能<br><br>winphone不支持<br><br>input控件默认外观丑陋<br><br>微信浏览器用户调整字体大小后页面矬了，怎么阻止用户调整<br><br><strong>原因</strong><br><br>android侧是复写了layoutinflater 对textview做了统一处理<br><br>ios侧是修改了body.style.webkitTextSizeAdjust值<br><br><strong>解决方案：</strong><br><br>android使用以下代码，该接口只在微信浏览器下有效(感谢jationhuang同学提供)<br></p>
+<pre><code>/**
+* 页面加入这段代码可使Android机器页面不再受到用户字体缩放强制改变大小
+* 但是会有一个1秒左右的延迟，期间可以考虑通过loading展示
+* 仅供参考
+*/
+(function(){
+if (typeof(WeixinJSBridge) == &quot;undefined&quot;) {
+document.addEventListener(&quot;WeixinJSBridgeReady&quot;, function (e) {
+setTimeout(function(){
+WeixinJSBridge.invoke(&apos;setFontSizeCallback&apos;,{&quot;fontSize&quot;:0}, function(res) {
+alert(JSON.stringify(res));
+});
+},0);
+});
+} else {
+setTimeout(function(){
+WeixinJSBridge.invoke(&apos;setFontSizeCallback&apos;,{&quot;fontSize&quot;:0}, function(res) {
+alert(JSON.stringify(res));
+});
+},0);
+}
+})();
+</code></pre><p>ios使用-webkit-text-size-adjust禁止调整字体大小<br></p>
+<pre><code>body{-webkit-text-size-adjust: 100%!important;}
+</code></pre><p><strong>最好的解决方案：</strong><br><br>整个页面用rem或者百分比布局<br><br>消除transition闪屏<br><br>网络都是这么写的，但我并没有测试出来<br></p>
+<pre><code>.css{
+/*设置内嵌的元素在 3D 空间如何呈现：保留 3D*/
+-webkit-transform-style: preserve-3d;
+/*（设置进行转换的元素的背面在面对用户时是否可见：隐藏）*/
+-webkit-backface-visibility: hidden;
+}
+</code></pre><h4 id="开启硬件加速"><a href="#开启硬件加速" class="headerlink" title="开启硬件加速"></a>开启硬件加速</h4><h4 id="解决页面闪白"><a href="#解决页面闪白" class="headerlink" title="解决页面闪白"></a>解决页面闪白</h4><h4 id="保证动画流畅"><a href="#保证动画流畅" class="headerlink" title="保证动画流畅"></a>保证动画流畅</h4><pre><code>.css {
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+</code></pre><p><strong>参考《用CSS开启硬件加速来提高网站性能》</strong><br><br><strong>取消input在ios下，输入的时候英文首字母的默认大写</strong><br></p>
+<pre><code>&lt;input autocapitalize=&quot;off&quot; autocorrect=&quot;off&quot; /&gt;
+</code></pre><p><strong>android 上去掉语音输入按钮</strong><br></p>
+<pre><code>input::-webkit-input-speech-button {display: none}
+</code></pre><h3 id="android-2-3-bug"><a href="#android-2-3-bug" class="headerlink" title="android 2.3 bug"></a>android 2.3 bug</h3><p>1.@-webkit-keyframes 需要以0%开始100%结束，0%的百分号不能去掉<br><br>2.after和before伪类无法使用动画animation<br><br>3.border-radius不支持%单位<br><br>4.translate百分比的写法和scale在一起会导致失效，例如-webkit-transform: translate(-50%,-50%) scale(-0.5, 1)<br></p>
+<h3 id="android-4-x-bug"><a href="#android-4-x-bug" class="headerlink" title="android 4.x bug"></a>android 4.x bug</h3><p>1.三星 Galaxy S4中自带浏览器不支持border-radius缩写<br><br>2.同时设置border-radius和背景色的时候，背景色会溢出到圆角以外部分<br><br>3.部分手机(如三星)，a链接支持鼠标:visited事件，也就是说链接访问后文字变为紫色<br><br>4.android无法同时播放多音频audio<br><br><strong>参考《border-radius 移动之伤》</strong><br></p>
+<h3 id="设计高性能css3动画的几个要素"><a href="#设计高性能css3动画的几个要素" class="headerlink" title="设计高性能css3动画的几个要素"></a>设计高性能css3动画的几个要素</h3><p>1.尽可能地使用合成属性transform和opacity来设计CSS3动画，不使用position的left和top来定位<br><br>2.利用translate3D开启GPU加速<br><br>参考《High Performance Animations》<br></p>
+<h4 id="fixed-bug"><a href="#fixed-bug" class="headerlink" title="fixed bug"></a>fixed bug</h4><p>1.ios下fixed元素容易定位出错，软键盘弹出时，影响fixed元素定位<br>2.android下fixed表现要比iOS更好，软键盘弹出时，不会影响fixed元素定位<br>3.ios4下不支持position:fixed</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>可用isroll.js，暂无完美方案<br><br>参考<br><br>《移动端web页面使用position:fixed问题总结》<br><br>《使用iScroll.js解决ios4下不支持position:fixed的问题》<br><br>如何阻止windows Phone的默认触摸事件<br><br>winphone下默认触摸事件事件使用e.preventDefault是无效的<br><br>目前解决方法是使用样式来禁用<br></p>
+<pre><code>html{-ms-touch-action: none;}/* 禁止winphone默认触摸事件 */
+</code></pre><p><strong>参考</strong><br><br>《Windows phone 8 touch support》<br></p>
+<h4 id="播放视频不全屏"><a href="#播放视频不全屏" class="headerlink" title="播放视频不全屏"></a>播放视频不全屏</h4><pre><code>&lt;!--
+1.ios7+支持自动播放
+2.支持Airplay的设备（如：音箱、Apple TV)播放
+x-webkit-airplay=&quot;true&quot;
+3.播放视频不全屏
+webkit-playsinline=&quot;true&quot;
+--&gt;
+&lt;video x-webkit-airplay=&quot;true&quot; webkit-playsinline=&quot;true&quot; preload=&quot;auto&quot; autoplay src=&quot;http://&quot;&gt;&lt;/video&gt;
+</code></pre><h3 id="常用的移动端框架"><a href="#常用的移动端框架" class="headerlink" title="常用的移动端框架"></a>常用的移动端框架</h3><h4 id="zepto-js"><a href="#zepto-js" class="headerlink" title="zepto.js"></a>zepto.js</h4><p>语法与jquery几乎一样，会jquery基本会zepto~<br><br>最新版本已经更新到1.16<br><br>官网：<a href="http://zeptojs.com/" target="_blank" rel="external">http://zeptojs.com/</a><br><br>中文(非官网)：<a href="http://www.css88.com/doc/zeptojs_api/" target="_blank" rel="external">http://www.css88.com/doc/zeptojs_api/</a><br><br>常使用的扩展模块：<br><br>浏览器检测：<a href="https://github.com/madrobby/zepto/blob/master/src/detect.js" target="_blank" rel="external">https://github.com/madrobby/zepto/blob/master/src/detect.js</a><br><br>tap事件：<a href="https://github.com/madrobby/zepto/blob/master/src/touch.js" target="_blank" rel="external">https://github.com/madrobby/zepto/blob/master/src/touch.js</a><br></p>
+<h4 id="iscroll-js"><a href="#iscroll-js" class="headerlink" title="iscroll.js"></a>iscroll.js</h4><p>解决页面不支持弹性滚动，不支持fixed引起的问题~<br><br>实现下拉刷新，滑屏，缩放等功能~<br><br>最新版本已经更新到5.0<br><br>官网：<a href="http://cubiq.org/iscroll-5" target="_blank" rel="external">http://cubiq.org/iscroll-5</a><br></p>
+<h4 id="underscore-js"><a href="#underscore-js" class="headerlink" title="underscore.js"></a>underscore.js</h4><p>笔者没用过，不过听说好用，推荐给大家~<br><br>该库提供了一整套函数式编程的实用功能，但是没有扩展任何javascript内置对象。<br><br>最新版本已经更新到1.8.2<br><br>官网：<a href="http://underscorejs.org/" target="_blank" rel="external">http://underscorejs.org/</a><br></p>
+<h4 id="滑屏框架"><a href="#滑屏框架" class="headerlink" title="滑屏框架"></a>滑屏框架</h4><p>适合上下滑屏、左右滑屏等滑屏切换页面的效果<br><br>slip.js<br><br>iSlider.js<br><br>fullpage.js<br></p>
+<h3 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h3><p>flex布局目前可使用在移动中，并非所有的语法都全兼容，但以下写法笔者实践过，效果良好~<br></p>
+<pre><code>/* ============================================================
+flex：定义布局为盒模型
+flex-v：盒模型垂直布局
+flex-1：子元素占据剩余的空间
+flex-align-center：子元素垂直居中
+flex-pack-center：子元素水平居中
+flex-pack-justify：子元素两端对齐
+兼容性：ios 4+、android 2.3+、winphone8+
+============================================================ */
+.flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+.flex-v{-webkit-box-orient:vertical;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}
+.flex-1{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;}
+.flex-align-center{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;}
+.flex-pack-center{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}
+.flex-pack-justify{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}
+</code></pre><p>示例：两端对齐<br></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; name=&quot;viewport&quot;&gt;
+&lt;meta content=&quot;yes&quot; name=&quot;apple-mobile-web-app-capable&quot;&gt;
+&lt;meta content=&quot;black&quot; name=&quot;apple-mobile-web-app-status-bar-style&quot;&gt;
+&lt;meta content=&quot;telephone=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;meta content=&quot;email=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+/* ============================================================
+flex：定义布局为盒模型
+flex-v：盒模型垂直布局
+flex-1：子元素占据剩余的空间
+flex-align-center：子元素垂直居中
+flex-pack-center：子元素水平居中
+flex-pack-justify：子元素两端对齐
+兼容性：ios 4+、android 2.3+、winphone8+
+============================================================ */
+.flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+.flex-v{-webkit-box-orient:vertical;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}
+.flex-1{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;}
+.flex-align-center{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;}
+.flex-pack-center{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}
+.flex-pack-justify{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;flex flex-pack-justify&quot;&gt;
+&lt;div&gt;模块一&lt;/div&gt;
+&lt;div&gt;模块二&lt;/div&gt;
+&lt;div&gt;模块三&lt;/div&gt;
+&lt;div&gt;模块四&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>使用注意：flex下的子元素必须为块级元素，非块级元素在android2.3机器下flex失效<br><br>参考：<br><br>flexyboxes<br><br>“老”的Flexbox和“新”的Flexbox<br><br>跨浏览器的Flexbox<br></p>
+<h4 id="FastClick"><a href="#FastClick" class="headerlink" title="FastClick"></a>FastClick</h4><p>消除在移动浏览器上触发click事件与一个物理Tap(敲击)之间的300延迟<br><br>参考《FastClick》<br><br>转载：<a href="http://peunzhang.cnblogs.com/" target="_blank" rel="external">http://peunzhang.cnblogs.com/</a><br><br>原文链接：<a href="http://caibaojian.com/mobile-knowledge.html" target="_blank" rel="external">移动前端知识总结</a><br>转自：前端开发博客 <a href="http://caibaojian.com/mobile-knowledge.html" target="_blank" rel="external">http://caibaojian.com/mobile-knowledge.html</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/04/15/21/">
+        利用Gulp优化部署Web项目👗 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/04/18/22/" data-title="移动前端知识总结🌟" data-url="https://menggeniu.github.io/2016/04/18/22/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.
+                </p>
+                <p>To make each day count.</p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
