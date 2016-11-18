@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>NNNの博客</title>
+  <title>回味js基础:call/bind🍕 | NNNの博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -180,17 +180,16 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-11-17T15:06:27.000Z" itemprop="datePublished">
-          2016-11-17
+      <time datetime="2016-04-11T15:06:27.000Z" itemprop="datePublished">
+          2016-04-11
       </time>
     
 </span>
-                <h1></h1>
+                <h1>回味js基础:call/bind🍕</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<hr>
-<p>title: “回味js基础:call/bind\uD83C\uDF55”<br>date: 2016-04-11 23:06:27<br>tags:<br>—在JavaScript中，<code>call</code>、<code>apply</code>和<code>bind</code>是<code>Function</code>对象自带的三个方法，本文将通过几个场景的应用，来详细理解三个方法。<br></p>
+      		<p>在JavaScript中，<code>call</code>、<code>apply</code>和<code>bind</code>是<code>Function</code>对象自带的三个方法，本文将通过几个场景的应用，来详细理解三个方法。<br></p>
 <h3 id="call"><a href="#call" class="headerlink" title="call()"></a>call()</h3><p><code>call()</code> 方法在使用一个指定的this值和若干个指定的参数值的前提下调用某个函数或方法。</p>
 <p>当调用一个函数时，可以赋值一个不同的 <code>this</code> 对象。<code>this</code> 引用当前对象，即<code>call</code>方法的第一个参数。<br><br>通过 <code>call</code> 方法，你可以在一个对象上借用另一个对象上的方法，比如<code>Object.prototype.toString.call([])</code>，就是一个<code>Array</code>对象借用了<code>Object</code>对象上的方法。<br></p>
 <pre><code>语法 fun.call(thisArg[, arg1[, arg2[, ...]]])
@@ -415,7 +414,7 @@ test(1,2,3,4);
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/11/17/20/" data-title="" data-url="https://menggeniu.github.io/2016/11/17/20/"></div>
+<div class="ds-thread" data-thread-key="2016/04/11/20/" data-title="回味js基础:call/bind🍕" data-url="https://menggeniu.github.io/2016/04/11/20/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"menggeniu"};
 (function() {
