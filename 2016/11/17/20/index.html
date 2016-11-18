@@ -189,7 +189,8 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>layout: ‘回味js基础:call’<br>title: “bind\uD83C\uDF55”<br>date: 2016-04-11 23:06:27<br>tags:<br>—在JavaScript中，<code>call</code>、<code>apply</code>和<code>bind</code>是<code>Function</code>对象自带的三个方法，本文将通过几个场景的应用，来详细理解三个方法。<br></p>
+      		<hr>
+<p>title: “回味js基础:call/bind\uD83C\uDF55”<br>date: 2016-04-11 23:06:27<br>tags:<br>—在JavaScript中，<code>call</code>、<code>apply</code>和<code>bind</code>是<code>Function</code>对象自带的三个方法，本文将通过几个场景的应用，来详细理解三个方法。<br></p>
 <h3 id="call"><a href="#call" class="headerlink" title="call()"></a>call()</h3><p><code>call()</code> 方法在使用一个指定的this值和若干个指定的参数值的前提下调用某个函数或方法。</p>
 <p>当调用一个函数时，可以赋值一个不同的 <code>this</code> 对象。<code>this</code> 引用当前对象，即<code>call</code>方法的第一个参数。<br><br>通过 <code>call</code> 方法，你可以在一个对象上借用另一个对象上的方法，比如<code>Object.prototype.toString.call([])</code>，就是一个<code>Array</code>对象借用了<code>Object</code>对象上的方法。<br></p>
 <pre><code>语法 fun.call(thisArg[, arg1[, arg2[, ...]]])
