@@ -5,10 +5,10 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
@@ -29,7 +29,7 @@
 
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -63,9 +63,9 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="ALL," />
@@ -77,7 +77,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
@@ -100,24 +100,35 @@
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"right","display":"post"},
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-
   <link rel="canonical" href="https://menggeniu.github.io/2016/04/18/22/"/>
+
+
+
+
 
   <title> 移动前端知识总结🌟 | NNNの博客 </title>
 </head>
@@ -140,7 +151,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -209,6 +220,8 @@
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -222,13 +235,26 @@
     
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/04/18/22/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="menggeNIU">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="NNNの博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
+    </span>
+  </span>
 
     
       <header class="post-header">
@@ -247,13 +273,19 @@
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-04-18T21:55:54+08:00" content="2016-04-18">
-              2016-04-18
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-04-18T21:55:54+08:00">
+                2016-04-18
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -268,6 +300,9 @@
           
 
           
+
+          
+
         </div>
       </header>
     
@@ -606,11 +641,12 @@ flex-pack-justify：子元素两端对齐
       
     </div>
 
+
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/ALL/" rel="tag">#ALL</a>
+            <a href="/tags/ALL/" rel="tag"># ALL</a>
           
         </div>
       
@@ -624,6 +660,8 @@ flex-pack-justify：子元素两端对齐
               </a>
             
           </div>
+
+          <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
@@ -686,7 +724,7 @@ flex-pack-justify：子元素两端对齐
         </ul>
       
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -727,19 +765,27 @@ flex-pack-justify：子元素两端对齐
         
         
 
+        
+
+
       </section>
 
       
+      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
+
             
               
             
+
             
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#meta基础知识"><span class="nav-number">1.</span> <span class="nav-text">meta基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#H5页面窗口自动调整到设备宽度，并禁止用户缩放页面"><span class="nav-number">1.1.</span> <span class="nav-text">H5页面窗口自动调整到设备宽度，并禁止用户缩放页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#忽略将页面中的数字识别为电话号码"><span class="nav-number">1.2.</span> <span class="nav-text">忽略将页面中的数字识别为电话号码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#忽略Android平台中对邮箱地址的识别"><span class="nav-number">1.3.</span> <span class="nav-text">忽略Android平台中对邮箱地址的识别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#"><span class="nav-number">1.4.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式"><span class="nav-number">1.5.</span> <span class="nav-text">将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#viewport模板"><span class="nav-number">2.</span> <span class="nav-text">viewport模板</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#viewport模板——通用"><span class="nav-number">2.1.</span> <span class="nav-text">viewport模板——通用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见问题"><span class="nav-number">3.</span> <span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端如何定义字体font-family"><span class="nav-number">3.1.</span> <span class="nav-text">移动端如何定义字体font-family</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端字体单位font-size选择px还是rem"><span class="nav-number">3.2.</span> <span class="nav-text">移动端字体单位font-size选择px还是rem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端touch事件-区分webkit-和-winphone"><span class="nav-number">3.3.</span> <span class="nav-text">移动端touch事件(区分webkit 和 winphone)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#移动端click屏幕产生200-300-ms的延迟响应"><span class="nav-number">3.4.</span> <span class="nav-text">移动端click屏幕产生200-300 ms的延迟响应</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是Retina-显示屏，带来了什么问题"><span class="nav-number">3.5.</span> <span class="nav-text">什么是Retina 显示屏，带来了什么问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#禁用PC端表单输入框默认清除按钮"><span class="nav-number">3.6.</span> <span class="nav-text">禁用PC端表单输入框默认清除按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#禁止ios-长按时不触发系统的菜单，禁止ios-amp-android长按时下载图片"><span class="nav-number">3.7.</span> <span class="nav-text">禁止ios 长按时不触发系统的菜单，禁止ios&android长按时下载图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#禁止ios和android用户选中文字"><span class="nav-number">3.8.</span> <span class="nav-text">禁止ios和android用户选中文字</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打电话发短信写邮件怎么实现"><span class="nav-number">4.</span> <span class="nav-text">打电话发短信写邮件怎么实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#打电话"><span class="nav-number">4.1.</span> <span class="nav-text">打电话</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#发短信，winphone系统无效"><span class="nav-number">4.2.</span> <span class="nav-text">发短信，winphone系统无效</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写邮件，可参考《移动web页面给用户发送邮件的方法》"><span class="nav-number">4.3.</span> <span class="nav-text">写邮件，可参考《移动web页面给用户发送邮件的方法》</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模拟按钮hover效果"><span class="nav-number">4.4.</span> <span class="nav-text">模拟按钮hover效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#屏幕旋转的事件和样式"><span class="nav-number">4.5.</span> <span class="nav-text">屏幕旋转的事件和样式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#摇一摇功能"><span class="nav-number">5.</span> <span class="nav-text">摇一摇功能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用总结："><span class="nav-number">5.1.</span> <span class="nav-text">使用总结：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开启硬件加速"><span class="nav-number">5.2.</span> <span class="nav-text">开启硬件加速</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决页面闪白"><span class="nav-number">5.3.</span> <span class="nav-text">解决页面闪白</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#保证动画流畅"><span class="nav-number">5.4.</span> <span class="nav-text">保证动画流畅</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#android-2-3-bug"><span class="nav-number">6.</span> <span class="nav-text">android 2.3 bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#android-4-x-bug"><span class="nav-number">7.</span> <span class="nav-text">android 4.x bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计高性能css3动画的几个要素"><span class="nav-number">8.</span> <span class="nav-text">设计高性能css3动画的几个要素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fixed-bug"><span class="nav-number">8.1.</span> <span class="nav-text">fixed bug</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案"><span class="nav-number">9.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#播放视频不全屏"><span class="nav-number">9.1.</span> <span class="nav-text">播放视频不全屏</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的移动端框架"><span class="nav-number">10.</span> <span class="nav-text">常用的移动端框架</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#zepto-js"><span class="nav-number">10.1.</span> <span class="nav-text">zepto.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#iscroll-js"><span class="nav-number">10.2.</span> <span class="nav-text">iscroll.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#underscore-js"><span class="nav-number">10.3.</span> <span class="nav-text">underscore.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#滑屏框架"><span class="nav-number">10.4.</span> <span class="nav-text">滑屏框架</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex布局"><span class="nav-number">11.</span> <span class="nav-text">flex布局</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#FastClick"><span class="nav-number">11.1.</span> <span class="nav-text">FastClick</span></a></li></ol></li></ol></div>
             
+
           </div>
         </section>
+      <!--/noindex-->
       
 
     </div>
@@ -762,6 +808,7 @@ flex-pack-justify：子元素两端对齐
   <span class="author" itemprop="copyrightHolder">menggeNIU</span>
 </div>
 
+
 <div class="powered-by">
   Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
@@ -769,9 +816,10 @@ flex-pack-justify：子元素两端对齐
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Muse
   </a>
 </div>
+
 
         
 
@@ -805,53 +853,46 @@ flex-pack-justify：子元素两端对齐
 
 
   
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
-
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
-  
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
@@ -864,6 +905,11 @@ flex-pack-justify：子元素两端对齐
 
 
 
+	
+
+
+
+
   
   
 
@@ -872,6 +918,9 @@ flex-pack-justify：子元素两端对齐
   
 
   
+
+  
+
 
 </body>
 </html>
