@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>ReactNative探索（二）：布局篇🍟 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
+                    
+                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+       <!--  <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul> -->
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-05-02T06:12:17.000Z" itemprop="datePublished">
+          2016-05-02
+      </time>
+    
+    
+    | 
+    <a href='/tags/React-Native/'>React Native</a>
+    
+    
+</span>
+                <h1>ReactNative探索（二）：布局篇🍟</h1>
+                <span id="busuanzi_container_page_pv">
+                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+                </span>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="宽度单位和像素密度"><a href="#宽度单位和像素密度" class="headerlink" title="宽度单位和像素密度"></a>宽度单位和像素密度</h3><p>react的宽度不支持百分比，设置宽度时不需要带单位 {width: 10}， 那么10代表的具体宽度是多少呢？<br><br>不知道是官网文档不全还是我眼瞎，反正是没找到，那做一个实验自己找吧：<br></p>
+<pre><code>var Dimensions = require(&apos;Dimensions&apos;);
+&lt;Text style={styles.welcome}&gt;
+      window.width={Dimensions.get(&apos;window&apos;).width + &apos;\n&apos;} 
+      window.height={Dimensions.get(&apos;window&apos;).height + &apos;\n&apos;} 
+      pxielRatio={PixelRatio.get()}
+&lt;/Text&gt; 
+</code></pre><p>默认用的是iphone6的模拟器结果是：<br></p>
+<pre><code>window.width=375
+window.height=667
+pxielRatio=2
+</code></pre><p>我们知道iphone系列的尺寸如下图：<br><br><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510010.jpg" alt=""><br><br>可以看到iphone 6的宽度为 375pt，对应了上边的375，由此可见react的单位为pt。 那如何获取实际的像素尺寸呢？ 这对图片的高清化很重要，如果我的图片大小为100<em>100 px. 设置宽度为100 </em> 100. 那在iphone上的尺寸就是模糊的。 这个时候需要的图像大小应该是 100 * pixelRatio的大小 。<br><br>react 提供了PixelRatio 的获取方式<a href="https://facebook.github.io/react-native/docs/pixelratio.html" target="_blank" rel="external">https://facebook.github.io/react-native/docs/pixelratio.html</a><br></p>
+<pre><code>var image = getImage({
+   width: 200 * PixelRatio.get(),
+   height: 100 * PixelRatio.get()
+ });
+ &lt;Image source={image} style={{width: 200, height: 100}} /&gt;
+</code></pre><h3 id="flex的布局"><a href="#flex的布局" class="headerlink" title="flex的布局"></a>flex的布局</h3><h4 id="默认宽度"><a href="#默认宽度" class="headerlink" title="默认宽度"></a>默认宽度</h4><p>我们知道一个div如果不设置宽度，默认的会占用100%的宽度， 为了验证100%这个问题， 做三个实验<br></p>
+<p>1.根节点上方一个View， 不设置宽度<br><br>2.固定宽度的元素上设置一个View， 不设置宽度<br><br>3.flex的元素上放一个View宽度， 不设置宽度<br></p>
+<pre><code>&lt;Text style={[styles.text, styles.header]}&gt;
+ 根节点上放一个元素，不设置宽度
+ &lt;/Text&gt;        
+
+ &lt;View style={{height: 20, backgroundColor: '#333333'}} /&gt;
+
+ &lt;Text style={[styles.text, styles.header]}&gt;
+     固定宽度的元素上放一个View，不设置宽度
+ &lt;/Text&gt; 
+
+ &lt;View style={{width: 100}}&gt;
+   &lt;View style={{height: 20, backgroundColor: '#333333'}} /&gt;
+ &lt;/View&gt;
+
+ &lt;Text style={[styles.text, styles.header]}&gt;
+     flex的元素上放一个View，不设置宽度
+ &lt;/Text&gt; 
+
+ &lt;View style={{flexDirection: 'row'}}&gt;
+   &lt;View style={{flex: 1}}&gt;
+     &lt;View style={{height: 20, backgroundColor: '#333333'}} /&gt;
+   &lt;/View&gt;
+   &lt;View style={{flex: 1}}/&gt;
+ &lt;/View&gt;
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510011.png" alt=""><br><br>结果可以看到flex的元素如果不设置宽度， 都会百分之百的占满父容器。<br></p>
+<h4 id="水平垂直居中"><a href="#水平垂直居中" class="headerlink" title="水平垂直居中"></a>水平垂直居中</h4><p>css 里边经常会做的事情是去讲一个文本或者图片水平垂直居中，如果使用过css 的flexbox当然知道使用alignItems 和 justifyContent . 那用react-native也来做一下实验<br></p>
+<pre><code>&lt;Text style={[styles.text, styles.header]}&gt;
+    水平居中
+&lt;/Text&gt;
+
+&lt;View style={{height: 100, backgroundColor: '#333333', alignItems: 'center'}}&gt;
+  &lt;View style={{backgroundColor: '#fefefe', width: 30, height: 30, borderRadius: 15}}/&gt;
+&lt;/View&gt;
+
+ &lt;Text style={[styles.text, styles.header]}&gt;
+    垂直居中
+&lt;/Text&gt;
+&lt;View style={{height: 100, backgroundColor: '#333333', justifyContent: 'center'}}&gt;
+  &lt;View style={{backgroundColor: '#fefefe', width: 30, height: 30, borderRadius: 15}}/&gt;
+&lt;/View&gt;
+
+&lt;Text style={[styles.text, styles.header]}&gt;
+    水平垂直居中
+&lt;/Text&gt;
+&lt;View style={{height: 100, backgroundColor: '#333333', alignItems: 'center', justifyContent: 'center'}}&gt;
+  &lt;View style={{backgroundColor: '#fefefe', width: 30, height: 30, borderRadius: 15}}/&gt;
+&lt;/View&gt;
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510012.png" alt=""><br></p>
+<h4 id="网格布局"><a href="#网格布局" class="headerlink" title="网格布局"></a>网格布局</h4><p>网格布局实验， 网格布局能够满足绝大多数的日常开发需求，所以只要满足网格布局的spec，那么就可以证明react的flex布局能够满足正常开发需求<br></p>
+<h4 id="等分的网格"><a href="#等分的网格" class="headerlink" title="等分的网格"></a>等分的网格</h4><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510013.png" alt=""><br></p>
+<pre><code> &lt;View style={styles.flexContainer}&gt;
+  &lt;View style={styles.cell}&gt;
+    &lt;Text style={styles.welcome}&gt;
+      cell1
+    &lt;/Text&gt;
+  &lt;/View&gt;
+  &lt;View style={styles.cell}&gt;
+    &lt;Text style={styles.welcome}&gt;
+      cell2
+    &lt;/Text&gt;
+  &lt;/View&gt;
+  &lt;View style={styles.cell}&gt;
+    &lt;Text style={styles.welcome}&gt;
+      cell3
+    &lt;/Text&gt;
+  &lt;/View&gt;
+&lt;/View&gt;
+
+styles = {
+    flexContainer: {
+        // 容器需要添加direction才能变成让子元素flex
+        flexDirection: &apos;row&apos;
+    },
+    cell: {
+        flex: 1,
+        height: 50,
+        backgroundColor: &apos;#aaaaaa&apos;
+    },
+    welcome: {
+        fontSize: 20,
+        textAlign: &apos;center&apos;,
+        margin: 10
+    },
+}
+</code></pre><h4 id="左边固定，-右边固定，中间flex的布局"><a href="#左边固定，-右边固定，中间flex的布局" class="headerlink" title="左边固定， 右边固定，中间flex的布局"></a>左边固定， 右边固定，中间flex的布局</h4><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510014.png" alt=""><br></p>
+<pre><code>&lt;View style={styles.flexContainer}&gt;
+  &lt;View style={styles.cellfixed}&gt;
+    &lt;Text style={styles.welcome}&gt;
+      fixed
+    &lt;/Text&gt;
+  &lt;/View&gt;
+  &lt;View style={styles.cell}&gt;
+    &lt;Text style={styles.welcome}&gt;
+      flex
+    &lt;/Text&gt;
+  &lt;/View&gt;
+  &lt;View style={styles.cellfixed}&gt;
+    &lt;Text style={styles.welcome}&gt;
+      fixed
+    &lt;/Text&gt;
+  &lt;/View&gt;
+&lt;/View&gt;
+
+styles = {
+    flexContainer: {
+        // 容器需要添加direction才能变成让子元素flex
+        flexDirection: &apos;row&apos;
+    },
+    cell: {
+        flex: 1,
+        height: 50,
+        backgroundColor: &apos;#aaaaaa&apos;
+    },
+    welcome: {
+        fontSize: 20,
+        textAlign: &apos;center&apos;,
+        margin: 10
+    },
+    cellfixed: {
+        height: 50,
+        width: 80,
+        backgroundColor: &apos;#fefefe&apos;
+    } 
+}
+</code></pre><h4 id="嵌套的网格"><a href="#嵌套的网格" class="headerlink" title="嵌套的网格"></a>嵌套的网格</h4><p>通常网格不是一层的，布局容器都是一层套一层的， 所以必须验证在real world下面的网格布局<br></p>
+<pre><code>&lt;Text style={[styles.text, styles.header]}&gt;
+嵌套的网格
+  &lt;/Text&gt;
+  &lt;View style={{flexDirection: 'row', height: 200, backgroundColor:"#fefefe", padding: 20}}&gt;
+    &lt;View style={{flex: 1, flexDirection:'column', padding: 15, backgroundColor:"#eeeeee"}}&gt;  
+        &lt;View style={{flex: 1, backgroundColor:"#bbaaaa"}}&gt;  
+        &lt;/View&gt;
+        &lt;View style={{flex: 1, backgroundColor:"#aabbaa"}}&gt;
+        &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View style={{flex: 1, padding: 15, flexDirection:'row', backgroundColor:"#eeeeee"}}&gt;
+        &lt;View style={{flex: 1, backgroundColor:"#aaaabb"}}&gt;  
+            &lt;View style={{flex: 1, flexDirection:'row', backgroundColor:"#eeaaaa"}}&gt; 
+               &lt;View style={{flex: 1, backgroundColor:"#eebbaa"}}&gt;  
+              &lt;/View&gt;
+              &lt;View style={{flex: 1, backgroundColor:"#bbccee"}}&gt;
+              &lt;/View&gt; 
+            &lt;/View&gt;
+            &lt;View style={{flex: 1, backgroundColor:"#eebbdd"}}&gt;
+            &lt;/View&gt;
+        &lt;/View&gt;
+        &lt;View style={{flex: 1, backgroundColor:"#aaccaa"}}&gt;
+          &lt;ScrollView style={{flex: 1, backgroundColor:"#bbccdd", padding: 5}}&gt;
+                &lt;View style={{flexDirection: 'row', height: 50, backgroundColor:"#fefefe"}}&gt;
+                  &lt;View style={{flex: 1, flexDirection:'column', backgroundColor:"#eeeeee"}}&gt;  
+                      &lt;View style={{flex: 1, backgroundColor:"#bbaaaa"}}&gt;  
+                      &lt;/View&gt;
+                      &lt;View style={{flex: 1, backgroundColor:"#aabbaa"}}&gt;
+                      &lt;/View&gt;
+                  &lt;/View&gt;
+                  &lt;View style={{flex: 1, flexDirection:'row', backgroundColor:"#eeeeee"}}&gt;
+                      &lt;View style={{flex: 1, backgroundColor:"#aaaabb"}}&gt;  
+                          &lt;View style={{flex: 1, flexDirection:'row', backgroundColor:"#eeaaaa"}}&gt; 
+                             &lt;View style={{flex: 1, backgroundColor:"#eebbaa"}}&gt;  
+                            &lt;/View&gt;
+                            &lt;View style={{flex: 1, backgroundColor:"#bbccee"}}&gt;
+                            &lt;/View&gt; 
+                          &lt;/View&gt;
+                          &lt;View style={{flex: 1, backgroundColor:"#eebbdd"}}&gt;
+                          &lt;/View&gt;
+                      &lt;/View&gt;
+                      &lt;View style={{flex: 1, backgroundColor:"#aaccaa"}}&gt;
+                      &lt;/View&gt;
+                  &lt;/View&gt;
+                &lt;/View&gt;
+                &lt;Text style={[styles.text, styles.header, {color: &apos;#ffffff&apos;, fontSize: 12}]}&gt;
+                  {(function(){
+                    var str = &apos;&apos;;
+                    var n = 100;
+                    while(n--) {
+                      str += &apos;嵌套的网格&apos; + &apos;\n&apos;;
+                    }
+                    return str;
+                  })()}
+                &lt;/Text&gt;
+          &lt;/ScrollView&gt; 
+        &lt;/View&gt;
+    &lt;/View&gt;
+  &lt;/View&gt;
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510015.png" alt=""><br><br>好在没被我玩儿坏，可以看到上图的嵌套关系也是足够的复杂的，（我还加了一个ScrollView，然后再嵌套整个结构）嵌套多层的布局是没有问题的。<br></p>
+<h4 id="图片布局"><a href="#图片布局" class="headerlink" title="图片布局"></a>图片布局</h4><p>首先我们得知道图片有一个stretchMode. 通过Image.resizeMode访问<br><br><strong>找出有哪些mode</strong><br></p>
+<pre><code>var keys = Object.keys(Image.resizeMode).join(&apos;  &apos;);
+</code></pre><p>打印出来的是 contain, cover, stretch 这几种模式， （官方文档不知道为什么不直接给出）<br><br><strong>尝试使用这些mode</strong></p>
+<pre><code>&lt;Text style={styles.welcome}&gt; 100px height &lt;/Text&gt;
+&lt;Image style={{height: 100}} source={{uri: 'http://gtms03.alicdn.com/tps/i3/    TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png'}} /&gt;
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510016.png" alt=""><br><br>100px 高度， 可以看到图片适应100高度和全屏宽度，背景居中适应未拉伸但是被截断也就是cover。<br></p>
+<pre><code>&lt;Text style={styles.welcome}&gt; 100px height with resizeMode contain &lt;/Text&gt;
+  &lt;View style={[{flex: 1, backgroundColor: &apos;#fe0000&apos;}]}&gt;
+      &lt;Image style={{flex: 1, height: 100, resizeMode: Image.resizeMode.contain}} source={{uri: 'http://gtms03.alicdn.com/tps/i3/TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png'}} /&gt;
+  &lt;/View&gt;
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510017.png" alt=""><br><br>contain 模式容器完全容纳图片，图片自适应宽高<br></p>
+<pre><code>&lt;Text style={styles.welcome}&gt; 100px height with resizeMode cover &lt;/Text&gt;
+  &lt;View style={[{flex: 1, backgroundColor: &apos;#fe0000&apos;}]}&gt;
+      &lt;Image style={{flex: 1, height: 100, resizeMode: Image.resizeMode.cover}} source={{uri: 'http://gtms03.alicdn.com/tps/i3/TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png'}} /&gt;
+  &lt;/View&gt;
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510018.png" alt=""><br><br>cover模式同100px高度模式<br></p>
+<pre><code>&lt;Text style={styles.welcome}&gt; 100px height with resizeMode stretch &lt;/Text&gt;
+  &lt;View style={[{flex: 1, backgroundColor: &apos;#fe0000&apos;}]}&gt;
+      &lt;Image style={{flex: 1, height: 100, resizeMode: Image.resizeMode.stretch}} source={{uri: 'http://gtms03.alicdn.com/tps/i3/TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png'}} /&gt;
+  &lt;/View&gt;
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510019.png" alt=""><br><br>stretch模式图片被拉伸适应屏幕<br></p>
+<pre><code>&lt;Text style={styles.welcome}&gt; set height to image container &lt;/Text&gt;
+  &lt;View style={[{flex: 1, backgroundColor: &apos;#fe0000&apos;, height: 100}]}&gt;
+      &lt;Image style={{flex: 1}} source={{uri: 'http://gtms03.alicdn.com/tps/i3/TB1Kcs5GXXXXXbMXVXXutsrNFXX-608-370.png'}} /&gt;
+  &lt;/View&gt;
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510020.png" alt=""><br><br>随便试验了一下， 发现高度设置到父容器，图片flex的时候也会等同于cover模式<br></p>
+<h4 id="绝对定位和相对定位"><a href="#绝对定位和相对定位" class="headerlink" title="绝对定位和相对定位"></a>绝对定位和相对定位</h4><pre><code>&lt;View style={{flex: 1, height: 100, backgroundColor: '#333333'}}&gt;
+&lt;View style={[styles.circle, {position: &apos;absolute&apos;, top: 50, left: 180}]}&gt;
+&lt;/View&gt;
+  &lt;/View&gt;
+  styles = {
+    circle: {
+    backgroundColor: &apos;#fe0000&apos;,
+    borderRadius: 10,
+    width: 20,
+    height: 20
+    }
+  }
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510021.png" alt=""><br><br>和css的标准不同的是， 元素容器不用设置position：’absolute|relative’ .<br></p>
+<pre><code>&lt;View style={{flex: 1, height: 100, backgroundColor: '#333333'}}&gt;
+&lt;View style={[styles.circle, {position: &apos;relative&apos;, top: 50, left: 50, marginLeft: 50}]}&gt;
+&lt;/View&gt;
+&lt;/View&gt;
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510022.png" alt=""><br><br>相对定位的可以看到很容易的配合margin做到了。 （我还担心不能配合margin，所以测试了一下：-：）<br></p>
+<h4 id="padding和margin"><a href="#padding和margin" class="headerlink" title="padding和margin"></a>padding和margin</h4><p>我们知道在css中区分inline元素和block元素，既然react-native实现了一个超级小的css subset。那我们就来实验一下padding和margin在inline和非inline元素上的padding和margin的使用情况。<br><br><strong>padding</strong></p>
+<pre><code>&lt;Text style={[styles.text, styles.header]}&gt;
+在正常的View上设置padding 
+  &lt;/Text&gt;
+
+  &lt;View style={{padding: 30, backgroundColor: '#333333'}}&gt;
+    &lt;Text style={[styles.text, {color: &apos;#fefefe&apos;}]}&gt; Text Element&lt;/Text&gt;
+  &lt;/View&gt;
+
+  &lt;Text style={[styles.text, styles.header]}&gt;
+    在文本元素上设置padding
+  &lt;/Text&gt;
+  &lt;View style={{padding: 0, backgroundColor: '#333333'}}&gt;
+    &lt;Text style={[styles.text, {backgroundColor: &apos;#fe0000&apos;, padding: 30}]}&gt;
+      text 元素上设置paddinga
+    &lt;/Text&gt;
+  &lt;/View&gt;
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510023.png" alt=""><br><br>在View上设置padding很顺利，没有任何问题， 但是如果在inline元素上设置padding， 发现会出现上面的错误， paddingTop和paddingBottom都被挤成marginBottom了。 按理说，不应该对Text做padding处理， 但是确实有这样的问题存在，所以可以将这个问题mark一下。<br><br><strong>margin</strong></p>
+<pre><code>&lt;Text style={[styles.text, styles.header]}&gt;
+在正常的View上设置margin 
+  &lt;/Text&gt;
+
+  &lt;View style={{backgroundColor: '#333333'}}&gt;
+    &lt;View style={{backgroundColor: '#fefefe', width: 30, height: 30, margin: 30}}/&gt;
+  &lt;/View&gt;
+
+  &lt;Text style={[styles.text, styles.header]}&gt;
+    在文本元素上设置margin
+  &lt;/Text&gt;
+  &lt;View style={{backgroundColor: '#333333'}}&gt;
+    &lt;Text style={[styles.text, {backgroundColor: &apos;#fe0000&apos;, margin: 30}]}&gt;
+      text 元素上设置margin
+    &lt;/Text&gt;
+    &lt;Text style={[styles.text, {backgroundColor: &apos;#fe0000&apos;, margin: 30}]}&gt;
+      text 元素上设置margin
+    &lt;/Text&gt;
+  &lt;/View&gt;
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510024.png" alt=""><br><br>我们知道，对于inline元素，设置margin-left和margin-right有效，top和bottom按理是不会生效的， 但是上图的结果可以看到，实际是生效了的。所以现在给我的感觉是Text元素更应该理解为一个不能设置padding的block。<br><br>算了不要猜了， 我们看看官方文档怎么说Text，<a href="https://facebook.github.io/react-native/docs/text.html" target="_blank" rel="external">https://facebook.github.io/react-native/docs/text.html</a><br></p>
+<pre><code> &lt;Text&gt;
+&lt;Text&gt;First part and &lt;/Text&gt;
+&lt;Text&gt;second part&lt;/Text&gt;
+  &lt;/Text&gt;
+  // Text container: all the text flows as if it was one
+  // |First part |
+  // |and second |
+  // |part       |
+
+  &lt;View&gt;
+    &lt;Text&gt;First part and &lt;/Text&gt;
+    &lt;Text&gt;second part&lt;/Text&gt;
+  &lt;/View&gt;
+  // View container: each text is its own block
+  // |First part |
+  // |and        |
+  // |second part|
+</code></pre><p>也就是如果Text元素在Text里边，可以考虑为inline， 如果单独在View里边，那就是Block。<br><br>下面会专门研究一下文本相关的布局<br></p>
+<h4 id="文本元素"><a href="#文本元素" class="headerlink" title="文本元素"></a>文本元素</h4><p>首先我们得考虑对于Text元素我们希望有哪些功能或者想验证哪些功能：<br></p>
+<p>1.文字是否能自动换行？<br><br>2.overflow ellipse？<br><br>3.是否能对部分文字设置样式 ，类似span等标签<br></p>
+<h4 id="先看看文字有哪些支持的style属性"><a href="#先看看文字有哪些支持的style属性" class="headerlink" title="先看看文字有哪些支持的style属性"></a>先看看文字有哪些支持的style属性</h4><pre><code>/*==========TEXT================*/
+  Attributes.style = {
+    color string
+    containerBackgroundColor string
+    fontFamily string
+    fontSize number
+    fontStyle enum(&apos;normal&apos;, &apos;italic&apos;)
+    fontWeight enum(&quot;normal&quot;, &apos;bold&apos;, &apos;100&apos;, &apos;200&apos;, &apos;300&apos;, &apos;400&apos;, &apos;500&apos;, &apos;600&apos;, &apos;700&apos;, &apos;800&apos;, &apos;900&apos;)
+    lineHeight number
+    textAlign enum(&quot;auto&quot;, &apos;left&apos;, &apos;right&apos;, &apos;center&apos;)
+    writingDirection enum(&quot;auto&quot;, &apos;ltr&apos;, &apos;rtl&apos;)
+  }
+</code></pre><h4 id="实验1，-2，-3"><a href="#实验1，-2，-3" class="headerlink" title="实验1， 2， 3"></a>实验1， 2， 3</h4><pre><code>&lt;Text style={[styles.text, styles.header]}&gt;
+      文本元素
+  &lt;/Text&gt;
+
+  &lt;View style={{backgroundColor: '#333333', padding: 10}}&gt;
+    &lt;Text style={styles.baseText} numberOfLines={5}&gt;
+      &lt;Text style={styles.titleText} onPress={this.onPressTitle}&gt;
+        文本元素{&apos;\n&apos;}
+      &lt;/Text&gt;
+      &lt;Text&gt;
+        {&apos;\n&apos;}In this example, the nested title and body text will inherit the fontFamily from styles.baseText, but the title provides its own additional styles. The title and body will stack on top of each other on account of the literal newlines, numberOfLines is Used to truncate the text with an elipsis after computing the text layout, including line wrapping, such that the total number of lines does not exceed this number.
+      &lt;/Text&gt;
+    &lt;/Text&gt;
+  &lt;/View&gt;
+  styles = {
+    baseText: {
+      fontFamily: &apos;Cochin&apos;,
+      color: &apos;white&apos;
+    },
+    titleText: {
+      fontSize: 20,
+      fontWeight: &apos;bold&apos;,
+    }
+  }
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510025.png" alt=""><br><br>从结果来看1，2，3得到验证。 但是不知道各位有没有发现问题， 为什么底部空出了这么多空间， 没有设置高度啊。 我去除numberOfLines={5} 这行代码，效果如下：<br><br><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510026.png" alt=""><br><br>所以实际上， 那段空间是文本撑开的， 但是文本被numberOfLines={5} 截取了，但是剩余的空间还在。 我猜这应该是个bug。<br><br>其实官方文档里边把numberOfLines={5}这句放到的是长文本的Text元素上的，也就是子Text上的。 实际结果是不生效。 这应该又是一个bug。<br><br>Text元素的子Text元素的具体实现是怎样的， 感觉这货会有很多bug， 看官文<br></p>
+<pre><code>&lt;Text style={{fontWeight: 'bold'}}&gt;
+  I am bold
+  &lt;Text style={{color: 'red'}}&gt;
+    and red
+  &lt;/Text&gt;
+ &lt;/Text&gt;
+
+Behind the scenes, this is going to be converted to a flat
+NSAttributedString that contains the following information
+
+&quot;I am bold and red&quot;
+ 0-9: bold
+ 9-17: bold, red
+</code></pre><p>好吧， 那对于numberOfLines={5} 放在子Text元素上的那种bug倒是可以解释了。<br></p>
+<h4 id="Text的样式继承"><a href="#Text的样式继承" class="headerlink" title="Text的样式继承"></a>Text的样式继承</h4><p>实际上React-native里边是没有样式继承这种说法的， 但是对于Text元素里边的Text元素，上面的例子可以看出存在继承。 那既然有继承，问题就来了！<br><br>到底是继承的最外层的Text的值呢，还是继承父亲Text的值呢？<br></p>
+<pre><code>&lt;Text style={[styles.text, styles.header]}&gt;
+  文本样式继承
+  &lt;/Text&gt;
+
+  &lt;View style={{backgroundColor: '#333333', padding: 10}}&gt;
+    &lt;Text style={{color: 'white'}}&gt;
+      &lt;Text style={{color: 'red'}} onPress={this.onPressTitle}&gt;
+         文本元素{&apos;\n&apos;}
+        &lt;Text&gt;我是white还是red呢？{&apos;\n&apos;} &lt;/Text&gt;
+      &lt;/Text&gt;
+      &lt;Text&gt;我应该是white的&lt;/Text&gt;
+    &lt;/Text&gt;
+  &lt;/View&gt;
+</code></pre><p><img src="http://cdn3.infoqstatic.com/statics_s2_20161115-0328/resource/articles/react-native-layout/zh/resources/0510027.png" alt=""><br><br>结果可见是直接继承父亲Text的。<br></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>react 宽度基于pt为单位， 可以通过Dimensions 来获取宽高，PixelRatio 获取密度，如果想使用百分比，可以通过获取屏幕宽度手动计算。</li>
+<li>基于flex的布局 <ul>
+<li>view默认宽度为100%</li>
+<li>水平居中用alignItems, 垂直居中用justifyContent</li>
+<li>基于flex能够实现现有的网格系统需求，且网格能够各种嵌套无bug</li>
+</ul>
+</li>
+<li>图片布局 <ul>
+<li>通过Image.resizeMode来适配图片布局，包括contain, cover, stretch</li>
+<li>默认不设置模式等于cover模式</li>
+<li>contain模式自适应宽高，给出高度值即可</li>
+<li>cover铺满容器，但是会做截取</li>
+<li>stretch铺满容器，拉伸</li>
+</ul>
+</li>
+<li><p>定位 </p>
+<ul>
+<li>定位相对于父元素，父元素不用设置position也行</li>
+<li>padding 设置在Text元素上的时候会存在bug。所有padding变成了marginBottom</li>
+</ul>
+</li>
+<li><p>文本元素 </p>
+<ul>
+<li>文字必须放在Text元素里边</li>
+<li>Text元素可以相互嵌套，且存在样式继承关系</li>
+<li>numberOfLines 需要放在最外层的Text元素上，且虽然截取了文字但是还是会占用空间<br>转自：<a href="http://www.infoq.com/cn/articles/react-native-layout/" target="_blank" rel="external">http://www.infoq.com/cn/articles/react-native-layout/</a></li>
+</ul>
+</li>
+</ul>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/04/28/25/">
+        React Native之设置IOS的图标，名称和启动图🍖 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/05/02/26/" data-title="ReactNative探索（二）：布局篇🍟" data-url="https://menggeniu.github.io/2016/05/02/26/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    <span>&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.</span>   
+                </p>
+                <p>To make each day count.</p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
