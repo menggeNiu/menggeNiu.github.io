@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>Mongoose全面理解🐳 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
+                    
+                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+       <!--  <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul> -->
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-05-28T14:25:20.000Z" itemprop="datePublished">
+          2016-05-28
+      </time>
+    
+</span>
+                <h1>Mongoose全面理解🐳</h1>
+                <span id="busuanzi_container_page_pv">
+                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+                </span>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="一、创建schemas"><a href="#一、创建schemas" class="headerlink" title="一、创建schemas"></a>一、创建schemas</h3><p>创建schemas的方式：<br></p>
+<pre><code>var userSchema = new mongoose.Schema({
+name: String,
+email: String,
+createdOn: Date
+});
+</code></pre><p>schemas中的数据类型有以下几种：<br></p>
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>Date</li>
+<li>Boolean</li>
+<li>Buffer</li>
+<li>ObjectId</li>
+<li>Mixed</li>
+<li>Array</li>
+</ul>
+<p>特别需要说明一下ObjectId类型和Mixed类型以及Array类型，在schemas中声明这几种类型的方式如下：<br></p>
+<pre><code>//ObjectId就类似于唯一键值
+projectSchema.add({
+   owner: mongoose.Schema.Types.ObjectId
+ });
+  //混合类型，顾名思义，就是说里面可以放置任意类型的数据，有两种方式创建该类型数据
+ //方式一：直接赋予一个空的字面量对象
+  vardjSchema= new mongoose.Schema({
+    mixedUp: {}
+  });
+ //方式二：根据Schemas.Types中值来赋予
+ vardjSchema= new mongoose.Schema({
+     mixedUp: Schema.Types.Mixed
+});
+ //Array类型数据有两种创建方式，一种是简单数组创建：
+ var userSchema = new mongoose.Schema({
+    name: String,
+     emailAddresses: [String]
+ });
+ //第二种方式就是复杂类型数据数组，例如我们可以再数组中添加不同类型的schemas:
+ var emailSchema = new mongoose.Schema({
+     email: String,
+     verified: Boolean
+ });
+ var userSchema = new mongoose.Schema({
+     name: String,
+     emailAddresses: [emailSchema]
+ });
+ //注意：如果定义一个空的数据的话，则会创建为一个混合类型数据的数组：
+var emailSchema = new mongoose.Schema({
+    email: String,
+     verified: Boolean
+ });
+ var userSchema = new mongoose.Schema({
+     name: String,
+     emailAddresses: [emailSchema]
+ });
+</code></pre><p>我们可以给schema创建静态方法，这个静态方法将来会用在Model中，创建该静态方法需要在创建完成schema之后，在Model编译之前：<br></p>
+<pre><code>projectSchema.statics.findByUserID = function (userid, callback) {
+  this.find({ createdBy: userid }, &apos;_id projectName&apos;, {sort: &apos;modifiedOn&apos;}, callback);
+ };
+</code></pre><p>在其对应的模型创建完成并编译后，我们就可以像下面这样来调用该静态方法了：<br><br>Model.findByUserID(userid,callback);<br><br>该静态方法会返回一个JSON格式的数据，这在我们使用AJAX技术来加载网页数据的时候会比较方便，就像下面这样：<br></p>
+<pre><code>//路由规则：app.get(&apos;/project/byuser/:userid&apos;, project.byUser);
+exports.byUser = function (req, res) {
+    console.log(&quot;Getting user projects&quot;);
+   if (req.params.userid){
+         Project.findByUserID(req.params.userid,function (err, projects) {
+          if(!err){
+                 console.log(projects);
+                res.json(projects);
+          }else{
+                console.log(err);
+               res.json({&quot;status&quot;:&quot;error&quot;, &quot;error&quot;:&quot;Error finding projects&quot;});
+            }
+        });
+ }else{
+    console.log(&quot;No user id supplied&quot;);
+    res.json({&quot;status&quot;:&quot;error&quot;, &quot;error&quot;:&quot;No user id supplied&quot;});
+ }
+ };
+</code></pre><h3 id="二、创建Model"><a href="#二、创建Model" class="headerlink" title="二、创建Model"></a>二、创建Model</h3><p>创建Model很简单：<br><br>Mongoose.Model(‘User’, userSchema);<br><br>参数一为Model的名字，参数二为生成Model所需要的schema,Model就像是schema所编译而成的一样。<br><br>mongoose连接数据库是有两种方式的：<br></p>
+<pre><code>//方式一：
+ var dbURI = &apos;mongodb://localhost/mydatabase&apos;;
+ mongoose.connect(dbURI);
+ //方式二：
+  var dbURI = &apos;mongodb://localhost/myadmindatabase&apos;;
+ var adminConnection = mongoose.createConnection(dbURI);
+ //如果需要声明端口号：
+var dbURI = &apos;mongodb://localhost:27018/mydatabase&apos;;
+ //如果需要定义用户名和密码：
+ var dbURI = &apos;mongodb://username:password@localhost/mydatabase&apos;;
+ //也可以像下面这样传一个对象类型的参数：
+ var dbURI = &apos;mongodb://localhost/mydatabase&apos;;
+ var dbOptions = {&apos;user&apos;:&apos;db_username&apos;,&apos;pass&apos;:&apos;db_password&apos;};
+mongoose.connect(dbURI, dbOptions);
+</code></pre><p>根据连接数据库的方式，我们可以得到第二种创建Model的方式，就是使用数据库连接的引用名来创建：<br><br>adminConnection.model( ‘User’, userSchema );<br><br>默认情况下mongoose会根据我们传入的Model名字来生成collection名字，在上面的代码中就会生成名为users(全为小写字母)的collection(集合)；<br><br>有两种方法能让我们自定义collection的名字。<br></p>
+<pre><code> //方式一，在创建schema的时候定义collection的名字：
+ var userSchema = new mongoose.Schema({
+     name: String,
+    email: {type: String, unique:true}
+},
+  {
+    collection: &apos;myuserlist&apos;
+ });
+ //方式二，在创建Model的时候定义collection的名字：
+mongoose.model( &apos;User&apos;, userSchema, &apos;myuserlist&apos; );
+</code></pre><p>创建Model实例：<br><br>var user = new User({ name: ‘Simon’ });<br><br>user就是模型User的一个实例，它具有mongoose中模型所具有的一些方法，例如保存实例：<br></p>
+<pre><code>user.save(function (err) {
+    if (err) return handleError(err);
+});
+</code></pre><p>模型也具有一些常用的增删查改的方法：<br></p>
+<pre><code>User.findOne({&apos;name&apos; : &apos;Sally&apos;, function(err,user) {
+     if(!err){
+         console.log(user);
+     }
+ });
+ User.find({}, function(err, users) {
+     if(!err){
+         console.log(users);
+     }
+});
+</code></pre><p>可以使用链式方式使用这些方法，例如：<br></p>
+<pre><code>var newUser = new User({
+    name: &apos;Simon Holmes&apos;,
+    email: &apos;simon@theholmesoffice.com&apos;,
+    lastLogin : Date.now()
+}).save( function( err ){
+    if(!err){
+        console.log(&apos;User saved!&apos;);
+    }
+});
+</code></pre><p>上面的代码创建了一个模型实例，然后进行保存。我们有一个更为简介的方式来完成这项工作，就是使用Model.create()方法：<br></p>
+<pre><code> User.create({
+     name: &apos;Simon Holmes&apos;,
+     email: &apos;simon@theholmesoffice.com&apos;,
+     lastLogin : Date.now()
+ }, function( err, user ){
+     if(!err){
+         console.log(&apos;User saved!&apos;);
+         console.log(&apos;Saved user name: &apos; + user.name);
+         console.log(&apos;_id of saved user: &apos; + user._id);
+    }
+});
+</code></pre><h3 id="三、查找数据和读取数据的方法"><a href="#三、查找数据和读取数据的方法" class="headerlink" title="三、查找数据和读取数据的方法"></a>三、查找数据和读取数据的方法</h3><h4 id="1-使用QueryBuilder接口来查找数据"><a href="#1-使用QueryBuilder接口来查找数据" class="headerlink" title="1.使用QueryBuilder接口来查找数据"></a>1.使用QueryBuilder接口来查找数据</h4><p>先看看下面的代码：<br></p>
+<pre><code>var myQuery = User.find({&apos;name&apos; : &apos;Simon Holmes&apos;});
+myQuery.where(&apos;age&apos;).gt(18);
+myQuery.sort(&apos;-lastLogin&apos;);
+myQuery.select(&apos;_id name email&apos;);
+myQuery.exec(function (err, users){
+   if (!err){
+        console.log(users); // output array of users found
+    }
+});
+</code></pre><p>代码中，我们查找名字为”Simon Holmes”，并且年龄大于18岁，查找结果根据lastLogin降序排列，只获取其中的_id, name, email三个字段的值，上面的代码只有在调用exec方法后才真正执行数据库的查询。<br><br>当然我们可以使用链式的方式来改写上面的代码，代码会更加简洁：<br></p>
+<pre><code>User.find({&apos;name&apos; : &apos;Simon Holmes&apos;})
+.where(&apos;age&apos;).gt(18)
+.sort(&apos;-lastLogin&apos;)
+.select(&apos;_id name email&apos;)
+.exec(function (err, users){
+    if (!err){
+        console.log(users); // output array of users found
+    }
+});
+</code></pre><p>上面代码中的第一行创建了一个queryBuilder.通过使用这个queryBuilder，我们就可以执行一些比较复杂的查找工作，在创建完成这个queryBuilder之后，查询操作并没有马上执行，而是待到执行exec方法时才会去执行数据库的查找。<br><br>当然也有另外一种方式能够直接查找数据库的，就是直接在查找方法中添加回调函数，使用方式为：<br><br>Model.find(conditions, [fields], [options], [callback])<br><br>下面举一个简单例子：<br></p>
+<pre><code>User.find({&apos;name&apos;, &apos;simon holmes&apos;}, function(err, user) {});
+</code></pre><p>另一个稍微复杂的例子：<br></p>
+<pre><code>User.find({&apos;name&apos;, &apos;simon holmes&apos;}, &apos;name email&apos;,function(err, user) {
+    //console.log(&apos;some thing&apos;);
+});
+</code></pre><p>另一个更加复杂的例子，包含查询结果的排序：<br></p>
+<pre><code>User.find({&apos;name&apos; : &apos;Simon Holmes&apos;},
+    null, // 如果使用null，则会返回所有的字段值
+    {sort : {lastLogin : -1}}, // 降序排序
+    function (err, users){
+        if (!err){console.log(users);}
+    });
+</code></pre><p>列举几个比较实用的查找方法：<br></p>
+<pre><code>Model.find(query);
+Model.findOne(query);//返回查找到的所有实例的第一个
+Model.findById(ObjectID);//根据ObjectId查找到唯一实例
+</code></pre><p>例如：<br></p>
+<pre><code>User.findOne({&apos;email&apos; : req.body.Email},
+&apos;_id name email&apos;,
+function(err, user) {
+    //todo     
+    });
+</code></pre><h4 id="2-更新数据"><a href="#2-更新数据" class="headerlink" title="2.更新数据"></a>2.更新数据</h4><p>有三种方式来更新数据：<br><br>(1)update(conditions,update,options,callback);<br><br>该方法会匹配到所查找的内容进行更新，不会返回数据；<br><br>(2)findOneAndUpdate(conditions,update,options,callback);<br><br>该方法会根据查找去更新数据库，另外也会返回查找到的并未改变的数据；<br><br>(3)findByIdAndUpdate(conditions,update,options,callback);<br><br>该方法跟上面的findOneAndUpdate方法功能一样，不过他是根据ID来查找文档并更新的。<br><br>三个方法都包含四个参数，一下稍微说明一下几个参数的意思：<br></p>
+<ul>
+<li>conditions:查询条件</li>
+<li>update:更新的数据对象，是一个包含键值对的对象</li>
+<li>options:是一个声明操作类型的选项，这个参数在下面再详细介绍</li>
+<li>callback:回调函数</li>
+</ul>
+<p>对于options参数，在update方法中和findOneAndUpdate、findByIdAndUpdate两个方法中的可选设置是不同的；<br></p>
+<pre><code>//在update方法中，options的可选设置为：
+ {
+ safe:true|false,  //声明是否返回错误信息，默认true
+ upsert:false|true, //声明如果查询不到需要更新的数据项，是否需要新插入一条记录，默认false
+ multi:false|true,  //声明是否可以同时更新多条记录，默认false
+ strict:true|false  //声明更新的数据中是否可以包含在schema定义之外的字段数据，默认true
+ }
+ //对于findOneAndUpdate、findByIdAndUpdate这两个方法，他们的options可选设置项为：
+ {
+new:true|false, //声明返回的数据时更新后的该是更新前的，如果为true则返回更新后的，默认true
+upsert:false|trure, 
+sort:javascriptObject, //如果查询返回多个文档记录，则可以进行排序，在这里是根据传入的javascript object对象进行排序
+select:String //这里声明要返回的字段，值是一个字符串
+}
+</code></pre><p>下面举个例子：<br></p>
+<pre><code>User.update({_id:user._id},{$set: {lastLogin: Date.now()}},function(){});
+</code></pre><h4 id="3-数据删除"><a href="#3-数据删除" class="headerlink" title="3.数据删除"></a>3.数据删除</h4><p>跟更新数据一样，也有三种方法给我们删除数据：<br></p>
+<ul>
+<li>remove();</li>
+<li>findOneAndRemove();</li>
+<li>findByIdAndRemove();  </li>
+</ul>
+<p>remove方法有两种使用方式，一种是用在模型上，另一种是用在模型实例上，例如：<br></p>
+<pre><code> User.remove({ name : /Simon/ } , function (err){
+     if (!err){
+         // 删除名字中包含simon的所有用户
+     }
+ });
+
+ User.findOne({ email : &apos;simon@theholmesoffice.com&apos;},function (err,user){
+     if (!err){
+         user.remove( function(err){
+            // 删除匹配到该邮箱的第一个用户
+        });
+    }
+});
+</code></pre><p>接下来看一下findOneAndRemove方法：<br></p>
+<pre><code>User.findOneAndRemove({name : /Simon/},{sort : &apos;lastLogin&apos;, select : &apos;name email&apos;},function (err, user){
+    if (!err) {
+        console.log(user.name + &quot; removed&quot;);
+        // Simon Holmes removed
+    };
+});
+</code></pre><p>另外一个findByIdAndRemove方法则是如出一辙的。<br></p>
+<pre><code>User.findByIdAndRemove(req.body._id,function (err, user) {
+    if(err){
+        console.log(err);
+        return;
+    }
+    console.log(&quot;User deleted:&quot;, user);
+});
+</code></pre><h3 id="四、数据验证"><a href="#四、数据验证" class="headerlink" title="四、数据验证"></a>四、数据验证</h3><h4 id="1-mongoose内置数据验证"><a href="#1-mongoose内置数据验证" class="headerlink" title="1.mongoose内置数据验证"></a>1.mongoose内置数据验证</h4><p>在mongoose中，数据验证这一层是放在schema中的，mongoose已经帮我们做了很多内置的数据验证，有一些验证是针对某些数据类型的，也有一些是针对所有数据类型的。<br><br>能够作用在所有数据类型上的验证有require，意思就是该字段是否是必须的，例如<br></p>
+<pre><code>email: { type: String, unique: true, required: true }
+</code></pre><p>上面的代码就定义了一个email是必须的schema<br><br>下面再分别介绍一下mongoose内置的一些数据验证类型。<br><br>数字类型schemasType,对于Number类型的数据，具有min,max提供用来界定最大最小值：<br></p>
+<pre><code>var teenSchema = new Schema({
+    age : {type: Number, min: 13, max:19}
+});
+</code></pre><p>字符串类型SchemasType,对于该类型数据，mongoose提供了两种验证器：<br></p>
+<ul>
+<li>match:可使用正则表达式来匹配字符串是否符合该正则表达式的规则</li>
+<li>enum:枚举出字符串可使用的一些值</li>
+</ul>
+<p>分别举例如下：</p>
+<pre><code>var weekdaySchema = new Schema({
+    day : {type: String, match: /^(mon|tues|wednes|thurs|fri)day$/i}
+});
+
+var weekdays = [&apos;monday&apos;, &apos;tuesday&apos;, &apos;wednesday&apos;, &apos;thursday&apos;,&apos;friday&apos;];
+var weekdaySchema = new Schema({
+    day : {type: String, enum: weekdays}
+});
+</code></pre><p>在我们进行一些数据库的时候，如果有错误，可能会返回一些错误信息，这些信息封装在一个对象中，该对象的数据格式大致如下：<br></p>
+<pre><code>{ 
+     message: &apos;Validation failed&apos;,
+     name: &apos;ValidationError&apos;,
+     errors:{ 
+        email:{
+             message: &apos;Validator &quot;required&quot; failed for path email&apos;,
+             name: &apos;ValidatorError&apos;,
+             path: &apos;email&apos;,
+             type: &apos;required&apos; 
+        },
+        name:{ 
+            message: &apos;Validator &quot;required&quot; failed for path name&apos;,
+            name: &apos;ValidatorError&apos;,
+            path: &apos;name&apos;,
+            type: &apos;required&apos; 
+        } 
+    } 
+}
+</code></pre><p>知道该错误信息的具体格式之后，我们可以从中得出我们想要的信息并反馈到控制台。<br></p>
+<pre><code>if(err){
+    Object.keys(err.errors).forEach(function(key) {
+        var message = err.errors[key].message;
+        console.log(&apos;Validation error for &quot;%s&quot;: %s&apos;, key, message);
+    });
+}
+</code></pre><h4 id="2-自定义数据验证"><a href="#2-自定义数据验证" class="headerlink" title="2.自定义数据验证"></a>2.自定义数据验证</h4><p>最简单的自定义数据验证方式就是定义一个数据验证的函数，并将它传递给schema;<br></p>
+<pre><code>var lengthValidator = function(val) {
+    if (val &amp;&amp; val.length &gt;= 5){
+        return true;
+    }
+    return false;
+};
+//usage:
+name: {type: String, required: true, validate: lengthValidator }
+</code></pre><p>可以看到，我们只需要在schema中添加validate键值对即可，validate对应的值便是我们自定义的验证方法；<br><br>但是该形式的数据验证无法给我们提供完整的错误信息，比如errors信息中返回的type值就会成为undefined;<br><br>在此基础上如果希望错误信息中能返回一个错误描述，那我们可以稍微进行一点修改：<br></p>
+<pre><code>//code 1
+validate: { validator: lengthValidator, msg: &apos;Too short&apos; }
+
+//code 2
+var weekdaySchema = new Schema({
+    day : {type: String, validate: {validator:/^(mon|tues|wednes|thurs|fri)day$/i, msg: &apos;Not a day&apos; }
+});
+</code></pre><p>将validate的值修改为一个对象，并且该对象包含验证器和错误描述。<br><br>我们也可以使用另一种方式在写这些验证器，就是将验证器卸载schema外部，例如：<br></p>
+<pre><code>var validateLength = [lengthValidator, &apos;Too short&apos; ];
+var validateDay = [/^(mon|tues|wednes|thurs|fri)day$/i, &apos;Not a day&apos; ];
+//usage:
+name: {type: String, required: true, validate: validateLength }
+day : {type: String, validate: validateDay }
+</code></pre><p>睛放大，一看再看，确实没错，在validate中我们传入的是一个数组了，而不是原来的对象了。<br><br>其实就validateLength这个东东来说，他就是一个简写来的，你也可以改成下面这样：<br></p>
+<pre><code>var validateLength = [
+    {validator: lengthValidator, msg: &apos;Too short&apos;}
+];
+</code></pre><p>恩，到这里，应该能明白了，将对象改为数组之后，我们便可以传递多个验证器给我们的schema了，的确如此。<br></p>
+<pre><code>var validateUsername = [
+    {validator: lengthValidator, msg: &apos;Too short&apos;} ,
+    {validator: /^[a-z]+$/i, msg: &apos;Letters only&apos;}
+];
+</code></pre><p>我们还有另外一种方法给我们的schema提供验证器：<br></p>
+<pre><code>userSchema.path(&apos;name&apos;).validate(lengthValidator, &apos;Too short&apos;);
+userSchema.path(&apos;name&apos;).validate(/^[a-z]+$/i, &apos;Letters only&apos;);  
+</code></pre><p>转自：<a href="http://www.cnblogs.com/jayruan/p/5123754.html" target="_blank" rel="external">http://www.cnblogs.com/jayruan/p/5123754.html</a>  </p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/05/25/33/">
+        express 框架之session🐾 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/05/28/34/" data-title="Mongoose全面理解🐳" data-url="https://menggeniu.github.io/2016/05/28/34/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    <span>&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.</span>   
+                </p>
+                <p>To make each day count.</p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
