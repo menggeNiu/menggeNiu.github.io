@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>JS中各种size总结 | NNNの博客</title>
+  <title>Tag: React Native | NNNの博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="post-template">
+<body class="home-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -174,101 +174,69 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      
-<section id="intro">
-    <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2016-01-20T03:08:40.000Z" itemprop="datePublished">
-          2016-01-20
-      </time>
-    
-    
-    | 
-    <a href='/tags/JS/'>JS</a>
-    
-    
-</span>
-                <h1>JS中各种size总结</h1>
-                <span id="busuanzi_container_page_pv">
-                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-                </span>
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>世上所有的相遇都是久别重逢。</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p></p>
+                        
+
+                    </div>
+                </div>
             </div>
+            <!-- // .col-md-12 -->
         </div>
-        <div class="col-md-8 col-md-offset-2">
-      		<p>最近在做项目中，涉及到获取浏览器和元素的高宽以及相关size。用的时候有些会有混淆，所以今天就来总结一下~</p>
-<hr>
-<h2 id="一-window对象"><a href="#一-window对象" class="headerlink" title="一.    window对象"></a>一.    window对象</h2><p>window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth 浏览器视口宽度（不包括工具栏和滚动条）</p>
-<p>window.inneHeight || document.documentElement.clientHeight || document.body.clientHeight 浏览器视口高度（不包括工具栏和滚动条）</p>
-<p>window.outerWidth  浏览器窗口的宽度(包含地址栏工具栏)(IE没有提供取得当前浏览器窗口尺寸的属性)</p>
-<p>window.outerHeight 浏览器窗口的高度 (包含地址栏工具栏)(IE没有提供取得当前浏览器窗口尺寸的属性)</p>
-<p>screen.width 显示屏幕的宽度</p>
-<p>screen.height 显示屏幕的高度</p>
-<p>screen.availHeight 返回显示屏幕的高度 (除 Windows 任务栏之外)</p>
-<p>screen.availWidth 返回显示屏幕的宽度 (除 Windows 任务栏之外)</p>
-<p>[转]<br>页可见区域宽： document.body.clientWidth;</p>
-<p>网页可见区域高： document.body.clientHeight;</p>
-<p>网页可见区域宽： document.body.offsetWidth   （包含边线的宽）;</p>
-<p>网页可见区域高： document.body.offsetHeight （包含边线的宽）;</p>
-<p>网页正文全文宽： document.body.scrollWidth;</p>
-<p>网页正文全文高： document.body.scrollHeight;</p>
-<p>网页被卷去的高： document.body.scrollTop;</p>
-<p>网页被卷去的左： document.body.scrollLeft;</p>
-<p>网页正文项目组上： window.screenTop;</p>
-<p>网页正文项目组左： window.screenLeft;</p>
-<p>屏幕辨别率的高： window.screen.height;</p>
-<p>屏幕辨别率的宽： window.screen.width;</p>
-<p>屏幕可用工作区高度： window.screen.availHeight;</p><p></p>
-<hr>
-<h2 id="二-元素"><a href="#二-元素" class="headerlink" title="二.  元素"></a>二.  元素</h2><p><img src="http://a3.qpic.cn/psb?/V12O5OuB1fjn3R/L3znwnldi4Bjj*5zpOqyLFePGlGTPeAZABCkU8MSZ1M!/b/dOMAAAAAAAAA&amp;bo=YQJaAgAAAAABBxs!&amp;rf=viewer_4" alt=""><br>在网上找到这个图。</p>
-<p>event.clientX 相对文档的水平座标</p>
-<p>event.clientY 相对文档的垂直座标</p>
-<p>event.offsetX 相对容器的水平坐标</p>
-<p>event.offsetY 相对容器的垂直坐标</p>
-<p>element.offsetWidth,element.offsetHeight: box 的总大小。包括 border, padding, content。不包括 margin</p>
-<p>element.clientWidth,element.clientHeight: box 中内容区域的大小。包括 padding, content不包括 margin, border</p>
-<p>scrollTop：已滚动过去的高度</p>
-<p>scrollHeight：可滚动内容的总高度</p>
-<p>offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置</p>
-<p>offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置</p>
-<hr>
-<p>错误之处，还请大家多多指教~~</p>
-
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-        </div>
-        <nav class="pagination" role="pagination">
-    
-    <a class="pull-left" href="/2016/02/05/5/" style="float: left;">
-        ← 加载旋转
-    </a>
-    
-    
-    <a class="pull-right" href="/2016/01/18/3/">
-        总结第二弹-光标形状 →
-    </a>
-    
-</nav>
-
-        <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/01/20/4/" data-title="JS中各种size总结" data-url="https://menggeniu.github.io/2016/01/20/4/"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"menggeniu"};
-(function() {
-	var ds = document.createElement('script');
-	ds.type = 'text/javascript';ds.async = true;
-	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	ds.charset = 'UTF-8';
-	(document.getElementsByTagName('head')[0] 
-	 || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>
-</div>
+        <div class="herofade beige-dk"></div>
     </div>
 </section>
 
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
 
+<!-- ============================ END Hero Image =========================== -->
+
+
+
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row boxes">
+                    
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2016/04/25/24/">简单教程🌼</a></h4>
+                            
+                            <p><time datetime="2016-04-25T14:11:01.000Z"><a href="/2016/04/25/24/">2016-04-25</a></time></p>
+                        </div>
+                    
+                </div>
+            </div>    
+        </div>
+    </div>
+</section> 
+
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p>立志成为合格的程序媛，立志走在食物链的顶端。</p>
+        </div>
+    </div>
+</section>
       
 <!-- ============================ Footer =========================== -->
 

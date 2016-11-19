@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>JS中各种size总结 | NNNの博客</title>
+  <title>requestAnimationFrame，Web中写动画的另一种选择 | NNNの博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -180,8 +180,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-01-20T03:08:40.000Z" itemprop="datePublished">
-          2016-01-20
+      <time datetime="2016-04-21T04:45:51.000Z" itemprop="datePublished">
+          2016-04-21
       </time>
     
     
@@ -190,69 +190,133 @@
     
     
 </span>
-                <h1>JS中各种size总结</h1>
+                <h1>requestAnimationFrame，Web中写动画的另一种选择</h1>
                 <span id="busuanzi_container_page_pv">
                   本文总阅读量<span id="busuanzi_value_page_pv"></span>次
                 </span>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>最近在做项目中，涉及到获取浏览器和元素的高宽以及相关size。用的时候有些会有混淆，所以今天就来总结一下~</p>
-<hr>
-<h2 id="一-window对象"><a href="#一-window对象" class="headerlink" title="一.    window对象"></a>一.    window对象</h2><p>window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth 浏览器视口宽度（不包括工具栏和滚动条）</p>
-<p>window.inneHeight || document.documentElement.clientHeight || document.body.clientHeight 浏览器视口高度（不包括工具栏和滚动条）</p>
-<p>window.outerWidth  浏览器窗口的宽度(包含地址栏工具栏)(IE没有提供取得当前浏览器窗口尺寸的属性)</p>
-<p>window.outerHeight 浏览器窗口的高度 (包含地址栏工具栏)(IE没有提供取得当前浏览器窗口尺寸的属性)</p>
-<p>screen.width 显示屏幕的宽度</p>
-<p>screen.height 显示屏幕的高度</p>
-<p>screen.availHeight 返回显示屏幕的高度 (除 Windows 任务栏之外)</p>
-<p>screen.availWidth 返回显示屏幕的宽度 (除 Windows 任务栏之外)</p>
-<p>[转]<br>页可见区域宽： document.body.clientWidth;</p>
-<p>网页可见区域高： document.body.clientHeight;</p>
-<p>网页可见区域宽： document.body.offsetWidth   （包含边线的宽）;</p>
-<p>网页可见区域高： document.body.offsetHeight （包含边线的宽）;</p>
-<p>网页正文全文宽： document.body.scrollWidth;</p>
-<p>网页正文全文高： document.body.scrollHeight;</p>
-<p>网页被卷去的高： document.body.scrollTop;</p>
-<p>网页被卷去的左： document.body.scrollLeft;</p>
-<p>网页正文项目组上： window.screenTop;</p>
-<p>网页正文项目组左： window.screenLeft;</p>
-<p>屏幕辨别率的高： window.screen.height;</p>
-<p>屏幕辨别率的宽： window.screen.width;</p>
-<p>屏幕可用工作区高度： window.screen.availHeight;</p><p></p>
-<hr>
-<h2 id="二-元素"><a href="#二-元素" class="headerlink" title="二.  元素"></a>二.  元素</h2><p><img src="http://a3.qpic.cn/psb?/V12O5OuB1fjn3R/L3znwnldi4Bjj*5zpOqyLFePGlGTPeAZABCkU8MSZ1M!/b/dOMAAAAAAAAA&amp;bo=YQJaAgAAAAABBxs!&amp;rf=viewer_4" alt=""><br>在网上找到这个图。</p>
-<p>event.clientX 相对文档的水平座标</p>
-<p>event.clientY 相对文档的垂直座标</p>
-<p>event.offsetX 相对容器的水平坐标</p>
-<p>event.offsetY 相对容器的垂直坐标</p>
-<p>element.offsetWidth,element.offsetHeight: box 的总大小。包括 border, padding, content。不包括 margin</p>
-<p>element.clientWidth,element.clientHeight: box 中内容区域的大小。包括 padding, content不包括 margin, border</p>
-<p>scrollTop：已滚动过去的高度</p>
-<p>scrollHeight：可滚动内容的总高度</p>
-<p>offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置</p>
-<p>offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置</p>
-<hr>
-<p>错误之处，还请大家多多指教~~</p>
+      		<p>HTML5/CSS3时代，我们要在web里做动画选择其实已经很多了:<br><br>你可以用CSS3的animattion+keyframes;<br></p>
+<p>你也可以用css3的transition;<br></p>
+<p>你还可以用通过在canvas上作图来实现动画，也可以借助jQuery动画相关的API方便地实现;<br></p>
+<p>当然最原始的你还可以使用window.setTimout()或者window.setInterval()通过不断更新元素的状态位置等来实现动画，前提是画面的更新频率要达到每秒60次才能让肉眼看到流畅的动画效果。<br></p>
+<p>现在又多了一种实现动画的方案，那就是还在草案当中的window.requestAnimationFrame()方法。<br></p>
+<h2 id="初识requestAnimationFrame"><a href="#初识requestAnimationFrame" class="headerlink" title="初识requestAnimationFrame"></a>初识requestAnimationFrame</h2><hr>
+<p>来看<a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame" target="_blank" rel="external">MDN</a>上对其给出的诠释：<br></p>
+<pre><code>The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. The method takes as an argument a callback to be invoked before the repaint. 
+
+window.requestAnimationFrame() 将告知浏览器你马上要开始动画效果了，后者需要在下次动画前调用相应方法来更新画面。这个方法就是传递给window.requestAnimationFrame()的回调函数。
+</code></pre><p>也可这个方法原理其实也就跟setTimeout/setInterval差不多，通过递归调用同一方法来不断更新画面以达到动起来的效果，但它优于setTimeout/setInterval的地方在于它是由浏览器专门为动画提供的API，在运行时浏览器会自动优化方法的调用，并且如果页面不是激活状态下的话，动画会自动暂停，有效节省了CPU开销。<br></p>
+<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p>可以直接调用，也可以通过window来调用，接收一个函数作为回调，返回一个ID值，通过把这个ID值传给window.cancelAnimationFrame()可以取消该次动画。<br></p>
+<pre><code>requestAnimationFrame(callback)//callback为回调函数
+</code></pre><h3 id="一个简单的例子"><a href="#一个简单的例子" class="headerlink" title="一个简单的例子"></a>一个简单的例子</h3><p>模拟一个进度条动画，初始div宽度为1px,在step函数中将进度加1然后再更新到div宽度上，在进度达到100之前，一直重复这一过程。<br></p>
+<pre><code>&lt;div id=&quot;test&quot; style=&quot;width:1px;height:17px;background:#0f0;&quot;&gt;0%&lt;/div&gt;
+&lt;input type=&quot;button&quot; value=&quot;Run&quot; id=&quot;run&quot;/&gt;
+
+window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+var start = null;
+var ele = document.getElementById(&quot;test&quot;);
+var progress = 0;
+
+function step(timestamp) {
+    progress += 1;
+    ele.style.width = progress + &quot;%&quot;;
+    ele.innerHTML=progress + &quot;%&quot;;
+    if (progress &lt; 100) {
+        requestAnimationFrame(step);
+    }
+}
+requestAnimationFrame(step);
+document.getElementById(&quot;run&quot;).addEventListener(&quot;click&quot;, function() {
+    ele.style.width = &quot;1px&quot;;
+    progress = 0;
+    requestAnimationFrame(step);
+}, false);
+</code></pre><h2 id="浏览器支持情况"><a href="#浏览器支持情况" class="headerlink" title="浏览器支持情况"></a>浏览器支持情况</h2><p>既然还是草案状态下引入的一个功能，在使用全我们就需要关心一下各浏览器对它的支持情况了。就目前来说，主流现代浏览器都对它提供了支持，请看下图：<br></p>
+<table>
+<thead>
+<tr>
+<th><img src="http://images.cnitblog.com/blog/431064/201402/131716057436728.png" alt=""></th>
+<th><img src="http://images.cnitblog.com/blog/431064/201402/131716525507291.png" alt=""></th>
+<th><img src="http://images.cnitblog.com/blog/431064/201402/131717024884229.png" alt=""></th>
+<th><img src="http://images.cnitblog.com/blog/431064/201402/131717310762164.png" alt=""></th>
+<th><img src="http://images.cnitblog.com/blog/431064/201402/131717469633418.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>31+</td>
+<td>26+</td>
+<td>10+</td>
+<td>19+</td>
+<td>6+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>更为具体的浏览器兼容性可以在<a href="http://caniuse.com/" target="_blank" rel="external">这里看到</a>。<br></p>
+<h3 id="Polyfill"><a href="#Polyfill" class="headerlink" title="Polyfill"></a>Polyfill</h3><hr>
+<p><a href="https://remysharp.com/2010/10/08/what-is-a-polyfill" target="_blank" rel="external">Polyfill</a>就是垫片，按发明这个词的人的原话来说，它就是一段这样的代码，让浏览器原生地支持我们期望使用的一些API。<br><br>就比如这里的requestAnimationFrame，在看到了上面的浏览器支持情况后，你就知道了比上面列出的浏览器版本老的就不支持该方法，但为了让代码能够有更好的浏览器兼容性在老机器上也能运行不报错，我们可以写一些代码让浏览器在不支持requestAnimationFrame的情况下使用window.setTimeout()，这是一种回退（fallback）到过去的方法。<br><br>这样一来，就可以通俗一点的理解polyfill了，它就是备胎。<br><br>下面是由Paul Irish及其他贡献者放在GitHub Gist上的代码片段，用于在浏览器不支持requestAnimationFrame情况下的回退，回退到使用setTmeout的情况。当然，如果你确定代码是工作在现代浏览器中，下面的代码是不必的。<br></p>
+<pre><code>// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
+// MIT license
+(function() {
+    var lastTime = 0;
+    var vendors = [&apos;ms&apos;, &apos;moz&apos;, &apos;webkit&apos;, &apos;o&apos;];
+    for (var x = 0; x &lt; vendors.length &amp;&amp; !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x] + &apos;RequestAnimationFrame&apos;];
+        window.cancelAnimationFrame = window[vendors[x] + &apos;CancelAnimationFrame&apos;] || window[vendors[x] + &apos;CancelRequestAnimationFrame&apos;];
+    }
+    if (!window.requestAnimationFrame) window.requestAnimationFrame = function(callback, element) {
+        var currTime = new Date().getTime();
+        var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+        var id = window.setTimeout(function() {
+            callback(currTime + timeToCall);
+        }, timeToCall);
+        lastTime = currTime + timeToCall;
+        return id;
+    };
+    if (!window.cancelAnimationFrame) window.cancelAnimationFrame = function(id) {
+        clearTimeout(id);
+    };
+}());
+</code></pre><p>上面代码作用有二，一是把各浏览器前缀进行统一，二是在浏览器没有requestAnimationFrame方法时将其指向setTimeout方法。<br><br>提到备胎代码呢，这里多说一句，在CSS代码中，我们也经常使用这种回退的技巧，即对同一条CSS规则，编写多条以不同浏览器前缀开头代码，或者编写一条备用样式。<br><br>下面是一个CSS中的备胎代码的例子：<br></p>
+<pre><code>div {
+background: rgb(0, 0, 0); /* fallback */
+background: rgba(0, 0, 0, 0.5);
+}
+</code></pre><p>代码中设置div背景为黑色带50%的透明度，但IE9-的浏览器是不支持rbga格式的颜色的，所以浏览器会回退到上一条CSS规则应用rgb颜色。<br></p>
+<p>Reference:</p>
+<ol>
+<li><p>article about rAF from css tricks: <a href="http://css-tricks.com/using-requestanimationframe/" target="_blank" rel="external">http://css-tricks.com/using-requestanimationframe/</a></p>
+</li>
+<li><p>article about rAF from Paul Irish:<a href="http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/" target="_blank" rel="external">http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/</a></p>
+</li>
+<li><p>what is polyfill <a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/" target="_blank" rel="external">http://remysharp.com/2010/10/08/what-is-a-polyfill/</a></p>
+</li>
+</ol>
+<p>转自：<a href="http://www.cnblogs.com/Wayou/p/requestAnimationFrame.html#home" target="_blank" rel="external">http://www.cnblogs.com/Wayou/p/requestAnimationFrame.html#home</a></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/02/05/5/" style="float: left;">
-        ← 加载旋转
+    <a class="pull-left" href="/2016/04/25/24/" style="float: left;">
+        ← 简单教程🌼
     </a>
     
     
-    <a class="pull-right" href="/2016/01/18/3/">
-        总结第二弹-光标形状 →
+    <a class="pull-right" href="/2016/04/18/22/">
+        移动前端知识总结🌟 →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/01/20/4/" data-title="JS中各种size总结" data-url="https://menggeniu.github.io/2016/01/20/4/"></div>
+<div class="ds-thread" data-thread-key="2016/04/21/23/" data-title="requestAnimationFrame，Web中写动画的另一种选择" data-url="https://menggeniu.github.io/2016/04/21/23/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"menggeniu"};
 (function() {
