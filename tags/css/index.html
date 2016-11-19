@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>加载旋转 | NNNの博客</title>
+  <title>Tag: css | NNNの博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="post-template">
+<body class="home-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -174,149 +174,69 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      
-<section id="intro">
-    <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2016-02-05T13:20:27.000Z" itemprop="datePublished">
-          2016-02-05
-      </time>
-    
-    
-    | 
-    <a href='/tags/css/'>css</a>
-    
-    
-</span>
-                <h1>加载旋转</h1>
-                <span id="busuanzi_container_page_pv">
-                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-                </span>
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>世上所有的相遇都是久别重逢。</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p></p>
+                        
+
+                    </div>
+                </div>
             </div>
+            <!-- // .col-md-12 -->
         </div>
-        <div class="col-md-8 col-md-offset-2">
-      		<h6 id="今天准备用一个div，和before，after伪类，通过css动画完成加载旋转的效果。"><a href="#今天准备用一个div，和before，after伪类，通过css动画完成加载旋转的效果。" class="headerlink" title="今天准备用一个div，和before，after伪类，通过css动画完成加载旋转的效果。"></a>今天准备用一个div，和before，after伪类，通过css动画完成加载旋转的效果。</h6><pre><code>@-webkit-keyframes load2 {
-  0% { -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-  100% {-webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-      }
-}
-
-@keyframes load2 {
-      0% {-webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-      100% {-webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-}
-</code></pre><h6 id="以上就是动画的代码，原理就是让div的before和after伪类进行上述动画，并让其中一个延迟动画几s，变会出现两个圆交替旋转的现象，怎么样，很简单吧-下面上css代码。"><a href="#以上就是动画的代码，原理就是让div的before和after伪类进行上述动画，并让其中一个延迟动画几s，变会出现两个圆交替旋转的现象，怎么样，很简单吧-下面上css代码。" class="headerlink" title="以上就是动画的代码，原理就是让div的before和after伪类进行上述动画，并让其中一个延迟动画几s，变会出现两个圆交替旋转的现象，怎么样，很简单吧~下面上css代码。"></a>以上就是动画的代码，原理就是让div的before和after伪类进行上述动画，并让其中一个延迟动画几s，变会出现两个圆交替旋转的现象，怎么样，很简单吧~下面上css代码。</h6><pre><code>&lt;style&gt;
-    /*body{
-    background-color: #0dcecb;
-    }*/
-    .loader,
-    .loader:before,
-    .loader:after {
-          border-radius: 50%;
-    }
-    .loader:before,
-    .loader:after {
-          position: absolute;
-          content: &apos;&apos;;
-    }
-    .loader:before {
-          width: 5.2em;
-          height: 10.2em;
-          background: #0dcecb;
-          border-radius: 10.2em 0 0 10.2em;
-          top: -0.1em;
-          left: -0.1em;
-          -webkit-transform-origin: 5.2em 5.1em;
-          transform-origin: 5.2em 5.1em;
-          -webkit-animation: load2 2s infinite ease 1.5s;
-          animation: load2 2s infinite ease 1.5s;
-    }
-    .loader {
-         font-size: 11px;
-          text-indent: -99999em;
-          margin: 30% auto;
-         position: relative;
-          width: 10em;
-          height: 10em;
-          box-shadow: inset 0 0 0 1em yellow;
-    }
-    .loader:after {
-          width: 5.2em;
-          height: 10.2em;
-          background: red;
-          border-radius: 0 10.2em 10.2em 0;
-          top: -0.1em;
-          left: 5.1em;
-          -webkit-transform-origin: 0px 5.1em;
-          transform-origin: 0px 5.1em;
-          -webkit-animation: load2 2s infinite ease;
-          animation: load2 2s infinite ease;
-    }
-    @-webkit-keyframes load2 {
-          0% {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-          }
-          100% {
-            -webkit-transform: rotate(360deg);
-               transform: rotate(360deg);
-          }
-    }
-    @keyframes load2 {
-          0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-          }
-          100% {
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-          }
-    }
-&lt;/style&gt;
-</code></pre><h6 id="以上就是今天的加载旋转小分享，等有时间再和大家分享另一种加载旋转效果"><a href="#以上就是今天的加载旋转小分享，等有时间再和大家分享另一种加载旋转效果" class="headerlink" title="以上就是今天的加载旋转小分享，等有时间再和大家分享另一种加载旋转效果~"></a>以上就是今天的加载旋转小分享，等有时间再和大家分享另一种加载旋转效果~</h6>
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-        </div>
-        <nav class="pagination" role="pagination">
-    
-    <a class="pull-left" href="/2016/02/11/6/" style="float: left;">
-        ← 加载旋转二
-    </a>
-    
-    
-    <a class="pull-right" href="/2016/01/20/4/">
-        JS中各种size总结 →
-    </a>
-    
-</nav>
-
-        <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/02/05/5/" data-title="加载旋转" data-url="https://menggeniu.github.io/2016/02/05/5/"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"menggeniu"};
-(function() {
-	var ds = document.createElement('script');
-	ds.type = 'text/javascript';ds.async = true;
-	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	ds.charset = 'UTF-8';
-	(document.getElementsByTagName('head')[0] 
-	 || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>
-</div>
+        <div class="herofade beige-dk"></div>
     </div>
 </section>
 
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
 
+<!-- ============================ END Hero Image =========================== -->
+
+
+
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row boxes">
+                    
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2016/02/05/5/">加载旋转</a></h4>
+                            
+                            <p><time datetime="2016-02-05T13:20:27.000Z"><a href="/2016/02/05/5/">2016-02-05</a></time></p>
+                        </div>
+                    
+                </div>
+            </div>    
+        </div>
+    </div>
+</section> 
+
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p>立志成为合格的程序媛，立志走在食物链的顶端。</p>
+        </div>
+    </div>
+</section>
       
 <!-- ============================ Footer =========================== -->
 
