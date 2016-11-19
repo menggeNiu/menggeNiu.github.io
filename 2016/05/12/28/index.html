@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2016/5 | NNNの博客</title>
+  <title>react-native-vector-icons的简单使用,图片,按钮,标签视图,导航条🌀 | NNNの博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -174,96 +174,170 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>世上所有的相遇都是久别重逢。</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/05/15/29/">React Native 的 Navigator 组件使用方法</a></h4>
-                            
-                            <p><time datetime="2016-05-15T13:49:06.000Z"><a href="/2016/05/15/29/">2016-05-15</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/05/12/28/">react-native-vector-icons的简单使用,图片,按钮,标签视图,导航条🌀</a></h4>
-                            
-                            <p><time datetime="2016-05-12T13:43:52.000Z"><a href="/2016/05/12/28/">2016-05-12</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/05/04/27/">React Native 之 ScrollView 的详解🐯</a></h4>
-                            
-                            <p><time datetime="2016-05-04T13:33:40.000Z"><a href="/2016/05/04/27/">2016-05-04</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/05/02/26/">ReactNative探索（二）：布局篇🍟</a></h4>
-                            
-                            <p><time datetime="2016-05-02T06:12:17.000Z"><a href="/2016/05/02/26/">2016-05-02</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-05-12T13:43:52.000Z" itemprop="datePublished">
+          2016-05-12
+      </time>
+    
+    
+    | 
+    <a href='/tags/React-Native/'>React Native</a>
+    
+    
+</span>
+                <h1>react-native-vector-icons的简单使用,图片,按钮,标签视图,导航条🌀</h1>
+                <span id="busuanzi_container_page_pv">
+                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+                </span>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p>ICONS是可以直接使用图片名, 就能加载图片的三方,使用很方便, 你不需要在工程文件夹里塞各种图片, 节省很多空间,下面就来看看怎么使用吧!<br></p>
+<ol>
+<li>首先打开terminal进入到我们的工程文件夹下, (不会创建工程的请参考:<a href="http://blog.csdn.net/margaret_mo/article/details/51304062" target="_blank" rel="external">http://blog.csdn.net/margaret_mo/article/details/51304062</a>)<br><br>输入: npm install react-native-vector-icons –save (回车)<br><br>输入: npm install rnpm -g<br><br>输入: rnpm link (回车) <br></li>
+<li>在Finder中用Xcode打开工程: …/Demo/ios/Demo.xcodeproj<br><br>(1).右键工程文件Add Files to “(你工程名)”<br><br>(2).选择node_modules/react-native-vector-icons/Fonts文件<br><br>(3).点击”完成”.<br><br><img src="http://images2015.cnblogs.com/blog/909388/201605/909388-20160511152159202-394433862.png" alt=""><br><br><img src="http://images2015.cnblogs.com/blog/909388/201605/909388-20160511152212874-216238892.png" alt=""><br></li>
+<li>在xcode的Info.plist文件中,加入: Fonts provided by application数组,并加入以下9项:<br><br><img src="http://images2015.cnblogs.com/blog/909388/201605/909388-20160511152230905-1647193773.png" alt=""><br><br>到此环境就算设置好了, 接下来就是使用ICONS了.<br></li>
+<li><p>在Finder中右键用Atom打开工程:<br><br><img src="http://images2015.cnblogs.com/blog/909388/201605/909388-20160511152258874-492588622.png" alt=""><br><br>5.然后就开始编辑我们的程序了:<br></p>
+<p> ‘use strict’;</p>
+<p> import React, {<br>   AppRegistry,<br>   Component,<br>   View,<br>   StyleSheet,<br>   AlertIOS,<br>   Text,<br>   TabBarIOS,<br>   NavigatorIOS,<br> } from ‘react-native’;</p>
+<p> var Icon = require(‘react-native-vector-icons/FontAwesome’);<br> import FindComponent from ‘./FindComponent’;<br> import SearchComponent from ‘./SearchComponent’;</p>
+</li>
+</ol>
+<pre><code>class Demo extends Component {
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>立志成为合格的程序媛，立志走在食物链的顶端。</p>
+  state = {
+    selectedTab: &apos;find&apos;,
+  };
+
+  loginWithFacebook = () =&gt; {   //点击&quot;Login with Facebook&quot;按钮后触发的方法
+    AlertIOS.alert(&quot;facebook&quot;);
+  }
+
+  render() {
+    return (
+      &lt;View style={styles.container}&gt;
+        &lt;Icon
+          name=&quot;rocket&quot;   //图片名连接,可以到这个网址搜索:http://ionicons.com/, 使用时:去掉前面的 &quot;icon-&quot; !!!!
+          size={30}   //图片大小
+          color=&quot;red&quot;  //图片颜色
+          /&gt;
+
+    &lt;Icon.Button    //在图片后加文字
+      name=&quot;facebook&quot;
+      backgroundColor=&quot;#3b5998&quot;
+      onPress={this.loginWithFacebook} //点击该按钮后触发的方法
+      &gt;
+      Login with Facebook
+    &lt;/Icon.Button&gt;
+
+    &lt;Icon.Button  //在图片后加, 自定义样式的文字
+      name=&quot;facebook&quot;
+      backgroundColor=&quot;#3b5998&quot;&gt;
+      &lt;Text style={{fontFamily: 'Arial', fontSize: 15}}&gt;Login with Facebook&lt;/Text&gt;
+    &lt;/Icon.Button&gt;
+
+
+    &lt;TabBarIOS    //和标签视图一起使用
+     tintColor=&quot;#4977f0&quot;
+     barTintColor=&quot;#E6E6E6&quot;&gt;
+
+     &lt;Icon.TabBarItem  //用 Icon.TabBarItem 代替 TabBarIOS.Item
+       title=&quot;发现&quot;
+       iconName=&quot;home&quot;
+       selectedIconName=&quot;home&quot;
+       selected = {this.state.selectedTab === &apos;find&apos;}
+       onPress={() =&gt; {
+         this.setState({
+           selectedTab: &apos;find&apos;,
+         });
+       }}&gt;
+       &lt;NavigatorIOS    //导航栏
+         style={styles.container}
+         tintColor=&apos;#FFFFFF&apos;
+         barTintColor=&apos;#4977f0&apos;
+         initialRoute={{
+               title: "发现",
+               titleTextColor: 'white',
+               component: FindComponent
+             }}/&gt;
+     &lt;/Icon.TabBarItem&gt;
+
+     &lt;Icon.TabBarItem  //用 Icon.TabBarItem 代替 TabBarIOS.Item
+       title=&quot;搜索&quot;
+       iconName=&quot;search&quot;
+       selectedIconName=&quot;search&quot;
+       selected = {this.state.selectedTab === &apos;search&apos;}
+       onPress={() =&gt; {
+         this.setState({
+           selectedTab: &apos;search&apos;,
+         });
+       }}&gt;
+       &lt;NavigatorIOS
+         style={styles.container}
+         tintColor=&apos;#FFFFFF&apos;
+         barTintColor=&apos;#4977f0&apos;
+         initialRoute={{
+               title: "搜索",
+               titleTextColor: 'white',
+               component: SearchComponent
+             }}/&gt;
+     &lt;/Icon.TabBarItem&gt;
+   &lt;/TabBarIOS&gt;
+
+  &lt;/View&gt;
+);
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: &apos;center&apos;,
+  },
+});
+
+AppRegistry.registerComponent(&apos;Demo&apos;, () =&gt; Demo);
+</code></pre><p>在terminal中的工程文件夹下,输入react-native run-ios(回车)等待程序运行起来就能看到效果啦.<br><br>主要代码下载地址: <a href="http://download.csdn.net/detail/margaret_mo/9512769" target="_blank" rel="external">http://download.csdn.net/detail/margaret_mo/9512769</a><br><br>参考网站: <a href="https://github.com/oblador/react-native-vector-icons" target="_blank" rel="external">https://github.com/oblador/react-native-vector-icons</a><br><br>转自：<a href="http://www.cnblogs.com/moxiaoyan33/p/5482024.html" target="_blank" rel="external">http://www.cnblogs.com/moxiaoyan33/p/5482024.html</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/05/15/29/" style="float: left;">
+        ← React Native 的 Navigator 组件使用方法
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/05/04/27/">
+        React Native 之 ScrollView 的详解🐯 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/05/12/28/" data-title="react-native-vector-icons的简单使用,图片,按钮,标签视图,导航条🌀" data-url="https://menggeniu.github.io/2016/05/12/28/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
