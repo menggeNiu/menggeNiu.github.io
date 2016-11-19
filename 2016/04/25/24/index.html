@@ -1,203 +1,300 @@
-<!DOCTYPE html>
-<!--[if lte IE 8 ]>
-<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--
-***************  *      *     *
-      8          *    *       *
-      8          *  *         *
-      8          **           *
-      8          *  *         *
-      8          *    *       *
-      8          *      *     *
-      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
--->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<!--<![endif]-->
+<!doctype html>
 
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
 <head>
-  <title>React Native简单教程🌼 | NNNの博客</title>
-  <!-- Meta data -->
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="NNNの博客">
-    <meta name="author" content="menggeNIU">
-    <meta name="description" content="前端小菜鸟" />
-    <meta name="keywords" content="" />
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    <!-- Favicon, (keep icon in root folder) -->
-    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
 
-    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
-    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
-	
-    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
     
     
-
-    <!-- Custom stylesheet, (add custom styles here, always load last) -->
-    <!-- Load our stylesheet for IE8 -->
-    <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
-    <![endif]-->
-
-    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
-    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-
-    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
-    <!--[if IE]>
-    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-    <![endif]-->
-
-    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
-    <script src="/js/jquery-1.11.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
-
-    <!-- Load these in the <head> for quicker IE8+ load times -->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <script src="/js/respond.min.js"></script>
-    <![endif]-->
-
-
-
-
-
-
-
-
-
-
-  
-  
   
 
   
-  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="React Native," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="最近开始研究react native，准备写几篇关于react native的文章。作为一个 JavaScript 开发者，我之前从来没想过用 JavaScript 很容易地写原生移动应用。当然，我们已经有了如 PhoneGap 等工具，但在原生应用中封装一个基于浏览器的应用还有许多需要改进的地方。 现在这一切都改变了—— Facebook 的 React 团队发布了 React Native。它">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native简单教程🌼">
+<meta property="og:url" content="https://menggeniu.github.io/2016/04/25/24/index.html">
+<meta property="og:site_name" content="NNNの博客">
+<meta property="og:description" content="最近开始研究react native，准备写几篇关于react native的文章。作为一个 JavaScript 开发者，我之前从来没想过用 JavaScript 很容易地写原生移动应用。当然，我们已经有了如 PhoneGap 等工具，但在原生应用中封装一个基于浏览器的应用还有许多需要改进的地方。 现在这一切都改变了—— Facebook 的 React 团队发布了 React Native。它">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120256_33H2.jpg">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120257_Ju7r.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120258_yw4N.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120258_ezqI.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120259_JAJg.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120259_Aiww.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120259_BD0O.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120300_zj6X.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120300_KWEJ.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120300_Q1RG.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120302_u6Ii.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120304_NI1m.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120304_W92q.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120304_kG1d.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120305_AIYQ.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120305_0oGb.png">
+<meta property="og:image" content="http://static.oschina.net/uploads/img/201505/19120305_B0Mj.png">
+<meta property="og:updated_time" content="2016-11-19T03:53:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React Native简单教程🌼">
+<meta name="twitter:description" content="最近开始研究react native，准备写几篇关于react native的文章。作为一个 JavaScript 开发者，我之前从来没想过用 JavaScript 很容易地写原生移动应用。当然，我们已经有了如 PhoneGap 等工具，但在原生应用中封装一个基于浏览器的应用还有许多需要改进的地方。 现在这一切都改变了—— Facebook 的 React 团队发布了 React Native。它">
+<meta name="twitter:image" content="http://static.oschina.net/uploads/img/201505/19120256_33H2.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://menggeniu.github.io/2016/04/25/24/"/>
+
+  <title> React Native简单教程🌼 | NNNの博客 </title>
 </head>
 
-<!--
-<body class="post-template">
--->
-<body id="index" class="lightnav animsition">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-      <!-- ============================ Off-canvas navigation =========================== -->
+  
 
-    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
-        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
-            <img src="/img/close.png" alt="Close"/>
-        </div>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu">
-            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
-            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
-            <!-- Dropdown Menu -->
-			 
-            
-            
-            <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
-                    
-                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
-                    
-                </ul>
-            </li>
-            
-        </ul>
-        <!-- Lists in Slidebars -->
-       <!--  <ul class="sb-menu secondary">
-            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
-            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
-        </ul> -->
-    </div>
+
+
+
+
+
+
+
+
+
+  
+  
     
-    <!-- ============================ END Off-canvas navigation =========================== -->
+  
 
-    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
 
-    <div id="sb-site">
-        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
 
-        <!-- ============================ Header & Logo bar =========================== -->
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NNNの博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">前端小菜鸟</p>
+</div>
 
-        <div id="navigation" class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <!-- Nav logo -->
-                    <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link">
-                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
-                        </a>
-                    </div>
-                    <!-- // Nav logo -->
-                    <!-- Info-bar -->
-                    <nav>
-                        <ul class="nav">
-                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
-                            
-                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
-                            
-                            
-                            
-                            
-                            
-                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
-                            
-                            <li class="nolink"><span>Welcome!</span></li>
-                        </ul>
-                    </nav>
-                    <!--// Info-bar -->
-                </div>
-                <!-- // .container -->
-                <div class="learnmore sb-toggle-right">More</div>
-                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar before"></span>
-                <span class="icon-bar main"></span>
-                <span class="icon-bar after"></span>
-                </button>
-            </div>
-            <!-- // .navbar-inner -->
-        </div>
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
 
-        <!-- ============================ Header & Logo bar =========================== -->
+<nav class="site-nav">
+  
 
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
 
       
-<section id="intro">
-    <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2016-04-25T14:11:01.000Z" itemprop="datePublished">
-          2016-04-25
-      </time>
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-    | 
-    <a href='/tags/React-Native/'>React Native</a>
-    
-    
-</span>
-                <h1>React Native简单教程🌼</h1>
-                <span id="busuanzi_container_page_pv">
-                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-                </span>
-            </div>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                React Native简单教程🌼
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-04-25T22:11:01+08:00" content="2016-04-25">
+              2016-04-25
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        <div class="col-md-8 col-md-offset-2">
-      		<h6 id="最近开始研究react-native，准备写几篇关于react-native的文章。"><a href="#最近开始研究react-native，准备写几篇关于react-native的文章。" class="headerlink" title="最近开始研究react native，准备写几篇关于react native的文章。"></a>最近开始研究react native，准备写几篇关于react native的文章。</h6><p>作为一个 JavaScript 开发者，我之前从来没想过用 JavaScript 很容易地写原生移动应用。当然，我们已经有了如 PhoneGap 等工具，但在原生应用中封装一个基于浏览器的应用还有许多需要改进的地方。 <br><br>现在这一切都改变了—— Facebook 的 React 团队发布了 React Native。它不仅可以让我们使用 React 框架来使用原生移动组件创建应用程序，但它使一切成为了现实——这意味着我们在开发应用时不需要重新编译——这使得它非常容易地创建移动应用！我有幸预览了 React Native 的 beta 版本，从那开始它大规模成长了起来。<br><br>请注意，目前已经支持 iOS。因此你需要运行 OS X 上的 Xcode 来跟随本教程。<br><br>如果你还没有过机会学习 React, 看看我的教程 来开始用用它吧.<br><br>要重点注意学习这个并不意味着我们可以写一次代码就能将这段代码用到每一个地方。尝试那样做会因为疯狂的抽象级别而陷入一场灾难。React Native 则让我们可以学习一次，到处编写。<br></p>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h6 id="最近开始研究react-native，准备写几篇关于react-native的文章。"><a href="#最近开始研究react-native，准备写几篇关于react-native的文章。" class="headerlink" title="最近开始研究react native，准备写几篇关于react native的文章。"></a>最近开始研究react native，准备写几篇关于react native的文章。</h6><p>作为一个 JavaScript 开发者，我之前从来没想过用 JavaScript 很容易地写原生移动应用。当然，我们已经有了如 PhoneGap 等工具，但在原生应用中封装一个基于浏览器的应用还有许多需要改进的地方。 <br><br>现在这一切都改变了—— Facebook 的 React 团队发布了 React Native。它不仅可以让我们使用 React 框架来使用原生移动组件创建应用程序，但它使一切成为了现实——这意味着我们在开发应用时不需要重新编译——这使得它非常容易地创建移动应用！我有幸预览了 React Native 的 beta 版本，从那开始它大规模成长了起来。<br><br>请注意，目前已经支持 iOS。因此你需要运行 OS X 上的 Xcode 来跟随本教程。<br><br>如果你还没有过机会学习 React, 看看我的教程 来开始用用它吧.<br><br>要重点注意学习这个并不意味着我们可以写一次代码就能将这段代码用到每一个地方。尝试那样做会因为疯狂的抽象级别而陷入一场灾难。React Native 则让我们可以学习一次，到处编写。<br></p>
 <h3 id="回到-2004"><a href="#回到-2004" class="headerlink" title="回到 2004"></a>回到 2004</h3><hr>
 <p>如果你关注社交网络领域的话你会记得 FaceMash，正式这个应用开创了 Facebook。对于不关注这个领域的人，其实是11年前(哇塞) Mark Zuckerberg 创建了 FaceMash，它是一个你可以用来查看两个人之中谁更加热门的应用程序。每一个人都有一个能反映他们有多“热门”的分数值 (尽管不知道原来使用的是什么算法，不过那部电影（社交网络）显示 Elo 排名算法 曾被使用过) .<br><br>它全部的荣耀都在于此 -<br><br><img src="http://static.oschina.net/uploads/img/201505/19120256_33H2.jpg" alt=""><br><br>让我们整个来过一遍吧 - 我们准备用 React Native 来重新创建 FaceMash。如果你觉得凭外貌来评价姑娘们不道德，你可以把图片变成你觉得能吸引人的其它事务(狗狗，代码块，等等，我不做评价)，随便。<br></p>
 <h3 id="创建你的应用"><a href="#创建你的应用" class="headerlink" title="创建你的应用"></a>创建你的应用</h3><hr>
@@ -1647,105 +1744,289 @@ module.exports = messageView;
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><hr>
 <p>请自由地在设置 tab 中加入一些功能。尝试使用其他的组件，比如 DatePickerIOS 遗迹 TextInput，来做一些通用的设置 (DOB，name，等等)。<br><br>希望这里的讨论能触及一些同你在你的 React Native 应用程序中通常会用到有所不同的组件。如有任何疑问，可以在推特  @rynclark 上联系我.<br><br>转自：<a href="http://www.oschina.net/translate/going-native-with-react" target="_blank" rel="external">http://www.oschina.net/translate/going-native-with-react</a></p>
 
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-        </div>
-        <nav class="pagination" role="pagination">
-    
-    <a class="pull-left" href="/2016/04/28/25/" style="float: left;">
-        ← React Native之设置IOS的图标，名称和启动图🍖
-    </a>
-    
-    
-    <a class="pull-right" href="/2016/04/21/23/">
-        requestAnimationFrame，Web中写动画的另一种选择 →
-    </a>
-    
-</nav>
-
-        <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/04/25/24/" data-title="React Native简单教程🌼" data-url="https://menggeniu.github.io/2016/04/25/24/"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"menggeniu"};
-(function() {
-	var ds = document.createElement('script');
-	ds.type = 'text/javascript';ds.async = true;
-	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	ds.charset = 'UTF-8';
-	(document.getElementsByTagName('head')[0] 
-	 || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>
-</div>
+      
     </div>
-</section>
 
+    <div>
+      
+        
 
       
-<!-- ============================ Footer =========================== -->
+    </div>
 
-<footer>
-    <div class="container">
-            <div class="copy">
-                <p>
-                    <span>&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.</span>   
-                </p>
-                <p>To make each day count.</p>
-            </div>
-            <div class="social">
-                <ul>
-                    
-                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
-                    
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-</script>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-</footer>
-
-<!-- ============================ END Footer =========================== -->
-      <!-- Load our scripts -->
+    <div>
+      
         
-<!-- Resizable 'on-demand' full-height hero -->
-<script type="text/javascript">
-    
-    var resizeHero = function () {
-        var hero = $(".cover,.heightblock"),
-            window1 = $(window);
-        hero.css({
-            "height": window1.height()
-        });
-    };
-    
-    resizeHero();
-    
-    $(window).resize(function () {
-        resizeHero();
-    });
-</script>
-<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
-<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
-<script src="/js/scripts.js"></script><!-- Theme scripts -->
 
-<!-- Initiate flexslider plugin -->
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/React-Native/" rel="tag">#React Native</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/21/23/" rel="next" title="requestAnimationFrame，Web中写动画的另一种选择">
+                <i class="fa fa-chevron-left"></i> requestAnimationFrame，Web中写动画的另一种选择
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/28/25/" rel="prev" title="React Native之设置IOS的图标，名称和启动图🍖">
+                React Native之设置IOS的图标，名称和启动图🍖 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="menggeNIU" />
+          <p class="site-author-name" itemprop="name">menggeNIU</p>
+          <p class="site-description motion-element" itemprop="description">个人收藏</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">38</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">Tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#最近开始研究react-native，准备写几篇关于react-native的文章。"><span class="nav-number">1.</span> <span class="nav-text">最近开始研究react native，准备写几篇关于react native的文章。</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回到-2004"><span class="nav-number"></span> <span class="nav-text">回到 2004</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建你的应用"><span class="nav-number"></span> <span class="nav-text">创建你的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#休斯顿，我们已经升空"><span class="nav-number"></span> <span class="nav-text">休斯顿，我们已经升空</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打开它"><span class="nav-number"></span> <span class="nav-text">打开它</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#悄悄来看一看"><span class="nav-number"></span> <span class="nav-text">悄悄来看一看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#React-Native-vs-浏览器"><span class="nav-number"></span> <span class="nav-text">React Native vs 浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始工作"><span class="nav-number"></span> <span class="nav-text">开始工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用静态图片"><span class="nav-number"></span> <span class="nav-text">使用静态图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回到代码"><span class="nav-number"></span> <span class="nav-text">回到代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#让我们打分吧"><span class="nav-number"></span> <span class="nav-text">让我们打分吧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#index-ios-js"><span class="nav-number"></span> <span class="nav-text">index.ios.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#展示外部的图片"><span class="nav-number"></span> <span class="nav-text">展示外部的图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#手指触击"><span class="nav-number"></span> <span class="nav-text">手指触击</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#消息"><span class="nav-number"></span> <span class="nav-text">消息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按下和弹出"><span class="nav-number"></span> <span class="nav-text">按下和弹出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MessageView-js"><span class="nav-number"></span> <span class="nav-text">MessageView.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number"></span> <span class="nav-text">总结</span></a></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">menggeNIU</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
 <script type="text/javascript">
-    $(document).ready(function($) {
-      $('.flexslider').flexslider({
-        animation: "fade",
-        prevText: "",
-        nextText: "",
-        directionNav: true
-      });
-    });
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>

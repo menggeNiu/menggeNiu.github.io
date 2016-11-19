@@ -1,350 +1,975 @@
-<!DOCTYPE html>
-<!--[if lte IE 8 ]>
-<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--
-***************  *      *     *
-      8          *    *       *
-      8          *  *         *
-      8          **           *
-      8          *  *         *
-      8          *    *       *
-      8          *      *     *
-      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
--->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<!--<![endif]-->
+<!doctype html>
 
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
 <head>
-  <title>NNNの博客</title>
-  <!-- Meta data -->
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="NNNの博客">
-    <meta name="author" content="menggeNIU">
-    <meta name="description" content="前端小菜鸟" />
-    <meta name="keywords" content="" />
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    <!-- Favicon, (keep icon in root folder) -->
-    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
 
-    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
-    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
-	
-    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
     
     
-
-    <!-- Custom stylesheet, (add custom styles here, always load last) -->
-    <!-- Load our stylesheet for IE8 -->
-    <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
-    <![endif]-->
-
-    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
-    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-
-    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
-    <!--[if IE]>
-    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-    <![endif]-->
-
-    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
-    <script src="/js/jquery-1.11.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
-
-    <!-- Load these in the <head> for quicker IE8+ load times -->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <script src="/js/respond.min.js"></script>
-    <![endif]-->
-
-
-
-
-
-
-
-
-
-
-  
-  
   
 
   
-  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="个人收藏">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NNNの博客">
+<meta property="og:url" content="https://menggeniu.github.io/index.html">
+<meta property="og:site_name" content="NNNの博客">
+<meta property="og:description" content="个人收藏">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NNNの博客">
+<meta name="twitter:description" content="个人收藏">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://menggeniu.github.io/"/>
+
+  <title> NNNの博客 </title>
 </head>
 
-<!--
-<body class="home-template">
--->
-<body id="index" class="lightnav animsition">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-      <!-- ============================ Off-canvas navigation =========================== -->
+  
 
-    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
-        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
-            <img src="/img/close.png" alt="Close"/>
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NNNの博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">前端小菜鸟</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/06/10/38/" itemprop="url">
+                  使用Flexible实现手淘H5页面的终端适配 🍧
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-06-10T21:26:33+08:00" content="2016-06-10">
+              2016-06-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu">
-            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
-            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
-            <!-- Dropdown Menu -->
-			 
-            
-            
-            <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
-                    
-                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
-                    
-                </ul>
-            </li>
-            
-        </ul>
-        <!-- Lists in Slidebars -->
-       <!--  <ul class="sb-menu secondary">
-            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
-            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
-        </ul> -->
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>曾几何时为了兼容IE低版本浏览器而头痛，以为到Mobile时代可以跟这些麻烦说拜拜。可没想到到了移动时代，为了处理各终端的适配而乱了手脚。对于混迹各社区的偶，时常发现大家拿<strong>手机淘宝的H5页面做讨论——手淘的H5页面是如何实现多终端的适配</strong>？<br><br>那么趁此<strong>Amfe阿里无线前端团队双11技术连载</strong>之际，用一个实战案例来告诉大家，手淘的H5页面是如何实现多终端适配的，希望这篇文章对大家在Mobile的世界中能过得更轻松。<br></p>
+<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><hr>
+<p>拿一个双11的Mobile页面来做案例，比如你实现一个类似下图的一个H5页面：<br><br><img src="http://cdn1.w3cplus.com/cdn/farfuture/HNLqSu8yuVeiaSsWQan4hEQMizO0S6Pii5NqPp2rBBY/mtime:1447769998/sites/default/files/blogs/2015/1511/rem-1.jpg" alt=""><br><br>目标很清晰，就是做一个这样的H5页面。<br><br><a href="http://huodong.m.taobao.com/act/yibo.html" target="_blank" rel="external">DEMO</a><br><br>请用手机扫下面的二维码<br><br><img src="http://cdn2.w3cplus.com/cdn/farfuture/RqdfEdIqyYInpUeFzDLoWrYJIaGIHzqPMrRWT9merUc/mtime:1448593751/sites/default/files/blogs/2015/1511/yiboqr.png" alt=""><br></p>
+<h3 id="痛点"><a href="#痛点" class="headerlink" title="痛点"></a>痛点</h3><hr>
+<p>虽然H5的页面与PC的Web页面相比简单了不少，但让我们头痛的事情是要想尽办法让页面能适配众多不同的终端设备。看看下图你就会知道，这是多么痛苦的一件事情：<br><br><img src="http://cdn1.w3cplus.com/cdn/farfuture/dAIFVQ4Hwx0DpAzSegmu2m3rYce0Z_u5XbZ2H49L94A/mtime:1447771098/sites/default/files/blogs/2015/1511/rem-4.png" alt=""><br><br>点击<a href="https://design.google.com/devices/" target="_blank" rel="external">这里</a>查看更多终端设备的参数。<br><br>再来看看手淘H5要适配的终端设备数据：<br><br><img src="http://cdn2.w3cplus.com/cdn/farfuture/M-e4_frBiR-exi9UaMTGMIa5NCWj6Bh1LJeAmb_yhtE/mtime:1447815283/sites/default/files/blogs/2015/1511/rem-7.png" alt=""><br><br>看到这些数据，是否死的心都有了，或者说为此捏了一把汗出来。<br></p>
+<h3 id="手淘团队适配协作模式"><a href="#手淘团队适配协作模式" class="headerlink" title="手淘团队适配协作模式"></a>手淘团队适配协作模式</h3><hr>
+<p>早期移动端开发，对于终端设备适配问题只属于Android系列，只不过很多设计师常常忽略Android适配问题，只出一套iOS平台设计稿。但随着iPhone6，iPhone6+的出现，从此终端适配问题不再是Android系列了，也从这个时候让移动端适配全面进入到“杂屏”时代。<br><br><img src="http://cdn.w3cplus.com/cdn/farfuture/ue4cH6tebXis4kq8W6ZU4afq5M4Tcl_dQbgiuTeSA7g/mtime:1447899085/sites/default/files/blogs/2015/1511/rem-11.png" alt=""><br><br>上图来自于<a href="https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions" target="_blank" rel="external">paintcodeapp.com</a><br><br>为了应对这多么的终端设备，设计师和前端开发之间又应该采用什么协作模式？或许大家对此也非常感兴趣。<br><br>而整个手淘设计师和前端开发的适配协作基本思路是：<br></p>
+<ul>
+<li>选择一种尺寸作为设计和开发基准</li>
+<li>定义一套适配规则，自动适配剩下的两种尺寸(其实不仅这两种，你懂的)</li>
+<li>特殊适配效果给出设计效果</li>
+</ul>
+<p>还是上一张图吧，因为一图胜过千言万语：<br><br><img src="http://cdn1.w3cplus.com/cdn/farfuture/Ir5AUumC72bH2nCmHgjR1OEPjAukzoPUgobXkpkiP6k/mtime:1447771790/sites/default/files/blogs/2015/1511/rem-6.jpg" alt=""><br><br>在此也不做更多的阐述。在手淘的设计师和前端开发协作过程中：<strong>手淘设计师常选择iPhone6作为基准设计尺寸，交付给前端的设计尺寸是按<code>750px * 1334px</code>为准(高度会随着内容多少而改变)。前端开发人员通过一套适配规则自动适配到其他的尺寸</strong>。<br><br>根据上面所说的，设计师给我们的设计图是一个<code>750px * 1600px</code>的页面：<br><br><img src="http://cdn.w3cplus.com/cdn/farfuture/Ie9-HRL4sYocKldzQvdwaoMVpbaS29xW13xcQMi9Q3k/mtime:1447770328/sites/default/files/blogs/2015/1511/rem-3.jpg" alt=""><br></p>
+<h3 id="前端开发完成终端适配方案"><a href="#前端开发完成终端适配方案" class="headerlink" title="前端开发完成终端适配方案"></a>前端开发完成终端适配方案</h3><hr>
+<p>拿到设计师给的设计图之后，剩下的事情是前端开发人员的事了。而手淘经过多年的摸索和实战，总结了一套移动端适配的方案——<a href="https://github.com/amfe/lib-flexible" target="_blank" rel="external">flexible方案</a>。<br><br>这种方案具体在实际开发中如何使用，暂时先卖个关子，在继续详细的开发实施之前，我们要先了解一些基本概念。<br></p>
+<h4 id="一些基本概念"><a href="#一些基本概念" class="headerlink" title="一些基本概念"></a>一些基本概念</h4><p>在进行具体实战之前，首先得了解下面这些基本概念(术语)：<br></p>
+<h5 id="视窗-viewport"><a href="#视窗-viewport" class="headerlink" title="视窗 viewport"></a>视窗 viewport</h5><p>简单的理解，viewport是严格等于浏览器的窗口。在桌面浏览器中，viewport就是浏览器窗口的宽度高度。但在移动端设备上就有点复杂。<br><br>移动端的viewport太窄，为了能更好为CSS布局服务，所以提供了两个viewport:虚拟的viewportvisualviewport和布局的viewportlayoutviewport。<br><br>eorge Cummins在Stack Overflow上<a href="http://stackoverflow.com/questions/6333927/difference-between-visual-viewport-and-layout-viewport" target="_blank" rel="external">对这两个基本概念做了详细的解释</a>。<br><br>而事实上viewport是一个很复杂的知识点，上面的简单描述可能无法帮助你更好的理解viewport，而你又想对此做更深的了解，可以阅读<a href="http://www.w3cplus.com/css/viewports.html" target="_blank" rel="external">PPK写的相关教程</a>。<br></p>
+<h5 id="物理像素-physical-pixel"><a href="#物理像素-physical-pixel" class="headerlink" title="物理像素(physical pixel)"></a>物理像素(physical pixel)</h5><p>理像素又被称为设备像素，他是显示设备中一个最微小的物理部件。每个像素可以根据操作系统设置自己的颜色和亮度。正是这些设备像素的微小距离欺骗了我们肉眼看到的图像效果。<br><br><img src="http://cdn.w3cplus.com/cdn/farfuture/hDnI5i1yyMPEDwG95I1vaigCKBysWlqydUCR6kgbKL4/mtime:1355415450/sites/default/files/blogs/201212/retina-web-1.jpg" alt=""><br></p>
+<h5 id="设备独立像素-density-independent-pixel"><a href="#设备独立像素-density-independent-pixel" class="headerlink" title="设备独立像素(density-independent pixel)"></a>设备独立像素(density-independent pixel)</h5><p>设备独立像素也称为密度无关像素，可以认为是计算机坐标系统中的一个点，这个点代表一个可以由程序使用的虚拟像素(比如说CSS像素)，然后由相关系统转换为物理像素。<br></p>
+<h5 id="CSS像素"><a href="#CSS像素" class="headerlink" title="CSS像素"></a>CSS像素</h5><p>CSS像素是一个抽像的单位，主要使用在浏览器上，用来精确度量Web页面上的内容。一般情况之下，CSS像素称为与设备无关的像素(device-independent pixel)，简称DIPs。<br></p>
+<h5 id="屏幕密度"><a href="#屏幕密度" class="headerlink" title="屏幕密度"></a>屏幕密度</h5><p>屏幕密度是指一个设备表面上存在的像素数量，它通常以每英寸有多少像素来计算(PPI)。<br></p>
+<h5 id="设备像素比-device-pixel-ratio"><a href="#设备像素比-device-pixel-ratio" class="headerlink" title="设备像素比(device pixel ratio)"></a>设备像素比(device pixel ratio)</h5><p>设备像素比简称为dpr，其定义了物理像素和设备独立像素的对应关系。它的值可以按下面的公式计算得到：<br></p>
+<pre><code>设备像素比 ＝ 物理像素 / 设备独立像素
+</code></pre><p>在JavaScript中，可以通过<code>window.devicePixelRatio</code>获取到当前设备的dpr。而在CSS中，可以通过<code>-webkit-device-pixel-ratio</code>，<code>-webkit-min-device-pixel-ratio</code>和 <code>-webkit-max-device-pixel-ratio</code>进行媒体查询，对不同dpr的设备，做一些样式适配(这里只针对webkit内核的浏览器和webview)。<br><br>dip或dp,（device independent pixels，设备独立像素）与屏幕密度有关。dip可以用来辅助区分视网膜设备还是非视网膜设备。<br><br>缩合上述的几个概念，用一张图来解释：<br><br><img src="http://cdn.w3cplus.com/cdn/farfuture/nvkUxqPg1a8coYtT29P7ghiy85RsGNz4aI5FVm4TVFg/mtime:1355415452/sites/default/files/blogs/201212/retina-web-3.jpg" alt=""><br><br>众所周知，iPhone6的设备宽度和高度为<code>375pt * 667pt</code>,可以理解为设备的独立像素；而其dpr为2，根据上面公式，我们可以很轻松得知其物理像素为<code>750pt * 1334pt</code>。<br><br>如下图所示，某元素的CSS样式：<br></p>
+<pre><code>width: 2px;
+height: 2px；
+</code></pre><p>在不同的屏幕上，CSS像素所呈现的物理尺寸是一致的，而不同的是CSS像素所对应的物理像素具数是不一致的。在普通屏幕下<code>1</code>个CSS像素对应<code>1</code>个物理像素，而在Retina屏幕下，<code>1</code>个CSS像素对应的却是<code>4</code>个物理像素。<br><br>有关于更多的介绍可以<a href="http://www.w3cplus.com/css/towards-retina-web.html" target="_blank" rel="external">点击这里</a>详细了解。<br><br>看到这里，你能感觉到，在移动端时代屏幕适配除了Layout之外，还要考虑到图片的适配，因为其直接影响到页面显示质量，对于如何实现图片适配，再此不做过多详细阐述。这里盗用了<a href="http://www.nangongruiyang.com/" target="_blank" rel="external">@南宮瑞揚</a>根据<a href="http://mir.aculo.us/2012/06/26/flowchart-how-to-retinafy-your-website/" target="_blank" rel="external">mir.aculo.us</a>翻译的一张信息图：<br><br><img src="http://cdn2.w3cplus.com/cdn/farfuture/8d__kFmdRwAU9j8EdBwuaGE9dWFoVIhEMRMFV1oV-4U/mtime:1355415458/sites/default/files/blogs/201212/retina-web-10.jpg" alt=""><br></p>
+<h4 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h4><p><code>&lt;meta&gt;</code>标签有很多种，而这里要着重说的是viewport的<code>meta</code>标签，其主要用来告诉浏览器如何规范的渲染Web页面，而你则需要告诉它视窗有多大。在开发移动端页面，我们需要设置<code>meta</code>标签如下：<br></p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;&gt;
+</code></pre><p>代码以显示网页的屏幕宽度定义了视窗宽度。网页的比例和最大比例被设置为100%。<br><br>留个悬念，因为后面的解决方案中需要重度依赖<code>meta</code>标签。<br></p>
+<h4 id="CSS单位rem"><a href="#CSS单位rem" class="headerlink" title="CSS单位rem"></a>CSS单位rem</h4><p>在<a href="https://www.w3.org/TR/css3-values/#rem-unit" target="_blank" rel="external">W3C</a>规范中是这样描述rem的:<br></p>
+<pre><code>font size of the root element.
+</code></pre><p>简单的理解，<code>rem</code>就是相对于根元素<code>&lt;html&gt;</code>的<code>font-size</code>来做计算。而我们的方案中使用<code>rem</code>单位，是能轻易的根据<code>&lt;html&gt;</code>的<code>font-size</code>计算出元素的盒模型大小。而这个特色对我们来说是特别的有益处。<br></p>
+<h3 id="前端实现方案"><a href="#前端实现方案" class="headerlink" title="前端实现方案"></a>前端实现方案</h3><p>解了前面一些相关概念之后，接下来我们来看实际解决方案。在整个手淘团队，我们有一个名叫lib-flexible的库，而这个库就是用来解决H5页面终端适配的。<br></p>
+<h4 id="lib-flexible是什么？"><a href="#lib-flexible是什么？" class="headerlink" title="lib-flexible是什么？"></a>lib-flexible是什么？</h4><p><a href="https://github.com/amfe/lib-flexible" target="_blank" rel="external">lib-flexible</a>是一个制作H5适配的开源库，可以点击<a href="https://github.com/amfe/lib-flexible/archive/master.zip" target="_blank" rel="external">这里下载</a>相关文件，获取需要的JavaScript和CSS文件。<br><br>当然你可以直接使用阿里CDN：<br></p>
+<pre><code>&lt;script src=&quot;http://g.tbcdn.cn/mtb/lib-flexible/{{version}}/??flexible_css.js,flexible.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>代码中的<code></code>换成对应的版本号<code>0.3.4</code>。<br></p>
+<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><p><a href="https://github.com/amfe/lib-flexible" target="_blank" rel="external">lib-flexible</a>库的使用方法非常的简单，只需要在Web页面的<code>&lt;head&gt;&lt;/head&gt;</code>中添加对应的<code>flexible_css.js,flexible.js</code>文件：<br><br>第一种方法是将文件下载到你的项目中，然后通过相对路径添加:<br></p>
+<pre><code>&lt;script src=&quot;build/flexible_css.debug.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;build/flexible.debug.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>或者直接加载阿里CDN的文件：<br></p>
+<pre><code>&lt;script src=&quot;http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>另外强烈建议对JS做<strong>内联处理</strong>，在所有资源加载之前执行这个JS。执行这个JS后，会在<code>&lt;html&gt;</code>元素上增加一个<code>data-dpr</code>属性，以及一个<code>font-size</code>样式。JS会根据不同的设备添加不同的<code>data-dpr</code>值，比如说2或者3，同时会给<code>html</code>加上对应的<code>font-size</code>的值，比如说75px。<br><br>如此一来，页面中的元素，都可以通过<code>rem</code>单位来设置。他们会根据<code>html</code>元素的<code>font-size</code>值做相应的计算，从而实现屏幕的适配效果。<br><br>此之外，在引入<code>lib-flexible</code>需要执行的JS之前，可以手动设置<code>meta</code>来控制<code>dpr</code>值，如：<br></p>
+<pre><code>&lt;meta name=&quot;flexible&quot; content=&quot;initial-dpr=2&quot; /&gt;
+</code></pre><p>其中<code>initial-dpr</code>会把<code>dpr</code>强制设置为给定的值。如果手动设置了<code>dpr</code>之后，不管设备是多少的<code>dpr</code>，都会强制认为其<code>dpr</code>是你设置的值。在此不建议手动强制设置<code>dpr</code>，因为在<code>Flexible</code>中，只对iOS设备进行<code>dpr</code>的判断，对于Android系列，始终认为其<code>dpr</code>为<code>1</code>。<br></p>
+<pre><code>if (!dpr &amp;&amp; !scale) {
+var isAndroid = win.navigator.appVersion.match(/android/gi);
+var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+var devicePixelRatio = win.devicePixelRatio;
+if (isIPhone) {
+    // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+    if (devicePixelRatio &gt;= 3 &amp;&amp; (!dpr || dpr &gt;= 3)) {                
+        dpr = 3;
+    } else if (devicePixelRatio &gt;= 2 &amp;&amp; (!dpr || dpr &gt;= 2)){
+        dpr = 2;
+    } else {
+        dpr = 1;
+    }
+} else {
+    // 其他设备下，仍旧使用1倍的方案
+    dpr = 1;
+}
+scale = 1 / dpr;
+}
+</code></pre><h4 id="flexible的实质"><a href="#flexible的实质" class="headerlink" title="flexible的实质"></a>flexible的实质</h4><p><code>flexible</code>实际上就是能过JS来动态改写<code>meta</code>标签，代码类似这样：<br></p>
+<pre><code>var metaEl = doc.createElement(&apos;meta&apos;);
+var scale = isRetina ? 0.5:1;
+metaEl.setAttribute(&apos;name&apos;, &apos;viewport&apos;);
+metaEl.setAttribute(&apos;content&apos;, &apos;initial-scale=&apos; + scale + &apos;, maximum-scale=&apos; + scale + &apos;, minimum-scale=&apos; + scale + &apos;, user-scalable=no&apos;);
+if (docEl.firstElementChild) {
+    document.documentElement.firstElementChild.appendChild(metaEl);
+} else {
+    var wrap = doc.createElement(&apos;div&apos;);
+    wrap.appendChild(metaEl);
+    documen.write(wrap.innerHTML);
+}
+</code></pre><p>事实上他做了这几样事情：<br></p>
+<ul>
+<li>动态改写<meta>标签</li>
+<li>给<code>&lt;html&gt;</code>元素添加<code>data-dpr</code>属性，并且动态改写<code>data-dpr</code>的值</li>
+<li>给<code>&lt;html&gt;</code>元素添加<code>font-size</code>属性，并且动态改写<code>font-size</code>的值</li>
+</ul>
+<h3 id="案例实战"><a href="#案例实战" class="headerlink" title="案例实战"></a>案例实战</h3><hr>
+<p>了解Flexible相关的知识之后，咱们回到文章开头。我们的目标是制作一个适配各终端的H5页面。别的不多说，动手才能丰衣足食。<br></p>
+<h4 id="创建HTML模板"><a href="#创建HTML模板" class="headerlink" title="创建HTML模板"></a>创建HTML模板</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta content=&quot;yes&quot; name=&quot;apple-mobile-web-app-capable&quot;&gt;
+        &lt;meta content=&quot;yes&quot; name=&quot;apple-touch-fullscreen&quot;&gt;
+        &lt;meta content=&quot;telephone=no,email=no&quot; name=&quot;format-detection&quot;&gt;
+        &lt;script src=&quot;http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js&quot;&gt;&lt;/script&gt;
+        &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;favicon.png&quot;&gt;
+        &lt;link rel=&quot;Shortcut Icon&quot; href=&quot;favicon.png&quot; type=&quot;image/x-icon&quot;&gt;
+        &lt;title&gt;再来一波&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- 页面结构写在这里 --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>正如前面所介绍的一样，首先加载了Flexible所需的配置：<br></p>
+<pre><code>&lt;script src=&quot;http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>这个时候可以根据设计的图需求，在HTML文档的<code>&lt;body&gt;&lt;/body&gt;</code>中添加对应的HTML结构，比如：<br></p>
+<pre><code>&lt;div class=&quot;item-section&quot; data-repeat=&quot;sections&quot;&gt;
+&lt;div class=&quot;item-section_header&quot;&gt;
+    &lt;h2&gt;&lt;img src=&quot;{brannerImag}&quot; alt=&quot;&quot;&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+    &lt;li data-repeat=&quot;items&quot; class=&quot;flag&quot; role=&quot;link&quot; href=&quot;{itemLink}&quot;&gt;
+        &lt;a class=&quot;figure flag-item&quot; href=&quot;{itemLink}&quot;&gt;
+            &lt;img src=&quot;{imgSrc}&quot; alt=&quot;&quot;&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;figcaption flag-item&quot;&gt;
+            &lt;div class=&quot;flag-title&quot;&gt;&lt;a href=&quot;{itemLink}&quot; title=&quot;&quot;&gt;{poductName}&lt;/a&gt;&lt;/div&gt;
+            &lt;div class=&quot;flag-price&quot;&gt;&lt;span&gt;双11价&lt;/span&gt;&lt;strong&gt;¥{price}&lt;/strong&gt;&lt;small&gt;({preferential})&lt;/small&gt;&lt;/div&gt;
+            &lt;div class=&quot;flag-type&quot;&gt;{activityType}&lt;/div&gt;
+            &lt;a class=&quot;flag-btn&quot; href=&quot;{shopLink}&quot;&gt;{activeName}&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</code></pre><p>这仅是一个示例文档，大家可以根据自己风格写模板。<br><br>为了能更好的测试页面，给其配置一点假数据：<br></p>
+<pre><code>//define data
+var pageData = {
+    sections:[{
+        &quot;brannerImag&quot;:&quot;http://xxx.cdn.com/B1PNLZKXXXXXaTXXXXXXXXXXXX-750-481.jpg&quot;,
+        items:[{
+            &quot;itemLink&quot;: &quot;##&quot;,
+            &quot;imgSrc&quot;: &quot;https://placeimg.com/350/350/people/grayscale&quot;,
+            &quot;poductName&quot;:&quot;Carter&apos;s1年式灰色长袖连体衣包脚爬服全棉鲸鱼男婴儿童装115G093&quot;,
+            &quot;price&quot;: &quot;299.06&quot;,
+            &quot;preferential&quot;: &quot;满400减100&quot;,
+            &quot;activityType&quot;: &quot;1小时内热卖5885件&quot;,
+            &quot;shopLink&quot;:&quot;##&quot;,
+            &quot;activeName&quot;: &quot;马上抢！&quot;
+        }
+            ....
+        }]
+    }]
+}
+</code></pre><p>接下来的工作就是美化工作了。在写具体样式之前，有几个点需要先了解一下。<br></p>
+<h4 id="把视觉稿中的px转换成rem"><a href="#把视觉稿中的px转换成rem" class="headerlink" title="把视觉稿中的px转换成rem"></a>把视觉稿中的px转换成rem</h4><p>读到这里，大家应该都知道，我们接下来要做的事情，就是如何把视觉稿中的<code>px</code>转换成<code>rem</code>。在此花点时间解释一下。<br><br>首先，目前日常工作当中，视觉设计师给到前端开发人员手中的视觉稿尺寸一般是基于<code>640px</code>、<code>750px</code>以及<code>1125px</code>宽度为准。甚至为什么？大家应该懂的（考虑Retina屏）。<br><br>正如文章开头显示的示例设计稿，他就是一张以<code>750px</code>为基础设计的。那么问题来了，我们如何将设计稿中的各元素的<code>px</code>转换成<code>rem</code>。<br><br><img src="http://cdn2.w3cplus.com/cdn/farfuture/hKfao4CS_yygi0EEUF1xMOb7NROYEu680tlykfjZzLs/mtime:1447828705/sites/default/files/blogs/2015/1511/rem-8.png" alt=""><br><br>我厂的视觉设计师想得还是很周到的，会帮你把相关的信息在视觉稿上标注出来。<br><br>目前Flexible会将视觉稿分成<code>100份</code>（主要为了以后能更好的兼容<code>vh</code>和<code>vw</code>），而每一份被称为一个单位<code>a</code>。同时<code>1rem</code>单位被认定为<code>10a</code>。针对我们这份视觉稿可以计算出：<br></p>
+<pre><code>1a   = 7.5px
+1rem = 75px 
+</code></pre><p>那么我们这个示例的稿子就分成了<code>10a</code>，也就是整个宽度为<code>10rem</code>，<code>&lt;html&gt;</code>对应的<code>font-size</code>为<code>75px</code>：<br><br><img src="http://cdn1.w3cplus.com/cdn/farfuture/h0w7oXfqJgirNWw4PPa2GZWyyAsPRGvxLRWCZYPE_Y4/mtime:1447769998/sites/default/files/blogs/2015/1511/rem-2.jpg" alt=""><br><br>这样一来，对于视觉稿上的元素尺寸换算，只需要原始的<code>px</code>值除以<code>rem</code>基准值即可。例如此例视觉稿中的图片，其尺寸是<code>176px * 176px</code>,转换成为<code>2.346667rem * 2.346667rem</code>。<br></p>
+<h4 id="如何快速计算"><a href="#如何快速计算" class="headerlink" title="如何快速计算"></a>如何快速计算</h4><p>在实际生产当中，如果每一次计算<code>px</code>转换<code>rem</code>，或许会觉得非常麻烦，或许直接影响大家平时的开发效率。为了能让大家更快进行转换，我们团队内的同学各施所长，为<code>px</code>转换<code>rem</code>写了各式各样的小工具。<br></p>
+<h4 id="CSSREM"><a href="#CSSREM" class="headerlink" title="CSSREM"></a>CSSREM</h4><p><a href="https://github.com/flashlizi/cssrem" target="_blank" rel="external">CSSREM</a>是一个CSS的px值转rem值的Sublime Text3自动完成插件。这个插件是由<a href="https://github.com/flashlizi" target="_blank" rel="external">@正霖</a>编写。先来看看插件的效果：<br><br><img src="http://cdn1.w3cplus.com/cdn/farfuture/Mn934L-OJUnahLoJ7qLdEDvmYFbD_O8SVgH7SovnaWg/mtime:1447830963/sites/default/files/blogs/2015/1511/cssrem.gif" alt=""><br><br>有关于CSSREM如何安装、配置教程可以<a href="https://github.com/flashlizi/cssrem" target="_blank" rel="external">点击这里查阅</a>。<br></p>
+<h4 id="CSS处理器"><a href="#CSS处理器" class="headerlink" title="CSS处理器"></a>CSS处理器</h4><p>除了使用编辑器的插件之外，还可以使用CSS的处理器来帮助大家处理。比如说Sass、LESS以及PostCSS这样的处理器。我们简单来看两个示例。<br></p>
+<h5 id="Sass"><a href="#Sass" class="headerlink" title="Sass"></a>Sass</h5><p>使用<a href="http://www.w3cplus.com/blog/tags/302.html" target="_blank" rel="external">Sass</a>的同学，可以使用Sass的函数、混合宏这些功能来实现：<br></p>
+<pre><code>@function px2em($px, $base-font-size: 16px) {
+@if (unitless($px)) {
+    @warn &quot;Assuming #{$px} to be in pixels, attempting to convert it into pixels for you&quot;;
+    @return px2em($px + 0px); // That may fail.
+} @else if (unit($px) == em) {
+    @return $px;
+}
+@return ($px / $base-font-size) * 1em;
+}
+</code></pre><p>除了使用Sass函数外，还可以使用Sass的混合宏：<br></p>
+<pre><code>@mixin px2rem($property,$px-values,$baseline-px:16px,$support-for-ie:false){
+//Conver the baseline into rems
+$baseline-rem: $baseline-px / 1rem * 1;
+//Print the first line in pixel values
+@if $support-for-ie {
+    #{$property}: $px-values;
+}
+//if there is only one (numeric) value, return the property/value line for it.
+@if type-of($px-values) == &quot;number&quot;{
+    #{$property}: $px-values / $baseline-rem;
+}
+@else {
+    //Create an empty list that we can dump values into
+    $rem-values:();
+    @each $value in $px-values{
+        // If the value is zero or not a number, return it
+        @if $value == 0 or type-of($value) != &quot;number&quot;{
+            $rem-values: append($rem-values, $value / $baseline-rem);
+        }
+    }
+    // Return the property and its list of converted values
+    #{$property}: $rem-values;
+}
+}
+</code></pre><p>有关于更多的介绍，可以<a href="http://www.w3cplus.com/blog/tags/143.html" target="_blank" rel="external">点击这里</a>进行了解。<br></p>
+<h4 id="PostCSS-px2rem"><a href="#PostCSS-px2rem" class="headerlink" title="PostCSS(px2rem)"></a>PostCSS(px2rem)</h4><p>了Sass这样的CSS处理器这外，我们团队的<a href="http://weibo.com/u/2168835224" target="_blank" rel="external">@颂奇</a>同学还开发了一款npm的工具<a href="https://www.npmjs.com/package/px2rem" target="_blank" rel="external">px2rem</a>。安装好<a href="https://www.npmjs.com/package/px2rem" target="_blank" rel="external">px2rem</a>之后，可以在项目中直接使用。也可以使用<a href="http://www.w3cplus.com/blog/tags/516.html" target="_blank" rel="external">PostCSS</a>。使用PostCSS插件<a href="https://www.npmjs.com/package/postcss-px2rem" target="_blank" rel="external">postcss-px2rem</a>：<br></p>
+<pre><code>var gulp = require(&apos;gulp&apos;);
+var postcss = require(&apos;gulp-postcss&apos;);
+var px2rem = require(&apos;postcss-px2rem&apos;);
+
+gulp.task(&apos;default&apos;, function() {
+    var processors = [px2rem({remUnit: 75})];
+    return gulp.src(&apos;./src/*.css&apos;)
+        .pipe(postcss(processors))
+        .pipe(gulp.dest(&apos;./dest&apos;));
+});
+</code></pre><p>除了在Gulp中配置外，还可以使用其他的配置方式，详细的介绍可以<a href="https://www.npmjs.com/package/postcss-px2rem" target="_blank" rel="external">点击这里</a>进行了解。<br><br>配置完成之后，在实际使用时，你只要像下面这样使用：<br></p>
+<pre><code>.selector {
+width: 150px;
+height: 64px; /*px*/
+font-size: 28px; /*px*/
+border: 1px solid #ddd; /*no*/
+}
+</code></pre><p><code>px2rem</code>处理之后将会变成：<br></p>
+<pre><code>.selector {
+width: 2rem;
+border: 1px solid #ddd;
+}
+[data-dpr=&quot;1&quot;] .selector {
+    height: 32px;
+    font-size: 14px;
+}
+[data-dpr=&quot;2&quot;] .selector {
+    height: 64px;
+    font-size: 28px;
+}
+[data-dpr=&quot;3&quot;] .selector {
+    height: 96px;
+    font-size: 42px;
+}
+</code></pre><p>在整个开发中有了这些工具之后，完全不用担心<code>px</code>值转<code>rem</code>值影响开发效率。<br></p>
+<h4 id="字号不使用rem"><a href="#字号不使用rem" class="headerlink" title="字号不使用rem"></a>字号不使用rem</h4><p>前面大家都见证了如何使用<code>rem</code>来完成H5适配。那么文本又将如何处理适配。是不是也通过<code>rem</code>来做自动适配。<br><br>显然，我们在iPhone3G和iPhone4的Retina屏下面，希望看到的文本字号是相同的。也就是说，我们<strong>不希望文本在Retina屏幕下变小</strong>，另外，我们<strong>希望在大屏手机上看到更多文本</strong>，以及，现在绝大多数的字体文件都自带一些点阵尺寸，通常是16px和24px，所以我们<strong>不希望出现13px</strong>和<strong>15px</strong>这样的奇葩尺寸。<br><br>如此一来，就决定了在制作H5的页面中，<code>rem</code>并不适合用到段落文本上。所以在Flexible整个适配方案中，考虑文本还是使用<code>px</code>作为单位。只不过使用<code>[data-dpr]</code>属性来区分不同<code>dpr</code>下的文本字号大小。<br></p>
+<pre><code>div {
+width: 1rem; 
+height: 0.4rem;
+font-size: 12px; // 默认写上dpr为1的fontSize
+}
+[data-dpr=&quot;2&quot;] div {
+    font-size: 24px;
+}
+[data-dpr=&quot;3&quot;] div {
+    font-size: 36px;
+}
+</code></pre><p>为了能更好的利于开发，在实际开发中，我们可以定制一个<a href="https://github.com/W3cplus/Sass-Resources/blob/master/mixins/_font-dpr.scss" target="_blank" rel="external">font-dpr()</a>这样的Sass混合宏：<br></p>
+<pre><code>@mixin font-dpr($font-size){
+font-size: $font-size;
+
+[data-dpr=&quot;2&quot;] &amp; {
+    font-size: $font-size * 2;
+}
+
+[data-dpr=&quot;3&quot;] &amp; {
+    font-size: $font-size * 3;
+}
+}
+</code></pre><p>有了这样的混合宏之后，在开发中可以直接这样使用：<br></p>
+<pre><code>@include font-dpr(16px);
+</code></pre><p>当然这只是针对于描述性的文本，比如说段落文本。但有的时候文本的字号也需要分场景的，比如在项目中有一个slogan,业务方希望这个slogan能根据不同的终端适配。针对这样的场景，完全可以使用rem给slogan做计量单位。<br></p>
+<h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><p>本来想把这个页面的用到的CSS(或SCSS)贴出来，但考虑篇幅过长，而且这么简单的页面，我想大家也能轻而易举搞定。所以就省略了。权当是给大家留的一个作业吧，感兴趣的可以试试Flexible能否帮你快速完成H5页面终端适配。<br></p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><hr>
+<p>最后来看看真机上显示的效果吧。我截了两种设备下的效果：<br></p>
+<h4 id="iPhone4"><a href="#iPhone4" class="headerlink" title="iPhone4"></a>iPhone4</h4><p><img src="http://cdn.w3cplus.com/cdn/farfuture/YhlgyAvcvtOe54709eeCV9lrooOFzNJIhMEEj921fzs/mtime:1447841119/sites/default/files/blogs/2015/1511/rem-9.jpg" alt=""><br></p>
+<h4 id="iPhone6"><a href="#iPhone6" class="headerlink" title="iPhone6+"></a>iPhone6+</h4><p><img src="http://cdn2.w3cplus.com/cdn/farfuture/gL7chP84773JBDGVVNjVp2m7yl2s9ecFv54nyQcaikk/mtime:1447841119/sites/default/files/blogs/2015/1511/rem-10.png" alt=""><br></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><hr>
+<p>其实H5适配的方案有很多种，网上有关于这方面的教程也非常的多。不管哪种方法，都有其自己的优势和劣势。而本文主要介绍的是如何使用Flexible这样的一库来完成H5页面的终端适配。为什么推荐使用Flexible库来做H5页面的终端设备适配呢？主要因为这个库在手淘已经使用了近一年，而且已达到了较为稳定的状态。除此之外，你不需要考虑如何对元素进行折算，可以根据对应的视觉稿，直接切入。<br><br>当然，如果您有更好的H5页面终端适配方案，欢迎在下面的评论中与我们一起分享。如果您在使用这个库时，碰到任何问题，都可以在Github给我们提<a href="https://github.com/amfe/lib-flexible/issues" target="_blank" rel="external">Issue</a>。我们团队会努力解决相关需Issues。<br></p>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><hr>
+<p>学们反馈需要一个在线演示的DEMO。那么花了点时间写了个demo，希望对有需要的同学有所帮助。友情提示：<strong>DEMO未经过所有设备测试，可能在部分设备上有细节上的差异</strong><br><br><a href="http://huodong.m.taobao.com/act/yibo.html" target="_blank" rel="external">DEMO</a><br><br>请用手机扫下面的二维码<br><br><img src="http://cdn2.w3cplus.com/cdn/farfuture/RqdfEdIqyYInpUeFzDLoWrYJIaGIHzqPMrRWT9merUc/mtime:1448593751/sites/default/files/blogs/2015/1511/yiboqr.png" alt=""><br></p>
+<h3 id="更新【2016年01月13日】"><a href="#更新【2016年01月13日】" class="headerlink" title="更新【2016年01月13日】"></a>更新【2016年01月13日】</h3><hr>
+<p>首先，由衷的感谢@完颜 帮忙踩了这个坑，回想起iOS从7~8，从8~9，都踩过只至少一个坑，真的也是醉了。<br><br>手淘这边的flexible方案临时升级如下：<br></p>
+<ul>
+<li>针对OS 9_3的UA，做临时处理，强制dpr为1，即scale也为1，虽然牺牲了这些版本上的高清方案，但是也只能这么处理了</li>
+<li>这个版本不打算发布到CDN（也不发不到tnpm），所以大家更新的方式，最好手动复制代码内联到html中，具体代码可以<a href="http://www.w3cplus.com/sites/default/files/blogs/2016/1601/flexible.js" target="_blank" rel="external">点击这里下载</a><br></li>
+</ul>
+<p>转自：<a href="http://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html" target="_blank" rel="external">http://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html</a></p>
+
+          
+        
+      
     </div>
-    
-    <!-- ============================ END Off-canvas navigation =========================== -->
 
-    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
-
-    <div id="sb-site">
-        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
-
-        <!-- ============================ Header & Logo bar =========================== -->
-
-        <div id="navigation" class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <!-- Nav logo -->
-                    <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link">
-                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
-                        </a>
-                    </div>
-                    <!-- // Nav logo -->
-                    <!-- Info-bar -->
-                    <nav>
-                        <ul class="nav">
-                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
-                            
-                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
-                            
-                            
-                            
-                            
-                            
-                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
-                            
-                            <li class="nolink"><span>Welcome!</span></li>
-                        </ul>
-                    </nav>
-                    <!--// Info-bar -->
-                </div>
-                <!-- // .container -->
-                <div class="learnmore sb-toggle-right">More</div>
-                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar before"></span>
-                <span class="icon-bar main"></span>
-                <span class="icon-bar after"></span>
-                </button>
-            </div>
-            <!-- // .navbar-inner -->
-        </div>
-
-        <!-- ============================ Header & Logo bar =========================== -->
-
-
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>世上所有的相遇都是久别重逢。</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
+    <div>
+      
     </div>
-</section>
 
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
+    <div>
+      
+    </div>
 
-<!-- ============================ END Hero Image =========================== -->
-<!-- ============================ Content =========================== -->
+    <footer class="post-footer">
+      
 
-<section id="intro">
-    <div class="container">
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
         
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/06/10/38/">使用Flexible实现手淘H5页面的终端适配 🍧</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-06-10T13:26:33.000Z" itemprop="datePublished">
-          2016-06-10
-      </time>
-    
-    
-    | 
-    <a href='/tags/HTML5/'>HTML5</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        曾几何时为了兼容IE低版本浏览器而头痛，以为到Mobile时代可以跟这些麻烦说拜拜。可没想到到了移动时代，为了处理各终端的适配而乱了手脚。对于混迹各社区的偶，时常发现大家拿手机淘宝的H5页面做讨论——手淘的H5页面是如何实现多终端的适配？那么趁此Amfe阿里无线前端团队双11技术连载之际，用一个实战案例来告诉大家，手淘的H5页面是如何实现多终端适配的，希望这篇文章对大家在Mobile的世界中能过得更轻松。
-目标
-拿一个双11的Mobil
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/06/10/38/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/06/05/37/" itemprop="url">
+                  知道这20个正则表达式，能让你少写1,000行代码🐰
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-06-05T20:11:00+08:00" content="2016-06-05">
+              2016-06-05
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/06/05/37/">知道这20个正则表达式，能让你少写1,000行代码🐰</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-06-05T12:11:00.000Z" itemprop="datePublished">
-          2016-06-05
-      </time>
+      </header>
     
-    
-    | 
-    <a href='/tags/JS/'>JS</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        正则表达式，一个十分古老而又强大的文本处理工具，仅仅用一段非常简短的表达式语句，便能够快速实现一个非常复杂的业务逻辑。熟练地掌握正则表达式的话，能够使你的开发效率得到极大的提升。正则表达式经常被用于字段或任意字符串的校验，如下面这段校验基本日期格式的JavaScript代码：
-var reg = /^(\\d{1,4})(-|\\/)(\\d{1,2})\\2(\\d{1,2})$/; 
-var r = fieldValue.match
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/06/05/37/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/06/01/36/">Sublime Text 3最好的功能、插件和设置🍰</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-06-01T14:04:44.000Z" itemprop="datePublished">
-          2016-06-01
-      </time>
-    
-    
-    | 
-    <a href='/tags/编辑器/'>编辑器</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Features（功能）
-Command Palette （命令面板） ctrl + shift + p命令面板可以使你访问设置菜单中可以所有的东西，调用包命令，更改文件的语法，处理Sublime项目，等等。举例来说，你可以在命令面板中Git命令添加，分支，提交和推送。
-使用：ctrl + shift + p
 
-File Switching （文件切换） ctrl + pSublime Text提供了一个非常快速的方式来打开新的文件。只
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/06/01/36/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
         
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/05/30/35/">canvas🐸</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-05-30T13:59:35.000Z" itemprop="datePublished">
-          2016-05-30
-      </time>
+          
+            <p>正则表达式，一个十分古老而又强大的文本处理工具，仅仅用一段非常简短的表达式语句，便能够快速实现一个非常复杂的业务逻辑。熟练地掌握正则表达式的话，能够使你的开发效率得到极大的提升。<br><br>正则表达式经常被用于字段或任意字符串的校验，如下面这段校验基本日期格式的JavaScript代码：<br></p>
+<pre><code>var reg = /^(\\d{1,4})(-|\\/)(\\d{1,2})\\2(\\d{1,2})$/; 
+var r = fieldValue.match(reg);             
+if(r==null)alert(&apos;Date format error!&apos;);
+</code></pre><p>下面是技匠整理的，在前端开发中经常使用到的20个正则表达式。<br></p>
+<hr>
+<h3 id="1-校验密码强度"><a href="#1-校验密码强度" class="headerlink" title="1 . 校验密码强度"></a>1 . 校验密码强度</h3><p>密码的强度必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。<br></p>
+<pre><code>^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$
+</code></pre><h3 id="2-校验中文"><a href="#2-校验中文" class="headerlink" title="2. 校验中文"></a>2. 校验中文</h3><p>字符串仅能是中文。<br></p>
+<pre><code>^[\\u4e00-\\u9fa5]{0,}$
+</code></pre><h3 id="3-由数字、26个英文字母或下划线组成的字符串"><a href="#3-由数字、26个英文字母或下划线组成的字符串" class="headerlink" title="3. 由数字、26个英文字母或下划线组成的字符串"></a>3. 由数字、26个英文字母或下划线组成的字符串</h3><pre><code>^\\w+$
+</code></pre><h3 id="4-校验E-Mail-地址"><a href="#4-校验E-Mail-地址" class="headerlink" title="4. 校验E-Mail 地址"></a>4. 校验E-Mail 地址</h3><p>同密码一样，下面是E-mail地址合规性的正则检查语句。<br></p>
+<pre><code>[\\w!#$%&amp;&apos;*+/=?^_`{|}~-]+(?:\\.[\\w!#$%&amp;&apos;*+/=?^_`{|}~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[\\w](?:[\\w-]*[\\w])?
+</code></pre><h3 id="5-校验身份证号码"><a href="#5-校验身份证号码" class="headerlink" title="5. 校验身份证号码"></a>5. 校验身份证号码</h3><p>下面是身份证号码的正则校验。15 或 18位。<br><br><strong>15位：</strong><br></p>
+<pre><code>^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$
+</code></pre><p><strong>18位：</strong><br></p>
+<pre><code>^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9]|X)$
+</code></pre><h3 id="6-校验日期"><a href="#6-校验日期" class="headerlink" title="6. 校验日期"></a>6. 校验日期</h3><p>“yyyy-mm-dd“ 格式的日期校验，已考虑平闰年。<br></p>
+<pre><code>^(?:(?!0000)[0-9]{4}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$
+</code></pre><h3 id="7-校验金额"><a href="#7-校验金额" class="headerlink" title="7. 校验金额"></a>7. 校验金额</h3><p>金额校验，精确到2位小数。<br></p>
+<pre><code>^[0-9]+(.[0-9]{2})?$
+</code></pre><h3 id="8-校验手机号"><a href="#8-校验手机号" class="headerlink" title="8. 校验手机号"></a>8. 校验手机号</h3><p>下面是国内 13、15、18开头的手机号正则表达式。（可根据目前国内收集号扩展前两位开头号码）<br></p>
+<pre><code>^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\\d{8}$
+</code></pre><h3 id="9-判断IE的版本"><a href="#9-判断IE的版本" class="headerlink" title="9. 判断IE的版本"></a>9. 判断IE的版本</h3><p>IE目前还没被完全取代，很多页面还是需要做版本兼容，下面是IE版本检查的表达式。<br></p>
+<pre><code>^.*MSIE [5-8](?:\\.[0-9]+)?(?!.*Trident\\/[5-9]\\.0).*$
+</code></pre><h3 id="10-校验IP-v4地址"><a href="#10-校验IP-v4地址" class="headerlink" title="10. 校验IP-v4地址"></a>10. 校验IP-v4地址</h3><p>IP4 正则语句。<br></p>
+<pre><code>\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b
+</code></pre><h3 id="11-校验IP-v6地址"><a href="#11-校验IP-v6地址" class="headerlink" title="11. 校验IP-v6地址"></a>11. 校验IP-v6地址</h3><p>IP6 正则语句。<br></p>
+<pre><code>(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))
+</code></pre><h3 id="12-检查URL的前缀"><a href="#12-检查URL的前缀" class="headerlink" title="12. 检查URL的前缀"></a>12. 检查URL的前缀</h3><p>应用开发中很多时候需要区分请求是HTTPS还是HTTP，通过下面的表达式可以取出一个url的前缀然后再逻辑判断。<br></p>
+<pre><code>if (!s.match(/^[a-zA-Z]+:\\/\\//))
+{
+    s = &apos;http://&apos; + s;
+}
+</code></pre><h3 id="13-提取URL链接"><a href="#13-提取URL链接" class="headerlink" title="13. 提取URL链接"></a>13. 提取URL链接</h3><p>下面的这个表达式可以筛选出一段文本中的URL。<br></p>
+<pre><code>^(f|ht){1}(tp|tps):\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- ./?%&amp;=]*)?
+</code></pre><h4 id="14-文件路径及扩展名校验"><a href="#14-文件路径及扩展名校验" class="headerlink" title="14. 文件路径及扩展名校验"></a>14. 文件路径及扩展名校验</h4><p>验证windows下文件路径和扩展名（下面的例子中为.txt文件） <br></p>
+<pre><code>^([a-zA-Z]\\:|\\\\)\\\\([^\\\\]+\\\\)*[^\\/:*?&quot;&lt;&gt;|]+\\.txt(l)?$
+</code></pre><h3 id="15-提取Color-Hex-Codes"><a href="#15-提取Color-Hex-Codes" class="headerlink" title="15. 提取Color Hex Codes"></a>15. 提取Color Hex Codes</h3><p>有时需要抽取网页中的颜色代码，可以使用下面的表达式。<br></p>
+<pre><code>^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$
+</code></pre><h3 id="16-提取网页图片"><a href="#16-提取网页图片" class="headerlink" title="16. 提取网页图片"></a>16. 提取网页图片</h3><p>假若你想提取网页中所有图片信息，可以利用下面的表达式。<br></p>
+<pre><code>\\&lt; *[img][^\\\\&gt;]*[src] *= *[\\&quot;\\&apos;]{0,1}([^\\&quot;\\&apos;\\ &gt;]*)
+</code></pre><h3 id="17-提取页面超链接"><a href="#17-提取页面超链接" class="headerlink" title="17. 提取页面超链接"></a>17. 提取页面超链接</h3><p>提取html中的超链接。<br></p>
+<pre><code>(&lt;a\\s*(?!.*\\brel=)[^&gt;]*)(href=&quot;https?:\\/\\/)((?!(?:(?:www\\.)?&apos;.implode(&apos;|(?:www\\.)?&apos;, $follow_list).&apos;))[^&quot;]+)&quot;((?!.*\\brel=)[^&gt;]*)(?:[^&gt;]*)&gt;
+</code></pre><h3 id="18-查找CSS属性"><a href="#18-查找CSS属性" class="headerlink" title="18. 查找CSS属性"></a>18. 查找CSS属性</h3><p>通过下面的表达式，可以搜索到相匹配的CSS属性。<br></p>
+<pre><code>^\\s*[a-zA-Z\\-]+\\s*[:]{1}\\s[a-zA-Z0-9\\s.#]+[;]{1}
+</code></pre><h3 id="19-抽取注释"><a href="#19-抽取注释" class="headerlink" title="19. 抽取注释"></a>19. 抽取注释</h3><p>如果你需要移除HMTL中的注释，可以使用如下的表达式。<br></p>
+<pre><code>&lt;!--(.*?)--&gt;
+</code></pre><h3 id="20-匹配HTML标签"><a href="#20-匹配HTML标签" class="headerlink" title="20. 匹配HTML标签"></a>20. 匹配HTML标签</h3><p>通过下面的表达式可以匹配出HTML中的标签属性。<br></p>
+<pre><code>&lt;\\/?\\w+((\\s+\\w+(\\s*=\\s*(?:&quot;.*?&quot;|&apos;.*?&apos;|[\\^&apos;&quot;&gt;\\s]+))?)+\\s*|\\s*)\\/?&gt;
+</code></pre><h3 id="正则表达式的相关语法"><a href="#正则表达式的相关语法" class="headerlink" title="正则表达式的相关语法"></a>正则表达式的相关语法</h3><p>下面是我找到的一张非常不错的正则表达式 Cheat Sheet，可以用来快速查找相关语法。<br><br><img src="http://upload-images.jianshu.io/upload_images/1399853-1b08244a4d375624.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br></p>
+<hr>
+<h3 id="学习正则表达式"><a href="#学习正则表达式" class="headerlink" title="学习正则表达式"></a>学习正则表达式</h3><p>我在网上看到了一篇相当不错的正则表达式<a href="https://msdn.microsoft.com/en-us/library/az24scfc(v=vs.110" target="_blank" rel="external">快速学习指南</a>.aspx)，有兴趣继续深入学习的同学可以参考。<br><br><img src="http://upload-images.jianshu.io/upload_images/1399853-017f7201958ae676.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br></p>
+<hr>
+<h3 id="正则表达式在线测试工具"><a href="#正则表达式在线测试工具" class="headerlink" title="正则表达式在线测试工具"></a>正则表达式在线测试工具</h3><p><a href="https://regex101.com/#javascript" target="_blank" rel="external">regex101</a>是一个非常不错的正则表达式在线测试工具，你可以直接在线测试你的正则表达式哦。<br><br><img src="http://upload-images.jianshu.io/upload_images/1399853-2c13bde71d91694c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br></p>
+<hr>
+<p>另外，我也网上找到几本不错的正则表达式方面的教程和书籍，并将它们分享到了<a href="jijiangshe.com">技匠社jijiangshe.com</a>，如果你有兴趣学习欢迎访问获取。^_^<br></p>
+<p>转自：<a href="http://www.jianshu.com/p/e7bb97218946" target="_blank" rel="external">http://www.jianshu.com/p/e7bb97218946</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-    | 
-    <a href='/tags/HTML5/'>HTML5</a>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/06/01/36/" itemprop="url">
+                  Sublime Text 3最好的功能、插件和设置🍰
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-06-01T22:04:44+08:00" content="2016-06-01">
+              2016-06-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Features（功能）"><a href="#Features（功能）" class="headerlink" title="Features（功能）"></a>Features（功能）</h3><hr>
+<h5 id="Command-Palette-（命令面板）-ctrl-shift-p"><a href="#Command-Palette-（命令面板）-ctrl-shift-p" class="headerlink" title="Command Palette （命令面板） ctrl + shift + p"></a>Command Palette （命令面板） ctrl + shift + p</h5><p>命令面板可以使你访问设置菜单中可以所有的东西，调用包命令，更改文件的语法，处理Sublime项目，等等。举例来说，你可以在命令面板中Git命令添加，分支，提交和推送。<br></p>
+<pre><code>使用：ctrl + shift + p
+</code></pre><p><img src="http://css88.b0.upaiyun.com/css88/2015/12/set-syntax-html.png" alt=""><br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/git-commands.png" alt=""><br></p>
+<h4 id="File-Switching-（文件切换）-ctrl-p"><a href="#File-Switching-（文件切换）-ctrl-p" class="headerlink" title="File Switching （文件切换） ctrl + p"></a>File Switching （文件切换） ctrl + p</h4><p>Sublime Text提供了一个非常快速的方式来打开新的文件。只要按下Ctrl+ P并开始输入你想要打开的文件的名称。一旦找到文件，只需按enter键，就可以开始直接输入到该文件了！<br></p>
+<pre><code>使用：ctrl + p
+</code></pre><p><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-file-opener.png" alt=""><br></p>
+<h4 id="Goto-Symbols-（跳转标记）-ctrl-r"><a href="#Goto-Symbols-（跳转标记）-ctrl-r" class="headerlink" title="Goto Symbols （跳转标记） ctrl + r"></a>Goto Symbols （跳转标记） ctrl + r</h4><p>当你编辑一个大文件时，文件中有一堆方法，按Ctrl + R将其全部列出来，使他们更容易找到。开始尝试的输入你想要的，然后按Enter 就可以快速跳转这个方法了。<br></p>
+<pre><code>使用方法：按Ctrl+ R
+</code></pre><p><img src="http://css88.b0.upaiyun.com/css88/2015/12/goto-symbol.png" alt=""><br><br>Sublime Text 3 有一个新功能（Goto Definition 转到定义）。它提供了 Sublime Text 更多功能，使其更接近于一个IDE。如果你有兴趣，可以自己去学习一下<br></p>
+<h4 id="Multi-Edit（多行编辑）-ctrl-click"><a href="#Multi-Edit（多行编辑）-ctrl-click" class="headerlink" title="Multi-Edit（多行编辑） ctrl + click"></a>Multi-Edit（多行编辑） ctrl + click</h4><p>在我看来这绝对是Sublime Text最好的功能。使用它之后，就很难再回到其他文本编辑器。（愚人码头注：其实很多编辑器，IDE现在都有这功能了，比如：WebStorm）<br>有许多不同的方式使用多行编辑：<br></p>
+<ul>
+<li>ctrl + d: 选中光标所占的文本，继续操作则会选中下一个相同的文本。（愚人码头注：多按几下试试）</li>
+<li>ctrl + click: 单击想要编辑的每一个地方，都将创建一个光标</li>
+<li>ctrl + shift + f 和 alt + enter: 在你的文件查找一个文本，然后将其全部选中</li>
+</ul>
+<p>以下叔整理的:<br></p>
+<ul>
+<li>ctrl+l 选中整行，继续操作则继续选择下一行，效果和 shift+↓ 效果一样。</li>
+<li>ctrl+shift+l 先选中多行，再按下快捷键，会在每行行尾插入光标，即可同时编辑这些行。</li>
+<li>ctrl+alt+↑ 或 ctrl+alt+鼠标向上拖动 向上添加多行光标，可同时编辑多行。</li>
+<li>ctrl+alt+↓ 或 ctrl+alt+鼠标向下拖动 向下添加多行光标，可同时编辑多行。</li>
+<li>shift+↑ 向上选中多行。</li>
+<li>shift+↓ 向下选中多行。</li>
+</ul>
+<p><img src="http://css88.b0.upaiyun.com/css88/2015/12/multiedit.png" alt=""><br></p>
+<h4 id="Snippets（代码片段）"><a href="#Snippets（代码片段）" class="headerlink" title="Snippets（代码片段）"></a>Snippets（代码片段）</h4><p>代码片段是Sublime Text的另一大特点。您可以使用预装的，也可以自己创建，或安装具有代码片段的包。你所要做的就是输入一个定义了代码片段的文本，它会扩展到你的代码段。<br><br>例如，键入lorem将产生lorem存有文本。<br><br>使用: 输入一个定义了代码片段的文本（例如lorem），然后按tab键。<br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-snippet-lorem.png" alt=""><br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-snippet-lorem-tab.png" alt=""><br><br>这里有一篇关于创建代码片段的非常棒的文章，<a href="http://www.hongkiat.com/blog/sublime-code-snippets/" target="_blank" rel="external">http://www.hongkiat.com/blog/sublime-code-snippets/</a><br></p>
+<h4 id="Keyboard-Shortcuts-（快捷键）"><a href="#Keyboard-Shortcuts-（快捷键）" class="headerlink" title="Keyboard Shortcuts （快捷键）"></a>Keyboard Shortcuts （快捷键）</h4><p>Sublime Text的快捷键的数量是惊人的。我觉得这是Sublime Text另一个好的功能。如果太多了，你可以将自己常用的快捷键从主键（ home keys ）移到了自己的快捷键列表中（my keyboard）。<br><br>对于Sublime Text键盘快捷键的完整列表，看看我们的键盘快捷键文章。<a href="https://scotch.io/bar-talk/sublime-text-keyboard-shortcuts" target="_blank" rel="external">https://scotch.io/bar-talk/sublime-text-keyboard-shortcuts</a><br></p>
+<h3 id="Projects（项目）"><a href="#Projects（项目）" class="headerlink" title="Projects（项目）"></a>Projects（项目）</h3><hr>
+<p>在Sublime Text中，项目是工作流程中不可或缺的一部分。一个项目仅仅是一个 Sublime工作空间，项目中的文件夹都是开放的，并显示在侧边栏中。这是很有帮助的，因为你可以定义一个项目，并添加文件夹到项目中，并能够迅速地在文件夹之间切换。<br><br>使用项目，你只需要去Windows资源管理器或Finder中找到你想要的项目，并将其拖到Sublime Text，就可以了。<br><br>保存一个项目：进入命令面板，输入保存项目。<br></p>
+<pre><code>切换项目：ctrl + alt + p
+</code></pre><p><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-project-switch.png" alt=""><br></p>
+<h3 id="Packages-Plugins（包-插件）"><a href="#Packages-Plugins（包-插件）" class="headerlink" title="Packages/Plugins（包/插件）"></a>Packages/Plugins（包/插件）</h3><hr>
+<h4 id="Package-Control（包控制）"><a href="#Package-Control（包控制）" class="headerlink" title="Package Control（包控制）"></a>Package Control（包控制）</h4><p>Sublime Text提供了绝对必要的包管理器。这是安装下面列出的所有插件和主题的最佳方式。继续，在包控制在安装插件。<br><br><strong>使用方法</strong>：进入命令面板（ctrl + shift+ p），然后键入 install。<br><br>包控制将加载所有可用于安装的包。看看你可以查找并安装自己喜欢的包..<br></p>
+<h4 id="Alignment-（代码对齐）"><a href="#Alignment-（代码对齐）" class="headerlink" title="Alignment （代码对齐）"></a>Alignment （代码对齐）</h4><p>一个非常简单和易于使用的插件,使你的代码组织和美观。当您重温代码时候非常有用。<br>使用方法：选中要调整的行，然后按 <code>Ctrl</code>+ <code>Alt</code> + <code>A</code><br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/alignment-before.png" alt=""><br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/alignment-after.png" alt=""><br></p>
+<h4 id="BracketHighlighter"><a href="#BracketHighlighter" class="headerlink" title="BracketHighlighter"></a>BracketHighlighter</h4><p>该插件提供行数列高亮的各种配对的语法符号。（愚人码头注：就是将配对的括号等显示在行数列上）<br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/brackethighlighter.png" alt=""><br></p>
+<h4 id="Colorpicker"><a href="#Colorpicker" class="headerlink" title="Colorpicker"></a>Colorpicker</h4><p>使用一个取色器改变颜色<br><br>使用方法: <code>ctrl</code> + <code>shift</code> + <code>c</code><br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-colorpicker.png" alt=""><br><br>注：该插件在Mac上使用时非常漂亮<br></p>
+<h4 id="Emmet"><a href="#Emmet" class="headerlink" title="Emmet"></a>Emmet</h4><p>Emmet绝对的节省时间。您可以轻松快速地编写HTML。<br><br>使用方法: <code>ctrl</code> + <code>alt</code>+ <code>ente</code>r ,并且开始输入Emmet风格的HTML<br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-emmet-start.png" alt=""><br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-emmet-finish.png" alt=""><br><br>看看我们的<a href="https://scotch.io/tutorials/write-html-crazy-fast-with-emmet-an-interactive-guide" target="_blank" rel="external">Emmet</a>指南，以了解更多，并自己尝试Emmet。<br></p>
+<h4 id="DocBlockr"><a href="#DocBlockr" class="headerlink" title="DocBlockr"></a>DocBlockr</h4><p>一个真正简单的方式来轻松地创建许多语言包括JavaScript，PHP和CoffeeScript的文档块。只要在函数的上面输入<code>/**</code>，按Tab就可以了。DocBlockr会观察函数需要的变量名和类型，并创建文档块。<br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-docblockr-example-start.png" alt=""><br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-docblockr-example-finish.png" alt=""><br></p>
+<h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><p>Git帮助你与你的Git repo协议进行交互。它支持很多命令像<code>init</code>, <code>push</code>,<code>pull</code>, <code>branch</code>, <code>stash</code>,等的。了解更多关于你在Sublime Text里面究竟能使用哪些Git功能，以提高您的工作流程。<a href="https://scotch.io/tutorials/using-git-inside-of-sublime-text-to-improve-workflow" target="_blank" rel="external">https://scotch.io/tutorials/using-git-inside-of-sublime-text-to-improve-workflow</a><br></p>
+<h4 id="GitGutter"><a href="#GitGutter" class="headerlink" title="GitGutter"></a>GitGutter</h4><p>这是一个小巧有用的插件，它会告诉你自上次git commit以来已经改变的行。一个指示器显示在行号的旁边。<br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-git-gutter.png" alt=""><br></p>
+<h4 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h4><p>这个插件可以让你拉你的Gists，并把它们插入到你的文件。当你有一个Gists，以启动一个HTML文件或任何其他可重用的代码时候，这是有用的。<br><br>使用方法：打开命令面板，并且键入<code>gist</code>。您也可以使用所显示的快捷方式。<br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-gist.png" alt=""><br></p>
+<h4 id="SidebarEnhancements"><a href="#SidebarEnhancements" class="headerlink" title="SidebarEnhancements"></a>SidebarEnhancements</h4><p>在侧边栏的文件上右击时，这个插件提供了大量更多的选择。打开，查找，复制和粘贴，等等。<br><br>这里是老菜单和SidebarEnhanced菜单的比较。<br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-sidebar-enhancements-before.png" alt=""><br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-sidebar-enhancements-after.png" alt=""><br></p>
+<h3 id="Themes-（主题）"><a href="#Themes-（主题）" class="headerlink" title="Themes （主题）"></a>Themes （主题）</h3><hr>
+<p>Sublime Text可以安装主题，有一些主题真的很酷。您可以使用包控制找到这些。<br><br>使用包控制安装一个主题，然后更新您的用户设置使用它。<br></p>
+<pre><code>// User/Preferences.sublime-settings
+{
+    &quot;theme&quot;: &quot;Soda Light.sublime-theme&quot;
+}
+</code></pre><p>注意： 您可能必须重新启动Sublime Text，这些更改才会生效。<br><br>一些流行的主题：<br><br><strong>THEME – SODA</strong> 包括 LIGHT 和 DARK<br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/soda-2-light-theme.png" alt=""><br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/soda-2-dark-theme.png" alt=""><br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-flatland.png" alt=""><br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/sublime-predawn.png" alt=""><br><br>Flatland的一个分支。repo<br></p>
+<h4 id="SPACEGRAY"><a href="#SPACEGRAY" class="headerlink" title="SPACEGRAY"></a>SPACEGRAY</h4><p>“一个Hyperminimal UI主题”。<br><br><img src="http://css88.b0.upaiyun.com/css88/2015/12/spacegray-sublime-text-theme.png" alt=""><br></p>
+<h3 id="Color-Schemes-配色方案"><a href="#Color-Schemes-配色方案" class="headerlink" title="Color Schemes (配色方案)"></a>Color Schemes (配色方案)</h3><hr>
+<p>除了改变你的主题，你也可以改变你的配色方案。这不同于主题，因为主题是Sublime Text的包。配色方案仅仅是配色方案文件，并更改您的设置。<br><br>更改配色方案：菜单，Preferences首选项&gt;Color Scheme配色方案，并选择一个。<br></p>
+<h3 id="Settings（设置）"><a href="#Settings（设置）" class="headerlink" title="Settings（设置）"></a>Settings（设置）</h3><hr>
+<p>Sublime自带了大量的设置。我建议你去看看它所提供的所有设置。<br><br>为了让您进入用户设置，使用命令面板并且键入user。<br><br>这里是我当前的设置，大部分是属性不需要解释了吧。为自己挑选好的部分并作为自己的自定义设置!<br></p>
+<pre><code>// User/Preferences.sublime-settings
+{
+    &quot;bold_folder_labels&quot;: true,
+    &quot;color_scheme&quot;: &quot;Packages/Theme - Flatland/Flatland Monokai.tmTheme&quot;,
+    &quot;font_face&quot;: &quot;Ubuntu Mono&quot;,
+    &quot;font_options&quot;: &quot;subpixel_antialias&quot;,
+    &quot;font_size&quot;: 14,
+    &quot;highlight_line&quot;: true,
+    &quot;highlight_modified_tabs&quot;: true,
+    &quot;ignored_packages&quot;:
+    [
+    ],
+    &quot;line_padding_bottom&quot;: 1,
+    &quot;line_padding_top&quot;: 1,
+    &quot;rulers&quot;:
+    [
+        80
+    ],
+    &quot;scroll_past_end&quot;: true,
+    &quot;tab_size&quot;: 4,
+    &quot;tab_completion&quot;: false,
+    &quot;theme&quot;: &quot;Soda Light.sublime-theme&quot;,
+    &quot;translate_tabs_to_spaces&quot;: true,
+    &quot;trim_trailing_white_space_on_save&quot;: true,
+    &quot;vintage_start_in_command_mode&quot;: true,
+    &quot;word_wrap&quot;: true
+}
+</code></pre><p>我在Sublime中用的是最佳模式。它提供了 vi 编辑命令代替Sublime Text。它不是原vi包的全功能，但它是我目前见过最接近 vi编辑器的文本编辑器。使用你的键盘快捷键和命令包就可以非常快速的开发。<br><br>上面的设置会在你打开一个文件时自动开启Vintage模式（叔注：Vintage是Sublime Text的vi模式编辑包。 可以使用组合vi命令来调用Sublime Text的功能，包括多重选择。）。<br><br>如果你不喜欢这个功能，只是删除<code>vintage_start_in_command_mode</code>就可以了，如果你想完全禁用Vintage模式，那么删除<code>ignored_packages</code>设置。<br></p>
+<h3 id="Conclusion（结论）"><a href="#Conclusion（结论）" class="headerlink" title="Conclusion（结论）"></a>Conclusion（结论）</h3><hr>
+<p>我敢肯定，还有很多Sublime的优秀部分我错过或者遗漏了。你过你发现了任何其他非常棒的包或者插件、功能，欢迎留言告诉我，让我知道，大家一起快乐地编码！<br></p>
+<p>转自：<a href="http://www.css88.com/archives/5858" target="_blank" rel="external">http://www.css88.com/archives/5858</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        最近在学习HTML5，做了一个打砖块游戏。。。。以下是代码哦:
-&lt;!DOCUTYPE HTML&gt;
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/30/35/" itemprop="url">
+                  canvas🐸
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-30T21:59:35+08:00" content="2016-05-30">
+              2016-05-30
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近在学习HTML5，做了一个打砖块游戏。。。。<br><br>以下是代码哦:<br></p>
+<pre><code>&lt;!DOCUTYPE HTML&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;
@@ -352,343 +977,2193 @@ File Switching （文件切换） ctrl + pSublime Text提供了一个非常快�
         &lt;/title&gt;
         &lt;style type=&quot;text/css&quot;&gt;
             #zn{
+                border: 10px red solid;
+                margin: 0 auto;
+                display: block;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;打砖块&lt;/h1&gt;
+        &lt;hr /&gt;
+        空格键：暂停;&lt;br /&gt;
+        方向左右键：控制接球板;&lt;br /&gt;
+        &lt;canvas id=&quot;zn&quot; width=&quot;480&quot; height=&quot;760&quot;&gt;&lt;/canvas&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            var Brick= function () {
+                var requestAnim= window.requestAnimationFrame ||
+                        window.webkitRequestAnimationFrame ||
+                        window.mozRequestAnimationFrame ||
+                        window.oRequestAnimationFrame ||
+                        window.msRequestAnimationFrame ||
+                        function(callback) { return setTimeout(callback, 100/6); },
+                cancelAnim= window.cancelAnimationFrame ||
+                    window.webkitCancelAnimationFrame ||
+                    window.mozCancelAnimationFrame ||
+                    window.oCancelAnimationFrame ||
+                    window.msCancelAnimationFrame ||
+                    function(timeid) { return clearTimeout(timeid); },
+                col= 8, row= 8, BW, BH= 30, BS= 1, r= 18, random= function (n1, n2) {   return Math.round(Math.random()*(n2- n1))+n1},
+                elWidth, elHeight, cycle= 200, N= 0, score= 0, 
+                randColor= function(c1, c2){ return &apos;rgb(&apos;+ random(c1 || 0, c2 || 255)+ &apos;,&apos;+ random(c1 || 0, c2 || 255)+ &apos;,&apos;+ random(c1 || 0, c2 || 255)+ &apos;)&apos;} ,
+                init = function (id) {
+                var el= this.el= document.querySelector(id);
+                    elWidth= el.width, elHeight= el.height;
+                    this.c= el.getContext(&apos;2d&apos;);
+                    BW= +(elWidth/col-BS).toFixed(2);
+                    this.RL= (elWidth- BW)/2;
+                    this.RT= elHeight- BH- BS;
+                    this.x= this.RL+ (BW/2);
+                    this.y= elHeight-r- BH- BS;
+                    this.xv= random(46, 90)* (Math.random()&gt; .5 ? 2 : -2);
+                    this.yv= -4* 126;
+                    this.initBricks();
+                    //暂停
+                    this.suspend= true;  
+                    this.listenerEvent();
+                } 
 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/05/30/35/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
+                init.prototype= {
+
+                    start: function (timestamp) {
+                        var self= this, newTime= Date.now(), diffX, diffY, diffTime= newTime- (timestamp || newTime) , x, y;
+                        if(++N=== cycle){
+                            N= 0;
+                            var ary= [];
+                            this.tables.unshift(ary); 
+                            for(var i =0 ; i&lt; col; i++){
+                                ary.push(1);
+                            }
+                        }
+                        diffX= this.xv* diffTime/1000;
+                        diffY= this.yv* diffTime/1000;
+                        this.clearView();
+                        //绘制砖块
+                        this.drawBricks();
+                        //绘制小球
+                        this.drawBall(0, 0);
+                        //绘制接球板
+                        this.drawRacket();
+                        //绘制得分
+                        this.showText(score);
+                        if(this.downKeyLeft)
+                            this.RL= Math.max(this.RL- BW/5, 0);
+                        else if(this.downKeyRight)
+                            this.RL= Math.min(this.RL+ BW/5, elWidth- 2*BW);
+                        x= this.x+ diffX;
+                        y= this.y+ diffY;
+
+                        if(x- r &lt;0 || x+ r &gt; elWidth)
+                            this.xv *= -1;
+                        if(y- r&lt; 0)
+                            this.yv *= -1;
+                        else if(y+ r&gt; this.RT){
+                            if(x+ r&gt; this.RL &amp;&amp; x-r&lt; this.RL+ 2*BW)
+                                this.yv *= -1;
+                            else{
+                                this.suspend= true ;
+                                this.clearView();
+                                this.showText(&apos;GAME OVER&apos;);
+                            }
+                        }
+                        var i= Math.floor(x/(BW +BS)), j= Math.floor(y/(BH +BS));
+                            if(this.tables[j] &amp;&amp; this.tables[j][i]===1){
+                                this.tables[j][i]= 0;
+                                score+= 100;
+                                this.yv*=-1;
+                            }
+                        if(!this.suspend){
+                            this.x= x;
+                            this.y= y;
+                            this.animID= requestAnim(function () {
+                                self.start(newTime);
+                            })
+                        }
+                        return this;
+                    },
+
+                    clearView: function () {
+                        var c= this.c;
+                        c.clearRect(0, 0, elWidth, elHeight);
+                    },
+
+                    initBricks: function(){
+                        this.tables= [];
+                        for(var i=0; i&lt; col; i++){
+                            this.tables.push([]);
+                            for(var j=0; j&lt; row; j++){
+                                this.tables[i][j]= 1;
+                            }
+                        }
+                    },
+
+                    drawRacket: function () {
+                        this.drawRect(this.RL, this.RT, 2*BW, BH, 1, 1);
+                    },
+
+                    drawBall: function(c1, c2){
+                        var c= this.c;  
+                        c.beginPath();
+                        c.arc(this.x, this.y, r, 0, 2*Math.PI);
+                        c.fillStyle= &apos;#000&apos;//randColor(c1 || 150, c2 || 255);
+                        c.closePath();
+                        c.fill();
+                    },
+
+                    drawRect: function(x, y, w, h, c1, c2){
+                        var c= this.c;
+                        c.beginPath();
+                        c.fillStyle= randColor(c1 || 0, c2 || 255);
+                        c.closePath();
+                        c.fillRect(x, y, w, h);
+                    },
+
+                    drawBricks: function(){
+                        var i= 0,len= this.tables.length, cur, tables= this.tables;
+                        for(; i&lt; len; i++){
+                            cur= tables[i];
+                            for(var j= 0; j&lt; cur.length; j++){
+                                cur[j]===1 &amp;&amp; this.drawRect(j*(BW+ BS), i*(BH+ BS), BW, BH);
+                            }
+                        }
+                    },
+
+                    listenerEvent: function(e){
+                        document.addEventListener(&apos;keydown&apos;, this, false);
+                        document.addEventListener(&apos;keyup&apos;, this, false);
+                    },
+
+                    handleEvent: function(e){
+                        var type= e.type, keycode= e.keyCode;
+                        if(keycode===37 || keycode=== 39 || keycode=== 32){
+                            switch(type){
+                                case &apos;keydown&apos;:
+                                    if(keycode === 37) this.downKeyLeft= true;
+                                    else if(keycode===39)  this.downKeyRight = true;
+                                    break;
+                                case &apos;keyup&apos;:
+                                    if(keycode === 37) 
+                                        this.downKeyLeft= false;
+                                    else if (keycode===39)
+                                        this.downKeyRight = false
+                                    else{
+                                        this.suspend= !this.suspend;
+                                        !this.suspend &amp;&amp; this.start();
+                                    }
+
+                            }
+                        }
+                    },
+
+                    showText: function(txt, left, top, size){
+                        var c= this.c, tw;
+                        size = size || 60;
+                        c.beginPath();
+                        c.font= size+ &apos;pt Calibri&apos;;
+                        tw= c.measureText(txt).width; 
+                        left= left=== undefined ? (elWidth- tw)/2 : left; 
+                        top= top=== undefined ? (elHeight- size)/2 : top; 
+                        c.fillText(txt, left, top);
+                        c.closePath();
+                    },
+
+
+                }
+                return init;
+            }();
+        b= new Brick(&apos;#zn&apos;);
+        b.start();
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>转自：<a href="http://www.cnblogs.com/webzhangnan/archive/2013/02/27/2935534.html" target="_blank" rel="external">http://www.cnblogs.com/webzhangnan/archive/2013/02/27/2935534.html</a></p>
+
+          
         
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/05/28/34/">Mongoose全面理解🐳</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-05-28T14:25:20.000Z" itemprop="datePublished">
-          2016-05-28
-      </time>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
     
-    | 
-    <a href='/tags/Mongoose/'>Mongoose</a>
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/28/34/" itemprop="url">
+                  Mongoose全面理解🐳
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-28T22:25:20+08:00" content="2016-05-28">
+              2016-05-28
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
     
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        一、创建schemas创建schemas的方式：
-var userSchema = new mongoose.Schema({
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="一、创建schemas"><a href="#一、创建schemas" class="headerlink" title="一、创建schemas"></a>一、创建schemas</h3><p>创建schemas的方式：<br></p>
+<pre><code>var userSchema = new mongoose.Schema({
 name: String,
 email: String,
 createdOn: Date
 });
-schemas中的数据类型有以下几种：
+</code></pre><p>schemas中的数据类型有以下几种：<br></p>
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>Date</li>
+<li>Boolean</li>
+<li>Buffer</li>
+<li>ObjectId</li>
+<li>Mixed</li>
+<li>Array</li>
+</ul>
+<p>特别需要说明一下ObjectId类型和Mixed类型以及Array类型，在schemas中声明这几种类型的方式如下：<br></p>
+<pre><code>//ObjectId就类似于唯一键值
+projectSchema.add({
+   owner: mongoose.Schema.Types.ObjectId
+ });
+  //混合类型，顾名思义，就是说里面可以放置任意类型的数据，有两种方式创建该类型数据
+ //方式一：直接赋予一个空的字面量对象
+  vardjSchema= new mongoose.Schema({
+    mixedUp: {}
+  });
+ //方式二：根据Schemas.Types中值来赋予
+ vardjSchema= new mongoose.Schema({
+     mixedUp: Schema.Types.Mixed
+});
+ //Array类型数据有两种创建方式，一种是简单数组创建：
+ var userSchema = new mongoose.Schema({
+    name: String,
+     emailAddresses: [String]
+ });
+ //第二种方式就是复杂类型数据数组，例如我们可以再数组中添加不同类型的schemas:
+ var emailSchema = new mongoose.Schema({
+     email: String,
+     verified: Boolean
+ });
+ var userSchema = new mongoose.Schema({
+     name: String,
+     emailAddresses: [emailSchema]
+ });
+ //注意：如果定义一个空的数据的话，则会创建为一个混合类型数据的数组：
+var emailSchema = new mongoose.Schema({
+    email: String,
+     verified: Boolean
+ });
+ var userSchema = new mongoose.Schema({
+     name: String,
+     emailAddresses: [emailSchema]
+ });
+</code></pre><p>我们可以给schema创建静态方法，这个静态方法将来会用在Model中，创建该静态方法需要在创建完成schema之后，在Model编译之前：<br></p>
+<pre><code>projectSchema.statics.findByUserID = function (userid, callback) {
+  this.find({ createdBy: userid }, &apos;_id projectName&apos;, {sort: &apos;modifiedOn&apos;}, callback);
+ };
+</code></pre><p>在其对应的模型创建完成并编译后，我们就可以像下面这样来调用该静态方法了：<br><br>Model.findByUserID(userid,callback);<br><br>该静态方法会返回一个JSON格式的数据，这在我们使用AJAX技术来加载网页数据的时候会比较方便，就像下面这样：<br></p>
+<pre><code>//路由规则：app.get(&apos;/project/byuser/:userid&apos;, project.byUser);
+exports.byUser = function (req, res) {
+    console.log(&quot;Getting user projects&quot;);
+   if (req.params.userid){
+         Project.findByUserID(req.params.userid,function (err, projects) {
+          if(!err){
+                 console.log(projects);
+                res.json(projects);
+          }else{
+                console.log(err);
+               res.json({&quot;status&quot;:&quot;error&quot;, &quot;error&quot;:&quot;Error finding projects&quot;});
+            }
+        });
+ }else{
+    console.log(&quot;No user id supplied&quot;);
+    res.json({&quot;status&quot;:&quot;error&quot;, &quot;error&quot;:&quot;No user id supplied&quot;});
+ }
+ };
+</code></pre><h3 id="二、创建Model"><a href="#二、创建Model" class="headerlink" title="二、创建Model"></a>二、创建Model</h3><p>创建Model很简单：<br><br>Mongoose.Model(‘User’, userSchema);<br><br>参数一为Model的名字，参数二为生成Model所需要的schema,Model就像是schema所编译而成的一样。<br><br>mongoose连接数据库是有两种方式的：<br></p>
+<pre><code>//方式一：
+ var dbURI = &apos;mongodb://localhost/mydatabase&apos;;
+ mongoose.connect(dbURI);
+ //方式二：
+  var dbURI = &apos;mongodb://localhost/myadmindatabase&apos;;
+ var adminConnection = mongoose.createConnection(dbURI);
+ //如果需要声明端口号：
+var dbURI = &apos;mongodb://localhost:27018/mydatabase&apos;;
+ //如果需要定义用户名和密码：
+ var dbURI = &apos;mongodb://username:password@localhost/mydatabase&apos;;
+ //也可以像下面这样传一个对象类型的参数：
+ var dbURI = &apos;mongodb://localhost/mydatabase&apos;;
+ var dbOptions = {&apos;user&apos;:&apos;db_username&apos;,&apos;pass&apos;:&apos;db_password&apos;};
+mongoose.connect(dbURI, dbOptions);
+</code></pre><p>根据连接数据库的方式，我们可以得到第二种创建Model的方式，就是使用数据库连接的引用名来创建：<br><br>adminConnection.model( ‘User’, userSchema );<br><br>默认情况下mongoose会根据我们传入的Model名字来生成collection名字，在上面的代码中就会生成名为users(全为小写字母)的collection(集合)；<br><br>有两种方法能让我们自定义collection的名字。<br></p>
+<pre><code> //方式一，在创建schema的时候定义collection的名字：
+ var userSchema = new mongoose.Schema({
+     name: String,
+    email: {type: String, unique:true}
+},
+  {
+    collection: &apos;myuserlist&apos;
+ });
+ //方式二，在创建Model的时候定义collection的名字：
+mongoose.model( &apos;User&apos;, userSchema, &apos;myuserlist&apos; );
+</code></pre><p>创建Model实例：<br><br>var user = new User({ name: ‘Simon’ });<br><br>user就是模型User的一个实例，它具有mongoose中模型所具有的一些方法，例如保存实例：<br></p>
+<pre><code>user.save(function (err) {
+    if (err) return handleError(err);
+});
+</code></pre><p>模型也具有一些常用的增删查改的方法：<br></p>
+<pre><code>User.findOne({&apos;name&apos; : &apos;Sally&apos;, function(err,user) {
+     if(!err){
+         console.log(user);
+     }
+ });
+ User.find({}, function(err, users) {
+     if(!err){
+         console.log(users);
+     }
+});
+</code></pre><p>可以使用链式方式使用这些方法，例如：<br></p>
+<pre><code>var newUser = new User({
+    name: &apos;Simon Holmes&apos;,
+    email: &apos;simon@theholmesoffice.com&apos;,
+    lastLogin : Date.now()
+}).save( function( err ){
+    if(!err){
+        console.log(&apos;User saved!&apos;);
+    }
+});
+</code></pre><p>上面的代码创建了一个模型实例，然后进行保存。我们有一个更为简介的方式来完成这项工作，就是使用Model.create()方法：<br></p>
+<pre><code> User.create({
+     name: &apos;Simon Holmes&apos;,
+     email: &apos;simon@theholmesoffice.com&apos;,
+     lastLogin : Date.now()
+ }, function( err, user ){
+     if(!err){
+         console.log(&apos;User saved!&apos;);
+         console.log(&apos;Saved user name: &apos; + user.name);
+         console.log(&apos;_id of saved user: &apos; + user._id);
+    }
+});
+</code></pre><h3 id="三、查找数据和读取数据的方法"><a href="#三、查找数据和读取数据的方法" class="headerlink" title="三、查找数据和读取数据的方法"></a>三、查找数据和读取数据的方法</h3><h4 id="1-使用QueryBuilder接口来查找数据"><a href="#1-使用QueryBuilder接口来查找数据" class="headerlink" title="1.使用QueryBuilder接口来查找数据"></a>1.使用QueryBuilder接口来查找数据</h4><p>先看看下面的代码：<br></p>
+<pre><code>var myQuery = User.find({&apos;name&apos; : &apos;Simon Holmes&apos;});
+myQuery.where(&apos;age&apos;).gt(18);
+myQuery.sort(&apos;-lastLogin&apos;);
+myQuery.select(&apos;_id name email&apos;);
+myQuery.exec(function (err, users){
+   if (!err){
+        console.log(users); // output array of users found
+    }
+});
+</code></pre><p>代码中，我们查找名字为”Simon Holmes”，并且年龄大于18岁，查找结果根据lastLogin降序排列，只获取其中的_id, name, email三个字段的值，上面的代码只有在调用exec方法后才真正执行数据库的查询。<br><br>当然我们可以使用链式的方式来改写上面的代码，代码会更加简洁：<br></p>
+<pre><code>User.find({&apos;name&apos; : &apos;Simon Holmes&apos;})
+.where(&apos;age&apos;).gt(18)
+.sort(&apos;-lastLogin&apos;)
+.select(&apos;_id name email&apos;)
+.exec(function (err, users){
+    if (!err){
+        console.log(users); // output array of users found
+    }
+});
+</code></pre><p>上面代码中的第一行创建了一个queryBuilder.通过使用这个queryBuilder，我们就可以执行一些比较复杂的查找工作，在创建完成这个queryBuilder之后，查询操作并没有马上执行，而是待到执行exec方法时才会去执行数据库的查找。<br><br>当然也有另外一种方式能够直接查找数据库的，就是直接在查找方法中添加回调函数，使用方式为：<br><br>Model.find(conditions, [fields], [options], [callback])<br><br>下面举一个简单例子：<br></p>
+<pre><code>User.find({&apos;name&apos;, &apos;simon holmes&apos;}, function(err, user) {});
+</code></pre><p>另一个稍微复杂的例子：<br></p>
+<pre><code>User.find({&apos;name&apos;, &apos;simon holmes&apos;}, &apos;name email&apos;,function(err, user) {
+    //console.log(&apos;some thing&apos;);
+});
+</code></pre><p>另一个更加复杂的例子，包含查询结果的排序：<br></p>
+<pre><code>User.find({&apos;name&apos; : &apos;Simon Holmes&apos;},
+    null, // 如果使用null，则会返回所有的字段值
+    {sort : {lastLogin : -1}}, // 降序排序
+    function (err, users){
+        if (!err){console.log(users);}
+    });
+</code></pre><p>列举几个比较实用的查找方法：<br></p>
+<pre><code>Model.find(query);
+Model.findOne(query);//返回查找到的所有实例的第一个
+Model.findById(ObjectID);//根据ObjectId查找到唯一实例
+</code></pre><p>例如：<br></p>
+<pre><code>User.findOne({&apos;email&apos; : req.body.Email},
+&apos;_id name email&apos;,
+function(err, user) {
+    //todo     
+    });
+</code></pre><h4 id="2-更新数据"><a href="#2-更新数据" class="headerlink" title="2.更新数据"></a>2.更新数据</h4><p>有三种方式来更新数据：<br><br>(1)update(conditions,update,options,callback);<br><br>该方法会匹配到所查找的内容进行更新，不会返回数据；<br><br>(2)findOneAndUpdate(conditions,update,options,callback);<br><br>该方法会根据查找去更新数据库，另外也会返回查找到的并未改变的数据；<br><br>(3)findByIdAndUpdate(conditions,update,options,callback);<br><br>该方法跟上面的findOneAndUpdate方法功能一样，不过他是根据ID来查找文档并更新的。<br><br>三个方法都包含四个参数，一下稍微说明一下几个参数的意思：<br></p>
+<ul>
+<li>conditions:查询条件</li>
+<li>update:更新的数据对象，是一个包含键值对的对象</li>
+<li>options:是一个声明操作类型的选项，这个参数在下面再详细介绍</li>
+<li>callback:回调函数</li>
+</ul>
+<p>对于options参数，在update方法中和findOneAndUpdate、findByIdAndUpdate两个方法中的可选设置是不同的；<br></p>
+<pre><code>//在update方法中，options的可选设置为：
+ {
+ safe:true|false,  //声明是否返回错误信息，默认true
+ upsert:false|true, //声明如果查询不到需要更新的数据项，是否需要新插入一条记录，默认false
+ multi:false|true,  //声明是否可以同时更新多条记录，默认false
+ strict:true|false  //声明更新的数据中是否可以包含在schema定义之外的字段数据，默认true
+ }
+ //对于findOneAndUpdate、findByIdAndUpdate这两个方法，他们的options可选设置项为：
+ {
+new:true|false, //声明返回的数据时更新后的该是更新前的，如果为true则返回更新后的，默认true
+upsert:false|trure, 
+sort:javascriptObject, //如果查询返回多个文档记录，则可以进行排序，在这里是根据传入的javascript object对象进行排序
+select:String //这里声明要返回的字段，值是一个字符串
+}
+</code></pre><p>下面举个例子：<br></p>
+<pre><code>User.update({_id:user._id},{$set: {lastLogin: Date.now()}},function(){});
+</code></pre><h4 id="3-数据删除"><a href="#3-数据删除" class="headerlink" title="3.数据删除"></a>3.数据删除</h4><p>跟更新数据一样，也有三种方法给我们删除数据：<br></p>
+<ul>
+<li>remove();</li>
+<li>findOneAndRemove();</li>
+<li>findByIdAndRemove();  </li>
+</ul>
+<p>remove方法有两种使用方式，一种是用在模型上，另一种是用在模型实例上，例如：<br></p>
+<pre><code> User.remove({ name : /Simon/ } , function (err){
+     if (!err){
+         // 删除名字中包含simon的所有用户
+     }
+ });
 
-String
-Number
-Date
-Boolean
-Buffer
-ObjectId
-Mixed
-Array
+ User.findOne({ email : &apos;simon@theholmesoffice.com&apos;},function (err,user){
+     if (!err){
+         user.remove( function(err){
+            // 删除匹配到该邮箱的第一个用户
+        });
+    }
+});
+</code></pre><p>接下来看一下findOneAndRemove方法：<br></p>
+<pre><code>User.findOneAndRemove({name : /Simon/},{sort : &apos;lastLogin&apos;, select : &apos;name email&apos;},function (err, user){
+    if (!err) {
+        console.log(user.name + &quot; removed&quot;);
+        // Simon Holmes removed
+    };
+});
+</code></pre><p>另外一个findByIdAndRemove方法则是如出一辙的。<br></p>
+<pre><code>User.findByIdAndRemove(req.body._id,function (err, user) {
+    if(err){
+        console.log(err);
+        return;
+    }
+    console.log(&quot;User deleted:&quot;, user);
+});
+</code></pre><h3 id="四、数据验证"><a href="#四、数据验证" class="headerlink" title="四、数据验证"></a>四、数据验证</h3><h4 id="1-mongoose内置数据验证"><a href="#1-mongoose内置数据验证" class="headerlink" title="1.mongoose内置数据验证"></a>1.mongoose内置数据验证</h4><p>在mongoose中，数据验证这一层是放在schema中的，mongoose已经帮我们做了很多内置的数据验证，有一些验证是针对某些数据类型的，也有一些是针对所有数据类型的。<br><br>能够作用在所有数据类型上的验证有require，意思就是该字段是否是必须的，例如<br></p>
+<pre><code>email: { type: String, unique: true, required: true }
+</code></pre><p>上面的代码就定义了一个email是必须的schema<br><br>下面再分别介绍一下mongoose内置的一些数据验证类型。<br><br>数字类型schemasType,对于Number类型的数据，具有min,max提供用来界定最大最小值：<br></p>
+<pre><code>var teenSchema = new Schema({
+    age : {type: Number, min: 13, max:19}
+});
+</code></pre><p>字符串类型SchemasType,对于该类型数据，mongoose提供了两种验证器：<br></p>
+<ul>
+<li>match:可使用正则表达式来匹配字符串是否符合该正则表达式的规则</li>
+<li>enum:枚举出字符串可使用的一些值</li>
+</ul>
+<p>分别举例如下：</p>
+<pre><code>var weekdaySchema = new Schema({
+    day : {type: String, match: /^(mon|tues|wednes|thurs|fri)day$/i}
+});
 
-特别需要说明一下ObjectId类型和Mixed类型以及Ar
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/05/28/34/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/05/25/33/">express 框架之session🐾</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-05-25T13:23:21.000Z" itemprop="datePublished">
-          2016-05-25
-      </time>
-    
-    
-    | 
-    <a href='/tags/node/'>node</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        一、什么是session？
-最近在学习node.js 的express框架，接触到了关于session方面的内容。翻阅了一些的博客，学到了不少东西，发现一篇博文讲的很好，概念内容摘抄如下：
-Session是什么Session一般译作会话，牛津词典对其的解释是进行某活动连续的一段时间。从不同的层面看待session，它有着类似但不全然相同的含义。比如，在web应用的用户看来，他打开浏览器访问一个电子商务网站，登录、并完成购物直到关闭浏览器
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/05/25/33/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/05/24/32/">Node模块创建及使用，文件操作，IO交互，URL解析🌼</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-05-24T12:50:08.000Z" itemprop="datePublished">
-          2016-05-24
-      </time>
-    
-    
-    | 
-    <a href='/tags/node/'>node</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        目录
-模块创建以及使用
-文件模块的使用
-IO键盘交互
-URL解析
+var weekdays = [&apos;monday&apos;, &apos;tuesday&apos;, &apos;wednesday&apos;, &apos;thursday&apos;,&apos;friday&apos;];
+var weekdaySchema = new Schema({
+    day : {type: String, enum: weekdays}
+});
+</code></pre><p>在我们进行一些数据库的时候，如果有错误，可能会返回一些错误信息，这些信息封装在一个对象中，该对象的数据格式大致如下：<br></p>
+<pre><code>{ 
+     message: &apos;Validation failed&apos;,
+     name: &apos;ValidationError&apos;,
+     errors:{ 
+        email:{
+             message: &apos;Validator &quot;required&quot; failed for path email&apos;,
+             name: &apos;ValidatorError&apos;,
+             path: &apos;email&apos;,
+             type: &apos;required&apos; 
+        },
+        name:{ 
+            message: &apos;Validator &quot;required&quot; failed for path name&apos;,
+            name: &apos;ValidatorError&apos;,
+            path: &apos;name&apos;,
+            type: &apos;required&apos; 
+        } 
+    } 
+}
+</code></pre><p>知道该错误信息的具体格式之后，我们可以从中得出我们想要的信息并反馈到控制台。<br></p>
+<pre><code>if(err){
+    Object.keys(err.errors).forEach(function(key) {
+        var message = err.errors[key].message;
+        console.log(&apos;Validation error for &quot;%s&quot;: %s&apos;, key, message);
+    });
+}
+</code></pre><h4 id="2-自定义数据验证"><a href="#2-自定义数据验证" class="headerlink" title="2.自定义数据验证"></a>2.自定义数据验证</h4><p>最简单的自定义数据验证方式就是定义一个数据验证的函数，并将它传递给schema;<br></p>
+<pre><code>var lengthValidator = function(val) {
+    if (val &amp;&amp; val.length &gt;= 5){
+        return true;
+    }
+    return false;
+};
+//usage:
+name: {type: String, required: true, validate: lengthValidator }
+</code></pre><p>可以看到，我们只需要在schema中添加validate键值对即可，validate对应的值便是我们自定义的验证方法；<br><br>但是该形式的数据验证无法给我们提供完整的错误信息，比如errors信息中返回的type值就会成为undefined;<br><br>在此基础上如果希望错误信息中能返回一个错误描述，那我们可以稍微进行一点修改：<br></p>
+<pre><code>//code 1
+validate: { validator: lengthValidator, msg: &apos;Too short&apos; }
 
-一、模块创建以及使用什么是模块模块和文件是一 一对应的，一个模块就是一个js文件，Node.js提供了exports和require两个对象，其中exports是模块公共的接口，require用于从外部获取一个模块的接口，即获取模块的exports对象。想要在外部用自定义模块中的方法exports方法暴露出去，通过require引入模块再调用其方法。
-模块的分类核心模块
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/05/24/32/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/05/23/31/">谈响应式web设计代码实现🍨</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-05-23T14:38:08.000Z" itemprop="datePublished">
-          2016-05-23
-      </time>
-    
-    
-    | 
-    <a href='/tags/HTML5/'>HTML5</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        在研究响应式的时候，记录了一些感想，分享出来，抛砖引玉，希望可以和大家一起讨论。总结下来，响应式比之前想象的要复杂得多。1.ie9以下（不包括ie9）采用ie条件注释，为ie8以及一下单独开一个样式文件2.一个模块的mq样式整体放在这个模块的样式的之后，符合层叠逻辑，也同时以免被层叠。
+//code 2
+var weekdaySchema = new Schema({
+    day : {type: String, validate: {validator:/^(mon|tues|wednes|thurs|fri)day$/i, msg: &apos;Not a day&apos; }
+});
+</code></pre><p>将validate的值修改为一个对象，并且该对象包含验证器和错误描述。<br><br>我们也可以使用另一种方式在写这些验证器，就是将验证器卸载schema外部，例如：<br></p>
+<pre><code>var validateLength = [lengthValidator, &apos;Too short&apos; ];
+var validateDay = [/^(mon|tues|wednes|thurs|fri)day$/i, &apos;Not a day&apos; ];
+//usage:
+name: {type: String, required: true, validate: validateLength }
+day : {type: String, validate: validateDay }
+</code></pre><p>睛放大，一看再看，确实没错，在validate中我们传入的是一个数组了，而不是原来的对象了。<br><br>其实就validateLength这个东东来说，他就是一个简写来的，你也可以改成下面这样：<br></p>
+<pre><code>var validateLength = [
+    {validator: lengthValidator, msg: &apos;Too short&apos;}
+];
+</code></pre><p>恩，到这里，应该能明白了，将对象改为数组之后，我们便可以传递多个验证器给我们的schema了，的确如此。<br></p>
+<pre><code>var validateUsername = [
+    {validator: lengthValidator, msg: &apos;Too short&apos;} ,
+    {validator: /^[a-z]+$/i, msg: &apos;Letters only&apos;}
+];
+</code></pre><p>我们还有另外一种方法给我们的schema提供验证器：<br></p>
+<pre><code>userSchema.path(&apos;name&apos;).validate(lengthValidator, &apos;Too short&apos;);
+userSchema.path(&apos;name&apos;).validate(/^[a-z]+$/i, &apos;Letters only&apos;);  
+</code></pre><p>转自：<a href="http://www.cnblogs.com/jayruan/p/5123754.html" target="_blank" rel="external">http://www.cnblogs.com/jayruan/p/5123754.html</a>  </p>
 
-祈求在一个相应点上同时做变化几乎是不可能的，因为版式中间的变化，无论是视觉还是具体的编码人员不可能掌握所有细节。
-流体布局很关键，%视父级为参照物，这
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/05/23/31/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/05/19/30/">React-Native项目中使用TabBar 🍰</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-05-19T12:23:27.000Z" itemprop="datePublished">
-          2016-05-19
-      </time>
-    
-    
-    | 
-    <a href='/tags/React-Native/'>React Native</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        之前的文章讲述了在RN项目中如何使用NavigationBar，如何调用原生模块，以及集成下拉刷新和上拉加载更多的功能，今天介绍一个第三方插件react-native-tab-navigator，讲述我是如何使用它在RN项目中使用TabBar项目源码在这里
-1.安装插件npm install react-native-tab-navigator --save
-2.使用就我的demo来说：Demo中包含了Navigator管理的一系列视图
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/05/19/30/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/05/15/29/">React Native 的 Navigator 组件使用方法</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-05-15T13:49:06.000Z" itemprop="datePublished">
-          2016-05-15
-      </time>
-    
-    
-    | 
-    <a href='/tags/React-Native/'>React Native</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        React Native的编程思想类似于iOS, 导航栏也使用Navigator作为标识, 类似于Android的ActionBar. 导航栏作为最重要的应用组件之一, 除了处理页面导航功能以外, 还会提供页面栈的管理, 管理页面的跳入和跳出. 本文介绍 Navigator 组件的使用方式.React Native本文源码的GitHub下载地址关于React Native项目的启动, 参考1, 参考2.
-
-简单使用Navigator添加
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/05/15/29/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <nav class="pagination" role="pagination">
           
-          <a class="pull-right" href="/page/2/">Older Posts →</a>
-        </nav>
+        
+      
     </div>
-</section>
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>立志成为合格的程序媛，立志走在食物链的顶端。</p>
-        </div>
+
+    <div>
+      
     </div>
-</section>
-<!-- ============================ END Content =========================== -->
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
 
       
-<!-- ============================ Footer =========================== -->
 
-<footer>
-    <div class="container">
-            <div class="copy">
-                <p>
-                    <span>&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.</span>   
-                </p>
-                <p>To make each day count.</p>
-            </div>
-            <div class="social">
-                <ul>
-                    
-                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
-                    
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-</script>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-</footer>
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
 
-<!-- ============================ END Footer =========================== -->
-      <!-- Load our scripts -->
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
         
-<!-- Resizable 'on-demand' full-height hero -->
-<script type="text/javascript">
-    
-    var resizeHero = function () {
-        var hero = $(".cover,.heightblock"),
-            window1 = $(window);
-        hero.css({
-            "height": window1.height()
-        });
-    };
-    
-    resizeHero();
-    
-    $(window).resize(function () {
-        resizeHero();
-    });
-</script>
-<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
-<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
-<script src="/js/scripts.js"></script><!-- Theme scripts -->
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/25/33/" itemprop="url">
+                  express 框架之session🐾
+                </a>
+              
+            
+          </h1>
+        
 
-<!-- Initiate flexslider plugin -->
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-25T21:23:21+08:00" content="2016-05-25">
+              2016-05-25
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="一、什么是session？"><a href="#一、什么是session？" class="headerlink" title="一、什么是session？"></a>一、什么是session？</h3><hr>
+<p>最近在学习node.js 的express框架，接触到了关于session方面的内容。翻阅了一些的博客，学到了不少东西，发现一篇博文讲的很好，概念内容摘抄如下：<br></p>
+<h4 id="Session是什么"><a href="#Session是什么" class="headerlink" title="Session是什么"></a>Session是什么</h4><p>Session一般译作会话，牛津词典对其的解释是进行某活动连续的一段时间。从不同的层面看待session，它有着类似但不全然相同的含义。比如，在web应用的用户看来，他打开浏览器访问一个电子商务网站，登录、并完成购物直到关闭浏览器，这是一个会话。而在web应用的开发者开来，用户登录时我需要创建一个数据结构以存储用户的登录信息，这个结构也叫做session。因此在谈论session的时候要注意上下文环境。而本文谈论的是一种基于HTTP协议的用以增强web应用能力的机制或者说一种方案，它不是单指某种特定的动态页面技术，而这种能力就是保持状态，也可以称作保持会话。<br></p>
+<h4 id="为什么需要session"><a href="#为什么需要session" class="headerlink" title="为什么需要session"></a>为什么需要session</h4><p>谈及session一般是在web应用的背景之下，我们知道web应用是基于HTTP协议的，而HTTP协议恰恰是一种无状态协议。也就是说，用户从A页面跳转到B页面会重新发送一次HTTP请求，而服务端在返回响应的时候是无法获知该用户在请求B页面之前做了什么的。<br><br>对于HTTP的无状态性的原因，相关RFC里并没有解释，但联系到HTTP的历史以及应用场景，我们可以推测出一些理由：<br><br>1.设计HTTP最初的目的是为了提供一种发布和接收HTML页面的方法。那个时候没有动态页面技术，只有纯粹的静态HTML页面，因此根本不需要协议能保持状态；<br><br>2.用户在收到响应时，往往要花一些时间来阅读页面，因此如果保持客户端和服务端之间的连接，那么这个连接在大多数的时间里都将是空闲的，这是一种资源的无端浪费。所以HTTP原始的设计是默认短连接，即客户端和服务端完成一次请求和响应之后就断开TCP连接，服务器因此无法预知客户端的下一个动作，它甚至都不知道这个用户会不会再次访问，因此让HTTP协议来维护用户的访问状态也全然没有必要；<br><br>3.将一部分复杂性转嫁到以HTTP协议为基础的技术之上可以使得HTTP在协议这个层面上显得相对简单，而这种简单也赋予了HTTP更强的扩展能力。事实上，session技术从本质上来讲也是对HTTP协议的一种扩展。<br><br>总而言之，HTTP的无状态是由其历史使命而决定的。但随着网络技术的蓬勃发展，人们再也不满足于死板乏味的静态HTML，他们希望web应用能动起来，于是客户端出现了脚本和DOM技术，HTML里增加了表单，而服务端出现了CGI等等动态技术。<br><br>而正是这种web动态化的需求，给HTTP协议提出了一个难题：一个无状态的协议怎样才能关联两次连续的请求呢？也就是说无状态的协议怎样才能满足有状态的需求呢？<br><br>此时有状态是必然趋势而协议的无状态性也是木已成舟，因此我们需要一些方案来解决这个矛盾，来保持HTTP连接状态，于是出现了cookie和session。<br><br>对于此部分内容，读者或许会有一些疑问，笔者在此先谈两点：<br></p>
+<ul>
+<li>无状态性和长连接<br><br>可能有人会问，现在被广泛使用的HTTP1.1默认使用长连接，它还是无状态的吗？<br>连接方式和有无状态是完全没有关系的两回事。因为状态从某种意义上来讲就是数据，而连接方式只是决定了数据的传输方式，而不能决定数据。长连接是随着计算机性能的提高和网络环境的改善所采取的一种合理的性能上的优化，一般情况下，web服务器会对长连接的数量进行限制，以免资源的过度消耗。<br></li>
+<li><p>无状态性和session<br>Session是有状态的，而HTTP协议是无状态的，二者是否矛盾呢？<br><br>Session和HTTP协议属于不同层面的事物，后者属于ISO七层模型的最高层应用层，前者不属于后者，前者是具体的动态页面技术来实现的，但同时它又是基于后者的。在下文中笔者会分析Servlet/Jsp技术中的session机制，这会使你对此有更深刻的理解。<br>Cookie和Session<br></p>
+<p>上面提到解决HTTP协议自身无状态的方式有cookie和session。二者都能记录状态，前者是将状态数据保存在客户端，后者则保存在服务端。<br><br>首先看一下cookie的工作原理，这需要有基本的HTTP协议基础。<br><br>cookie是在RFC2109（已废弃，被RFC2965取代）里初次被描述的，每个客户端最多保持三百个cookie，每个域名下最多20个Cookie（实际上一般浏览器现在都比这个多，如Firefox是50个），而每个cookie的大小为最多4K，不过不同的浏览器都有各自的实现。对于cookie的使用，最重要的就是要控制cookie的大小，不要放入无用的信息，也不要放入过多信息。<br><br>无论使用何种服务端技术，只要发送回的HTTP响应中包含如下形式的头，则视为服务器要求设置一个cookie：<br></p>
+<p>  Set-cookie:name=name;expires=date;path=path;domain=domain<br>支持cookie的浏览器都会对此作出反应，即创建cookie文件并保存（也可能是内存cookie），用户以后在每次发出请求时，浏览器都要判断当前所有的cookie中有没有没失效（根据expires属性判断）并且匹配了path属性的cookie信息，如果有的话，会以下面的形式加入到请求头中发回服务端：<br></p>
+<pre><code>Cookie: name=&quot;zj&quot;; Path=&quot;/linkage&quot;
+</code></pre><p>服务端的动态脚本会对其进行分析，并做出相应的处理，当然也可以选择直接忽略。<br><br>这里牵扯到一个规范（或协议）与实现的问题，简单来讲就是规范规定了做成什么样子，那么实现就必须依据规范来做，这样才能互相兼容，但是各个实现所使用的方式却不受约束，也可以在实现了规范的基础上超出规范，这就称之为扩展了。无论哪种浏览器，只要想提供cookie的功能，那就必须依照相应的RFC规范来实现。所以这里服务器只管发Set-cookie头域，这也是HTTP协议无状态性的一种体现。<br><br>需要注意的是，出于安全性的考虑，cookie可以被浏览器禁用。<br><br>再看一下session的原理：<br><br>笔者没有找到相关的RFC，因为session本就不是协议层面的事物。它的基本原理是服务端为每一个session维护一份会话信息数据，而客户端和服务端依靠一个全局唯一的标识来访问会话信息数据。用户访问web应用时，服务端程序决定何时创建session，创建session可以概括为三个步骤：<br></p>
+</li>
+<li><p>生成全局唯一标识符（sessionid）；</p>
+</li>
+<li>开辟数据存储空间。一般会在内存中创建相应的数据结构，但这种情况下，系统一旦掉电，所有的会话数据就会丢失，如果是电子商务网站，这种事故会造成严重的后果。不过也可以写到文件里甚至存储在数据库中，这样虽然会增加I/O开销，但session可以实现某种程度的持久化，而且更有利于session的共享；</li>
+<li>将session的全局唯一标示符发送给客户端。</li>
+</ul>
+<p>问题的关键就在服务端如何发送这个session的唯一标识上。联系到HTTP协议，数据无非可以放到请求行、头域或Body里，基于此，一般来说会有两种常用的方式：cookie和URL重写。<br></p>
+<ol>
+<li>Cookie<br><br>读者应该想到了，对，服务端只要设置Set-cookie头就可以将session的标识符传送到客户端，而客户端此后的每一次请求都会带上这个标识符，由于cookie可以设置失效时间，所以一般包含session信息的cookie会设置失效时间为0，即浏览器进程有效时间。至于浏览器怎么处理这个0，每个浏览器都有自己的方案，但差别都不会太大（一般体现在新建浏览器窗口的时候）；<br></li>
+<li>URL重写<br>所谓URL重写，顾名思义就是重写URL。试想，在返回用户请求的页面之前，将页面内所有的URL后面全部以get参数的方式加上session标识符（或者加在path info部分等等），这样用户在收到响应之后，无论点击哪个链接或提交表单，都会在再带上session的标识符，从而就实现了会话的保持。读者可能会觉得这种做法比较麻烦，确实是这样，但是，如果客户端禁用了cookie的话，URL重写将会是首选。<br><br>到这里，读者应该明白我前面为什么说session也算作是对HTTP的一种扩展了吧。如下两幅图是笔者在Firefox的Firebug插件中的截图，可以看到，当我第一次访问index.jsp时，响应头里包含了Set-cookie头，而请求头中没有。当我再次刷新页面时，图二显示在响应中不在有Set-cookie头，而在请求头中却有了Cookie头。注意一下Cookie的名字：jsessionid，顾名思义，就是session的标识符，另外可以看到两幅图中的jsessionid的值是相同的，原因笔者就不再多解释了。另外读者可能在一些网站上见过在最后附加了一段形如jsessionid=xxx的URL，这就是采用URL重写来实现的session。<br><br><img src="http://images.cnitblog.com/blog/328925/201501/011334335135085.png" alt=""><br><br>（图一，首次请求index.jsp）<br><br><img src="http://images.cnitblog.com/blog/328925/201501/011334335135085.png" alt=""><br><br>（图二，再次请求index.jsp）<br><br>Cookie和session由于实现手段不同，因此也各有优缺点和各自的应用场景：<br></li>
+<li>应用场景<br>Cookie的典型应用场景是Remember Me服务，即用户的账户信息通过cookie的形式保存在客户端，当用户再次请求匹配的URL的时候，账户信息会被传送到服务端，交由相应的程序完成自动登录等功能。当然也可以保存一些客户端信息，比如页面布局以及搜索历史等等。<br>Session的典型应用场景是用户登录某网站之后，将其登录信息放入session，在以后的每次请求中查询相应的登录信息以确保该用户合法。当然还是有购物车等等经典场景；<br></li>
+<li>安全性<br>cookie将信息保存在客户端，如果不进行加密的话，无疑会暴露一些隐私信息，安全性很差，一般情况下敏感信息是经过加密后存储在cookie中，但很容易就会被窃取。而session只会将信息存储在服务端，如果存储在文件或数据库中，也有被窃取的可能，只是可能性比cookie小了太多。<br>Session安全性方面比较突出的是存在会话劫持的问题，这是一种安全威胁，这在下文会进行更详细的说明。总体来讲，session的安全性要高于cookie；<br></li>
+<li>性能<br>Cookie存储在客户端，消耗的是客户端的I/O和内存，而session存储在服务端，消耗的是服务端的资源。但是session对服务器造成的压力比较集中，而cookie很好地分散了资源消耗，就这点来说，cookie是要优于session的；<br></li>
+<li>时效性<br>Cookie可以通过设置有效期使其较长时间内存在于客户端，而session一般只有比较短的有效期（用户主动销毁session或关闭浏览器后引发超时）；<br></li>
+<li>其他<br>Cookie的处理在开发中没有session方便。而且cookie在客户端是有数量和大小的限制的，而session的大小却只以硬件为限制，能存储的数据无疑大了太多。<br><br>后文中我会主要针对express的session专门讲解。主要参考的博客网址如下，并对博主的无私奉献表示万分感谢。<br><br><a href="http://www.cnblogs.com/shoru/archive/2010/02/19/1669395.html" target="_blank" rel="external">http://www.cnblogs.com/shoru/archive/2010/02/19/1669395.html</a>                   （大话session）<br><br><a href="http://blog.csdn.net/fangaoxin/article/details/6952954" target="_blank" rel="external">http://blog.csdn.net/fangaoxin/article/details/6952954</a>                                    （<a href="http://blog.csdn.net/fangaoxin/article/details/6952954" target="_blank" rel="external">Cookie/Session</a>机制详解）<br><h3 id="二、express框架之session-内存存储"><a href="#二、express框架之session-内存存储" class="headerlink" title="二、express框架之session 内存存储"></a>二、express框架之session 内存存储</h3></li>
+</ol>
+<hr>
+<p>express-session 是基于express框专门用于处理session的中间件。这里不谈express-session怎么安装，只给出相应的实例代码。另外，session的认证机制离不开cookie，需要同时使用cookieParser 中间件，有关的介绍可以专门参考<a href="https://github.com/expressjs/session/blob/master/README.md" target="_blank" rel="external">https://github.com/expressjs/session/blob/master/README.md</a>，或者参考<a href="http://blog.modulus.io/nodejs-and-express-sessions" target="_blank" rel="external">http://blog.modulus.io/nodejs-and-express-sessions</a>，这个博客上讲的比较清楚。<br></p>
+<pre><code>var express = require(&apos;express&apos;);
+ 2 var session = require(&apos;express-session&apos;);
+ 3 var cookieParser = require(&apos;cookie-parser&apos;);
+ 4 
+ 5 var app = express();
+ 6 
+ 7 app.use(cookieParser());
+ 8 app.use(session({
+ 9     secret: &apos;12345&apos;,
+10     name: &apos;testapp&apos;,   //这里的name值得是cookie的name，默认cookie的name是：connect.sid
+11     cookie: {maxAge: 80000 },  //设置maxAge是80000ms，即80s后session和相应的cookie失效过期
+12     resave: false,
+13     saveUninitialized: true,
+14 }));
+15 
+16 
+17 app.get(&apos;/awesome&apos;, function(req, res){
+18     
+19     if(req.session.lastPage) {
+20         console.log(&apos;Last page was: &apos; + req.session.lastPage + &quot;.&quot;);    
+21     }    
+22     req.session.lastPage = &apos;/awesome&apos;; //每一次访问时，session对象的lastPage会自动的保存或更新内存中的session中去。
+23     res.send(&quot;You&apos;re Awesome. And the session expired time is: &quot; + req.session.cookie.maxAge);
+24 });
+25 
+26 app.get(&apos;/radical&apos;, function(req, res){
+27     if (req.session.lastPage) {
+28         console.log(&apos;Last page was: &apos; + req.session.lastPage + &quot;.&quot;);    
+29     }
+30     req.session.lastPage = &apos;/radical&apos;;  
+31     res.send(&apos;What a radical visit! And the session expired time is: &apos; + req.session.cookie.maxAge);
+32 });
+33 
+34 app.get(&apos;/tubular&apos;, function(req, res){
+35     if (req.session.lastPage){
+36         console.log(&quot;Last page was: &quot; + req.session.lastPage + &quot;.&quot;);    
+37     }
+38 
+39     req.session.lastPage = &apos;/tubular&apos;;
+40     res.send(&apos;Are you a suffer? And the session expired time is: &apos; + req.session.cookie.maxAge);
+41 });
+42 
+43 
+44 app.listen(5000);
+</code></pre><p>2.1 express-session中间件的使用：<br><br>只需要用express app的use方法将session挂载在‘/’路径即可，这样所有的路由都可以访问到session。可以给要挂载的session传递不同的option参数，来控制session的不同特性。具体可以参见官网：<a href="https://github.com/expressjs/session/blob/master/README.md" target="_blank" rel="external">https://github.com/expressjs/session/blob/master/README.md</a>。<br><br>2.2 session内容的存储和更改：<br></p>
+<pre><code>To store or access session data, simply use the request property req.session, which is (generally) serialized as JSON by the store, so nested objects are typically fine.
+</code></pre><p>一旦我们将express-session中间件用use挂载后，我们可以很方便的通过req参数来存储和访问session对象的数据。req.session是一个JSON格式的JavaScript对象，我们可以在使用的过程中随意的增加成员，这些成员会自动的被保存到option参数指定的地方，默认即为内存中去。<br><br>2.3 session的生命周期<br><br>session与发送到客户端浏览器的生命周期是一致的。而我们在挂载session的时候，通过option选项的cookie.maxAge成员，我们可以设置session的过期时间，以ms为单位（但是，如果session存储在mongodb中的话，任何低于60s(60000ms)的设置是没有用的，下文会有详细的解释）。如果maxAge不设置，默认为null，这样的expire的时间就是浏览器的关闭时间，即每次关闭浏览器的时候，session都会失效。<br></p>
+<h3 id="三、express框架之session-数据库存储"><a href="#三、express框架之session-数据库存储" class="headerlink" title="三、express框架之session 数据库存储"></a>三、express框架之session 数据库存储</h3><hr>
+<p>有时候，我们需要session的声明周期要长一点，比如好多网站有个免密码两周内自动登录的功能。基于这个需求，session必须寻找内存之外的存储载体，数据库能提供完美的解决方案。这里，我选用的是mongodb数据库，作为一个NoSQL数据库，它的基础数据对象时database-collection-document 对象模型非常直观并易于理解，针对node.js 也提供了丰富的驱动和API。express框架提供了针对mongodb的中间件：connect-mongo，我们只需在挂载session的时候在options中传入mongodb的参数即可，程序运行的时候, express app 会自动的替我们管理session的存储，更新和删除。具体可以参考：<br><br><a href="https://github.com/kcbanner/connect-mongo" target="_blank" rel="external">https://github.com/kcbanner/connect-mongo</a><br><br>测试代码如下：<br></p>
+<pre><code>var express = require(&apos;express&apos;);
+var session = require(&apos;express-session&apos;);
+var cookieParser = require(&apos;cookie-parser&apos;);
+var MongoStore = require(&apos;connect-mongo&apos;)(session);
+var app = express();
+
+app.use(cookieParser());
+app.use(session({
+    secret: &apos;12345&apos;,
+    name: &apos;testapp&apos;,
+    cookie: {maxAge: 80000 },
+    resave: false,
+    saveUninitialized: true,
+   store: new MongoStore({   //创建新的mongodb数据库
+        host: &apos;localhost&apos;,    //数据库的地址，本机的话就是127.0.0.1，也可以是网络主机
+       port: 27017,          //数据库的端口号
+        db: &apos;test-app&apos;        //数据库的名称。
+    })
+}));
+
+
+app.get(&apos;/awesome&apos;, function(req, res){
+
+    if(req.session.lastPage) {
+        console.log(&apos;Last page was: &apos; + req.session.lastPage + &quot;.&quot;);    
+   }    
+    req.session.lastPage = &apos;/awesome&apos;;
+   res.send(&quot;You&apos;re Awesome. And the session expired time is: &quot; + req.session.cookie.maxAge);
+ });
+
+app.get(&apos;/radical&apos;, function(req, res){
+    if (req.session.lastPage) {
+       console.log(&apos;Last page was: &apos; + req.session.lastPage + &quot;.&quot;);    
+    }
+     req.session.lastPage = &apos;/radical&apos;;
+   res.send(&apos;What a radical visit! And the session expired time is: &apos; + req.session.cookie.maxAge);
+});
+
+app.get(&apos;/tubular&apos;, function(req, res){
+    if (req.session.lastPage){
+        console.log(&quot;Last page was: &quot; + req.session.lastPage + &quot;.&quot;);    
+     }
+
+ req.session.lastPage = &apos;/tubular&apos;;
+res.send(&apos;Are you a suffer? And the session expired time is: &apos; + req.session.cookie.maxAge);
+ });
+
+app.listen(5000);
+</code></pre><p>跟session的内存存储一样，只需增加红色部分的store选项即可，app会自动替我们把session存入到mongodb数据，而非内存中。<br><br>3.1  session的生命周期：<br><br>由于session是存在服务器端数据库的，所以的它的生命周期可以持久化，而不仅限于浏览器关闭的时间。具体是由cookie.maxAge 决定：如果maxAge设定是1个小时，那么从这个因浏览器访问服务器导致session创建开始后，session会一直保存在服务器端，即使浏览器关闭，session也会继续存在。如果此时服务器宕机，只要开机后数据库没发生不可逆转的破坏，maxAge时间没过期，那么session是可以继续保持的。<br><br>当maxAge时间过期后，session会自动的数据库中移除，对应的还有浏览器的cookie。不过，由于connect-mongo的特殊机制（每1分钟检查一次过期session），session的移除可能在时间上会有一定的滞后。<br></p>
+<pre><code>connect-mongo uses MongoDB&apos;s TTL collection feature (2.2+) to have mongod automatically remove expired sessions. (mongod runs this check every minute.)
+
+Note: By connect/express&apos;s default, session cookies are set to expire when the user closes their browser (maxAge: null). In accordance with standard industry practices, connect-mongo will set these sessions to expire two weeks from their last &apos;set&apos;. You can override this behavior by manually setting the maxAge for your cookies -- just keep in mind that any value less than 60 seconds is pointless, as mongod will only delete expired documents in a TTL collection every minute.
+</code></pre><p>当然，由于cookie是由浏览器厂商实现的，cookie不具有跨浏览器的特性，例如，我用firefox浏览器在京东上购物时，勾选了2周内免密码输入，但是当我第一次用IE登陆京东时，同样要重新输入密码。所以，这对服务器的同一个操作，不同的浏览器发起的请求，会产生不同的session-cookie。<br></p>
+<p>转自：<a href="http://www.cnblogs.com/chenchenluo/p/4197181.html" target="_blank" rel="external">http://www.cnblogs.com/chenchenluo/p/4197181.html</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/24/32/" itemprop="url">
+                  Node模块创建及使用，文件操作，IO交互，URL解析🌼
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-24T20:50:08+08:00" content="2016-05-24">
+              2016-05-24
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>模块创建以及使用</li>
+<li>文件模块的使用</li>
+<li>IO键盘交互</li>
+<li>URL解析</li>
+</ul>
+<h3 id="一、模块创建以及使用"><a href="#一、模块创建以及使用" class="headerlink" title="一、模块创建以及使用"></a>一、模块创建以及使用</h3><h4 id="什么是模块"><a href="#什么是模块" class="headerlink" title="什么是模块"></a>什么是模块</h4><p>模块和文件是一 一对应的，一个模块就是一个js文件，Node.js提供了exports和require两个对象，其中exports是模块公共的接口，require用于从外部获取一个模块的接口，即获取模块的exports对象。想要在外部用自定义模块中的方法exports方法暴露出去，通过require引入模块再调用其方法。<br></p>
+<h4 id="模块的分类"><a href="#模块的分类" class="headerlink" title="模块的分类"></a>模块的分类</h4><h5 id="核心模块"><a href="#核心模块" class="headerlink" title="核心模块"></a>核心模块</h5><p>如http、fs、path等，引用《深入浅出Node.js》中的一段话<br><br><code>核心模块部分在Node源代码的编译过程中，编译进了二进制执行文件。在Node进程启动时，部分核心模块就被直接加载进内存中，所以这部分核心模块引入时，文件定位和编译执行这两个步骤可以省略掉，并且在路径分析中优先判断，所以他的加载速度是最快的。</code></p>
+<h5 id="第三方模块"><a href="#第三方模块" class="headerlink" title="第三方模块"></a>第三方模块</h5><p>通过NPM安装的模块都会放入到node_modules目录下，在引用模块时和核心模块类似，require方法只需写模块名一就可以，不需要路径。Node在查找这个模块时会现在本级目录下查看是否有node_modules目录，若有看其内是否有相应的模块，若没有会去父目录查找，以此类推，就像是JavaScript的原型链和作用域链的查找方式。所以这类模块的查找会耗时最多，加载最慢。</p>
+<h4 id="创建模块"><a href="#创建模块" class="headerlink" title="创建模块"></a>创建模块</h4><h5 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式"></a>第一种方式</h5><pre><code>//mymodule.js
+//使用exports向外部暴露方法
+var name;
+exports.setName=function(isname) {
+  name = isname;
+}
+exports.sayNanme=function (){
+  console.log(&apos;hello my name is &apos;+name);
+}
+
+
+//getmymodule.js
+var myModule =require(&apos;./mymodule&apos;);
+myModule.setName(&apos;AngelaMuller&apos;);//调用模块中方法设置属性
+myModule.sayNanme();//调用方法
+</code></pre><h6 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h6><pre><code>muller@ubuntu:~/node$ node getmymodule.js
+hello my name is AngelaMuller
+</code></pre><h5 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h5><pre><code>//mymodule.js
+module.exports =  function (name){
+  this.name = name;
+  this.sayhello = function(){
+      console.log(&apos;hello world！&apos;+this.name);
+  }
+};
+
+//getmymodule.js
+var person  = require(&apos;./mymodule&apos;);
+var oneper = new person(&apos;AngelaMuller&apos;);
+oneper.sayhello();
+</code></pre><h6 id="使用：-1"><a href="#使用：-1" class="headerlink" title="使用："></a>使用：</h6><pre><code>muller@ubuntu:~/node$ node getmymodule.js
+hello world！AngelaMuller
+</code></pre><h4 id="单次加载"><a href="#单次加载" class="headerlink" title="单次加载"></a>单次加载</h4><p>上面的例子有点类似创建一个对象，但实际上和对象又有本质的区别，因为require不会重复加载模块，也就是说无论调用多少次require，获取的模块都是同一个<br></p>
+<h4 id="覆盖exports"><a href="#覆盖exports" class="headerlink" title="覆盖exports"></a>覆盖exports</h4><p>有时我们知识想把一个对象封装到模块中，例如<br><br>定义模块：singleobejct.js<br><br>引入模块使用：getSingleObject.js<br><br>繁琐：exports.hello=hello;<br><br>引入：require(“./singleobject”).hello;<br><br>简易：module.exports=hello;<br><br>exports本身仅仅是一个普通的空对象，即{}，它是专门用来声明接口<br></p>
+<hr>
+<h5 id="定义模块：singleobejct-js"><a href="#定义模块：singleobejct-js" class="headerlink" title="定义模块：singleobejct.js"></a>定义模块：singleobejct.js</h5><pre><code>function hello(){
+var name;
+this.setName=function(thyName){
+    name=thyName;
+}
+this.sayHello=function(){
+    console.log(&apos;hello &apos;+name);
+}
+}
+//exports.hello=hello;
+module.exports=hello;    // 定义的方法添加   （简单的方式）
+</code></pre><h5 id="引入模块使用：getSingleObject-js"><a href="#引入模块使用：getSingleObject-js" class="headerlink" title="引入模块使用：getSingleObject.js"></a>引入模块使用：getSingleObject.js</h5><pre><code>var hello=require(&apos;./singleobject&apos;);
+var he=new hello();
+he.setName(&apos;marico&apos;);  //实例化第一个实例
+he.sayHello();
+var he2=new hello();  //实例化第二个实例
+he2.setName(&apos;yfc&apos;);
+he2.sayHello()
+</code></pre><h5 id="结果输出："><a href="#结果输出：" class="headerlink" title="结果输出："></a>结果输出：</h5><pre><code>[root@localhost nodejs]# node getSingleObject.js 
+hello marico
+hello yfc
+</code></pre><p>繁琐：exports.hello=hello; //使用这种方式加载在对象中时，在调用使用时比较繁琐<br>引入：require(“./singleobject”).hello;<br></p>
+<h3 id="二、文件操作"><a href="#二、文件操作" class="headerlink" title="二、文件操作"></a>二、文件操作</h3><p>node.js模块是文件操作的封装，它提供了文件的读取，写入，更名，删除，遍历目录，链接POSIX文件系统操作。与其他模块不同的是，fs模块中所有的操作都提供了异步和同步两个版本，例如，读取文件内容函数异步方法，readFile(),同步方法readFileSync().<br><br>1.同步方式的文件系统调用会导致阻塞，由于Node.js是单线程的，直到文件调用完成后，控制权才会被放回主线程，这也就导致了后台其他线程池中的很多线程不能够执行，从而导致Node.js中一定程度的性能问题。因此应该尽可能的减少使用同步方式的文件系统的方法调用。<br><br>2.异步调用会被主线程放置在事件队列中以备随后运行，这使得调用能够融入Node.js中的事件模型。但在执行代码时，就会变得有点棘手，因为事件并不能在预期的时候完成，这就需要有一个callback函数来规定当调用完成时需要完成的事。（这里可以去深入了解下Node.js的事件队列）<br></p>
+<ul>
+<li>简单读取<ul>
+<li>fs.readFile(path,[options],callback);</li>
+<li>fs.readFildSync(path,[options]);</li>
+</ul>
+</li>
+<li>非简单读取<ul>
+<li>fs.read(fd,buffer,offset,length,position,callback);</li>
+<li>fs.readSync(fd,buffer,offset,length,position);<ul>
+<li>流式读取<ul>
+<li>fs.createReadStream(path,[options]);</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>fs模块的其他方法<ul>
+<li>验证文件/目录路径的存在性</li>
+<li>fs.exists(path,callback);</li>
+<li>fs.existsSync(path);</li>
+</ul>
+</li>
+</ul>
+<p><strong>注</strong>： 同步方法返回true/false，异步方法callback仅仅只有一个err对象表示是否删除成功。<br></p>
+<pre><code>同步读取
+//引入fs模块
+var fs=require(&apos;fs&apos;);
+fs.readFile(&apos;content.txt&apos;,&apos;UTF-8&apos;,function(err,data){
+    if(err){
+        console.log(err);
+    }else{
+        console.log(data);
+    }
+});
+
+//没有回调函数
+try{
+    var data=fs.readFileSync(&apos;content.txt&apos;,&apos;UTF-8&apos;);
+    console.log(data+&quot;同步式读取&quot;);
+}catch(e){
+    console.log(e)
+}
+</code></pre><p>content.txt 内容<br><br>Node.js的文件系统的Api   AngelaMuller<br><br>输出结果：<br></p>
+<pre><code>muller@ubuntu:~/node$ node mymodule.js 
+Node.js的文件系统的Api   AngelaMuller同步式读取
+Node.js的文件系统的Api   AngelaMuller
+</code></pre><p>异步读取文件与readFile相同，而读取到的文件内容会以函数返回值的形式返回，如果有错误发生，fs将抛出异常，你需要try和catch捕获并处理异常。<br><br><a href="http://stackoverflow.com/questions/22863170/node-js-from-fs-readfilesync-to-fs-readfile" target="_blank" rel="external">Node.js from fs.readFileSync() to fs.readFile()</a><br><br>其他方法请查看官方API<a href="https://nodejs.org/dist/latest-v4.x/docs/api/fs.html" target="_blank" rel="external">https://nodejs.org/dist/latest-v4.x/docs/api/fs.html</a><br></p>
+<h3 id="三、-IO交互"><a href="#三、-IO交互" class="headerlink" title="三、 IO交互"></a>三、 IO交互</h3><h4 id="什么是IO交互"><a href="#什么是IO交互" class="headerlink" title="什么是IO交互"></a>什么是IO交互</h4><p>简单点是Node.js的控制台输入输出，I 是input 可读输入流 ，O是output 可输出流，Node.js也有如同C++和Java的标准输入输出进行交互。<br></p>
+<ul>
+<li>输入设备<ul>
+<li>输入设备是人向计算机输入信息的设备，常用的输入设备有：<ol>
+<li>键盘—人向计算机输入信息最基本的设备； </li>
+<li>鼠标器—-一种光标指点设备；</li>
+<li>触摸屏—-一种坐标定位设备，常用于公共查询系统。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>输出设备<ul>
+<li>输出设备是直接向人提供计算机运行结果的设备，常用的输出设备有：<ol>
+<li>显示器—计算机的主要输出设备,它与键盘一起构成最基本的人机对话环境；</li>
+<li>打印机—打印机为用户提供计算机信息的硬拷贝。常用的打印机有：击打式、喷墨式和激光打印机。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="什么是Readline"><a href="#什么是Readline" class="headerlink" title="什么是Readline"></a>什么是Readline</h4><p>Readline是Node.js里实现标准输入输出的封装好的模块，通过这个模块我们可以以逐行的方式读取数据流。<br><br>使用require(“readline”)可以引用模块。<br></p>
+<h4 id="如何使用Readline"><a href="#如何使用Readline" class="headerlink" title="如何使用Readline"></a>如何使用Readline</h4><pre><code>// 引入readline模块
+const readline = require(&apos;readline&apos;);
+
+//创建readline接口实例
+const rl = readline.createInterface({
+    input: process.stdin,  //监听的可读流 (必填)
+    output: process.stdout //逐行读取（Readline）数据要写入的可写流(可选)
+});
+rl.setPrompt(&apos;What is your name ? &gt; &apos;);//设置提示符
+rl.prompt(); //为用户输入准备好逐行读取（Readline）,让用户有新的地方输入
+
+
+rl.on(&apos;line&apos;, function (str) {
+    console.log(&apos;my name is : &apos;+str);
+});
+
+// close事件监听
+rl.on(&quot;close&quot;, function(){
+   // 结束程序
+   console.log(&apos;Have a great day!&apos;);
+    process.exit(0);// 结束程序
+});
+
+/* v0.10.44 版本似乎有问题 v4.5.0案例
+rl.on(&apos;line&apos;, (line) =&gt; {
+    var str = line.trim();
+    console.log(&apos;my name is : &apos;+str);
+
+    rl.prompt();
+}).on(&apos;close&apos;, () =&gt; {
+  console.log(&apos;Have a great day!&apos;);
+  process.exit(0);
+});
+*/
+</code></pre><p>在close事件的监听里，我们执行了process.exit(0)来使程序退出的操作，因为readline模块只要一开始获取用户输入就不会结束，必须使用这种直接的方式来结束程序。<br></p>
+<h4 id="输入与输出实例"><a href="#输入与输出实例" class="headerlink" title="输入与输出实例"></a>输入与输出实例</h4><pre><code>// 引入readline模块
+var readline = require(&apos;readline&apos;);
+
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.on(&apos;line&apos;, function(line){
+    switch(line.trim()) {
+        case &apos;copy&apos;:
+            console.log(&quot;复制&quot;);
+            break;
+        case &apos;hello&apos;:
+            rl.write(&quot;Write&quot;);
+            console.log(&apos;world!&apos;);
+            break;
+        case &apos;close&apos;:
+            rl.close();
+            break;
+        default:
+            console.log(&apos;没有找到命令！&apos;);
+            break;
+    }
+});
+rl.on(&apos;close&apos;, function() {
+    console.log(&apos;bye bye&apos;);
+    process.exit(0);
+});
+
+ &apos;line&apos;事件，这个事件就是在用户输完一行，按下回车后就会触发的事件，它会将用户输入的数据通过回调函数传回来，可在此方法里处理用户输入的数据
+</code></pre><h4 id="命令行输入与输出"><a href="#命令行输入与输出" class="headerlink" title="命令行输入与输出"></a>命令行输入与输出</h4><pre><code>const readline = require(&apos;readline&apos;);
+const rl = readline.createInterface(process.stdin, process.stdout);
+
+rl.setPrompt(&apos;OHAI&gt; &apos;);
+rl.prompt();
+
+rl.on(&apos;line&apos;, (line) =&gt; {
+  switch(line.trim()) {
+    case &apos;hello&apos;:
+      console.log(&apos;world!&apos;);
+      break;
+    default:
+      console.log(&apos;Say what? I might have heard `&apos; + line.trim() + &apos;`&apos;);
+      break;
+  }
+  rl.prompt();
+}).on(&apos;close&apos;, () =&gt; {
+  console.log(&apos;Have a great day!&apos;);
+  process.exit(0);
+});
+</code></pre><h3 id="四、URL解析"><a href="#四、URL解析" class="headerlink" title="四、URL解析"></a>四、URL解析</h3><h4 id="1-URL模块为URL的解析工具"><a href="#1-URL模块为URL的解析工具" class="headerlink" title="1.URL模块为URL的解析工具"></a>1.URL模块为URL的解析工具</h4><pre><code>var url = require(&apos;url&apos;);
+var urlString = &apos;http://user:pass@best.bluepay.asia:90/p/a/t/h?query=string#hash&apos;;
+var result = url.parse(urlString);
+console.log(result);
+
+//第二个可选参数设置为true时  query: { query: &apos;string&apos; },
+</code></pre><p>输出结果：<br></p>
+<pre><code>muller@ubuntu:~/node$ node url.js
+Url {
+  protocol: &apos;http:&apos;,
+  slashes: true,
+  auth: &apos;user:pass&apos;,
+  host: &apos;best.bluepay.asia:90&apos;,
+  port: &apos;90&apos;,
+  hostname: &apos;best.bluepay.asia&apos;,
+  hash: &apos;#hash&apos;,
+  search: &apos;?query=string&apos;,
+  query: &apos;query=string&apos;,
+  pathname: &apos;/p/a/t/h&apos;,
+  path: &apos;/p/a/t/h?query=string&apos;,
+  href: &apos;http://user:pass@best.bluepay.asia:90/p/a/t/h?query=string#hash&apos; }
+</code></pre><ul>
+<li>href 属性会被忽略 </li>
+<li>protocol无论是否有末尾的 : (冒号)，会同样的处理 这些协议包括 http, https, ftp, gopher, file 后缀是 :// (冒号-斜杠-斜杠). 所有其他的协议如 mailto, xmpp, aim, sftp, foo, 等 会加上后缀 : (冒号) </li>
+<li>auth 如果有将会出现. </li>
+<li>hostname 如果 host 属性没被定义，则会使用此属性. </li>
+<li>port 如果 host 属性没被定义，则会使用此属性. </li>
+<li>host 优先使用，将会替代 hostname 和port </li>
+<li>pathname 将会同样处理无论结尾是否有/ (斜杠) </li>
+<li>search 将会替代 query属性 </li>
+<li>query (object类型; 详细请看 querystring) 如果没有 search,将会使用此属性. </li>
+<li>search 无论前面是否有 ? (问号)，都会同样的处理 </li>
+<li>hash无论前面是否有# (井号, 锚点)，都会同样处理</li>
+</ul>
+<hr>
+<h4 id="2-queryString-模块"><a href="#2-queryString-模块" class="headerlink" title="2.queryString 模块"></a>2.queryString 模块</h4><p>提供了实用程序来处理查询字符串<br></p>
+<ul>
+<li>querystring.stringify(obj, [sep], [eq])<ul>
+<li>将JSON对象格式化为查询字符串格式的字符串，默认的分隔符为：“&amp;”和“=”，具体可以看一下以下代码.<br></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">querystring.stringify(&#123; foo: &apos;bar&apos;, baz: [&apos;qux&apos;, &apos;quux&apos;], corge: &apos;&apos; &#125;)</div><div class="line">// returns &apos;foo=bar&amp;baz=qux&amp;baz=quux&amp;corge=&apos;</div><div class="line"></div><div class="line">querystring.stringify(&#123;foo: &apos;bar&apos;, baz: &apos;qux&apos;&#125;, &apos;;&apos;, &apos;:&apos;)</div><div class="line">// returns &apos;foo:bar;baz:qux&apos;</div><div class="line"></div><div class="line">// Suppose gbkEncodeURIComponent function already exists,</div><div class="line">// it can encode string with `gbk` encoding</div><div class="line">querystring.stringify(&#123; w: &apos;中文&apos;, foo: &apos;bar&apos; &#125;, null, null,</div><div class="line">  &#123; encodeURIComponent: gbkEncodeURIComponent &#125;)</div><div class="line">// returns &apos;w=%D6%D0%CE%C4&amp;foo=bar&apos;</div></pre></td></tr></table></figure>
+<ul>
+<li>querystring.parse(str, [sep], [eq], [options])<ul>
+<li>根据“&amp;”和“=”将字符串进行分割，反序列化为JSON对象，而options包含的maxKeys默认设置为1000，如果将其设置为0则表示没这个限制.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">querystring.parse(&apos;foo=bar&amp;baz=qux&amp;baz=quux&amp;corge&apos;)</div><div class="line">// returns &#123; foo: &apos;bar&apos;, baz: [&apos;qux&apos;, &apos;quux&apos;], corge: &apos;&apos; &#125;</div><div class="line"></div><div class="line">// Suppose gbkDecodeURIComponent function already exists,</div><div class="line">// it can decode `gbk` encoding string</div><div class="line">querystring.parse(&apos;w=%D6%D0%CE%C4&amp;foo=bar&apos;, null, null,</div><div class="line">  &#123; decodeURIComponent: gbkDecodeURIComponent &#125;)</div><div class="line">// returns &#123; w: &apos;中文&apos;, foo: &apos;bar&apos; &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>querystring.escape，querystring.unescape<ul>
+<li>这两个内置方法，分别在上述两个方法的内置使用，如果有需要分别格式化和解码URL字符串。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-QueryString模块和Url模块之间的关系"><a href="#3-QueryString模块和Url模块之间的关系" class="headerlink" title="3. QueryString模块和Url模块之间的关系"></a>3. QueryString模块和Url模块之间的关系</h4><pre><code>url.parse(string).query
+                                       |
+       url.parse(string).pathname      |
+                   |                   |
+                   |                   |
+                 ------ -------------------
+http://localhost:8888/start?foo=bar&amp;hello=world
+                                ---       -----
+                                 |          |
+                                 |          |
+              querystring(string)[&quot;foo&quot;]    |
+                                            |
+                         querystring(string)[&quot;hello&quot;]
+</code></pre><h4 id="4-获取静态资源"><a href="#4-获取静态资源" class="headerlink" title="4. 获取静态资源"></a>4. 获取静态资源</h4><p>完整实例（根据不同的url地址请求不同的文件）<br></p>
+<pre><code>const ip = &apos;192.168.1.223&apos;;//主机IP
+const port = 3000;//端口号
+//引入的组建模块  http、url、fs
+const http = require(&apos;http&apos;);
+const urls = require(&apos;url&apos;);
+const fs = require(&apos;fs&apos;);
+//实例化一个服务容器
+var server = new http.Server();
+//监听一个端口
+server.listen(port , ip);
+//注册一个事件处理的on方法
+server.on(&apos;request&apos; , function(req , res){
+    //获取请求的url地址
+    var url = urls.parse(req.url);
+    //console.log(url.pathname);
+    //根据path路径来读取不同的模板文件
+    switch( url.pathname ){
+        //显示首页
+        case &apos;&apos; || &apos;/&apos;:
+            //读取文件内容
+            fs.readFile(&apos;./index.html&apos;,function( error, content){
+                if(error){
+                    //如果有错误时，显示错误信息
+                    funError();
+                }else{
+                    //正确时浏览器输出模板文件的内容
+                    funAuccess(res,content);
+                }
+            });
+            break;
+        //显示列表页面
+        case &apos;/list&apos;:
+            fs.readFile(&apos;./list.html&apos;,function( error, content){
+                if(error){
+                        funError(res , error);
+                }else{
+                    funAuccess(res,content);
+                }
+                });
+            break;
+        //显示详情页
+        case &apos;/show&apos;:
+            fs.readFile(&apos;./show.html&apos;,function( error, content){
+                if(error){
+                    funError(res , error);
+                }else{
+                    funAuccess(res,content);
+                }
+            });
+            break;
+        //获取静态资源的页面 如：css\js
+        default:
+            //获取文件名
+            var filename = url.pathname.substring(1);
+            //获取文件名对应的类型值
+            var type = getAllType( filename.substring(filename.lastIndexOf(&apos;.&apos;)+1));
+            //测试所用
+            //console.log(type);
+            //读取静态资源的页面
+            fs.readFile(filename , function( error, content){
+                if(error){
+                    funError(res , error);
+                }else{
+                    res.writeHead(200,{&apos;Content-Type&apos; : type});
+                    res.write(content);
+                    res.end();
+                }
+            });
+            break;
+    }
+
+});
+//错误提示的函数
+function funError(response , error){
+    response.writeHead(400,{&apos;Content-Type&apos;:&apos;text/plain;charset=&quot;utf-8&quot;&apos;});
+    response.write(error.message);
+    response.end();
+}
+
+//正确时输出文件内容的函数
+function funAuccess(response,cont){
+    response.writeHead(200,{&apos;Content-Type&apos;:&apos;text/html;charset=&quot;utf-8&quot;&apos;});//头信息
+    response.write(cont);//模板文件内容
+    response.end();
+}
+
+
+//定义文件类型的函数
+function getAllType(code){
+    var type = &apos;&apos;;
+    switch(code){
+          case &apos;html&apos;:
+            type = &apos;text/html;charset=utf-8&apos;;
+            break;
+        case &apos;js&apos;:
+            type = &apos;application/javascript/html;charset=utf-8&apos;;
+            break;
+        case &apos;css&apos;:
+            type = &apos;text/css;charset=utf-8&apos;;
+            break;
+            case &apos;text&apos;:
+            type = &apos;text/plain;charset=utf-8&apos;;
+            break;
+        case &apos;manifest&apos;:
+            type = &apos;text/cache-manifest;charset=utf-8&apos;;
+            break;
+        default:
+            type = &apos;application/octet-stream&apos;;
+            break;
+    }
+    return type;
+}
+</code></pre><p>转自：<a href="http://www.jianshu.com/p/21c7db836836" target="_blank" rel="external">http://www.jianshu.com/p/21c7db836836</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/23/31/" itemprop="url">
+                  谈响应式web设计代码实现🍨
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-23T22:38:08+08:00" content="2016-05-23">
+              2016-05-23
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在研究响应式的时候，记录了一些感想，分享出来，抛砖引玉，希望可以和大家一起讨论。总结下来，响应式比之前想象的要复杂得多。<br><br>1.ie9以下（不包括ie9）采用ie条件注释，为ie8以及一下单独开一个样式文件<br><br>2.一个模块的mq样式整体放在这个模块的样式的之后，符合层叠逻辑，也同时以免被层叠。<br></p>
+<ol>
+<li>祈求在一个相应点上同时做变化几乎是不可能的，因为版式中间的变化，无论是视觉还是具体的编码人员不可能掌握所有细节。<br></li>
+<li>流体布局很关键，%视父级为参照物，这一点虽然很多人都知道，但是实际做的时候却最容易被忽略。<br></li>
+<li>清除浮动也很重要，切记。<br></li>
+<li>如果你希望边框、边距（内、外）也在100%的范围内，直接设置width:auto就好了，不要给予希望在新的css3属性上，也不要寄希望在-webkit上，-webkit-很容易就会变成下一个ie6了。<br></li>
+<li>合理的嵌套更加健壮，用一个包装元素来替代设置当前元素margin或者padding。举例，假如有A和B两个元素，width是40%，maring-right是10%，这样很容易在搜索浏览器的时候篡位，所以用一个包装元素C去分别包裹A和B，然给给C设置50%，A和B分别设置为80%。这样就是合理且健壮的嵌套了。<br></li>
+<li>两行两列这种设计，由于流体布局和字数的不同，所以为每一行添加一个包装元素，更加健壮。也就是说，先做两行，再在每一行里做两列。<br></li>
+<li>不要奢望在在每一个像素的宽度上不会出现超出预期的表现，因为没有任何人知道页面在每一个像素宽度时候的表现的样子，页面越负责可预期的就越不准确。所以mq可能真的是“非预期数值”（预期数值指代在设计和实现之前约定的响应点）<br></li>
+<li>相同区间的mq和mq会层叠，全局的样式也会和mq中的样式层叠，所以属性尽量不要写成缩写。以减少忘记的风险。<br></li>
+<li>图片的自适应处理不容易，特别是有边框的，如果正常条件（没有利用mq来约束）下设置了宽和高，在另外一个mq下，仅仅设置一个属性是不行的，还是那句话，mq不是二选一（除非是两个不同的mq区间），而是层叠！！<br></li>
+<li>如果水平列表的两端的元素两端对齐，以四个元素为例，那么除了前三个预留左边距，最后一个为零；或者第一个右边据为0；后三个有右边距以外。可以采用第一个左侧有，最后一个右侧有，中间两个左右偏移边距来做，短的一面为 边距除以空白数，比如4个列表项，边距为40,则40除以3。好处么？就是可以保证每一个外包装为通栏的25%。<br></li>
+<li>四个25%，两个50% 没关系，但是50% 25% 25%就可能会掉下去最后一个，所以24.99，22.49有时还会相差1~2像素。<br></li>
+<li>如果版式变化不大，那么从大到小的写mq，不必写一个区间，只写最大值即可，这样一层一层的继承，小尺寸继承大尺寸，另外，不用过分担心选择器本身权重的问题，mq会提高其优先级。<br></li>
+<li>像导航和版权这种在pc、pad、phone截然不同的版式。mq，就写区间。这样在区间外就等于这些dom毫无样式，这样就不比担心由继承引发的覆盖、优先级、重写以及未知问题。减少了属性的重写，提高了效率、降低了修改成本。其实就是等于一个dom，为不同的设备写不同的样式，这些样式之间不继承。<br></li>
+<li>如果你希望几个元素是相对位置不变的话，请将他们包裹，通过这个包裹元素使他们整体与其他元素或元素组做排版，所以一个健壮的响应式离不开这些看似“冗余”的包裹元素。但还是以最少的可实现目标的dom层级为目标。<br></li>
+<li>关于背景图，以中心为原点进行“裁剪”是理智的，已某一侧为原点看起来都有点怪。另外可以使用background-size某个值为auto，另外一个使用%<br></li>
+<li>大图片请写在一个mq区间内，不要只写最大值，这样会搞定按需加载的问题。<br></li>
+<li><p>banner样式实践<br></p>
+<p>@media (min-width:1110px){<br>.banner{height:684px; background:url(img/banner1980.jpg) center center no-repeat; background-size:auto 100%;}<br>}/<em>高度一直填充，两侧裁剪，这种体验先看比较好</em>/<br>/<em>以下不同目标分辨率载入不同的图片，保证k数最佳，裁剪体验应该一致</em>/<br>@media (min-width:769px) and (max-width:1110px){<br>.banner{height:383px; background:url(img/banner1110.jpg) center center;}<br>}<br>@media (min-width:569px) and (max-width:768px){<br>.banner{height:265px; background:url(img/banner768.jpg) center center;}<br>}<br>@media (min-width:415px) and (max-width:568px){<br>.banner{height:196px; background:url(img/banner568.jpg) center center;}<br>}<br>@media (min-width:321px) and (max-width:414px){<br>.banner{height:143px; background:url(img/banner414.jpg) center center;}<br>}<br>@media (max-width:320px){<br>.banner{height:111px; background:url(img/banner320.jpg) center center;}<br>}<br>20.logo如果是在banner的背景图上镂空，这样是不推荐的。在缩小浏览器窗口宽度的时候，给人以很明显很明显的视觉差，感觉页面极其不健壮（至少我的感觉是这样），似乎有随时要散的感觉。文字也有这感觉，特别是有大量文字的时候。所以你会发现很多响应式好的网站，他的导航的底色都是纯色。logo和导航都不镂空在一张背景图上。当然也有少数在的，比如adobe。<br></p>
+</li>
+<li>接20，一般banner图片几乎是满屏的可能高达1980px；而一般如果是居中的话，我们把导航和logo以及一些小功能，比如登录、搜索控制在1200px最大宽度，当页面大于这个最大宽度的时候，这个区域就像钉在了背景图上，不会导致有两个图层的感觉。所以当页面宽度马上等于最大宽度的时候，我们在利用mq重新写定义下一这个区域的最大宽度，当然是该小一点，这样就解决了20出现的那个问题。<br></li>
+<li>png8的问题，ie6下就用纯色做底吧。我最理想的想法是，当用ie6访问所有公司web产品的时候，给用户一个页面，先登录QQ帐号，然后下载最新的QQ浏览器，然后发这个用户10个Q币。然后浏览器界就清静了。<br></li>
+<li>接21，当前mq中的这个区域的最大宽度等于下一个（更小的一个尺寸）mq的尺寸，这样就用户的钉在了背景图的上面了。<br></li>
+<li>对于相同的一些元素，某一个有特殊的样式，优先使用nth-of-type选择器。在测试ie8以及一下的时候，再为这个特殊的dom添加一个class之类，然后再在那个ie8以及一下的样式表中书写复制响应的规则。<br></li>
+<li>body下有一个包裹元素，作为整体弹性的参照，为ie6、ie7单独写一个宽度，为什么是1000px，由于很难获得使用ie6的用户的分辨率，或者说获取了之后可能因为数据繁多不好决策，所以简单粗暴，认为使用ie6的都是低端设备用户，是小显示器用户，是1024*768分辨率；至于ie7，设置了4个25%的浮动，在缩小浏览器的过程中都能时不时的掉下去一个，对于小数点的像素就自动向上补全，太悲哀了。所以如下：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">regular css file</div><div class="line">.layout&#123;width:100%; max-width:1980px; min-width:320px;*zoom:1; margin:0 auto;&#125;</div><div class="line">lt9 css file</div><div class="line">.layout&#123;*width:1000px; min-width:1000px;&#125;/*ie8的最小宽度为1000px，ie7 6只有1000px*/</div></pre></td></tr></table></figure>
+<p>26.对于一定要百分之百通栏的模块，比如，带有背景色的版权，或者banner，那么可以在lt9的文件夹里为ie7 6写一个不是只有1000px，而是可以100%的样式，但是切记这里只要有一列，否则就又产生了25中提到的问题，也许，你可以这么写：</p>
+<pre><code>lt9 css file
+.layout{*width:1000px; min-width:1000px;}/*ie8的最小宽度为1000px，ie7 6只有1000px*/
+.one-percent{width:100%;}/*新增的，一定要在layout的后面，否则对于ie6 7不生效*/
+
+html dom
+</code></pre><p>所以我建议，把banner 主体部分 版权 三者用三个layout包裹，这样便于对ie6 ie7 ie8做样式。<br></p>
+<ol>
+<li>经过长达半年的持续统计，1366px用户最多，根据栅格化，n=24为基准，得出W=(A*n)-i，所以如果要设置最大宽度则设置为1310px；a=45px,i=10px；不过由于与门户和电商等网站的排版不同且主要为了弹性版式，所以这里最大宽度是我们所需要的，至于45px和10px，以后有固定版式的话可以使用。<br></li>
+<li>响应点：1366px 1200px 1110px 768px 568px 414px 320px；768以下的很好理解也方便约束，PC侧的响应点是较难控制的，所以前面三个值基本都是按照版式来操作的。原因参见3。<br></li>
+<li>有的人说写响应式从小往大写，意思是说先写手机端，然后写PC端，大致的原因是从大往小写的话，手机就要层叠和重写很多样式，可能会影响性能。理论上，我是赞成的，实际上我并没有测试过到底性能有多么影响。但是单单从布局的角度上讲，从设计的角度上讲，至少我的逻辑是从大往小写，因为小的基本都是在大的基础上做删减和布局的变化，所以写的时候逻辑比较顺畅。不过无论从大到小，还是从小到大，自己顺手就好。一般视觉都会先设计PC的，然后考虑mobile是什么样的，这一点也使得我是从大到小的去写。<br></li>
+<li>之前黄老师问我，认为响应式的难点是在设计上还是在技术上，我当时说是技术上没什么，关键是版式的变化和设计的体验。现在想想。版式变化固然是难点，但是技术手段也很重要，在这方面的深度和方式的选择要比版式上的选择复杂的多。<br></li>
+<li>响应式三大技术：流体、mq、弹性图片。<br></li>
+</ol>
+<p>以上都是个人经验，难免片面，欢迎讨论。<br><br>转自：<a href="http://isux.tencent.com/code-of-response-web-design.html" target="_blank" rel="external">http://isux.tencent.com/code-of-response-web-design.html</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/19/30/" itemprop="url">
+                  React-Native项目中使用TabBar 🍰
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-19T20:23:27+08:00" content="2016-05-19">
+              2016-05-19
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://www.jianshu.com/p/34eefd41ed94" target="_blank" rel="external">之前的文章</a>讲述了在RN项目中如何使用NavigationBar，如何调用原生模块，以及集成下拉刷新和上拉加载更多的功能，今天介绍一个第三方插件<a href="https://github.com/exponentjs/react-native-tab-navigator" target="_blank" rel="external">react-native-tab-navigator</a>，讲述我是如何使用它在RN项目中使用TabBar<br><a href="https://github.com/yongqianvip/RN-ListViewLoadMore" target="_blank" rel="external">项目源码在这里</a><br></p>
+<h4 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1.安装插件"></a>1.安装插件</h4><pre><code>npm install react-native-tab-navigator --save
+</code></pre><h4 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h4><p>就我的demo来说：<br><br>Demo中包含了Navigator管理的一系列视图，我尝试过使用一个<code>Tab</code>管理多个由<code>Navigator</code>管理的一系列视图<br><br>(这跟我之前的iOS开发经验有关，在iOS中<code>Application</code>的根视图是<code>TabBarController</code>，这个<code>TabBarController</code>管理多个由<code>NavigationController</code>管理的一系列ViewController） <br><br><strong>但是这有一个问题：</strong><br><br>场景切换的时候可能有隐藏TabBar的需求，按照刚才说的方法，我需要set一个值来控制tabbar的<code>height</code>和<code>overflow</code>，又由于<code>component</code>的生命周期函数中没有类似于iOS中<code>-（void)viewWillAppear;</code>的方法，所以没有很好的方法把隐藏的tabbar再显示出来（如果你有解决这个问题的方法，请告诉我）。 <br><br><strong>那么换一种思路：</strong><br><br>把管理一系列视图的<code>Tab</code>交由一个<code>Navigator</code>管理，虽然这样违背了iOS开发的普通思路，但是就目前在RN项目中，没有发现太大的问题（有一个问题是只有一级页面显示TabBar，所有二级页面全部不显示，不过就国内大多数应用设计风格来看，这个问题也不算是问题）。<br></p>
+<h4 id="3-react-native-vector-icons"><a href="#3-react-native-vector-icons" class="headerlink" title="3.react-native-vector-icons"></a>3.react-native-vector-icons</h4><p>这是一个图标库，有兴趣话可以<a href="https://github.com/oblador/react-native-vector-icons" target="_blank" rel="external">去这里</a>深入了解，简单使用请执行下边两条命令即可 <br></p>
+<pre><code>$ npm install react-native-vector-icons --save
+$ rnpm link
+</code></pre><p>使用：<br></p>
+<pre><code>import Icon from &apos;react-native-vector-icons/Ionicons&apos;;
+&lt;Icon name={ &apos;ios-home&apos; }
+</code></pre><h4 id="4-关键部分代码"><a href="#4-关键部分代码" class="headerlink" title="4.关键部分代码"></a>4.关键部分代码</h4><pre><code>//root.js
+ import React from &apos;react&apos;
+ import {
+     Navigator
+ } from &apos;react-native&apos;;
+ import { Provider } from &apos;react-redux&apos;
+ import configureStore from &apos;./store/store.js&apos;
+ import App from &apos;./containers/app.js&apos;
+ const store = configureStore();
+
+ class Root extends React.Component {
+     render() {
+         return (
+             &lt;Provider store={ store }&gt;
+                 //在原来&lt;App /&gt;的基础上添加Navigator
+                 &lt;Navigator 
+                     initialRoute={{ component: App }}
+                     configureScene={(route) =&gt; {
+                         return Navigator.SceneConfigs.FloatFromRight;
+                     }}
+                     renderScene={(route, navigator) =&gt; {
+                         let Component = route.component;
+                         return &lt;Component {...route.params} navigator={navigator} /&gt;
+                     }} /&gt;
+             &lt;/Provider&gt;
+         );
+     }
+ }
+ export default Root;
+
+ //----------------------
+ //app.js  ( render(){} ) 
+
+ render() {
+     const { reducer } = this.props;
+     console.log(&quot;============&quot;,reducer.tabbarHeight);
+     return (
+         &lt;TabNavigator tabBarStyle={{ backgroundColor:'white' }} style={{backgroundColor: 'white'}}&gt;
+                &lt;TabNavigator.Item
+                 title=&quot;主页&quot;
+                 selected={this.state.selectedTab === &apos;home&apos;}
+                 renderIcon={() =&gt; &lt;Icon name={ &apos;ios-home&apos; } size={30} color={&apos;gray&apos;}/&gt;}
+                 renderSelectedIcon={() =&gt; &lt;Icon name={ &apos;ios-home&apos; } size={30} color={&apos;#4E78E7&apos;}/&gt;}
+                 onPress={() =&gt; this.setState({ selectedTab: &apos;home&apos; })}&gt;
+                 &lt;ProductListContainer {...this.props} /&gt;
+             &lt;/TabNavigator.Item&gt;
+             &lt;TabNavigator.Item
+                 title=&quot;其他&quot;
+                 selected={this.state.selectedTab === &apos;other&apos;}
+                 renderIcon={() =&gt; &lt;Icon name={ &apos;ios-more&apos; } size={30} color={&apos;gray&apos;}/&gt;}
+                 renderSelectedIcon={() =&gt; &lt;Icon name={ &apos;ios-more&apos; } size={30} color={&apos;#4E78E7&apos;}/&gt;}
+                 onPress={() =&gt; this.setState({ selectedTab: &apos;other&apos; })}&gt;
+                 &lt;OtherContainer {...this.props}/&gt;
+             &lt;/TabNavigator.Item&gt;
+         &lt;/TabNavigator&gt;
+     );
+ }
+</code></pre><h4 id="5-效果图"><a href="#5-效果图" class="headerlink" title="5.效果图"></a>5.效果图</h4><p><img src="http://upload-images.jianshu.io/upload_images/321232-7d52bf6e83cb0b39.gif?imageMogr2/auto-orient/strip" alt=""><br><br>转自：<a href="http://www.jianshu.com/p/7a4899bde137" target="_blank" rel="external">http://www.jianshu.com/p/7a4899bde137</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/15/29/" itemprop="url">
+                  React Native 的 Navigator 组件使用方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-15T21:49:06+08:00" content="2016-05-15">
+              2016-05-15
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>React Native</strong>的编程思想类似于<code>iOS</code>, 导航栏也使用<code>Navigator</code>作为标识, 类似于<code>Android</code>的<code>ActionBar</code>. 导航栏作为最重要的应用组件之一, 除了处理页面导航功能以外, 还会提供页面栈的管理, 管理页面的跳入和跳出. 本文介绍 <a href="http://facebook.github.io/react-native/docs/navigator.html" target="_blank" rel="external">Navigator</a> 组件的使用方式.<br><br><img src="http://upload-images.jianshu.io/upload_images/749674-717db66222368931.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><br>React Native<br><br>本文源码的GitHub<a href="https://github.com/SpikeKing/WclNavigator" target="_blank" rel="external">下载地址</a><br><br>关于React Native项目的启动, <a href="http://www.wangchenlong.org/2016/04/07/1604/071-rn-uiexplorer/" target="_blank" rel="external">参考1</a>, <a href="http://www.wangchenlong.org/2016/04/11/1604/111-rn-open-project/" target="_blank" rel="external">参考2</a>.<br></p>
+<hr>
+<h3 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h3><h4 id="Navigator"><a href="#Navigator" class="headerlink" title="Navigator"></a>Navigator</h4><p>添加 <strong>Navigator</strong> 的组件<code>&lt;Navigator/&gt;.</code> 设置方法: 初始化路由(initialRoute), 配置场景动画(configureScene), 渲染场景(renderScene). 初始化路由<strong>(initialRoute),</strong> 使用<code>FirstPage</code>页面作为首页.</p>
+<pre><code>// 主模块
+class SimpleView extends Component {
+  // ...
+  render() {
+    return (
+      &lt;Navigator
+        style={{flex:1}}
+        initialRoute={{component: FirstPage}}
+        configureScene={this.configureScene}
+        renderScene={this.renderScene}/&gt;
+    );
+  }
+}
+</code></pre><p><strong>配置场景动画(configureScene)</strong>: 根据路由的<code>type</code>属性, 判断使用的动画样式, 底部弹出或右侧弹出.<br></p>
+<pre><code>/**
+  * 配置场景动画
+  * @param route 路由
+  * @param routeStack 路由栈
+  * @returns {*} 动画
+  */
+ configureScene(route, routeStack) {
+   if (route.type == &apos;Bottom&apos;) {
+     return Navigator.SceneConfigs.FloatFromBottom; // 底部弹出
+   }
+   return Navigator.SceneConfigs.PushFromRight; // 右侧弹出
+ }
+</code></pre><p><strong>渲染场景(renderScene)</strong>: 使用动态加载组件的方式. 设置加载页面的<code>navigator</code>参数, 其余使用<code>route.passProps</code>属性传递其他参数.<br></p>
+<pre><code>/**
+  * 使用动态页面加载
+  * @param route 路由
+  * @param navigator 导航器
+  * @returns {XML} 页面
+  */
+ renderScene(route, navigator) {
+   return &lt;route.component navigator={navigator}  {...route.passProps} /&gt;;
+ }
+</code></pre><p>也可以使用<code>静态加载组件</code>, 需要预定义组件, 没有动态加载灵活.<br></p>
+<pre><code>/**
+   * 渲染场景, 通过不同参数, 设置不同页面
+   * @param route 路由, 场景信息
+   * @param navigator 导航器
+   * @returns {XML} 页面
+   */
+  renderScene(route, navigator) {
+    if (route.name == &apos;FirstPage&apos;) {
+      return &lt;FirstPage navigator={navigator} {...route.passProps}/&gt;
+    } else if (route.name == &apos;SecondPage&apos;) {
+      return &lt;SecondPage navigator={navigator} {...route.passProps}/&gt;
+    }
+}
+</code></pre><h4 id="第一页"><a href="#第一页" class="headerlink" title="第一页"></a>第一页</h4><p><strong>FirstPage组件</strong>: 包含导航栏标题和两个跳转按钮. 提供两种跳转动画, 右出和底部. 点击按钮调用<code>_navigate()</code>方法, 跳转到第二页.<br></p>
+<pre><code>// 第一页. 使用Component可以自动生成注释, 符合标准
+class FirstPage extends Component {
+
+  // ...
+
+  render() {
+    return (
+      &lt;View style={styles.container}&gt;
+        &lt;View style={styles.heading}&gt;
+          &lt;Text style={styles.headText}&gt;
+            {&apos;第一页&apos;}
+          &lt;/Text&gt;
+        &lt;/View&gt;
+        &lt;TouchableOpacity
+          style={styles.button}
+          onPress={()=&gt;this._navigate(&apos;你好! (来源第一页:右出)&apos;)}&gt;
+          &lt;Text style={styles.buttonText}&gt;
+            {&apos;跳转至第二页(右出)&apos;}
+          &lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+        &lt;TouchableOpacity
+          style={styles.button}
+          onPress={()=&gt;this._navigate(&apos;你好! (来源第一页:底出)&apos;, &apos;Bottom&apos;)}&gt;
+          &lt;Text style={styles.buttonText}&gt;
+            {&apos;跳转至第二页(底部)&apos;}
+          &lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+      &lt;/View&gt;
+    );
+  }
+}   
+</code></pre><p>也可以使用<code>var FirstPage = React.createClass()</code>创建组件, 但没有使用继承<code>Component</code>方式规范, 不能自动生成注释.<br><br><img src="http://upload-images.jianshu.io/upload_images/749674-1143541a93c6a977.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><br>第一页<br><br><code>_navigate()</code>方法: 导航跳转, 调用<code>navigator.push()</code>方法. 传递参数<code>passProps的name</code>属性, <code>type</code>动画类型, <code>component</code>跳转组件.<br></p>
+<pre><code>/**
+   * 给Navigator传递参数.
+   * @param name 参数
+   * @private
+   */
+  _navigate(name, type = &apos;Normal&apos;) {
+    this.props.navigator.push({
+      component: SecondPage,
+      passProps: {
+        name: name
+      },
+      type: type
+    })
+  }
+</code></pre><p>下划线表示私有方法, 类似Java的private限定符.<br></p>
+<h4 id="第二页"><a href="#第二页" class="headerlink" title="第二页"></a>第二页</h4><p><strong>SecondPage组件</strong>: 第二页, 跳出返回第一页. 调用<code>navigator.pop()</code>方法, 使用当前页面出栈, 显示上一个栈内页面.<br></p>
+<pre><code>// 第二页, 点击跳出返回第一页
+class SecondPage extends Component {
+  render() {
+    return (
+      &lt;View style={styles.container}&gt;
+        &lt;View style={styles.heading}&gt;
+          &lt;Text style={styles.headText}&gt;
+            第二页: {this.props.name}
+          &lt;/Text&gt;
+        &lt;/View&gt;
+        &lt;TouchableOpacity
+          style={styles.button}
+          onPress={()=&gt;this.props.navigator.pop()}&gt;
+          &lt;Text style={styles.buttonText}&gt;
+            返回上一页
+          &lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+      &lt;/View&gt;
+    );
+  }
+}
+</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/749674-b11aa80cc0bdd3c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><br>Navigator的主要功能, 是管理页面栈, 控制页面的跳入跳出.<br></p>
+<hr>
+<h3 id="统一导航栏"><a href="#统一导航栏" class="headerlink" title="统一导航栏"></a>统一导航栏</h3><p>对于应用而言, 需要统一的导航栏, Navigator 组件也提供导航栏的定制.<br></p>
+<h4 id="Navigator-1"><a href="#Navigator-1" class="headerlink" title="Navigator"></a>Navigator</h4><p>与上文类似, 额外添加<code>navigationBar</code>的属性, 自定义设置导航栏, 保持所有页面的导航栏一致. 属性添加<code>&lt;NavigationBar/&gt;</code>标签, 通过<code>routeMapper</code>控制导航栏的功能和样式.<br></p>
+<pre><code>// 主模块
+class UniformView extends Component {
+  //...
+
+  render() {
+    return (
+      &lt;Navigator
+        style={{flex:1}}
+        initialRoute={{name: 'FirstPage', component: FirstPage}}
+        configureScene={this.configureScene}
+        renderScene={this.renderScene}
+        navigationBar={
+          &lt;Navigator.NavigationBar
+            style={styles.navContainer}
+            routeMapper={NavigationBarRouteMapper}/&gt;}
+        /&gt;
+    );
+  }
+}
+</code></pre><h4 id="NavigationBarRouteMapper"><a href="#NavigationBarRouteMapper" class="headerlink" title="NavigationBarRouteMapper"></a>NavigationBarRouteMapper</h4><p><strong>NavigationBarRouteMapper</strong>: 导航栏路由映射器, 设置左键<strong>LeftButton</strong>, 右键<strong>RightButton</strong>, 标题Title.<br></p>
+<pre><code>// 导航栏的Mapper
+var NavigationBarRouteMapper = {
+  // 左键
+  LeftButton(route, navigator, index, navState) {
+    // ...
+  },
+  // 右键
+  RightButton(route, navigator, index, navState) {
+    // ...
+  },
+  // 标题
+  Title(route, navigator, index, navState) {
+    return (
+      &lt;View style={styles.navContainer}&gt;
+        &lt;Text style={styles.title}&gt;
+          应用标题
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    );
+  }
+};
+</code></pre><p><strong>左键LeftButton</strong>: <code>index</code>属性表示当前页面的索引, 通过判断<code>index</code>属性, 获知栈内是否有其他页面, 判断后退按钮是否显示. 点击调用<code>navigator.pop()</code>出栈. <br></p>
+<pre><code>// 左键
+  LeftButton(route, navigator, index, navState) {
+    if (index &gt; 0) {
+      return (
+        &lt;View style={styles.navContainer}&gt;
+          &lt;TouchableOpacity
+            underlayColor=&apos;transparent&apos;
+            onPress={() =&gt; {if (index &gt; 0) {navigator.pop()}}}&gt;
+            &lt;Text style={styles.leftNavButtonText}&gt;
+              后退
+            &lt;/Text&gt;
+          &lt;/TouchableOpacity&gt;
+        &lt;/View&gt;
+      );
+    } else {
+      return null;
+    }
+  },
+</code></pre><p><strong>右键RightButton</strong>: 点击调用路由(route)的<code>onPress()</code>方法, 提示信息. 根据路由的<code>rightText</code>属性添加显示文字.<br></p>
+<pre><code>// 右键
+ RightButton(route, navigator, index, navState) {
+   if (route.onPress)
+     return (
+       &lt;View style={styles.navContainer}&gt;
+         &lt;TouchableOpacity
+           onPress={() =&gt; route.onPress()}&gt;
+           &lt;Text style={styles.rightNavButtonText}&gt;
+             {route.rightText || &apos;右键&apos;}
+           &lt;/Text&gt;
+         &lt;/TouchableOpacity&gt;
+       &lt;/View&gt;
+     );
+ },
+</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/749674-fb243dbf9ac6b21e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br></p>
+<h4 id="第一页-第二页"><a href="#第一页-第二页" class="headerlink" title="第一页/第二页"></a>第一页/第二页</h4><p>第一页与第二页与上文类似, 当第一页跳转时, 传递的路由信息有些变化, 控制第二页与导航栏的显示信息.<br></p>
+<pre><code>// 填出提示框
+  onPress() {
+    alert(&quot;我是Spike!&quot;);
+  }
+
+  /**
+   * 跳转页面至SecondPage
+   * @param name 传递参数
+   * @param type 动画类型
+   */
+  gotoNext(name, type = &apos;Normal&apos;) {
+    this.props.navigator.push({
+      component: SecondPage,
+      passProps: {
+        id: name
+      },
+      onPress: this.onPress,
+      rightText: &apos;ALERT!&apos;,
+      type: type
+    })
+  }
+</code></pre><p>React Native 路由的基本功能就是这些, 控制页面的切换, 控制导航栏的功能. 导航栏作为应用最重要的组件之一, 一定要熟练掌握.<br><br>OK, that’s all ! Enjoy it!<br><br>转自：<a href="http://www.jianshu.com/p/91fa0f34895e" target="_blank" rel="external">http://www.jianshu.com/p/91fa0f34895e</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="menggeNIU" />
+          <p class="site-author-name" itemprop="name">menggeNIU</p>
+          <p class="site-description motion-element" itemprop="description">个人收藏</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">38</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">Tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">menggeNIU</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
 <script type="text/javascript">
-    $(document).ready(function($) {
-      $('.flexslider').flexslider({
-        animation: "fade",
-        prevText: "",
-        nextText: "",
-        directionNav: true
-      });
-    });
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>
