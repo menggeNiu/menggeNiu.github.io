@@ -1,336 +1,203 @@
-<!doctype html>
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
 
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>TCP/IP🌿 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
 
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
     
     
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
   
 
   
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="JS," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
-
-
-
-
-<meta name="description" content="TCP/IP详解学习笔记   这位仁兄写得太好了http://blog.csdn.net/goodboy1881/category/204448.aspxTCP/IP详解学习笔记(13)-TCP坚持定时器，TCP保活定时器TCP/IP详解学习笔记(12)-TCP的超时与重传TCP/IP详解学习笔记(11)-TCP交互数据流，成块数据流
-TCP/IP详解学习笔记(1)-基本概念为什么会有TCP/IP">
-<meta property="og:type" content="article">
-<meta property="og:title" content="TCP/IP🌿">
-<meta property="og:url" content="https://menggeniu.github.io/2016/03/25/14/index.html">
-<meta property="og:site_name" content="NNNの博客">
-<meta property="og:description" content="TCP/IP详解学习笔记   这位仁兄写得太好了http://blog.csdn.net/goodboy1881/category/204448.aspxTCP/IP详解学习笔记(13)-TCP坚持定时器，TCP保活定时器TCP/IP详解学习笔记(12)-TCP的超时与重传TCP/IP详解学习笔记(11)-TCP交互数据流，成块数据流
-TCP/IP详解学习笔记(1)-基本概念为什么会有TCP/IP">
-<meta property="og:updated_time" content="2016-11-19T02:16:52.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TCP/IP🌿">
-<meta name="twitter:description" content="TCP/IP详解学习笔记   这位仁兄写得太好了http://blog.csdn.net/goodboy1881/category/204448.aspxTCP/IP详解学习笔记(13)-TCP坚持定时器，TCP保活定时器TCP/IP详解学习笔记(12)-TCP的超时与重传TCP/IP详解学习笔记(11)-TCP交互数据流，成块数据流
-TCP/IP详解学习笔记(1)-基本概念为什么会有TCP/IP">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"right","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="https://menggeniu.github.io/2016/03/25/14/"/>
-
-
-
-
-
-  <title> TCP/IP🌿 | NNNの博客 </title>
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
 
-  
+      <!-- ============================ Off-canvas navigation =========================== -->
 
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">NNNの博客</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">前端小菜鸟</p>
-</div>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/03/25/14/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="menggeNIU">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NNNの博客">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                TCP/IP🌿
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-03-25T23:00:06+08:00">
-                2016-03-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <a href="/2016/03/25/14/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/25/14/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/03/25/14/" class="leancloud_visitors" data-flag-title="TCP/IP🌿">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-
-          
-
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
         </div>
-      </header>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
+                    
+                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+       <!--  <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul> -->
+    </div>
     
+    <!-- ============================ END Off-canvas navigation =========================== -->
 
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
 
-    <div class="post-body" itemprop="articleBody">
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
 
       
-      
-
-      
-        <h6 id="TCP-IP详解学习笔记-这位仁兄写得太好了"><a href="#TCP-IP详解学习笔记-这位仁兄写得太好了" class="headerlink" title="TCP/IP详解学习笔记   这位仁兄写得太好了"></a>TCP/IP详解学习笔记   这位仁兄写得太好了<br></h6><p><a href="http://blog.csdn.net/goodboy1881/category/204448.aspx" target="_blank" rel="external">http://blog.csdn.net/goodboy1881/category/204448.aspx</a><br><br>TCP/IP详解学习笔记(13)-TCP坚持定时器，TCP保活定时器<br><br>TCP/IP详解学习笔记(12)-TCP的超时与重传<br><br>TCP/IP详解学习笔记(11)-TCP交互数据流，成块数据流<br></p>
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-03-25T15:00:06.000Z" itemprop="datePublished">
+          2016-03-25
+      </time>
+    
+    
+    | 
+    <a href='/tags/JS/'>JS</a>
+    
+    
+</span>
+                <h1>TCP/IP🌿</h1>
+                <span id="busuanzi_container_page_pv">
+                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+                </span>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h6 id="TCP-IP详解学习笔记-这位仁兄写得太好了"><a href="#TCP-IP详解学习笔记-这位仁兄写得太好了" class="headerlink" title="TCP/IP详解学习笔记   这位仁兄写得太好了"></a>TCP/IP详解学习笔记   这位仁兄写得太好了<br></h6><p><a href="http://blog.csdn.net/goodboy1881/category/204448.aspx" target="_blank" rel="external">http://blog.csdn.net/goodboy1881/category/204448.aspx</a><br><br>TCP/IP详解学习笔记(13)-TCP坚持定时器，TCP保活定时器<br><br>TCP/IP详解学习笔记(12)-TCP的超时与重传<br><br>TCP/IP详解学习笔记(11)-TCP交互数据流，成块数据流<br></p>
 <h3 id="TCP-IP详解学习笔记-1-基本概念"><a href="#TCP-IP详解学习笔记-1-基本概念" class="headerlink" title="TCP/IP详解学习笔记(1)-基本概念"></a>TCP/IP详解学习笔记(1)-基本概念</h3><h4 id="为什么会有TCP-IP协议"><a href="#为什么会有TCP-IP协议" class="headerlink" title="为什么会有TCP/IP协议"></a>为什么会有TCP/IP协议</h4><p>在世界上各地，各种各样的电脑运行着各自不同的操作系统为大家服务，这些电脑在表达同一种信息的时候所使用的方法是千差万别。就好像圣经中上帝打乱了各地人的口音，让他们无法合作一样。计算机使用者意识到，计算机只是单兵作战并不会发挥太大的作用。只有把它们联合起来，电脑才会发挥出它最大的潜力。于是人们就想方设法的用电线把电脑连接到了一起。<br><br>但是简单的连到一起是远远不够的，就好像语言不同的两个人互相见了面，完全不能交流信息。因而他们需要定义一些共通的东西来进行交流，TCP/IP就是为此而生。TCP/IP不是一个协议，而是一个协议族的统称。里面包括了IP协议，IMCP协议，TCP协议，以及我们更加熟悉的http、ftp、pop3协议等等。电脑有了这些，就好像学会了外语一样，就可以和其他的计算机终端做自由的交流了。<br></p>
 <h4 id="TCP-IP协议分层"><a href="#TCP-IP协议分层" class="headerlink" title="TCP/IP协议分层"></a>TCP/IP协议分层</h4><p>提到协议分层，我们很容易联想到ISO-OSI的七层协议经典架构，但是TCP/IP协议族的结构则稍有不同。如图所示 <br><br>TCP/IP协议族按照层次由上到下，层层包装。最上面的就是应用层了，这里面有http，ftp,等等我们熟悉的协议。而第二层则是传输层，著名的TCP和UDP协议就在这个层次（不要告诉我你没用过udp玩星际）。第三层是网络层，IP协议就在这里，它负责对数据加上IP地址和其他的数据（后面会讲到）以确定传输的目标。第四层是叫数据链路层，这个层次为待传送的数据加入一个以太网协议头，并进行CRC编码，为最后的数据传输做准备。再往下则是硬件层次了，负责网络的传输，这个层次的定义包括网线的制式，网卡的定义等等（这些我们就不用关心了，我们也不做网卡），所以有些书并不把这个层次放在tcp/ip协议族里面，因为它几乎和tcp/ip协议的编写者没有任何的关系。发送协议的主机从上自下将数据按照协议封装，而接收数据的主机则按照协议从得到的数据包解开，最后拿到需要的数据。这种结构非常有栈的味道，所以某些文章也把tcp/ip协议族称为tcp/ip协议栈。<br></p>
 <h4 id="一些基本的常识"><a href="#一些基本的常识" class="headerlink" title="一些基本的常识"></a>一些基本的常识</h4><p>在学习协议之前，我们应该具备一些基本知识。<br></p>
@@ -383,478 +250,105 @@ Internet Address Physical Address Type&lt;br&gt;
 <h5 id="2-1-RIP：选路信息协议"><a href="#2-1-RIP：选路信息协议" class="headerlink" title="2.1.RIP：选路信息协议"></a>2.1.RIP：选路信息协议</h5><p>它的定义可以在RFC1058内找到，这种协议使用UDP作为载体（也就是UDP的上层协议）。我们最关心的就是RIP其中的一个段，叫做度量的段，这是一个以hop作为计数器（就是以走过多少路由为计数器）的段（IP协议里面也有一个TTL不是么）。这个度量段将最终影响到路由表的建立。参考图:<br><br>一般说来routed要承担如下的工作：<br><br>1.给每一个已知的路由器发送rip请求报文，要求其他路由器给出完整的路由表。这种报文的命令字段为1，地址字段为0，度量地段为16（相当于无穷大）。<br><br>2.接受请求，如果接收到刚才的那个请求，就把自己的完整的路由表交给请求者。如果没有，就处理IP请求表项，把表项中自己有的部分添上跳数，没有的部分添上16。然后发给请求者。<br><br>3.接受回应。更新自己的路由表。使用hop数小的规则。<br><br>4.定期更新路由表，一般是30s(真频繁)给相邻的路有启发一次自己的路由表。这种形式可以使广播形式的。<br><br>这个协议看起来会工作的很好，但是，这里面其实有很多隐藏的忧患，比如说RIP没有子网的概念，比如说环路的危险。而且hop数的上限也限制了网络的大小。<br><br>因此，出现了很多RIPv1的替代品，比如说RIPv2,比如说OSPF。他们都是通过某种策略来影响路由表，所以就不说了。<br></p>
 <p>　</p>
 
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/JS/" rel="tag"># JS</a>
-          
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/03/25/15/" rel="next" title="JS家的排序算法🎵">
-                <i class="fa fa-chevron-left"></i> JS家的排序算法🎵
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/28/16/" rel="prev" title="本地存储小结💘">
-                本地存储小结💘 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
+        <nav class="pagination" role="pagination">
     
-      <div class="ds-thread" data-thread-key="2016/03/25/14/"
-           data-title="TCP/IP🌿" data-url="https://menggeniu.github.io/2016/03/25/14/">
-      </div>
+    <a class="pull-left" href="/2016/03/28/16/" style="float: left;">
+        ← 本地存储小结💘
+    </a>
     
-  </div>
+    
+    <a class="pull-right" href="/2016/03/25/15/">
+        JS家的排序算法🎵 →
+    </a>
+    
+</nav>
 
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="menggeNIU" />
-          <p class="site-author-name" itemprop="name">menggeNIU</p>
-          <p class="site-description motion-element" itemprop="description">个人收藏</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">38</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">12</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/menggeNiu" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/u/1967072037" target="_blank" title="微博">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  微博
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              Links
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://zjflove.github.io" title="zjf" target="_blank">zjf</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://blog.901web.com" title="pybyongbo" target="_blank">pybyongbo</a>
-                </li>
-              
-            </ul>
-          </div>
-        
-
-        
-
-
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#TCP-IP详解学习笔记-这位仁兄写得太好了"><span class="nav-number">1.</span> <span class="nav-text">TCP/IP详解学习笔记   这位仁兄写得太好了</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP详解学习笔记-1-基本概念"><span class="nav-number"></span> <span class="nav-text">TCP/IP详解学习笔记(1)-基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么会有TCP-IP协议"><span class="nav-number"></span> <span class="nav-text">为什么会有TCP/IP协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP-IP协议分层"><span class="nav-number"></span> <span class="nav-text">TCP/IP协议分层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些基本的常识"><span class="nav-number"></span> <span class="nav-text">一些基本的常识</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#互联网地址-ip地址"><span class="nav-number"></span> <span class="nav-text">互联网地址(ip地址)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#域名系统"><span class="nav-number"></span> <span class="nav-text">域名系统</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#RFC"><span class="nav-number"></span> <span class="nav-text">RFC</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#端口号-port"><span class="nav-number"></span> <span class="nav-text">端口号(port)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#应用编程接口"><span class="nav-number"></span> <span class="nav-text">应用编程接口</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP详解学习笔记-2-数据链路层"><span class="nav-number"></span> <span class="nav-text">TCP/IP详解学习笔记(2)-数据链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#可见，RFC1042在TCP-IP里面处于一个配角的地位。这两种不同的数据报格式请参考教材。"><span class="nav-number">1.</span> <span class="nav-text">可见，RFC1042在TCP/IP里面处于一个配角的地位。这两种不同的数据报格式请参考教材。</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP详解之IP协议ARP协议和RARP协议"><span class="nav-number"></span> <span class="nav-text">TCP/IP详解之IP协议ARP协议和RARP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-IP协议"><span class="nav-number"></span> <span class="nav-text">1.IP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-IP协议头"><span class="nav-number"></span> <span class="nav-text">1.1.IP协议头</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-IP路由选择"><span class="nav-number"></span> <span class="nav-text">1.2.IP路由选择</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-子网寻址"><span class="nav-number"></span> <span class="nav-text">1.3.子网寻址</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-ARP协议"><span class="nav-number"></span> <span class="nav-text">2. ARP协议</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP详解学习笔记-4-ICMP协议，ping和Traceroute"><span class="nav-number"></span> <span class="nav-text">TCP/IP详解学习笔记(4)-ICMP协议，ping和Traceroute</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-IMCP协议介绍"><span class="nav-number"></span> <span class="nav-text">1.IMCP协议介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-ICMP的应用–ping"><span class="nav-number"></span> <span class="nav-text">2.ICMP的应用–ping</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-ICMP的应用–Traceroute"><span class="nav-number"></span> <span class="nav-text">3.ICMP的应用–Traceroute</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-IP详解学习笔记-5-IP选路，动态选路，和一些细节"><span class="nav-number"></span> <span class="nav-text">TCP/IP详解学习笔记(5)-IP选路，动态选路，和一些细节</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-静态IP选路"><span class="nav-number"></span> <span class="nav-text">1.静态IP选路</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-一个简单的路由表"><span class="nav-number"></span> <span class="nav-text">1.1.一个简单的路由表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-其他有关路由表的知识"><span class="nav-number"></span> <span class="nav-text">1.2.其他有关路由表的知识</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-ICMP的IP重定向报文和路由发现报文"><span class="nav-number"></span> <span class="nav-text">1.3.ICMP的IP重定向报文和路由发现报文</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-动态选路协议"><span class="nav-number"></span> <span class="nav-text">2.动态选路协议</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-Unix选路程序"><span class="nav-number"></span> <span class="nav-text">2.1.Unix选路程序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-RIP：选路信息协议"><span class="nav-number"></span> <span class="nav-text">2.1.RIP：选路信息协议</span></a></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">menggeNIU</span>
-</div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
-
-
-        
-
-        
-      </div>
-    </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
-  </div>
-
-  
-
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/03/25/14/" data-title="TCP/IP🌿" data-url="https://menggeniu.github.io/2016/03/25/14/"></div>
 <script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
 </script>
+</div>
+    </div>
+</section>
 
 
+      
+<!-- ============================ Footer =========================== -->
 
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    <span>&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.</span>   
+                </p>
+                <p>To make each day count.</p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</footer>
 
-
-
-
-
-
-  
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-  
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
     
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"menggeniu"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
-
-
-
-
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("elhh73EjPvJjogo27rOTNyxB-gzGzoHsz", "ICYhjaCGuWcsPbm8nPit7Gkh");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
         });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
     });
-  </script>
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
 
-
-
-  
-
-  
-
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
 
 </body>
 </html>

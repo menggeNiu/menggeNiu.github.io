@@ -1,346 +1,203 @@
-<!doctype html>
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
 
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>Web前端技术栈🐥 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
 
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
     
     
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
   
 
   
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="ALL," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
-
-
-
-
-<meta name="description" content="转自http://www.haonanji.cn/230.html
-1. 前言本文把整个web前端开发所需要的知识都之中在一个视图中，形成一个完整的web前端知识体系，目的是想要颠覆人们对于前端只有三大块（html、css、js）的认识——做web前端需要的比这三大块要多得多。　　在看内容之前，先看一下这个知识框架的预览图。图太大不好展示，看不清除，可在此下载清晰版：http://pan.baid">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Web前端技术栈🐥">
-<meta property="og:url" content="https://menggeniu.github.io/2016/03/02/9/index.html">
-<meta property="og:site_name" content="NNNの博客">
-<meta property="og:description" content="转自http://www.haonanji.cn/230.html
-1. 前言本文把整个web前端开发所需要的知识都之中在一个视图中，形成一个完整的web前端知识体系，目的是想要颠覆人们对于前端只有三大块（html、css、js）的认识——做web前端需要的比这三大块要多得多。　　在看内容之前，先看一下这个知识框架的预览图。图太大不好展示，看不清除，可在此下载清晰版：http://pan.baid">
-<meta property="og:image" content="http://images0.cnblogs.com/blog2015/138012/201507/160850143914776.png">
-<meta property="og:image" content="http://images0.cnblogs.com/blog2015/138012/201507/152119217207735.png">
-<meta property="og:image" content="http://images0.cnblogs.com/blog2015/138012/201507/152129259385742.png">
-<meta property="og:image" content="http://images0.cnblogs.com/blog2015/138012/201507/152135018295393.png">
-<meta property="og:image" content="http://images0.cnblogs.com/blog2015/138012/201507/152147469705639.png">
-<meta property="og:image" content="http://images0.cnblogs.com/blog2015/138012/201507/152152268299472.png">
-<meta property="og:image" content="http://images0.cnblogs.com/blog2015/138012/201507/152159399381422.png">
-<meta property="og:image" content="http://images0.cnblogs.com/blog2015/138012/201507/152213479853405.png">
-<meta property="og:image" content="http://images0.cnblogs.com/blog2015/138012/201507/152219247359926.png">
-<meta property="og:updated_time" content="2016-11-19T02:19:03.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Web前端技术栈🐥">
-<meta name="twitter:description" content="转自http://www.haonanji.cn/230.html
-1. 前言本文把整个web前端开发所需要的知识都之中在一个视图中，形成一个完整的web前端知识体系，目的是想要颠覆人们对于前端只有三大块（html、css、js）的认识——做web前端需要的比这三大块要多得多。　　在看内容之前，先看一下这个知识框架的预览图。图太大不好展示，看不清除，可在此下载清晰版：http://pan.baid">
-<meta name="twitter:image" content="http://images0.cnblogs.com/blog2015/138012/201507/160850143914776.png">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"right","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="https://menggeniu.github.io/2016/03/02/9/"/>
-
-
-
-
-
-  <title> Web前端技术栈🐥 | NNNの博客 </title>
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
 
-  
+      <!-- ============================ Off-canvas navigation =========================== -->
 
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">NNNの博客</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">前端小菜鸟</p>
-</div>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/03/02/9/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="menggeNIU">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NNNの博客">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Web前端技术栈🐥
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-03-02T20:48:50+08:00">
-                2016-03-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <a href="/2016/03/02/9/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/02/9/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/03/02/9/" class="leancloud_visitors" data-flag-title="Web前端技术栈🐥">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-
-          
-
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
         </div>
-      </header>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
+                    
+                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+       <!--  <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul> -->
+    </div>
     
+    <!-- ============================ END Off-canvas navigation =========================== -->
 
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
 
-    <div class="post-body" itemprop="articleBody">
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
 
       
-      
-
-      
-        <p>转自<a href="http://www.haonanji.cn/230.html" target="_blank" rel="external">http://www.haonanji.cn/230.html</a><br></p>
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-03-02T12:48:50.000Z" itemprop="datePublished">
+          2016-03-02
+      </time>
+    
+    
+    | 
+    <a href='/tags/ALL/'>ALL</a>
+    
+    
+</span>
+                <h1>Web前端技术栈🐥</h1>
+                <span id="busuanzi_container_page_pv">
+                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+                </span>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>转自<a href="http://www.haonanji.cn/230.html" target="_blank" rel="external">http://www.haonanji.cn/230.html</a><br></p>
 <h4 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h4><p>本文把整个web前端开发所需要的知识都之中在一个视图中，形成一个完整的web前端知识体系，目的是想要颠覆人们对于前端只有三大块（html、css、js）的认识——做web前端需要的比这三大块要多得多。<br>　　在看内容之前，先看一下这个知识框架的预览图。图太大不好展示，看不清除，可在此下载清晰版：<a href="http://pan.baidu.com/s/1hqIUvUc" target="_blank" rel="external">http://pan.baidu.com/s/1hqIUvUc</a>（内有整个知识体系的图片和xmind文件）。<br><br>　　<img src="http://images0.cnblogs.com/blog2015/138012/201507/160850143914776.png" alt=""><br><br></p>
 <h4 id="2-分类"><a href="#2-分类" class="headerlink" title="2.分类"></a>2.分类</h4><p>所有知识框架，那肯定是一个结构型的展现，就是一棵树。web前端的知识点非常多，也非常散，需要好几层结构来组织这个体系，否则就会显得很乱。那么如何组织、把谁和谁放在一块儿？这是真正值得我们去思考的，你也可以自己来思考一下这个问题。<br>在我总结的这个知识框架中，首先第一层我划分为：<strong>理论知识</strong>，<strong>类库框架</strong>，<strong>编码开发</strong>，<strong>运行环境</strong>。如下图：<br><br>　<img src="http://images0.cnblogs.com/blog2015/138012/201507/152119217207735.png" alt=""><br><br>接下来给大家解释一下:<br><br>这个图要<strong>从下往上</strong>看，为何？——因为下面是上面的基础；<br></p>
 <ul>
@@ -376,478 +233,105 @@
 <p>来自：<a href="http://www.cnblogs.com/wangfupeng1988/p/4649709.html" target="_blank" rel="external">http://www.cnblogs.com/wangfupeng1988/p/4649709.html</a>
 　</p>
 
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/ALL/" rel="tag"># ALL</a>
-          
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/02/25/8/" rel="next" title="Swiper用法小总结🌸">
-                <i class="fa fa-chevron-left"></i> Swiper用法小总结🌸
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/10/10/" rel="prev" title="CSS最佳实践——成为CSS忍者的十四步上😎">
-                CSS最佳实践——成为CSS忍者的十四步上😎 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
+        <nav class="pagination" role="pagination">
     
-      <div class="ds-thread" data-thread-key="2016/03/02/9/"
-           data-title="Web前端技术栈🐥" data-url="https://menggeniu.github.io/2016/03/02/9/">
-      </div>
+    <a class="pull-left" href="/2016/03/10/10/" style="float: left;">
+        ← CSS最佳实践——成为CSS忍者的十四步上😎
+    </a>
     
-  </div>
+    
+    <a class="pull-right" href="/2016/02/25/8/">
+        Swiper用法小总结🌸 →
+    </a>
+    
+</nav>
 
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="menggeNIU" />
-          <p class="site-author-name" itemprop="name">menggeNIU</p>
-          <p class="site-description motion-element" itemprop="description">个人收藏</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">38</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">12</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/menggeNiu" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/u/1967072037" target="_blank" title="微博">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  微博
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              Links
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://zjflove.github.io" title="zjf" target="_blank">zjf</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://blog.901web.com" title="pybyongbo" target="_blank">pybyongbo</a>
-                </li>
-              
-            </ul>
-          </div>
-        
-
-        
-
-
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-前言"><span class="nav-number">1.</span> <span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-分类"><span class="nav-number">2.</span> <span class="nav-text">2.分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-理论知识-包括“软知识”和“硬知识”"><span class="nav-number">3.</span> <span class="nav-text">3. 理论知识 包括“软知识”和“硬知识”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-http标准"><span class="nav-number">4.</span> <span class="nav-text">4.1 http标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-W3C标准"><span class="nav-number">5.</span> <span class="nav-text">4.2 W3C标准</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-ECMAScript"><span class="nav-number">6.</span> <span class="nav-text">4.3 ECMAScript</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#框架和类库"><span class="nav-number">7.</span> <span class="nav-text">框架和类库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-编码开发"><span class="nav-number">8.</span> <span class="nav-text">6. 编码开发</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-运行环境"><span class="nav-number">9.</span> <span class="nav-text">7. 运行环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-其他"><span class="nav-number">10.</span> <span class="nav-text">8. 其他</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">menggeNIU</span>
-</div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
-
-
-        
-
-        
-      </div>
-    </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
-  </div>
-
-  
-
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/03/02/9/" data-title="Web前端技术栈🐥" data-url="https://menggeniu.github.io/2016/03/02/9/"></div>
 <script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
 </script>
+</div>
+    </div>
+</section>
 
 
+      
+<!-- ============================ Footer =========================== -->
 
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    <span>&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.</span>   
+                </p>
+                <p>To make each day count.</p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</footer>
 
-
-
-
-
-
-  
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-  
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
     
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"menggeniu"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
-
-
-
-
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("elhh73EjPvJjogo27rOTNyxB-gzGzoHsz", "ICYhjaCGuWcsPbm8nPit7Gkh");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
         });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
     });
-  </script>
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
 
-
-
-  
-
-  
-
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
 
 </body>
 </html>

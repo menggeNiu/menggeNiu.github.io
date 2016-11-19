@@ -1,338 +1,203 @@
-<!doctype html>
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
 
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>CSS最佳实践——成为CSS忍者的十四步上😎 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
 
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
 
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
     
     
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
   
 
   
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="CSS," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
-
-
-
-
-<meta name="description" content="前言本文来自@安生的翻译分享。本文有两篇，本文是上，下篇在第二条。正文从这开始~就算是专业的Web开发者，可能也很难管理好CSS。在这个系列里，你将了解十四条关于CSS的最佳实践。在第一部分，你将学习如何掌握CSS特殊的层次结构，你会发现!important声明和ID选择器的危险，也会学习到过高优先级选择器带来的代价，最后你还会学习如何规避浏览器带来的不一致性。让我们开始学习吧。
-第一条：掌握CS">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CSS最佳实践——成为CSS忍者的十四步上😎">
-<meta property="og:url" content="https://menggeniu.github.io/2016/03/10/10/index.html">
-<meta property="og:site_name" content="NNNの博客">
-<meta property="og:description" content="前言本文来自@安生的翻译分享。本文有两篇，本文是上，下篇在第二条。正文从这开始~就算是专业的Web开发者，可能也很难管理好CSS。在这个系列里，你将了解十四条关于CSS的最佳实践。在第一部分，你将学习如何掌握CSS特殊的层次结构，你会发现!important声明和ID选择器的危险，也会学习到过高优先级选择器带来的代价，最后你还会学习如何规避浏览器带来的不一致性。让我们开始学习吧。
-第一条：掌握CS">
-<meta property="og:image" content="http://a2.qpic.cn/psb?/V12O5OuB1fjn3R/LyIkiF92nnogXNG62c8tUquRfsd029l889uz6SV8I1Q!/b/dAkBAAAAAAAA&bo=fgKTAQAAAAADB8w!&rf=viewer_4">
-<meta property="og:updated_time" content="2016-11-19T02:16:22.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS最佳实践——成为CSS忍者的十四步上😎">
-<meta name="twitter:description" content="前言本文来自@安生的翻译分享。本文有两篇，本文是上，下篇在第二条。正文从这开始~就算是专业的Web开发者，可能也很难管理好CSS。在这个系列里，你将了解十四条关于CSS的最佳实践。在第一部分，你将学习如何掌握CSS特殊的层次结构，你会发现!important声明和ID选择器的危险，也会学习到过高优先级选择器带来的代价，最后你还会学习如何规避浏览器带来的不一致性。让我们开始学习吧。
-第一条：掌握CS">
-<meta name="twitter:image" content="http://a2.qpic.cn/psb?/V12O5OuB1fjn3R/LyIkiF92nnogXNG62c8tUquRfsd029l889uz6SV8I1Q!/b/dAkBAAAAAAAA&bo=fgKTAQAAAAADB8w!&rf=viewer_4">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"right","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="https://menggeniu.github.io/2016/03/10/10/"/>
-
-
-
-
-
-  <title> CSS最佳实践——成为CSS忍者的十四步上😎 | NNNの博客 </title>
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
 
-  
+      <!-- ============================ Off-canvas navigation =========================== -->
 
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">NNNの博客</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">前端小菜鸟</p>
-</div>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/03/10/10/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="menggeNIU">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NNNの博客">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                CSS最佳实践——成为CSS忍者的十四步上😎
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-03-10T22:08:59+08:00">
-                2016-03-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <a href="/2016/03/10/10/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/10/10/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/03/10/10/" class="leancloud_visitors" data-flag-title="CSS最佳实践——成为CSS忍者的十四步上😎">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-
-          
-
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
         </div>
-      </header>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
+                    
+                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+       <!--  <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul> -->
+    </div>
     
+    <!-- ============================ END Off-canvas navigation =========================== -->
 
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
 
-    <div class="post-body" itemprop="articleBody">
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
 
       
-      
-
-      
-        <p>前言<br><br>本文来自@安生的翻译分享。本文有两篇，本文是上，下篇在第二条。<br><br>正文从这开始~<br><br>就算是专业的Web开发者，可能也很难管理好CSS。在这个系列里，你将了解十四条关于CSS的最佳实践。在第一部分，你将学习如何掌握CSS特殊的层次结构，你会发现!important声明和ID选择器的危险，也会学习到过高优先级选择器带来的代价，最后你还会学习如何规避浏览器带来的不一致性。让我们开始学习吧。<br></p>
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-03-10T14:08:59.000Z" itemprop="datePublished">
+          2016-03-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/CSS/'>CSS</a>
+    
+    
+</span>
+                <h1>CSS最佳实践——成为CSS忍者的十四步上😎</h1>
+                <span id="busuanzi_container_page_pv">
+                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+                </span>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>前言<br><br>本文来自@安生的翻译分享。本文有两篇，本文是上，下篇在第二条。<br><br>正文从这开始~<br><br>就算是专业的Web开发者，可能也很难管理好CSS。在这个系列里，你将了解十四条关于CSS的最佳实践。在第一部分，你将学习如何掌握CSS特殊的层次结构，你会发现!important声明和ID选择器的危险，也会学习到过高优先级选择器带来的代价，最后你还会学习如何规避浏览器带来的不一致性。让我们开始学习吧。<br></p>
 <h3 id="第一条：掌握CSS特殊的层次结构"><a href="#第一条：掌握CSS特殊的层次结构" class="headerlink" title="第一条：掌握CSS特殊的层次结构"></a>第一条：掌握CSS特殊的层次结构</h3><p>让我们从最艰难的一步开始。如果你想要成为一个CSS忍者，那么这是你必须掌握的，即便你不想成为忍者，也至少应该了解它。如果你只是想在同事朋友面前吹嘘一下，那么这块知识你一定要懂。有大量的人自称他们是Web开发者或者Web设计人员。<br></p>
 <h4 id="经常被忽略的基础知识"><a href="#经常被忽略的基础知识" class="headerlink" title="经常被忽略的基础知识"></a>经常被忽略的基础知识</h4><p>有趣的是，很多人对这个话题一无所知。这些人搭建了网站或者Web应用却不知道CSS是怎么工作的。他们知道一些层叠的知识，或者浏览器如何阅读选择器的（从右到左）。想象一下你认识一个对汽车的认知还不错的人，但你会让这个人给你造一辆车吗？恐怕不会。<br><br>不过如果你需要让人给你搭一个网站，你就需要寻找一个专业人士了。如果你同意我的话，那么真正专业的人士是会想去掌握好他的手艺的人。这种人会着迷于任何一个细节。如果CSS层次就是其中一个细节呢？或者是一个CSS最佳实践呢？那么，忽略这个细节的人就不能称之为专业人士了。<br><br>如果你想变得专业，你必须学习它，而如果你想成为忍者，你必须掌握它。你需要了解CSS的任何一个特性。当一个小孩问你，你需要能解释得出来，虽然不太可能发生。当然，你潜在的客户或者老板可能会问你关于这方面的东西。这个话题就是一个测试知识点的很好方式。<br><br>正如讨论过的，很多开发者对CSS特殊的层次结构知之甚少。因此这个问题可以说是帮助雇主们用来找到人才的好方法。若在网上向自由职业者提出这个问题，有多少人能够回答呢?<br></p>
 <h4 id="CSS特殊层次结构的困难之处"><a href="#CSS特殊层次结构的困难之处" class="headerlink" title="CSS特殊层次结构的困难之处"></a>CSS特殊层次结构的困难之处</h4><p>那么既然它如此重要，为什么它是CSS最容易被忽略的部分之一呢，而且为什么极少的CSS实践中会提及到？大概是因为你可能需要做一些数学运算。在这个层次结构中，每个CSS选择器都有一些特定的值。而且当你组合起选择器时，这些值会增加。因此简单的元素选择器（如a）比两个元素的选择器（如a span）的层次低。<br><br>通配符选择器它的值是最低的，几乎等于零。可以说所有的选择器都优先于它。排在后面的是元素选择器，它的值是1。然后是带有伪元素的元素，这个结合起来值是2。一直如此下去。最高值是元素选择器、ID选择器、class选择器再加上一个元素选择器的组合，这个组合的值是112。一个ID选择器的值差不多就是100了。（这段不大懂得话详见下表）<br><br>这里提供一个CSS特殊层次结构的概述。下边有个简单的表格可以帮助你快速找到层次，不用你自己去计算。如果你想要更深入了解的话，可以参考下这篇我写的短文，不然你经常会需要回看这个表格。<br><br>CSS层次特性表：<br><br><img src="http://a2.qpic.cn/psb?/V12O5OuB1fjn3R/LyIkiF92nnogXNG62c8tUquRfsd029l889uz6SV8I1Q!/b/dAkBAAAAAAAA&amp;bo=fgKTAQAAAAADB8w!&amp;rf=viewer_4" alt=""><br></p>
@@ -350,478 +215,105 @@
 <h4 id="不要想CSS最佳实践了"><a href="#不要想CSS最佳实践了" class="headerlink" title="不要想CSS最佳实践了"></a>不要想CSS最佳实践了</h4><p>这就是今天我带给你的所有CSS最佳实践。我相信这六条会帮助你提升你的CSS代码。让我们快速回顾一下，第一，掌握CSS特殊的层次结构。这是CSS经常被忽略的一部分。但是你能看到今天许多最佳实践都和它有关。第二，避免使用improtant声明，同时不要使用ID进行样式书写。这两件事可以避免恶性循环。<br><br>之后是避免层级过高的元素。它会让浏览器执行过多渲染你样式的不必要周期。这会降低性能和带来不佳的用户体验。最后是使用reset或者normalize样式表来避免浏览器的不一致。但要确保根据你具体的状况来量身定制。不然的话就会让你的CSS变得冗杂。<br><br><br>关于本文<br><br>译者：@安生<br><br>原文：<a href="http://blog.alexdevero.com/css-best-practices-become-css-ninja-pt1/" target="_blank" rel="external">http://blog.alexdevero.com/css-best-practices-become-css-ninja-pt1/</a><br></p>
 <p>转自：前端早读课</p>
 
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/CSS/" rel="tag"># CSS</a>
-          
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/03/02/9/" rel="next" title="Web前端技术栈🐥">
-                <i class="fa fa-chevron-left"></i> Web前端技术栈🐥
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/12/11/" rel="prev" title="CSS最佳实践——成为CSS忍者的十四步下😎">
-                CSS最佳实践——成为CSS忍者的十四步下😎 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
+        <nav class="pagination" role="pagination">
     
-      <div class="ds-thread" data-thread-key="2016/03/10/10/"
-           data-title="CSS最佳实践——成为CSS忍者的十四步上😎" data-url="https://menggeniu.github.io/2016/03/10/10/">
-      </div>
+    <a class="pull-left" href="/2016/03/12/11/" style="float: left;">
+        ← CSS最佳实践——成为CSS忍者的十四步下😎
+    </a>
     
-  </div>
+    
+    <a class="pull-right" href="/2016/03/02/9/">
+        Web前端技术栈🐥 →
+    </a>
+    
+</nav>
 
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="menggeNIU" />
-          <p class="site-author-name" itemprop="name">menggeNIU</p>
-          <p class="site-description motion-element" itemprop="description">个人收藏</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">38</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">12</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/menggeNiu" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/u/1967072037" target="_blank" title="微博">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  微博
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              Links
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://zjflove.github.io" title="zjf" target="_blank">zjf</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://blog.901web.com" title="pybyongbo" target="_blank">pybyongbo</a>
-                </li>
-              
-            </ul>
-          </div>
-        
-
-        
-
-
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一条：掌握CSS特殊的层次结构"><span class="nav-number">1.</span> <span class="nav-text">第一条：掌握CSS特殊的层次结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#经常被忽略的基础知识"><span class="nav-number">1.1.</span> <span class="nav-text">经常被忽略的基础知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS特殊层次结构的困难之处"><span class="nav-number">1.2.</span> <span class="nav-text">CSS特殊层次结构的困难之处</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二条：避免使用-important声明"><span class="nav-number">2.</span> <span class="nav-text">第二条：避免使用!important声明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#惹祸上身"><span class="nav-number">2.1.</span> <span class="nav-text">惹祸上身</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决-improtant问题"><span class="nav-number">2.2.</span> <span class="nav-text">解决!improtant问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三条：不要使用ID"><span class="nav-number">3.</span> <span class="nav-text">第三条：不要使用ID</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#那么性能呢？"><span class="nav-number">3.1.</span> <span class="nav-text">那么性能呢？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么时候适合使用ID"><span class="nav-number">3.2.</span> <span class="nav-text">什么时候适合使用ID</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四条：避免层次过高的元素"><span class="nav-number">4.</span> <span class="nav-text">第四条：避免层次过高的元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用层次过高的元素的问题"><span class="nav-number">4.1.</span> <span class="nav-text">使用层次过高的元素的问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第五条：reset还是normalize"><span class="nav-number">5.</span> <span class="nav-text">第五条：reset还是normalize</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#reset还是normalize"><span class="nav-number">5.1.</span> <span class="nav-text">reset还是normalize</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第六条：别重置所有东西"><span class="nav-number">6.</span> <span class="nav-text">第六条：别重置所有东西</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#不要想CSS最佳实践了"><span class="nav-number">6.1.</span> <span class="nav-text">不要想CSS最佳实践了</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">menggeNIU</span>
-</div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
-
-
-        
-
-        
-      </div>
-    </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
-  </div>
-
-  
-
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/03/10/10/" data-title="CSS最佳实践——成为CSS忍者的十四步上😎" data-url="https://menggeniu.github.io/2016/03/10/10/"></div>
 <script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
 </script>
+</div>
+    </div>
+</section>
 
 
+      
+<!-- ============================ Footer =========================== -->
 
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    <span>&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.</span>   
+                </p>
+                <p>To make each day count.</p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</footer>
 
-
-
-
-
-
-  
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-  
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
     
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"menggeniu"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
-
-
-
-
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("elhh73EjPvJjogo27rOTNyxB-gzGzoHsz", "ICYhjaCGuWcsPbm8nPit7Gkh");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
         });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
     });
-  </script>
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
 
-
-
-  
-
-  
-
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
 
 </body>
 </html>
