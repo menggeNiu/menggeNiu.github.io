@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>谈响应式web设计代码实现🍨 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
+                    
+                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+       <!--  <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul> -->
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-05-23T14:38:08.000Z" itemprop="datePublished">
+          2016-05-23
+      </time>
+    
+    
+    | 
+    <a href='/tags/HTML5/'>HTML5</a>
+    
+    
+</span>
+                <h1>谈响应式web设计代码实现🍨</h1>
+                <span id="busuanzi_container_page_pv">
+                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+                </span>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>在研究响应式的时候，记录了一些感想，分享出来，抛砖引玉，希望可以和大家一起讨论。总结下来，响应式比之前想象的要复杂得多。<br><br>1.ie9以下（不包括ie9）采用ie条件注释，为ie8以及一下单独开一个样式文件<br><br>2.一个模块的mq样式整体放在这个模块的样式的之后，符合层叠逻辑，也同时以免被层叠。<br></p>
+<ol>
+<li>祈求在一个相应点上同时做变化几乎是不可能的，因为版式中间的变化，无论是视觉还是具体的编码人员不可能掌握所有细节。<br></li>
+<li>流体布局很关键，%视父级为参照物，这一点虽然很多人都知道，但是实际做的时候却最容易被忽略。<br></li>
+<li>清除浮动也很重要，切记。<br></li>
+<li>如果你希望边框、边距（内、外）也在100%的范围内，直接设置width:auto就好了，不要给予希望在新的css3属性上，也不要寄希望在-webkit上，-webkit-很容易就会变成下一个ie6了。<br></li>
+<li>合理的嵌套更加健壮，用一个包装元素来替代设置当前元素margin或者padding。举例，假如有A和B两个元素，width是40%，maring-right是10%，这样很容易在搜索浏览器的时候篡位，所以用一个包装元素C去分别包裹A和B，然给给C设置50%，A和B分别设置为80%。这样就是合理且健壮的嵌套了。<br></li>
+<li>两行两列这种设计，由于流体布局和字数的不同，所以为每一行添加一个包装元素，更加健壮。也就是说，先做两行，再在每一行里做两列。<br></li>
+<li>不要奢望在在每一个像素的宽度上不会出现超出预期的表现，因为没有任何人知道页面在每一个像素宽度时候的表现的样子，页面越负责可预期的就越不准确。所以mq可能真的是“非预期数值”（预期数值指代在设计和实现之前约定的响应点）<br></li>
+<li>相同区间的mq和mq会层叠，全局的样式也会和mq中的样式层叠，所以属性尽量不要写成缩写。以减少忘记的风险。<br></li>
+<li>图片的自适应处理不容易，特别是有边框的，如果正常条件（没有利用mq来约束）下设置了宽和高，在另外一个mq下，仅仅设置一个属性是不行的，还是那句话，mq不是二选一（除非是两个不同的mq区间），而是层叠！！<br></li>
+<li>如果水平列表的两端的元素两端对齐，以四个元素为例，那么除了前三个预留左边距，最后一个为零；或者第一个右边据为0；后三个有右边距以外。可以采用第一个左侧有，最后一个右侧有，中间两个左右偏移边距来做，短的一面为 边距除以空白数，比如4个列表项，边距为40,则40除以3。好处么？就是可以保证每一个外包装为通栏的25%。<br></li>
+<li>四个25%，两个50% 没关系，但是50% 25% 25%就可能会掉下去最后一个，所以24.99，22.49有时还会相差1~2像素。<br></li>
+<li>如果版式变化不大，那么从大到小的写mq，不必写一个区间，只写最大值即可，这样一层一层的继承，小尺寸继承大尺寸，另外，不用过分担心选择器本身权重的问题，mq会提高其优先级。<br></li>
+<li>像导航和版权这种在pc、pad、phone截然不同的版式。mq，就写区间。这样在区间外就等于这些dom毫无样式，这样就不比担心由继承引发的覆盖、优先级、重写以及未知问题。减少了属性的重写，提高了效率、降低了修改成本。其实就是等于一个dom，为不同的设备写不同的样式，这些样式之间不继承。<br></li>
+<li>如果你希望几个元素是相对位置不变的话，请将他们包裹，通过这个包裹元素使他们整体与其他元素或元素组做排版，所以一个健壮的响应式离不开这些看似“冗余”的包裹元素。但还是以最少的可实现目标的dom层级为目标。<br></li>
+<li>关于背景图，以中心为原点进行“裁剪”是理智的，已某一侧为原点看起来都有点怪。另外可以使用background-size某个值为auto，另外一个使用%<br></li>
+<li>大图片请写在一个mq区间内，不要只写最大值，这样会搞定按需加载的问题。<br></li>
+<li><p>banner样式实践<br></p>
+<p>@media (min-width:1110px){<br>.banner{height:684px; background:url(img/banner1980.jpg) center center no-repeat; background-size:auto 100%;}<br>}/<em>高度一直填充，两侧裁剪，这种体验先看比较好</em>/<br>/<em>以下不同目标分辨率载入不同的图片，保证k数最佳，裁剪体验应该一致</em>/<br>@media (min-width:769px) and (max-width:1110px){<br>.banner{height:383px; background:url(img/banner1110.jpg) center center;}<br>}<br>@media (min-width:569px) and (max-width:768px){<br>.banner{height:265px; background:url(img/banner768.jpg) center center;}<br>}<br>@media (min-width:415px) and (max-width:568px){<br>.banner{height:196px; background:url(img/banner568.jpg) center center;}<br>}<br>@media (min-width:321px) and (max-width:414px){<br>.banner{height:143px; background:url(img/banner414.jpg) center center;}<br>}<br>@media (max-width:320px){<br>.banner{height:111px; background:url(img/banner320.jpg) center center;}<br>}<br>20.logo如果是在banner的背景图上镂空，这样是不推荐的。在缩小浏览器窗口宽度的时候，给人以很明显很明显的视觉差，感觉页面极其不健壮（至少我的感觉是这样），似乎有随时要散的感觉。文字也有这感觉，特别是有大量文字的时候。所以你会发现很多响应式好的网站，他的导航的底色都是纯色。logo和导航都不镂空在一张背景图上。当然也有少数在的，比如adobe。<br></p>
+</li>
+<li>接20，一般banner图片几乎是满屏的可能高达1980px；而一般如果是居中的话，我们把导航和logo以及一些小功能，比如登录、搜索控制在1200px最大宽度，当页面大于这个最大宽度的时候，这个区域就像钉在了背景图上，不会导致有两个图层的感觉。所以当页面宽度马上等于最大宽度的时候，我们在利用mq重新写定义下一这个区域的最大宽度，当然是该小一点，这样就解决了20出现的那个问题。<br></li>
+<li>png8的问题，ie6下就用纯色做底吧。我最理想的想法是，当用ie6访问所有公司web产品的时候，给用户一个页面，先登录QQ帐号，然后下载最新的QQ浏览器，然后发这个用户10个Q币。然后浏览器界就清静了。<br></li>
+<li>接21，当前mq中的这个区域的最大宽度等于下一个（更小的一个尺寸）mq的尺寸，这样就用户的钉在了背景图的上面了。<br></li>
+<li>对于相同的一些元素，某一个有特殊的样式，优先使用nth-of-type选择器。在测试ie8以及一下的时候，再为这个特殊的dom添加一个class之类，然后再在那个ie8以及一下的样式表中书写复制响应的规则。<br></li>
+<li>body下有一个包裹元素，作为整体弹性的参照，为ie6、ie7单独写一个宽度，为什么是1000px，由于很难获得使用ie6的用户的分辨率，或者说获取了之后可能因为数据繁多不好决策，所以简单粗暴，认为使用ie6的都是低端设备用户，是小显示器用户，是1024*768分辨率；至于ie7，设置了4个25%的浮动，在缩小浏览器的过程中都能时不时的掉下去一个，对于小数点的像素就自动向上补全，太悲哀了。所以如下：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">regular css file</div><div class="line">.layout&#123;width:100%; max-width:1980px; min-width:320px;*zoom:1; margin:0 auto;&#125;</div><div class="line">lt9 css file</div><div class="line">.layout&#123;*width:1000px; min-width:1000px;&#125;/*ie8的最小宽度为1000px，ie7 6只有1000px*/</div></pre></td></tr></table></figure>
+<p>26.对于一定要百分之百通栏的模块，比如，带有背景色的版权，或者banner，那么可以在lt9的文件夹里为ie7 6写一个不是只有1000px，而是可以100%的样式，但是切记这里只要有一列，否则就又产生了25中提到的问题，也许，你可以这么写：</p>
+<pre><code>lt9 css file
+.layout{*width:1000px; min-width:1000px;}/*ie8的最小宽度为1000px，ie7 6只有1000px*/
+.one-percent{width:100%;}/*新增的，一定要在layout的后面，否则对于ie6 7不生效*/
+
+html dom
+</code></pre><p>所以我建议，把banner 主体部分 版权 三者用三个layout包裹，这样便于对ie6 ie7 ie8做样式。<br></p>
+<ol>
+<li>经过长达半年的持续统计，1366px用户最多，根据栅格化，n=24为基准，得出W=(A*n)-i，所以如果要设置最大宽度则设置为1310px；a=45px,i=10px；不过由于与门户和电商等网站的排版不同且主要为了弹性版式，所以这里最大宽度是我们所需要的，至于45px和10px，以后有固定版式的话可以使用。<br></li>
+<li>响应点：1366px 1200px 1110px 768px 568px 414px 320px；768以下的很好理解也方便约束，PC侧的响应点是较难控制的，所以前面三个值基本都是按照版式来操作的。原因参见3。<br></li>
+<li>有的人说写响应式从小往大写，意思是说先写手机端，然后写PC端，大致的原因是从大往小写的话，手机就要层叠和重写很多样式，可能会影响性能。理论上，我是赞成的，实际上我并没有测试过到底性能有多么影响。但是单单从布局的角度上讲，从设计的角度上讲，至少我的逻辑是从大往小写，因为小的基本都是在大的基础上做删减和布局的变化，所以写的时候逻辑比较顺畅。不过无论从大到小，还是从小到大，自己顺手就好。一般视觉都会先设计PC的，然后考虑mobile是什么样的，这一点也使得我是从大到小的去写。<br></li>
+<li>之前黄老师问我，认为响应式的难点是在设计上还是在技术上，我当时说是技术上没什么，关键是版式的变化和设计的体验。现在想想。版式变化固然是难点，但是技术手段也很重要，在这方面的深度和方式的选择要比版式上的选择复杂的多。<br></li>
+<li>响应式三大技术：流体、mq、弹性图片。<br></li>
+</ol>
+<p>以上都是个人经验，难免片面，欢迎讨论。<br><br>转自：<a href="http://isux.tencent.com/code-of-response-web-design.html" target="_blank" rel="external">http://isux.tencent.com/code-of-response-web-design.html</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/05/24/32/" style="float: left;">
+        ← Node模块创建及使用，文件操作，IO交互，URL解析🌼
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/05/19/30/">
+        React-Native项目中使用TabBar 🍰 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/05/23/31/" data-title="谈响应式web设计代码实现🍨" data-url="https://menggeniu.github.io/2016/05/23/31/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    <span>&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.</span>   
+                </p>
+                <p>To make each day count.</p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>

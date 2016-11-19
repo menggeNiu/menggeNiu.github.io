@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>Node模块创建及使用，文件操作，IO交互，URL解析🌼 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
+                    
+                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+       <!--  <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul> -->
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-05-24T12:50:08.000Z" itemprop="datePublished">
+          2016-05-24
+      </time>
+    
+    
+    | 
+    <a href='/tags/node/'>node</a>
+    
+    
+</span>
+                <h1>Node模块创建及使用，文件操作，IO交互，URL解析🌼</h1>
+                <span id="busuanzi_container_page_pv">
+                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+                </span>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>模块创建以及使用</li>
+<li>文件模块的使用</li>
+<li>IO键盘交互</li>
+<li>URL解析</li>
+</ul>
+<h3 id="一、模块创建以及使用"><a href="#一、模块创建以及使用" class="headerlink" title="一、模块创建以及使用"></a>一、模块创建以及使用</h3><h4 id="什么是模块"><a href="#什么是模块" class="headerlink" title="什么是模块"></a>什么是模块</h4><p>模块和文件是一 一对应的，一个模块就是一个js文件，Node.js提供了exports和require两个对象，其中exports是模块公共的接口，require用于从外部获取一个模块的接口，即获取模块的exports对象。想要在外部用自定义模块中的方法exports方法暴露出去，通过require引入模块再调用其方法。<br></p>
+<h4 id="模块的分类"><a href="#模块的分类" class="headerlink" title="模块的分类"></a>模块的分类</h4><h5 id="核心模块"><a href="#核心模块" class="headerlink" title="核心模块"></a>核心模块</h5><p>如http、fs、path等，引用《深入浅出Node.js》中的一段话<br><br><code>核心模块部分在Node源代码的编译过程中，编译进了二进制执行文件。在Node进程启动时，部分核心模块就被直接加载进内存中，所以这部分核心模块引入时，文件定位和编译执行这两个步骤可以省略掉，并且在路径分析中优先判断，所以他的加载速度是最快的。</code></p>
+<h5 id="第三方模块"><a href="#第三方模块" class="headerlink" title="第三方模块"></a>第三方模块</h5><p>通过NPM安装的模块都会放入到node_modules目录下，在引用模块时和核心模块类似，require方法只需写模块名一就可以，不需要路径。Node在查找这个模块时会现在本级目录下查看是否有node_modules目录，若有看其内是否有相应的模块，若没有会去父目录查找，以此类推，就像是JavaScript的原型链和作用域链的查找方式。所以这类模块的查找会耗时最多，加载最慢。</p>
+<h4 id="创建模块"><a href="#创建模块" class="headerlink" title="创建模块"></a>创建模块</h4><h5 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式"></a>第一种方式</h5><pre><code>//mymodule.js
+//使用exports向外部暴露方法
+var name;
+exports.setName=function(isname) {
+  name = isname;
+}
+exports.sayNanme=function (){
+  console.log(&apos;hello my name is &apos;+name);
+}
+
+
+//getmymodule.js
+var myModule =require(&apos;./mymodule&apos;);
+myModule.setName(&apos;AngelaMuller&apos;);//调用模块中方法设置属性
+myModule.sayNanme();//调用方法
+</code></pre><h6 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h6><pre><code>muller@ubuntu:~/node$ node getmymodule.js
+hello my name is AngelaMuller
+</code></pre><h5 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h5><pre><code>//mymodule.js
+module.exports =  function (name){
+  this.name = name;
+  this.sayhello = function(){
+      console.log(&apos;hello world！&apos;+this.name);
+  }
+};
+
+//getmymodule.js
+var person  = require(&apos;./mymodule&apos;);
+var oneper = new person(&apos;AngelaMuller&apos;);
+oneper.sayhello();
+</code></pre><h6 id="使用：-1"><a href="#使用：-1" class="headerlink" title="使用："></a>使用：</h6><pre><code>muller@ubuntu:~/node$ node getmymodule.js
+hello world！AngelaMuller
+</code></pre><h4 id="单次加载"><a href="#单次加载" class="headerlink" title="单次加载"></a>单次加载</h4><p>上面的例子有点类似创建一个对象，但实际上和对象又有本质的区别，因为require不会重复加载模块，也就是说无论调用多少次require，获取的模块都是同一个<br></p>
+<h4 id="覆盖exports"><a href="#覆盖exports" class="headerlink" title="覆盖exports"></a>覆盖exports</h4><p>有时我们知识想把一个对象封装到模块中，例如<br><br>定义模块：singleobejct.js<br><br>引入模块使用：getSingleObject.js<br><br>繁琐：exports.hello=hello;<br><br>引入：require(“./singleobject”).hello;<br><br>简易：module.exports=hello;<br><br>exports本身仅仅是一个普通的空对象，即{}，它是专门用来声明接口<br></p>
+<hr>
+<h5 id="定义模块：singleobejct-js"><a href="#定义模块：singleobejct-js" class="headerlink" title="定义模块：singleobejct.js"></a>定义模块：singleobejct.js</h5><pre><code>function hello(){
+var name;
+this.setName=function(thyName){
+    name=thyName;
+}
+this.sayHello=function(){
+    console.log(&apos;hello &apos;+name);
+}
+}
+//exports.hello=hello;
+module.exports=hello;    // 定义的方法添加   （简单的方式）
+</code></pre><h5 id="引入模块使用：getSingleObject-js"><a href="#引入模块使用：getSingleObject-js" class="headerlink" title="引入模块使用：getSingleObject.js"></a>引入模块使用：getSingleObject.js</h5><pre><code>var hello=require(&apos;./singleobject&apos;);
+var he=new hello();
+he.setName(&apos;marico&apos;);  //实例化第一个实例
+he.sayHello();
+var he2=new hello();  //实例化第二个实例
+he2.setName(&apos;yfc&apos;);
+he2.sayHello()
+</code></pre><h5 id="结果输出："><a href="#结果输出：" class="headerlink" title="结果输出："></a>结果输出：</h5><pre><code>[root@localhost nodejs]# node getSingleObject.js 
+hello marico
+hello yfc
+</code></pre><p>繁琐：exports.hello=hello; //使用这种方式加载在对象中时，在调用使用时比较繁琐<br>引入：require(“./singleobject”).hello;<br></p>
+<h3 id="二、文件操作"><a href="#二、文件操作" class="headerlink" title="二、文件操作"></a>二、文件操作</h3><p>node.js模块是文件操作的封装，它提供了文件的读取，写入，更名，删除，遍历目录，链接POSIX文件系统操作。与其他模块不同的是，fs模块中所有的操作都提供了异步和同步两个版本，例如，读取文件内容函数异步方法，readFile(),同步方法readFileSync().<br><br>1.同步方式的文件系统调用会导致阻塞，由于Node.js是单线程的，直到文件调用完成后，控制权才会被放回主线程，这也就导致了后台其他线程池中的很多线程不能够执行，从而导致Node.js中一定程度的性能问题。因此应该尽可能的减少使用同步方式的文件系统的方法调用。<br><br>2.异步调用会被主线程放置在事件队列中以备随后运行，这使得调用能够融入Node.js中的事件模型。但在执行代码时，就会变得有点棘手，因为事件并不能在预期的时候完成，这就需要有一个callback函数来规定当调用完成时需要完成的事。（这里可以去深入了解下Node.js的事件队列）<br></p>
+<ul>
+<li>简单读取<ul>
+<li>fs.readFile(path,[options],callback);</li>
+<li>fs.readFildSync(path,[options]);</li>
+</ul>
+</li>
+<li>非简单读取<ul>
+<li>fs.read(fd,buffer,offset,length,position,callback);</li>
+<li>fs.readSync(fd,buffer,offset,length,position);<ul>
+<li>流式读取<ul>
+<li>fs.createReadStream(path,[options]);</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>fs模块的其他方法<ul>
+<li>验证文件/目录路径的存在性</li>
+<li>fs.exists(path,callback);</li>
+<li>fs.existsSync(path);</li>
+</ul>
+</li>
+</ul>
+<p><strong>注</strong>： 同步方法返回true/false，异步方法callback仅仅只有一个err对象表示是否删除成功。<br></p>
+<pre><code>同步读取
+//引入fs模块
+var fs=require(&apos;fs&apos;);
+fs.readFile(&apos;content.txt&apos;,&apos;UTF-8&apos;,function(err,data){
+    if(err){
+        console.log(err);
+    }else{
+        console.log(data);
+    }
+});
+
+//没有回调函数
+try{
+    var data=fs.readFileSync(&apos;content.txt&apos;,&apos;UTF-8&apos;);
+    console.log(data+&quot;同步式读取&quot;);
+}catch(e){
+    console.log(e)
+}
+</code></pre><p>content.txt 内容<br><br>Node.js的文件系统的Api   AngelaMuller<br><br>输出结果：<br></p>
+<pre><code>muller@ubuntu:~/node$ node mymodule.js 
+Node.js的文件系统的Api   AngelaMuller同步式读取
+Node.js的文件系统的Api   AngelaMuller
+</code></pre><p>异步读取文件与readFile相同，而读取到的文件内容会以函数返回值的形式返回，如果有错误发生，fs将抛出异常，你需要try和catch捕获并处理异常。<br><br><a href="http://stackoverflow.com/questions/22863170/node-js-from-fs-readfilesync-to-fs-readfile" target="_blank" rel="external">Node.js from fs.readFileSync() to fs.readFile()</a><br><br>其他方法请查看官方API<a href="https://nodejs.org/dist/latest-v4.x/docs/api/fs.html" target="_blank" rel="external">https://nodejs.org/dist/latest-v4.x/docs/api/fs.html</a><br></p>
+<h3 id="三、-IO交互"><a href="#三、-IO交互" class="headerlink" title="三、 IO交互"></a>三、 IO交互</h3><h4 id="什么是IO交互"><a href="#什么是IO交互" class="headerlink" title="什么是IO交互"></a>什么是IO交互</h4><p>简单点是Node.js的控制台输入输出，I 是input 可读输入流 ，O是output 可输出流，Node.js也有如同C++和Java的标准输入输出进行交互。<br></p>
+<ul>
+<li>输入设备<ul>
+<li>输入设备是人向计算机输入信息的设备，常用的输入设备有：<ol>
+<li>键盘—人向计算机输入信息最基本的设备； </li>
+<li>鼠标器—-一种光标指点设备；</li>
+<li>触摸屏—-一种坐标定位设备，常用于公共查询系统。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>输出设备<ul>
+<li>输出设备是直接向人提供计算机运行结果的设备，常用的输出设备有：<ol>
+<li>显示器—计算机的主要输出设备,它与键盘一起构成最基本的人机对话环境；</li>
+<li>打印机—打印机为用户提供计算机信息的硬拷贝。常用的打印机有：击打式、喷墨式和激光打印机。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="什么是Readline"><a href="#什么是Readline" class="headerlink" title="什么是Readline"></a>什么是Readline</h4><p>Readline是Node.js里实现标准输入输出的封装好的模块，通过这个模块我们可以以逐行的方式读取数据流。<br><br>使用require(“readline”)可以引用模块。<br></p>
+<h4 id="如何使用Readline"><a href="#如何使用Readline" class="headerlink" title="如何使用Readline"></a>如何使用Readline</h4><pre><code>// 引入readline模块
+const readline = require(&apos;readline&apos;);
+
+//创建readline接口实例
+const rl = readline.createInterface({
+    input: process.stdin,  //监听的可读流 (必填)
+    output: process.stdout //逐行读取（Readline）数据要写入的可写流(可选)
+});
+rl.setPrompt(&apos;What is your name ? &gt; &apos;);//设置提示符
+rl.prompt(); //为用户输入准备好逐行读取（Readline）,让用户有新的地方输入
+
+
+rl.on(&apos;line&apos;, function (str) {
+    console.log(&apos;my name is : &apos;+str);
+});
+
+// close事件监听
+rl.on(&quot;close&quot;, function(){
+   // 结束程序
+   console.log(&apos;Have a great day!&apos;);
+    process.exit(0);// 结束程序
+});
+
+/* v0.10.44 版本似乎有问题 v4.5.0案例
+rl.on(&apos;line&apos;, (line) =&gt; {
+    var str = line.trim();
+    console.log(&apos;my name is : &apos;+str);
+
+    rl.prompt();
+}).on(&apos;close&apos;, () =&gt; {
+  console.log(&apos;Have a great day!&apos;);
+  process.exit(0);
+});
+*/
+</code></pre><p>在close事件的监听里，我们执行了process.exit(0)来使程序退出的操作，因为readline模块只要一开始获取用户输入就不会结束，必须使用这种直接的方式来结束程序。<br></p>
+<h4 id="输入与输出实例"><a href="#输入与输出实例" class="headerlink" title="输入与输出实例"></a>输入与输出实例</h4><pre><code>// 引入readline模块
+var readline = require(&apos;readline&apos;);
+
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.on(&apos;line&apos;, function(line){
+    switch(line.trim()) {
+        case &apos;copy&apos;:
+            console.log(&quot;复制&quot;);
+            break;
+        case &apos;hello&apos;:
+            rl.write(&quot;Write&quot;);
+            console.log(&apos;world!&apos;);
+            break;
+        case &apos;close&apos;:
+            rl.close();
+            break;
+        default:
+            console.log(&apos;没有找到命令！&apos;);
+            break;
+    }
+});
+rl.on(&apos;close&apos;, function() {
+    console.log(&apos;bye bye&apos;);
+    process.exit(0);
+});
+
+ &apos;line&apos;事件，这个事件就是在用户输完一行，按下回车后就会触发的事件，它会将用户输入的数据通过回调函数传回来，可在此方法里处理用户输入的数据
+</code></pre><h4 id="命令行输入与输出"><a href="#命令行输入与输出" class="headerlink" title="命令行输入与输出"></a>命令行输入与输出</h4><pre><code>const readline = require(&apos;readline&apos;);
+const rl = readline.createInterface(process.stdin, process.stdout);
+
+rl.setPrompt(&apos;OHAI&gt; &apos;);
+rl.prompt();
+
+rl.on(&apos;line&apos;, (line) =&gt; {
+  switch(line.trim()) {
+    case &apos;hello&apos;:
+      console.log(&apos;world!&apos;);
+      break;
+    default:
+      console.log(&apos;Say what? I might have heard `&apos; + line.trim() + &apos;`&apos;);
+      break;
+  }
+  rl.prompt();
+}).on(&apos;close&apos;, () =&gt; {
+  console.log(&apos;Have a great day!&apos;);
+  process.exit(0);
+});
+</code></pre><h3 id="四、URL解析"><a href="#四、URL解析" class="headerlink" title="四、URL解析"></a>四、URL解析</h3><h4 id="1-URL模块为URL的解析工具"><a href="#1-URL模块为URL的解析工具" class="headerlink" title="1.URL模块为URL的解析工具"></a>1.URL模块为URL的解析工具</h4><pre><code>var url = require(&apos;url&apos;);
+var urlString = &apos;http://user:pass@best.bluepay.asia:90/p/a/t/h?query=string#hash&apos;;
+var result = url.parse(urlString);
+console.log(result);
+
+//第二个可选参数设置为true时  query: { query: &apos;string&apos; },
+</code></pre><p>输出结果：<br></p>
+<pre><code>muller@ubuntu:~/node$ node url.js
+Url {
+  protocol: &apos;http:&apos;,
+  slashes: true,
+  auth: &apos;user:pass&apos;,
+  host: &apos;best.bluepay.asia:90&apos;,
+  port: &apos;90&apos;,
+  hostname: &apos;best.bluepay.asia&apos;,
+  hash: &apos;#hash&apos;,
+  search: &apos;?query=string&apos;,
+  query: &apos;query=string&apos;,
+  pathname: &apos;/p/a/t/h&apos;,
+  path: &apos;/p/a/t/h?query=string&apos;,
+  href: &apos;http://user:pass@best.bluepay.asia:90/p/a/t/h?query=string#hash&apos; }
+</code></pre><ul>
+<li>href 属性会被忽略 </li>
+<li>protocol无论是否有末尾的 : (冒号)，会同样的处理 这些协议包括 http, https, ftp, gopher, file 后缀是 :// (冒号-斜杠-斜杠). 所有其他的协议如 mailto, xmpp, aim, sftp, foo, 等 会加上后缀 : (冒号) </li>
+<li>auth 如果有将会出现. </li>
+<li>hostname 如果 host 属性没被定义，则会使用此属性. </li>
+<li>port 如果 host 属性没被定义，则会使用此属性. </li>
+<li>host 优先使用，将会替代 hostname 和port </li>
+<li>pathname 将会同样处理无论结尾是否有/ (斜杠) </li>
+<li>search 将会替代 query属性 </li>
+<li>query (object类型; 详细请看 querystring) 如果没有 search,将会使用此属性. </li>
+<li>search 无论前面是否有 ? (问号)，都会同样的处理 </li>
+<li>hash无论前面是否有# (井号, 锚点)，都会同样处理</li>
+</ul>
+<hr>
+<h4 id="2-queryString-模块"><a href="#2-queryString-模块" class="headerlink" title="2.queryString 模块"></a>2.queryString 模块</h4><p>提供了实用程序来处理查询字符串<br></p>
+<ul>
+<li>querystring.stringify(obj, [sep], [eq])<ul>
+<li>将JSON对象格式化为查询字符串格式的字符串，默认的分隔符为：“&amp;”和“=”，具体可以看一下以下代码.<br></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">querystring.stringify(&#123; foo: &apos;bar&apos;, baz: [&apos;qux&apos;, &apos;quux&apos;], corge: &apos;&apos; &#125;)</div><div class="line">// returns &apos;foo=bar&amp;baz=qux&amp;baz=quux&amp;corge=&apos;</div><div class="line"></div><div class="line">querystring.stringify(&#123;foo: &apos;bar&apos;, baz: &apos;qux&apos;&#125;, &apos;;&apos;, &apos;:&apos;)</div><div class="line">// returns &apos;foo:bar;baz:qux&apos;</div><div class="line"></div><div class="line">// Suppose gbkEncodeURIComponent function already exists,</div><div class="line">// it can encode string with `gbk` encoding</div><div class="line">querystring.stringify(&#123; w: &apos;中文&apos;, foo: &apos;bar&apos; &#125;, null, null,</div><div class="line">  &#123; encodeURIComponent: gbkEncodeURIComponent &#125;)</div><div class="line">// returns &apos;w=%D6%D0%CE%C4&amp;foo=bar&apos;</div></pre></td></tr></table></figure>
+<ul>
+<li>querystring.parse(str, [sep], [eq], [options])<ul>
+<li>根据“&amp;”和“=”将字符串进行分割，反序列化为JSON对象，而options包含的maxKeys默认设置为1000，如果将其设置为0则表示没这个限制.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">querystring.parse(&apos;foo=bar&amp;baz=qux&amp;baz=quux&amp;corge&apos;)</div><div class="line">// returns &#123; foo: &apos;bar&apos;, baz: [&apos;qux&apos;, &apos;quux&apos;], corge: &apos;&apos; &#125;</div><div class="line"></div><div class="line">// Suppose gbkDecodeURIComponent function already exists,</div><div class="line">// it can decode `gbk` encoding string</div><div class="line">querystring.parse(&apos;w=%D6%D0%CE%C4&amp;foo=bar&apos;, null, null,</div><div class="line">  &#123; decodeURIComponent: gbkDecodeURIComponent &#125;)</div><div class="line">// returns &#123; w: &apos;中文&apos;, foo: &apos;bar&apos; &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>querystring.escape，querystring.unescape<ul>
+<li>这两个内置方法，分别在上述两个方法的内置使用，如果有需要分别格式化和解码URL字符串。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-QueryString模块和Url模块之间的关系"><a href="#3-QueryString模块和Url模块之间的关系" class="headerlink" title="3. QueryString模块和Url模块之间的关系"></a>3. QueryString模块和Url模块之间的关系</h4><pre><code>url.parse(string).query
+                                       |
+       url.parse(string).pathname      |
+                   |                   |
+                   |                   |
+                 ------ -------------------
+http://localhost:8888/start?foo=bar&amp;hello=world
+                                ---       -----
+                                 |          |
+                                 |          |
+              querystring(string)[&quot;foo&quot;]    |
+                                            |
+                         querystring(string)[&quot;hello&quot;]
+</code></pre><h4 id="4-获取静态资源"><a href="#4-获取静态资源" class="headerlink" title="4. 获取静态资源"></a>4. 获取静态资源</h4><p>完整实例（根据不同的url地址请求不同的文件）<br></p>
+<pre><code>const ip = &apos;192.168.1.223&apos;;//主机IP
+const port = 3000;//端口号
+//引入的组建模块  http、url、fs
+const http = require(&apos;http&apos;);
+const urls = require(&apos;url&apos;);
+const fs = require(&apos;fs&apos;);
+//实例化一个服务容器
+var server = new http.Server();
+//监听一个端口
+server.listen(port , ip);
+//注册一个事件处理的on方法
+server.on(&apos;request&apos; , function(req , res){
+    //获取请求的url地址
+    var url = urls.parse(req.url);
+    //console.log(url.pathname);
+    //根据path路径来读取不同的模板文件
+    switch( url.pathname ){
+        //显示首页
+        case &apos;&apos; || &apos;/&apos;:
+            //读取文件内容
+            fs.readFile(&apos;./index.html&apos;,function( error, content){
+                if(error){
+                    //如果有错误时，显示错误信息
+                    funError();
+                }else{
+                    //正确时浏览器输出模板文件的内容
+                    funAuccess(res,content);
+                }
+            });
+            break;
+        //显示列表页面
+        case &apos;/list&apos;:
+            fs.readFile(&apos;./list.html&apos;,function( error, content){
+                if(error){
+                        funError(res , error);
+                }else{
+                    funAuccess(res,content);
+                }
+                });
+            break;
+        //显示详情页
+        case &apos;/show&apos;:
+            fs.readFile(&apos;./show.html&apos;,function( error, content){
+                if(error){
+                    funError(res , error);
+                }else{
+                    funAuccess(res,content);
+                }
+            });
+            break;
+        //获取静态资源的页面 如：css\js
+        default:
+            //获取文件名
+            var filename = url.pathname.substring(1);
+            //获取文件名对应的类型值
+            var type = getAllType( filename.substring(filename.lastIndexOf(&apos;.&apos;)+1));
+            //测试所用
+            //console.log(type);
+            //读取静态资源的页面
+            fs.readFile(filename , function( error, content){
+                if(error){
+                    funError(res , error);
+                }else{
+                    res.writeHead(200,{&apos;Content-Type&apos; : type});
+                    res.write(content);
+                    res.end();
+                }
+            });
+            break;
+    }
+
+});
+//错误提示的函数
+function funError(response , error){
+    response.writeHead(400,{&apos;Content-Type&apos;:&apos;text/plain;charset=&quot;utf-8&quot;&apos;});
+    response.write(error.message);
+    response.end();
+}
+
+//正确时输出文件内容的函数
+function funAuccess(response,cont){
+    response.writeHead(200,{&apos;Content-Type&apos;:&apos;text/html;charset=&quot;utf-8&quot;&apos;});//头信息
+    response.write(cont);//模板文件内容
+    response.end();
+}
+
+
+//定义文件类型的函数
+function getAllType(code){
+    var type = &apos;&apos;;
+    switch(code){
+          case &apos;html&apos;:
+            type = &apos;text/html;charset=utf-8&apos;;
+            break;
+        case &apos;js&apos;:
+            type = &apos;application/javascript/html;charset=utf-8&apos;;
+            break;
+        case &apos;css&apos;:
+            type = &apos;text/css;charset=utf-8&apos;;
+            break;
+            case &apos;text&apos;:
+            type = &apos;text/plain;charset=utf-8&apos;;
+            break;
+        case &apos;manifest&apos;:
+            type = &apos;text/cache-manifest;charset=utf-8&apos;;
+            break;
+        default:
+            type = &apos;application/octet-stream&apos;;
+            break;
+    }
+    return type;
+}
+</code></pre><p>转自：<a href="http://www.jianshu.com/p/21c7db836836" target="_blank" rel="external">http://www.jianshu.com/p/21c7db836836</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/05/23/31/">
+        谈响应式web设计代码实现🍨 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/05/24/32/" data-title="Node模块创建及使用，文件操作，IO交互，URL解析🌼" data-url="https://menggeniu.github.io/2016/05/24/32/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    <span>&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.</span>   
+                </p>
+                <p>To make each day count.</p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
