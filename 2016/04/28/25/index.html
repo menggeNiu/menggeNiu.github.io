@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: React Native | NNNの博客</title>
+  <title>React Native之设置IOS的图标，名称和启动图🍖 | NNNの博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -174,78 +174,65 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>世上所有的相遇都是久别重逢。</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/04/28/25/">React Native之设置IOS的图标，名称和启动图🍖</a></h4>
-                            
-                            <p><time datetime="2016-04-28T13:02:43.000Z"><a href="/2016/04/28/25/">2016-04-28</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2016/04/25/24/">React Native简单教程🌼</a></h4>
-                            
-                            <p><time datetime="2016-04-25T14:11:01.000Z"><a href="/2016/04/25/24/">2016-04-25</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-04-28T13:02:43.000Z" itemprop="datePublished">
+          2016-04-28
+      </time>
+    
+    
+    | 
+    <a href='/tags/React-Native/'>React Native</a>
+    
+    
+</span>
+                <h1>React Native之设置IOS的图标，名称和启动图🍖</h1>
+                <span id="busuanzi_container_page_pv">
+                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+                </span>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="1-首先，app的名称："><a href="#1-首先，app的名称：" class="headerlink" title="1.首先，app的名称："></a>1.首先，app的名称：</h3><p><img src="http://images2015.cnblogs.com/blog/877983/201608/877983-20160824110318980-1050611130.png" alt=""><br><br>如图所示：我的工程名叫BOOk 在BOOk下面的info.plist的文件里设置app的相关信息：比如Bundle name就是设置APP的名称<br></p>
+<h3 id="2-App的图标：（这里注意的是：1-app的图标有尺寸之分，所以如果图片的尺寸不对，编译也就会失败！2-图标的圆角是系统自己设定的，也就是说，我们上传的图片是正正方方的！）"><a href="#2-App的图标：（这里注意的是：1-app的图标有尺寸之分，所以如果图片的尺寸不对，编译也就会失败！2-图标的圆角是系统自己设定的，也就是说，我们上传的图片是正正方方的！）" class="headerlink" title="2.App的图标：（这里注意的是：1.app的图标有尺寸之分，所以如果图片的尺寸不对，编译也就会失败！2.图标的圆角是系统自己设定的，也就是说，我们上传的图片是正正方方的！）"></a>2.App的图标：（这里注意的是：1.app的图标有尺寸之分，所以如果图片的尺寸不对，编译也就会失败！2.图标的圆角是系统自己设定的，也就是说，我们上传的图片是正正方方的！）</h3><p><img src="http://images2015.cnblogs.com/blog/877983/201608/877983-20160824110731401-812968533.png" alt=""><br><br>如图：在工程文件下面的 images.xcassests的文件下是存储图片文件的地方，在IOS开发中一般是将图片放在这个位置，但是在React native的开发中，我们也可以从这里面拿图片使用，也可以自己定义图片存储文件夹，当然为了方便起见，一般我们将自定义图片文件夹放在RN工程中，android、IOS的工程外，当然，启动图啥的就还是乖乖的放在android，IOS工程里面吧！<br><br><img src="http://images2015.cnblogs.com/blog/877983/201608/877983-20160824111222776-1639235598.png" alt=""><br></p>
+<h3 id="3-启动图："><a href="#3-启动图：" class="headerlink" title="3.启动图："></a>3.启动图：</h3><p>同样！启动图也是放在images.xcasssets文件里 ，但是，我们要新建<br></p>
+<p><img src="http://images2015.cnblogs.com/blog/877983/201608/877983-20160824111448761-942336200.png" alt=""><br><br>失误~吧QQ给截图出来了~~~呵呵，点击左侧的空白处` 然后new icon那个 —-new ios launch<br><br>然后我们将启动图拖拽到里面~（注意尺寸，要不然编译会出错！！！）<br><br><img src="http://images2015.cnblogs.com/blog/877983/201608/877983-20160824111754730-88380989.png" alt=""><br><br>这个添加好了以后就需要去设置啦~点击项目名称（我这里是BOOK）然后会弹出这样的界面<br><br><img src="http://images2015.cnblogs.com/blog/877983/201608/877983-20160824112015198-543098236.png" alt=""><br><br>这里的App icons source 就是我们设置图标的路径（可以去查看下）<br><br>然后我们要设置的是下面的这个lanch images source 改成我们刚新建的那个启动图就好了~这里注意的是：下面的launch Screen file要设置成空<br><br>ok！完成结束！<br></p>
+<p>转自：<a href="http://www.cnblogs.com/allenxieyusheng/p/5802179.html" target="_blank" rel="external">http://www.cnblogs.com/allenxieyusheng/p/5802179.html</a></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>立志成为合格的程序媛，立志走在食物链的顶端。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/04/25/24/">
+        React Native简单教程🌼 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/04/28/25/" data-title="React Native之设置IOS的图标，名称和启动图🍖" data-url="https://menggeniu.github.io/2016/04/28/25/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
