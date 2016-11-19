@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>canvas🐸 | NNNの博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="NNNの博客">
+    <meta name="author" content="menggeNIU">
+    <meta name="description" content="前端小菜鸟" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="NNNの博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://blog.901web.com" target="_BLANK">pybyongbo</a></li>
+                    
+                    <li><a href="https://zjflove.github.io" target="_BLANK">zjf</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+       <!--  <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul> -->
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">NNNの博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            
+                            
+                            
+                            <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-05-30T13:59:35.000Z" itemprop="datePublished">
+          2016-05-30
+      </time>
+    
+    
+    | 
+    <a href='/tags/HTML5/'>HTML5</a>
+    
+    
+</span>
+                <h1>canvas🐸</h1>
+                <span id="busuanzi_container_page_pv">
+                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+                </span>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>最近在学习HTML5，做了一个打砖块游戏。。。。<br><br>以下是代码哦:<br></p>
+<pre><code>&lt;!DOCUTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;
+            打砖块. by 一只柯楠
+        &lt;/title&gt;
+        &lt;style type=&quot;text/css&quot;&gt;
+            #zn{
+                border: 10px red solid;
+                margin: 0 auto;
+                display: block;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;打砖块&lt;/h1&gt;
+        &lt;hr /&gt;
+        空格键：暂停;&lt;br /&gt;
+        方向左右键：控制接球板;&lt;br /&gt;
+        &lt;canvas id=&quot;zn&quot; width=&quot;480&quot; height=&quot;760&quot;&gt;&lt;/canvas&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            var Brick= function () {
+                var requestAnim= window.requestAnimationFrame ||
+                        window.webkitRequestAnimationFrame ||
+                        window.mozRequestAnimationFrame ||
+                        window.oRequestAnimationFrame ||
+                        window.msRequestAnimationFrame ||
+                        function(callback) { return setTimeout(callback, 100/6); },
+                cancelAnim= window.cancelAnimationFrame ||
+                    window.webkitCancelAnimationFrame ||
+                    window.mozCancelAnimationFrame ||
+                    window.oCancelAnimationFrame ||
+                    window.msCancelAnimationFrame ||
+                    function(timeid) { return clearTimeout(timeid); },
+                col= 8, row= 8, BW, BH= 30, BS= 1, r= 18, random= function (n1, n2) {   return Math.round(Math.random()*(n2- n1))+n1},
+                elWidth, elHeight, cycle= 200, N= 0, score= 0, 
+                randColor= function(c1, c2){ return &apos;rgb(&apos;+ random(c1 || 0, c2 || 255)+ &apos;,&apos;+ random(c1 || 0, c2 || 255)+ &apos;,&apos;+ random(c1 || 0, c2 || 255)+ &apos;)&apos;} ,
+                init = function (id) {
+                var el= this.el= document.querySelector(id);
+                    elWidth= el.width, elHeight= el.height;
+                    this.c= el.getContext(&apos;2d&apos;);
+                    BW= +(elWidth/col-BS).toFixed(2);
+                    this.RL= (elWidth- BW)/2;
+                    this.RT= elHeight- BH- BS;
+                    this.x= this.RL+ (BW/2);
+                    this.y= elHeight-r- BH- BS;
+                    this.xv= random(46, 90)* (Math.random()&gt; .5 ? 2 : -2);
+                    this.yv= -4* 126;
+                    this.initBricks();
+                    //暂停
+                    this.suspend= true;  
+                    this.listenerEvent();
+                } 
+
+                init.prototype= {
+
+                    start: function (timestamp) {
+                        var self= this, newTime= Date.now(), diffX, diffY, diffTime= newTime- (timestamp || newTime) , x, y;
+                        if(++N=== cycle){
+                            N= 0;
+                            var ary= [];
+                            this.tables.unshift(ary); 
+                            for(var i =0 ; i&lt; col; i++){
+                                ary.push(1);
+                            }
+                        }
+                        diffX= this.xv* diffTime/1000;
+                        diffY= this.yv* diffTime/1000;
+                        this.clearView();
+                        //绘制砖块
+                        this.drawBricks();
+                        //绘制小球
+                        this.drawBall(0, 0);
+                        //绘制接球板
+                        this.drawRacket();
+                        //绘制得分
+                        this.showText(score);
+                        if(this.downKeyLeft)
+                            this.RL= Math.max(this.RL- BW/5, 0);
+                        else if(this.downKeyRight)
+                            this.RL= Math.min(this.RL+ BW/5, elWidth- 2*BW);
+                        x= this.x+ diffX;
+                        y= this.y+ diffY;
+
+                        if(x- r &lt;0 || x+ r &gt; elWidth)
+                            this.xv *= -1;
+                        if(y- r&lt; 0)
+                            this.yv *= -1;
+                        else if(y+ r&gt; this.RT){
+                            if(x+ r&gt; this.RL &amp;&amp; x-r&lt; this.RL+ 2*BW)
+                                this.yv *= -1;
+                            else{
+                                this.suspend= true ;
+                                this.clearView();
+                                this.showText(&apos;GAME OVER&apos;);
+                            }
+                        }
+                        var i= Math.floor(x/(BW +BS)), j= Math.floor(y/(BH +BS));
+                            if(this.tables[j] &amp;&amp; this.tables[j][i]===1){
+                                this.tables[j][i]= 0;
+                                score+= 100;
+                                this.yv*=-1;
+                            }
+                        if(!this.suspend){
+                            this.x= x;
+                            this.y= y;
+                            this.animID= requestAnim(function () {
+                                self.start(newTime);
+                            })
+                        }
+                        return this;
+                    },
+
+                    clearView: function () {
+                        var c= this.c;
+                        c.clearRect(0, 0, elWidth, elHeight);
+                    },
+
+                    initBricks: function(){
+                        this.tables= [];
+                        for(var i=0; i&lt; col; i++){
+                            this.tables.push([]);
+                            for(var j=0; j&lt; row; j++){
+                                this.tables[i][j]= 1;
+                            }
+                        }
+                    },
+
+                    drawRacket: function () {
+                        this.drawRect(this.RL, this.RT, 2*BW, BH, 1, 1);
+                    },
+
+                    drawBall: function(c1, c2){
+                        var c= this.c;  
+                        c.beginPath();
+                        c.arc(this.x, this.y, r, 0, 2*Math.PI);
+                        c.fillStyle= &apos;#000&apos;//randColor(c1 || 150, c2 || 255);
+                        c.closePath();
+                        c.fill();
+                    },
+
+                    drawRect: function(x, y, w, h, c1, c2){
+                        var c= this.c;
+                        c.beginPath();
+                        c.fillStyle= randColor(c1 || 0, c2 || 255);
+                        c.closePath();
+                        c.fillRect(x, y, w, h);
+                    },
+
+                    drawBricks: function(){
+                        var i= 0,len= this.tables.length, cur, tables= this.tables;
+                        for(; i&lt; len; i++){
+                            cur= tables[i];
+                            for(var j= 0; j&lt; cur.length; j++){
+                                cur[j]===1 &amp;&amp; this.drawRect(j*(BW+ BS), i*(BH+ BS), BW, BH);
+                            }
+                        }
+                    },
+
+                    listenerEvent: function(e){
+                        document.addEventListener(&apos;keydown&apos;, this, false);
+                        document.addEventListener(&apos;keyup&apos;, this, false);
+                    },
+
+                    handleEvent: function(e){
+                        var type= e.type, keycode= e.keyCode;
+                        if(keycode===37 || keycode=== 39 || keycode=== 32){
+                            switch(type){
+                                case &apos;keydown&apos;:
+                                    if(keycode === 37) this.downKeyLeft= true;
+                                    else if(keycode===39)  this.downKeyRight = true;
+                                    break;
+                                case &apos;keyup&apos;:
+                                    if(keycode === 37) 
+                                        this.downKeyLeft= false;
+                                    else if (keycode===39)
+                                        this.downKeyRight = false
+                                    else{
+                                        this.suspend= !this.suspend;
+                                        !this.suspend &amp;&amp; this.start();
+                                    }
+
+                            }
+                        }
+                    },
+
+                    showText: function(txt, left, top, size){
+                        var c= this.c, tw;
+                        size = size || 60;
+                        c.beginPath();
+                        c.font= size+ &apos;pt Calibri&apos;;
+                        tw= c.measureText(txt).width; 
+                        left= left=== undefined ? (elWidth- tw)/2 : left; 
+                        top= top=== undefined ? (elHeight- size)/2 : top; 
+                        c.fillText(txt, left, top);
+                        c.closePath();
+                    },
+
+
+                }
+                return init;
+            }();
+        b= new Brick(&apos;#zn&apos;);
+        b.start();
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>转自：<a href="http://www.cnblogs.com/webzhangnan/archive/2013/02/27/2935534.html" target="_blank" rel="external">http://www.cnblogs.com/webzhangnan/archive/2013/02/27/2935534.html</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    
+    <a class="pull-right" href="/2016/05/28/34/">
+        Mongoose全面理解🐳 →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/05/30/canvas🐸/" data-title="canvas🐸" data-url="https://menggeniu.github.io/2016/05/30/canvas🐸/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"menggeniu"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    <span>&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Content By menggeNIU. All Rights Reserved.</span>   
+                </p>
+                <p>To make each day count.</p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/menggeNiu" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://weibo.com/u/1967072037" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
