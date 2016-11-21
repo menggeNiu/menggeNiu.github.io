@@ -1,0 +1,916 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="原文：http://www.kwstu.com/Admin/ViewArticle/201409011604277330CSS hack大全&amp;amp;详解（什么是CSS hack）
+1、什么是CSS hack?CSS hack是通过在CSS样式中加入一些特殊的符号，让不同的浏览器识别不同的符号（什么样的浏览器识别什么样的符号是有标准的，CSS hack就是让你记住这个标准），以达到应用不同的CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" CSS hack大全&详解（什么是CSS hack）👾">
+<meta property="og:url" content="https://menggeniu.github.io/2016/06/13/39/index.html">
+<meta property="og:site_name" content="NNNの博客">
+<meta property="og:description" content="原文：http://www.kwstu.com/Admin/ViewArticle/201409011604277330CSS hack大全&amp;amp;详解（什么是CSS hack）
+1、什么是CSS hack?CSS hack是通过在CSS样式中加入一些特殊的符号，让不同的浏览器识别不同的符号（什么样的浏览器识别什么样的符号是有标准的，CSS hack就是让你记住这个标准），以达到应用不同的CSS">
+<meta property="og:image" content="http://www.kwstu.com/Content/uploadFiles/images/ie.png">
+<meta property="og:updated_time" content="2016-11-21T06:17:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=" CSS hack大全&详解（什么是CSS hack）👾">
+<meta name="twitter:description" content="原文：http://www.kwstu.com/Admin/ViewArticle/201409011604277330CSS hack大全&amp;amp;详解（什么是CSS hack）
+1、什么是CSS hack?CSS hack是通过在CSS样式中加入一些特殊的符号，让不同的浏览器识别不同的符号（什么样的浏览器识别什么样的符号是有标准的，CSS hack就是让你记住这个标准），以达到应用不同的CSS">
+<meta name="twitter:image" content="http://www.kwstu.com/Content/uploadFiles/images/ie.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://menggeniu.github.io/2016/06/13/39/"/>
+
+
+
+
+
+  <title>  CSS hack大全&详解（什么是CSS hack）👾 | NNNの博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NNNの博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">前端小菜鸟</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/06/13/39/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="menggeNIU">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="NNNの博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                 CSS hack大全&详解（什么是CSS hack）👾
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-13T22:01:14+08:00">
+                2016-06-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2016/06/13/39/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/13/39/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/06/13/39/" class="leancloud_visitors" data-flag-title=" CSS hack大全&详解（什么是CSS hack）👾">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>原文：<a href="http://www.kwstu.com/Admin/ViewArticle/201409011604277330" target="_blank" rel="external">http://www.kwstu.com/Admin/ViewArticle/201409011604277330</a><br><br><a href="http://www.kwstu.com/Admin/ViewArticle/201409011604277330" target="_blank" rel="external">CSS hack大全&amp;详解（什么是CSS hack）</a><br></p>
+<h3 id="1、什么是CSS-hack"><a href="#1、什么是CSS-hack" class="headerlink" title="1、什么是CSS hack?"></a>1、什么是CSS hack?</h3><p>CSS hack是通过在CSS样式中加入一些特殊的符号，让不同的浏览器识别不同的符号（什么样的浏览器识别什么样的符号是有标准的，CSS hack就是让你记住这个标准），以达到应用不同的CSS样式的目的，比如.kwstu{width:300px;_width:200px;}，一般浏览器会先给元素使用width:300px;的样式，紧接着后面还有个_width:200px;由于下划线_width只有IE6可以识别，所以此样式在IE6中实际设置对象的宽度为200px，后面的把前面的给覆盖了，而其他浏览器不识别_width不会执行_width:200px;这句样式，所以在其他浏览器中设置对象的宽度就是300px;<br><br>以下是引自百度文库的定义<br></p>
+<pre><code>简单地讲，css hack指各版本及各品牌浏览器之间对CSS解释后出现网页内容的误差(比如我们常说错位)的处理。由于各浏览器的内核不同，所以会造成一些误差就像JS一样，一个JS网页特效，在微软IE6、IE7、IE8浏览器有效果，但可能在火狐（Mozilla Firefox）谷歌浏览器无效，这样就叫做JS hack ，所以我们对于CSS来说他们来解决各浏览器对CSS解释不同所采取的区别不同浏览器制作不同的CSS样式的设置来解决这些问题就叫作CSS Hack。
+</code></pre><p>注意：我们通常主要考虑的浏览器有IE6、IE7、IE8、谷歌浏览器（chrome）、火狐（Mozilla Firefox）即可，至于我们常用的傲游、QQ的TT浏览器是用你计算机中装的系统自带浏览器的内核，所以只需要兼容以上浏览器即可兼容TT\傲游浏览器。<br></p>
+<h3 id="2、CSS-hack解决问题"><a href="#2、CSS-hack解决问题" class="headerlink" title="2、CSS hack解决问题"></a>2、CSS hack解决问题</h3><p>CSS hack用来解决有些css属性在不同浏览器中显示的效果不一样的问题，如margin属性在ie6中显示的距离会比其他浏览器中显示的距离宽2倍，也就是说margin-left:20px;在ie6中距左侧对象的实际显示距离是40px，而在非ie6中显示的距左侧对象的距离是设置的值20px;所以要想设置一个对象距离左侧对象的距离在所有浏览器中都显示是20px的宽度的样式应为：.kwstu{margin-left:20px;_margin-left:20px;}。<br></p>
+<h3 id="3、浏览器识别字符标准对应表"><a href="#3、浏览器识别字符标准对应表" class="headerlink" title="3、浏览器识别字符标准对应表"></a>3、浏览器识别字符标准对应表</h3><p><img src="http://www.kwstu.com/Content/uploadFiles/images/ie.png" alt=""><br>从上图可以分析出以下几种情况：<br></p>
+<pre><code>1.大部分特殊字符IE浏览器支持，其他主流浏览器firefox，chrome，opera，safari不支持 (opera可识别除外)。&lt;br&gt;
+2.\9    ：所有IE浏览器都支持&lt;br&gt;
+3._和-  ：仅IE6支持&lt;br&gt;
+4.*     ：IE6、E7支持&lt;br&gt;
+5.\0    ：IE8、IE9支持，opera部分支持&lt;br&gt;
+6.\9\0  ：IE8部分支持、IE9支持&lt;br&gt;
+7.\0\9  ：IE8、IE9支持&lt;br&gt;
+</code></pre><h3 id="4、各种CSS-hack情况介绍"><a href="#4、各种CSS-hack情况介绍" class="headerlink" title="4、各种CSS hack情况介绍"></a>4、各种CSS hack情况介绍</h3><h4 id="1-区别IE和非IE浏览器"><a href="#1-区别IE和非IE浏览器" class="headerlink" title="1.区别IE和非IE浏览器"></a>1.区别IE和非IE浏览器</h4><pre><code>#tip{ 
+background:blue;/*非IE背景蓝色  因为所有浏览器都能解释*/ 
+background:red\9;/*IE6、IE7、IE8、IE9背景紅色 因为\9在IE6.7.8.9中可以识别，覆盖上面样式 IE10跟11应该不识别，IE11测试确定*/ 
+}   
+</code></pre><h4 id="2-区别IE6-IE7-IE8-FF"><a href="#2-区别IE6-IE7-IE8-FF" class="headerlink" title="2.区别IE6,IE7,IE8,FF"></a>2.区别IE6,IE7,IE8,FF</h4><p>【区别符号】：“\9”、“*”、“_”<br> </p>
+<pre><code>#tip{ 
+background:blue;/*Firefox背景变蓝色 所有浏览器都支持*/ 
+background:red\9;/*IE8背景变红色 IE6、7、8、9支持覆盖上面样式*/ 
+*background:black;/*IE7背景变黑色 IE6、7支持又一次覆盖上面样式*/ 
+_background:orange;/*IE6背景变橘色 紧IE6支持又一次覆盖上面样式*/ 
+}  
+
+说明】：因为IE系列浏览器可读「\9」，而IE6和IE7可读「*」(米字号)，另外IE6可辨识「_」(底线)，因此可以依照顺序写下来，就会让浏览器正确的读取到自己看得懂得CSS语法，所以就可以有效区分IE各版本和非IE浏览器(像是Firefox、Opera、GoogleChrome、Safari等)。
+</code></pre><h4 id="3-区别IE6、IE7、Firefox-方法1"><a href="#3-区别IE6、IE7、Firefox-方法1" class="headerlink" title="3.区别IE6、IE7、Firefox(方法1)"></a>3.区别IE6、IE7、Firefox(方法1)</h4><p>【区别符号】：“*”、“_”<br></p>
+<pre><code>#tip{  
+background:blue;/*Firefox背景变蓝色*/  
+*background:black;/*IE7背景变黑色*/  
+_background:orange;/*IE6背景变橘色*/  
+} 
+
+【说明】：IE7和IE6可读「*」(米字号)，IE6又可以读「_」(底线)，但是IE7却无法读取「_」，至于Firefox(非IE浏览器)则完全无法辨识「*」和「_」，因此就可以透过这样的差异性来区分IE6、IE7、Firefox
+</code></pre><h4 id="4-区别IE6、IE7、Firefox-方法2"><a href="#4-区别IE6、IE7、Firefox-方法2" class="headerlink" title="4.区别IE6、IE7、Firefox(方法2)"></a>4.区别IE6、IE7、Firefox(方法2)</h4><p>【区别符号】：“*”、“!important”<br></p>
+<pre><code>#tip{  
+background:blue;/*Firefox背景变蓝色*/  
+*background:green!important;/*IE7背景变绿色*/  
+*background:orange;/*IE6背景变橘色*/  
+} 
+
+【说明】：IE7可以辨识「*」和「!important」，但是IE6只可以辨识「*」，却无法辨识「!important」，至于Firefox可以读取「!important」但不能辨识「*」因此可以透过这样的差异来有效区隔IE6、IE7、Firefox。
+</code></pre><h4 id="5-区别IE7、Firefox"><a href="#5-区别IE7、Firefox" class="headerlink" title="5.区别IE7、Firefox"></a>5.区别IE7、Firefox</h4><p>【区别符号】：“*”、“!important”<br></p>
+<pre><code>#tip{  
+background:blue;/*Firefox背景变蓝色*/  
+*background:green!important;/*IE7背景变绿色*/  
+} 
+
+【说明】：因为Firefox可以辨识「!important」但却无法辨识「*」，而IE7则可以同时看懂「*」、「!important」，因此可以两个辨识符号来区隔IE7和Firefox。
+</code></pre><h4 id="6-区别IE6、IE7-方法1"><a href="#6-区别IE6、IE7-方法1" class="headerlink" title="6.区别IE6、IE7(方法1)"></a>6.区别IE6、IE7(方法1)</h4><p>【区别符号】：“*”、“_”<br></p>
+<pre><code>#tip{  
+*background:black;/*IE7背景变黑色*/  
+_background:orange;/*IE6背景变橘色*/  
+} 
+【说明】：IE7和IE6都可以辨识「*」(米字号)，但IE6可以辨识「_」(底线)，IE7却无法辨识，透过IE7无法读取「_」的特性就能轻鬆区隔IE6和IE7之间的差异。
+</code></pre><h4 id="7-区别IE6、IE7-方法2"><a href="#7-区别IE6、IE7-方法2" class="headerlink" title="7.区别IE6、IE7(方法2)"></a>7.区别IE6、IE7(方法2)</h4><p>【区别符号】：“!important”<br></p>
+<pre><code> #tip{  
+background:black!important;/*IE7背景变黑色*/  
+background:orange;/*IE6背景变橘色*/  
+} 
+【说明】：因为IE7可读取「!important;」但IE6却不行，而CSS的读取步骤是从上到下，因此IE6读取时因无法辨识「!important」而直接跳到下一行读取CSS，所以背景色会呈现橘色。
+</code></pre><h4 id="8-区别IE6、Firefox"><a href="#8-区别IE6、Firefox" class="headerlink" title="8.区别IE6、Firefox"></a>8.区别IE6、Firefox</h4><p>【区别符号】：“_”<br></p>
+<pre><code>#tip{  
+background:black;/*Firefox背景变黑色*/  
+_background:orange;/*IE6背景变橘色*/  
+}
+</code></pre><p>【说明】：因为IE6可以辨识「_」(底线)，但是Firefox却不行，因此可以透过这样的差异来区隔Firefox和IE6，有效达成CSShack。<br></p>
+<h3 id="5、IE浏览器下hack总结"><a href="#5、IE浏览器下hack总结" class="headerlink" title="5、IE浏览器下hack总结"></a>5、IE浏览器下hack总结</h3><pre><code>element{
+color：#666\9； //IE8 IE9
+* color：#999；   //IE7
+_color:#EBEBEB； //IE6
+} 
+</code></pre><p>可以看出，利用字符识别无法区分IE8和IE9，我们可以从伪类的识别来区分<br></p>
+<pre><code>element{
+color：#666\9；      //IE8
+* color：#999；        //IE7
+_color:#EBEBEB；      //IE6
+}
+:root element{color：#666\9;}//IE9
+【说明】：“:root”伪类IE系列只有IE9支持，其他主流浏览器均支持，利用这一点来区分IE8和IE9。另外考虑到opera部分支持，完全支持:root,所以不使用。
+</code></pre><h3 id="6、其他主流浏览器css-hack总结"><a href="#6、其他主流浏览器css-hack总结" class="headerlink" title="6、其他主流浏览器css hack总结"></a>6、其他主流浏览器css hack总结</h3><h4 id="1-Firefox浏览器：mozilla私有属性"><a href="#1-Firefox浏览器：mozilla私有属性" class="headerlink" title="1.Firefox浏览器：mozilla私有属性"></a>1.Firefox浏览器：mozilla私有属性</h4><pre><code>@-moz-document url-prefix(){ .element{color:#f1f1f1;}} //Firefox
+</code></pre><h4 id="2-Webkit和Opera"><a href="#2-Webkit和Opera" class="headerlink" title="2.Webkit和Opera:"></a>2.Webkit和Opera:</h4><pre><code>@media all and (min-width: 0px){ .element{color:#777;} }
+//Webkit
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+.element{color:#444;}
+}
+//Opera
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+.element{color:#336699;}
+}
+</code></pre><h3 id="7、兼容各大主流浏览器-最新版本-css-hack汇总如下（最全的）："><a href="#7、兼容各大主流浏览器-最新版本-css-hack汇总如下（最全的）：" class="headerlink" title="7、兼容各大主流浏览器(最新版本)css hack汇总如下（最全的）："></a>7、兼容各大主流浏览器(最新版本)css hack汇总如下（最全的）：</h3><pre><code>.element{
+color:#000;             /*w3c标准*/
+[;color:#f00;];         /*Webkit(chrome和safari)*/
+color:#666\9;           /*IE8*/
+*color:#999;            /*IE7*/
+_color:#333;            /*IE6*/
+}
+:root .element{color:#0f0\9;}  /*IE9*/
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (
+-webkit-min-device-pixel-ratio:0) { .element{color:#336699;}}  /*opera*/
+@-moz-document url-prefix(){ .element{color:#f1f1f1;}} /*Firefox*/
+</code></pre><h3 id="8、建议：实际开发先如果不是很清楚可以先写布局代码，写一个阶段用浏览器测试工具（常用工具推荐IETEST）测试一个各个版本浏览器的布局效果，如有问题针对有问题的浏览器单独调试。"><a href="#8、建议：实际开发先如果不是很清楚可以先写布局代码，写一个阶段用浏览器测试工具（常用工具推荐IETEST）测试一个各个版本浏览器的布局效果，如有问题针对有问题的浏览器单独调试。" class="headerlink" title="8、建议：实际开发先如果不是很清楚可以先写布局代码，写一个阶段用浏览器测试工具（常用工具推荐IETEST）测试一个各个版本浏览器的布局效果，如有问题针对有问题的浏览器单独调试。"></a>8、建议：实际开发先如果不是很清楚可以先写布局代码，写一个阶段用浏览器测试工具（常用工具推荐IETEST）测试一个各个版本浏览器的布局效果，如有问题针对有问题的浏览器单独调试。</h3><p>转自：<a href="http://blog.csdn.net/liu_rong_fei/article/details/51555438" target="_blank" rel="external">http://blog.csdn.net/liu_rong_fei/article/details/51555438</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/10/38/" rel="next" title="使用Flexible实现手淘H5页面的终端适配 🍧">
+                <i class="fa fa-chevron-left"></i> 使用Flexible实现手淘H5页面的终端适配 🍧
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+    <!-- 多说评论框 start -->  
+        <div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>  
+<!-- 多说评论框 end -->    
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->  
+<script type="text/javascript">  
+var duoshuoQuery = {short_name:"yuzhiyun"};  
+    (function() {  
+        var ds = document.createElement('script');  
+        ds.type = 'text/javascript';ds.async = true;  
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';  
+        ds.charset = 'UTF-8';  
+        (document.getElementsByTagName('head')[0]   
+         || document.getElementsByTagName('body')[0]).appendChild(ds);  
+    })();  
+    </script>  
+<!-- 多说公共JS代码 end -->  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="menggeNIU" />
+          <p class="site-author-name" itemprop="name">menggeNIU</p>
+          <p class="site-description motion-element" itemprop="description">个人收藏</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">39</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/menggeNiu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1967072037" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zjflove.github.io" title="zjf" target="_blank">zjf</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.901web.com" title="pybyongbo" target="_blank">pybyongbo</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、什么是CSS-hack"><span class="nav-number">1.</span> <span class="nav-text">1、什么是CSS hack?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、CSS-hack解决问题"><span class="nav-number">2.</span> <span class="nav-text">2、CSS hack解决问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、浏览器识别字符标准对应表"><span class="nav-number">3.</span> <span class="nav-text">3、浏览器识别字符标准对应表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、各种CSS-hack情况介绍"><span class="nav-number">4.</span> <span class="nav-text">4、各种CSS hack情况介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-区别IE和非IE浏览器"><span class="nav-number">4.1.</span> <span class="nav-text">1.区别IE和非IE浏览器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-区别IE6-IE7-IE8-FF"><span class="nav-number">4.2.</span> <span class="nav-text">2.区别IE6,IE7,IE8,FF</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-区别IE6、IE7、Firefox-方法1"><span class="nav-number">4.3.</span> <span class="nav-text">3.区别IE6、IE7、Firefox(方法1)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-区别IE6、IE7、Firefox-方法2"><span class="nav-number">4.4.</span> <span class="nav-text">4.区别IE6、IE7、Firefox(方法2)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-区别IE7、Firefox"><span class="nav-number">4.5.</span> <span class="nav-text">5.区别IE7、Firefox</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-区别IE6、IE7-方法1"><span class="nav-number">4.6.</span> <span class="nav-text">6.区别IE6、IE7(方法1)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-区别IE6、IE7-方法2"><span class="nav-number">4.7.</span> <span class="nav-text">7.区别IE6、IE7(方法2)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-区别IE6、Firefox"><span class="nav-number">4.8.</span> <span class="nav-text">8.区别IE6、Firefox</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、IE浏览器下hack总结"><span class="nav-number">5.</span> <span class="nav-text">5、IE浏览器下hack总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、其他主流浏览器css-hack总结"><span class="nav-number">6.</span> <span class="nav-text">6、其他主流浏览器css hack总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Firefox浏览器：mozilla私有属性"><span class="nav-number">6.1.</span> <span class="nav-text">1.Firefox浏览器：mozilla私有属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Webkit和Opera"><span class="nav-number">6.2.</span> <span class="nav-text">2.Webkit和Opera:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、兼容各大主流浏览器-最新版本-css-hack汇总如下（最全的）："><span class="nav-number">7.</span> <span class="nav-text">7、兼容各大主流浏览器(最新版本)css hack汇总如下（最全的）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、建议：实际开发先如果不是很清楚可以先写布局代码，写一个阶段用浏览器测试工具（常用工具推荐IETEST）测试一个各个版本浏览器的布局效果，如有问题针对有问题的浏览器单独调试。"><span class="nav-number">8.</span> <span class="nav-text">8、建议：实际开发先如果不是很清楚可以先写布局代码，写一个阶段用浏览器测试工具（常用工具推荐IETEST）测试一个各个版本浏览器的布局效果，如有问题针对有问题的浏览器单独调试。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">menggeNIU</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"nnnmg"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("elhh73EjPvJjogo27rOTNyxB-gzGzoHsz", "ICYhjaCGuWcsPbm8nPit7Gkh");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+</body>
+</html>
