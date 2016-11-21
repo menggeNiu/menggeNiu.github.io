@@ -1,0 +1,926 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="HTML5," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="先来看以下这样一段代码：
+&amp;lt;ul&amp;gt;
+   &amp;lt;li&amp;gt;&amp;lt;h4&amp;gt;&amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/h4&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;/ul&amp;gt;
+当然，我是不会告诉你这段代码来自于FACEBOOK的 ，各位认为以上元素的嵌套有没有问题呢？我们会在后面讨论这个。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5的元素嵌套规则👗">
+<meta property="og:url" content="https://menggeniu.github.io/2016/06/17/41/index.html">
+<meta property="og:site_name" content="NNNの博客">
+<meta property="og:description" content="先来看以下这样一段代码：
+&amp;lt;ul&amp;gt;
+   &amp;lt;li&amp;gt;&amp;lt;h4&amp;gt;&amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/h4&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;/ul&amp;gt;
+当然，我是不会告诉你这段代码来自于FACEBOOK的 ，各位认为以上元素的嵌套有没有问题呢？我们会在后面讨论这个。">
+<meta property="og:image" content="http://www.5icool.org/uploadfile/2013/0810/20130810120753961.png">
+<meta property="og:image" content="http://www.5icool.org/uploadfile/2013/0810/20130810120757745.png">
+<meta property="og:image" content="http://www.5icool.org/uploadfile/2013/0810/20130810120758930.png">
+<meta property="og:image" content="http://www.5icool.org/uploadfile/2013/0810/20130810120759949.png">
+<meta property="og:image" content="http://www.5icool.org/uploadfile/2013/0810/20130810120759154.png">
+<meta property="og:image" content="http://www.5icool.org/uploadfile/2013/0810/20130810120800950.png">
+<meta property="og:image" content="http://www.5icool.org/uploadfile/2013/0810/20130810120800280.png">
+<meta property="og:updated_time" content="2016-11-21T08:11:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5的元素嵌套规则👗">
+<meta name="twitter:description" content="先来看以下这样一段代码：
+&amp;lt;ul&amp;gt;
+   &amp;lt;li&amp;gt;&amp;lt;h4&amp;gt;&amp;lt;a href=&amp;quot;&amp;quot;&amp;gt;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/h4&amp;gt;&amp;lt;/li&amp;gt;
+ &amp;lt;/ul&amp;gt;
+当然，我是不会告诉你这段代码来自于FACEBOOK的 ，各位认为以上元素的嵌套有没有问题呢？我们会在后面讨论这个。">
+<meta name="twitter:image" content="http://www.5icool.org/uploadfile/2013/0810/20130810120753961.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://menggeniu.github.io/2016/06/17/41/"/>
+
+
+
+
+
+  <title> HTML5的元素嵌套规则👗 | NNNの博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NNNの博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">前端小菜鸟</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/06/17/41/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="menggeNIU">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="NNNの博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HTML5的元素嵌套规则👗
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-17T21:52:38+08:00">
+                2016-06-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2016/06/17/41/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/17/41/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/06/17/41/" class="leancloud_visitors" data-flag-title="HTML5的元素嵌套规则👗">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>先来看以下这样一段代码：<br></p>
+<pre><code>&lt;ul&gt;
+   &lt;li&gt;&lt;h4&gt;&lt;a href=&quot;&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/a&gt;&lt;/h4&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+</code></pre><p>当然，我是不会告诉你这段代码来自于FACEBOOK的 ，各位认为以上元素的嵌套有没有问题呢？我们会在后面讨论这个。<br></p>
+<h4 id="HTML4-XHTML的嵌套规则"><a href="#HTML4-XHTML的嵌套规则" class="headerlink" title="HTML4/XHTML的嵌套规则"></a>HTML4/XHTML的嵌套规则</h4><p>在我们的印象中会有这样的嵌套规则：<br><br><img src="http://www.5icool.org/uploadfile/2013/0810/20130810120753961.png" alt=""><br></p>
+<pre><code>内联元素不能嵌套块元素&lt;p&gt;元素和&lt;h1~6&gt;元素不能嵌套块元素
+</code></pre><p>那么到底什么是块元素，什么是内联元素？<br><br>以下是W3C CSS2.1规范中对块元素和内联元素的定义：<br></p>
+<pre><code>Block-level elements are those elements of the source document that are formatted visually as blocks (e.g., paragraphs). The following values of the &apos;display&apos; property make an element block-level: &apos;block&apos;, &apos;list-item&apos;, and &apos;table&apos;.
+    Inline-level elements are those elements of the source document that do not form new blocks of content; the content is distributed in lines (e.g., emphasized pieces of text within a paragraph, inline images, etc.). The following values of the &apos;display&apos; property make an element inline-level: &apos;inline&apos;, &apos;inline-table&apos;, and &apos;inline-block&apos;. Inline-level elements generate inline-level boxes, which are boxes that participate in an inline formatting context.
+</code></pre><p>我们可以这样理解：块元素一般都从新行开始，内联元素在一行内显示，我们也可以通过CSS属性display的’inline’ 或 ‘ block’ 来改变元素为内联元素或块元素，当然这是CSS中对元素的分类，显然用 ‘display’ 的属性值来对html元素进行分类是不严谨的。<br><br>如果按照上述规则来讲，那么FACEBOOK的做法就是一种错误的做法，因为他在内联元素<a>元素中嵌套了块元素元素<div>，但是细心的读者应该会发现上述规则是基于HTML4/xHTML1的strict模式，而FACEBOOK现在已经统一使用了html5的doctype，那么这个规则到底还是是否适用？<br></div></a></p>
+<h4 id="HTML5的元素嵌套规则"><a href="#HTML5的元素嵌套规则" class="headerlink" title="HTML5的元素嵌套规则"></a>HTML5的元素嵌套规则</h4><p>元素的嵌套规则和页面头部申明的DTD有着千丝万缕的关系，DTD基础请查看我之前写的文章《<a href="http://www.smallni.com/dtd/" target="_blank" rel="external">DTD详解</a>》，那么在最新的HTML5规范中是否对元素嵌套有着新的规范呢？<br><br>让我们先了解下W3C在最新的HTML5规范中对元素的分类方式：<br><br><img src="http://www.5icool.org/uploadfile/2013/0810/20130810120757745.png" alt=""><br><br>如上图，元素的分类不再是块元素或内联元素这样来分类（其实从来就没有这样分），而是按照如下分类来分：<strong>Flow</strong>（流式元素）、<strong>Heading</strong>（标题元素）、<strong>Sectioning</strong>（章节元素）、<strong>Phrasing</strong>（段落元素）、<strong>Embedded</strong>（嵌入元素）、<strong>Interactive</strong>（交互元素）、<strong>Metadata</strong>（元数据元素）。<br></p>
+<h5 id="Flow（流式元素）"><a href="#Flow（流式元素）" class="headerlink" title="Flow（流式元素）"></a>Flow（流式元素）</h5><p>在应用程序和文档的主体部分中使用的大部分元素都被分类为流式元素。<br></p>
+<pre><code>a， abbr， address， area（如果它是map元素的后裔）， article， aside， audio， b， bdi， bdo， blockquote， br， button， canvas， cite， code， command， datalist， del， details， dfn， div， dl，em， embed， fieldset， figure， footer， form， h1， h2， h3， h4， h5， h6， header， hgroup， hr， i， iframe， img， input， ins， kbd， keygen， label， map， mark， math， menu， meter，nav， noscript， object， ol， output， p， pre， progress， q， ruby， s， samp， script， section， select， small， span， strong， style（如果该元素设置了scoped属性）， sub， sup， svg， table，textarea， time， u， ul， var， video， wbr， text
+</code></pre><h5 id="Heading（标题元素）"><a href="#Heading（标题元素）" class="headerlink" title="Heading（标题元素）"></a>Heading（标题元素）</h5><p>标题式元素定义一个区块/章节（section）（无论是明确的使用章节式内容的元素标记，或者标题式内容自身所隐含的）的标题。<br></p>
+<pre><code>h1， h2， h3， h4， h5， h6， hgroup
+</code></pre><h5 id="Sectioning（章节元素）"><a href="#Sectioning（章节元素）" class="headerlink" title="Sectioning（章节元素）"></a>Sectioning（章节元素）</h5><p>章节式元素是用于定义标题及页脚范围的元素。<br></p>
+<pre><code>article， aside， nav， section
+</code></pre><h5 id="Phrasing（段落元素）"><a href="#Phrasing（段落元素）" class="headerlink" title="Phrasing（段落元素）"></a>Phrasing（段落元素）</h5><p>段落式元素是文档中的文本、标记段落级文本的元素。<br></p>
+<pre><code>a（如果其只包含段落式元素）， abbr， area（如果它是map元素的后裔）， audio， b， bdi， bdo， br， button， canvas， cite， code， command， datalist， del（如果其只包含段落式元素）， dfn， em， embed， i，iframe， img， input， ins（如果其只包含段落式元素）， kbd， keygen， label， map（如果其只包含段落式元素）， mark， math， meter， noscript， object， output， progress， q， ruby， s， samp， script，select， small， span， strong， sub， sup， svg， textarea， time， u， var， video， wbr， text
+</code></pre><h5 id="Embedded（嵌入元素）"><a href="#Embedded（嵌入元素）" class="headerlink" title="Embedded（嵌入元素）"></a>Embedded（嵌入元素）</h5><p>嵌入式元素是引用或插入到文档中其他资源的元素。<br><br>audio， canvas， embed， iframe， img， math， object， svg， video<br></p>
+<h5 id="Interactive（交互元素）"><a href="#Interactive（交互元素）" class="headerlink" title="Interactive（交互元素）"></a>Interactive（交互元素）</h5><p>交互式元素是专门用于与用户交互的元素。<br></p>
+<pre><code>a， audio（如果设置了controls属性）， button， details， embed， iframe， img（如果设置了usemap属性）， input（如果type属性不为hidden状态）， keygen， label， menu（如果type属性为toolbar状态），object（如果设置了usemap属性）， select， textarea， video（如果设置了controls属性）
+</code></pre><h5 id="Metadata（元数据元素）"><a href="#Metadata（元数据元素）" class="headerlink" title="Metadata（元数据元素）"></a>Metadata（元数据元素）</h5><p>元数据元素是可以被用于说明其他内容的表现或行为，或者在当前文档和其他文档之间建立联系的元素<br></p>
+<pre><code>base，command，link，meta，noscript，script，style，title
+</code></pre><p>各分类会有交叉或重叠的现象，这说明在html5中，元素可能属于上述所有分类中的一个或多个。<br><br>例子(1)：&lt; h1 &gt;~&lt; h6 &gt;元素：<br></p>
+<ul>
+<li>Categories:<br>Flow content.<br><br>Heading content.<br><br>Palpable content.<br></li>
+<li>Contexts in which this element can be used:<br>As a child of an hgroup element.<br><br>Where flow content is expected.<br></li>
+<li><p>Content model:<br>Phrasing content.<br><br>其中的「<strong>Categories</strong>」说明该元素的类别，「<strong>Contexts in which this element can be used</strong>」说明该元素能在何种场景下被使用，也就是它的父元素是什么，「<strong>Content model</strong>」说明该元素可以包含的内容是什么，由于页面中的元素是层层嵌套的，一个元素有可能既是父元素同时也是子元素的角色，所以下面我们以「<strong>Content model</strong>」也就是可包含的子元素做讨论。<br><br>那么对于h1~h6元素：<br></p>
+</li>
+<li><p>它们同时属于Flow content 、Heading content 和 Palpable content三个分类</p>
+</li>
+<li>它们的父元素可以是&lt; hgroup &gt;，同时那些子元素是流式元素的元素也可以作为h1-h6元素的父元素</li>
+<li>它们允许的子元素是段落式元素</li>
+</ul>
+<p>例子(2)：&lt; div &gt;元素<br></p>
+<ul>
+<li>Categories:<br>Flow content.<br><br>Palpable content.<br></li>
+<li>Contexts in which this element can be used:<br>Where phrasing content is expected.<br></li>
+<li><p>Content model:<br>Flow content.<br><br>对于&lt; div &gt;元素：<br></p>
+</li>
+<li><p>同时属于Flow content 、 Palpable content分类</p>
+</li>
+<li>父元素必须是那些子元素为段落式元素的元素</li>
+<li>允许的子元素是流式元素</li>
+</ul>
+<p><div>元素允许的子元素是流式元素，流式元素基本涵括了页面中的大部分元素，所以我们在用<div>时可以不用担心嵌套错误的问题。<br><br>但对于&lt; h1 &gt;~&lt; h6 &gt;元素，它们允许的子元素为段落式元素，而段落式元素并不包含诸如&lt; div &gt;、&lt; p &gt;、&lt; ul &gt;&lt; ol &gt;之类的元素，这就说明按照html5的规范，是不允许在标题元素内部嵌入&lt; div &gt;、&lt; p &gt;、&lt; ul &gt;&lt; ol &gt;之类的元素。<br><br>例子(3)：&lt; a &gt;元素<br></div></div></p>
+<ul>
+<li>Categories:<br>Flow content.<br><br>Phrasing content.<br><br>Interactive content.<br><br>Palpable content.<br></li>
+<li>Contexts in which this element can be used:<br>Where phrasing content is expected.<br></li>
+<li><p>Content model:<br>Transparent, but there must be no interactive content descendant.<br><br>对于&lt; a &gt;元素：<br></p>
+</li>
+<li><p>同时属于Flow content 、 Phrasing content、Interactive content、Palpable content分类</p>
+</li>
+<li>父元素必须是那些子元素为段落式元素的元素</li>
+<li>允许的子元素是以它的父元素允许的子元素为准，但不能包含交互式元素</li>
+</ul>
+<p>这样看&lt; a &gt;元素还是挺有意思的，允许的子元素要看它的父元素所能包含的子元素。<br></p>
+<h4 id="再来看文章开头中提到的代码"><a href="#再来看文章开头中提到的代码" class="headerlink" title="再来看文章开头中提到的代码"></a>再来看文章开头中提到的代码</h4><pre><code>&lt;ul&gt;
+  &lt;li&gt;&lt;h4&gt;&lt;a href=&quot;&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;/a&gt;&lt;/h4&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><p>这时&lt; a &gt;的父元素为&lt; div &gt;，而&lt; div &gt;元素允许的子元素是流式元素，流式元素中包含<div>元素，所以这样的情形下在&lt; a &gt;里面嵌套&lt; div &gt;就是正确的做法！<br></div></p>
+<h4 id="嵌套错误可能引起的问题"><a href="#嵌套错误可能引起的问题" class="headerlink" title="嵌套错误可能引起的问题"></a>嵌套错误可能引起的问题</h4><p>上面讲了HTML5对元素新的分类方式和以&lt; h1 &gt;~&lt; h6 &gt;、&lt; div &gt;、&lt; a &gt;元素举例讲述了各自的嵌套规则，但FACEBOOK即使不按照标准去嵌套也不会有大的错误问题，这就给我们带来了一个思考：嵌套错误到底会不会有问题？<br><br>例子(1)：开始与结束标签嵌套错误<br></p>
+<pre><code>&lt;div&gt;&lt;h2&gt;内容&lt;/div&gt;&lt;/h2&gt;
+</code></pre><p>测试结果：<br><br><img src="http://www.5icool.org/uploadfile/2013/0810/20130810120758930.png" alt=""><br><br>例子(2)：</p><p>元素嵌套<div>元素<br></div></p>
+<pre><code>&lt;p&gt;&lt;div&gt;内容&lt;/div&gt;&lt;/p&gt;
+</code></pre><p>测试结果：<br><br><img src="http://www.5icool.org/uploadfile/2013/0810/20130810120759949.png" alt=""><br><br>例子(3)：列表元素&lt; li &gt;兄弟元素为&lt; div &gt;<br></p>
+<pre><code>&lt;ul&gt;&lt;li&gt;内容&lt;/li&gt;&lt;div&gt;内容&lt;/div&gt;&lt;/ul&gt;
+</code></pre><p>测试结果：<br><br><img src="http://www.5icool.org/uploadfile/2013/0810/20130810120759154.png" alt=""><br><br>例子(4)：&lt; h2 &gt;元素嵌套&lt; div &gt;元素<br></p>
+<pre><code>&lt;h2&gt;&lt;div&gt;内容&lt;/div&gt;&lt;/h2&gt;
+</code></pre><p>测试结果：<br><br><img src="http://www.5icool.org/uploadfile/2013/0810/20130810120800950.png" alt=""><br><br>例子(5)：&lt; a &gt;元素嵌套&lt; a &gt;元素<br></p>
+<pre><code>&lt;a href=&quot;&quot;&gt;&lt;a href=&quot;&quot;&gt;内容&lt;/a&gt;&lt;/a&gt;
+</code></pre><p>测试结果：<br><br><img src="http://www.5icool.org/uploadfile/2013/0810/20130810120800280.png" alt=""><br></p>
+<h4 id="通过上述例子，我们总结如下："><a href="#通过上述例子，我们总结如下：" class="headerlink" title="通过上述例子，我们总结如下："></a>通过上述例子，我们总结如下：</h4><ul>
+<li>元素开始与结束标签嵌套错误，页面可以在大部分浏览器被正常解析，IE9会出现解析错误</li>
+<li>在&lt; p &gt;元素内嵌入&lt; div &gt;等元素造成所有浏览器的解析错误</li>
+<li>在&lt; h1 &gt;~&lt; h6 &gt;元素内嵌入&lt; div &gt;等元素所有浏览器可以解析正常</li>
+<li>在&lt; a &gt;元素内嵌入&lt; a &gt;元素会导致所有浏览器的解析错误</li>
+<li>在列表元素&lt; li &gt;&lt; dt &gt;&lt; dd &gt;等插入非列表兄弟元素会导致IE6\IE7的解析错误</li>
+</ul>
+<p>其实，这里说解析错误并不是很合理，应该是说浏览器解析出来的结果和我们期望的结果不一致，但任何的嵌套错误都不会导致页面呈现有很大的出错。<br><br>我们知道JS代码如果写的有语法错误，浏览器的JS解释器就会拒绝执行并且报错，而浏览器在遇到不符合语法规定的HTML代码时则会千方百计将其呈现出来。<br></p>
+<h4 id="严格嵌套约束、语义嵌套约束"><a href="#严格嵌套约束、语义嵌套约束" class="headerlink" title="严格嵌套约束、语义嵌套约束"></a>严格嵌套约束、语义嵌套约束</h4><p>通过上面的示例我们发现在&lt; p &gt;元素里嵌套<div>元素或者&lt; a &gt;元素里&lt; a &gt;元素会导致所有的浏览器都解析错误，这其实是W3C规范的严格嵌套约束，严格嵌套约束要求必须去遵守，不然就会导致所有浏览器的解析错误。<br></div></p>
+<h4 id="严格嵌套约束规则："><a href="#严格嵌套约束规则：" class="headerlink" title="严格嵌套约束规则："></a>严格嵌套约束规则：</h4><ul>
+<li>a元素里不可以嵌套交互式元素(&lt; a &gt;、&lt; button &gt;、&lt; select &gt;等)</li>
+<li>&lt; p &gt;里面不可以嵌套&lt; div &gt;、&lt; h1 &gt;~&lt; h6 &gt;、&lt; p &gt;、&lt; ul &gt;/&lt; ol &gt;/&lt; li &gt;、&lt; dl &gt;/&lt; dt &gt;/&lt; dd &gt;、&lt; form &gt;等</li>
+<li>暂时没有发现更多，有的欢迎告诉我</li>
+</ul>
+<h4 id="语义嵌套约束："><a href="#语义嵌套约束：" class="headerlink" title="语义嵌套约束："></a>语义嵌套约束：</h4><p>每个元素基本都有自己的嵌套规则（即父元素可以是什么，子元素可以是什么），除了严格嵌套约束之外的一些规则就是语义嵌套约束，对于语义嵌套约束，如果不遵守，页面可能正常，但也可能解析错误，这和下面要讲的容错机制有关。<br></p>
+<h4 id="浏览器的容错机制"><a href="#浏览器的容错机制" class="headerlink" title="浏览器的容错机制"></a>浏览器的容错机制</h4><p>并不是每位同学在写完页面后去做合法性检查，因此浏览器厂商不得不让它们的浏览器以尽可能宽松的方式去处理网页，每个浏览器内核中都有相当一部分代码专门用来处理那些含糊不清的html标记及嵌套，并且会去猜测前端们到底想如何呈现网页，这是浏览器的容错机制。<br><br>这其实在告诉我们，我们写出来的HTML代码不符合W3C规范可能最终呈现出来没有异样，但那其实是浏览器的一种容错机制，我们没有理由让自己以一个随性的态度去coding，对待自己的代码应该一丝不苟，即使HTML5的胸襟很宽广。<br></p>
+<h4 id="拥抱WEB标准"><a href="#拥抱WEB标准" class="headerlink" title="拥抱WEB标准"></a>拥抱WEB标准</h4><p>原本我们认为从HTML4到XHTML是一个时代，现在又从XHTML跨到了HTML5，新时代新标准的诞生，我们应该敞开胸怀去拥抱，而不是排斥。<br><br>你关注或不关注，标准就在那里，只增不减。我们应该感谢W3C这样一个组织，让各个浏览器厂商抛开彼此的敌意共同制定新的标准。不然，也许你会像90年代那样，JS引用一个元素都需要为某个浏览器写一套自己的代码。<br><br>WEB标准只会使我们吃饭变得更香，睡眠变得更好，新的技术或标准会推动我们去富有热情的coding，而不是每天在重复劳动。<br></p>
+<p>转自：<a href="http://www.5icool.org/a/201308/a2081_2.html" target="_blank" rel="external">http://www.5icool.org/a/201308/a2081_2.html</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML5/" rel="tag"># HTML5</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/16/40/" rel="next" title="HTML+CSS: 三层嵌套（滑动门、背景图自适应扩展）💚">
+                <i class="fa fa-chevron-left"></i> HTML+CSS: 三层嵌套（滑动门、背景图自适应扩展）💚
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+    <!-- 多说评论框 start -->  
+        <div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>  
+<!-- 多说评论框 end -->    
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->  
+<script type="text/javascript">  
+var duoshuoQuery = {short_name:"yuzhiyun"};  
+    (function() {  
+        var ds = document.createElement('script');  
+        ds.type = 'text/javascript';ds.async = true;  
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';  
+        ds.charset = 'UTF-8';  
+        (document.getElementsByTagName('head')[0]   
+         || document.getElementsByTagName('body')[0]).appendChild(ds);  
+    })();  
+    </script>  
+<!-- 多说公共JS代码 end -->  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="menggeNIU" />
+          <p class="site-author-name" itemprop="name">menggeNIU</p>
+          <p class="site-description motion-element" itemprop="description">个人收藏</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">41</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/menggeNiu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1967072037" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zjflove.github.io" title="zjf" target="_blank">zjf</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.901web.com" title="pybyongbo" target="_blank">pybyongbo</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML4-XHTML的嵌套规则"><span class="nav-number">1.</span> <span class="nav-text">HTML4/XHTML的嵌套规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML5的元素嵌套规则"><span class="nav-number">2.</span> <span class="nav-text">HTML5的元素嵌套规则</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Flow（流式元素）"><span class="nav-number">2.1.</span> <span class="nav-text">Flow（流式元素）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Heading（标题元素）"><span class="nav-number">2.2.</span> <span class="nav-text">Heading（标题元素）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sectioning（章节元素）"><span class="nav-number">2.3.</span> <span class="nav-text">Sectioning（章节元素）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Phrasing（段落元素）"><span class="nav-number">2.4.</span> <span class="nav-text">Phrasing（段落元素）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Embedded（嵌入元素）"><span class="nav-number">2.5.</span> <span class="nav-text">Embedded（嵌入元素）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Interactive（交互元素）"><span class="nav-number">2.6.</span> <span class="nav-text">Interactive（交互元素）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Metadata（元数据元素）"><span class="nav-number">2.7.</span> <span class="nav-text">Metadata（元数据元素）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#再来看文章开头中提到的代码"><span class="nav-number">3.</span> <span class="nav-text">再来看文章开头中提到的代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#嵌套错误可能引起的问题"><span class="nav-number">4.</span> <span class="nav-text">嵌套错误可能引起的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过上述例子，我们总结如下："><span class="nav-number">5.</span> <span class="nav-text">通过上述例子，我们总结如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#严格嵌套约束、语义嵌套约束"><span class="nav-number">6.</span> <span class="nav-text">严格嵌套约束、语义嵌套约束</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#严格嵌套约束规则："><span class="nav-number">7.</span> <span class="nav-text">严格嵌套约束规则：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#语义嵌套约束："><span class="nav-number">8.</span> <span class="nav-text">语义嵌套约束：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器的容错机制"><span class="nav-number">9.</span> <span class="nav-text">浏览器的容错机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拥抱WEB标准"><span class="nav-number">10.</span> <span class="nav-text">拥抱WEB标准</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">menggeNIU</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"nnnmg"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("elhh73EjPvJjogo27rOTNyxB-gzGzoHsz", "ICYhjaCGuWcsPbm8nPit7Gkh");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+</body>
+</html>
