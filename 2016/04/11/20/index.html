@@ -612,13 +612,22 @@ test(1,2,3,4);
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/04/11/20/"
-           data-title="回味js基础:call/bind🍕" data-url="https://menggeniu.github.io/2016/04/11/20/">
-      </div>
-    
-  </div>
+    <!-- 多说评论框 start -->  
+        <div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>  
+<!-- 多说评论框 end -->    
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->  
+<script type="text/javascript">  
+var duoshuoQuery = {short_name:"yuzhiyun"};  
+    (function() {  
+        var ds = document.createElement('script');  
+        ds.type = 'text/javascript';ds.async = true;  
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';  
+        ds.charset = 'UTF-8';  
+        (document.getElementsByTagName('head')[0]   
+         || document.getElementsByTagName('body')[0]).appendChild(ds);  
+    })();  
+    </script>  
+<!-- 多说公共JS代码 end -->  
 
 
         </div>
