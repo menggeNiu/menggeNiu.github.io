@@ -5,10 +5,10 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
@@ -29,7 +29,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -63,9 +63,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -77,7 +77,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -96,35 +96,19 @@
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+<script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
+    scheme: 'Muse',
     sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: 0,
       author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
-
-
-
-  <link rel="canonical" href="https://menggeniu.github.io/page/4/"/>
-
-
-
-
 
   <title> NNNの博客 </title>
 </head>
@@ -218,8 +202,6 @@
   
 </nav>
 
-
-
  </div>
     </header>
 
@@ -233,26 +215,13 @@
       
 
   
+  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/02/25/8/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="menggeNIU">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NNNの博客">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
-    </span>
-  </span>
 
     
       <header class="post-header">
@@ -274,19 +243,13 @@
 
         <div class="post-meta">
           <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-25T22:10:19+08:00">
-                2016-02-25
-              </time>
-            
-
-            
-
-            
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-25T22:10:19+08:00" content="2016-02-25">
+              2016-02-25
+            </time>
           </span>
 
           
@@ -294,9 +257,9 @@
           
             
               <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
+                &nbsp; | &nbsp;
                 <a href="/2016/02/25/8/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/25/8/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/25/8/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,20 +269,8 @@
 
           
           
-             <span id="/2016/02/25/8/" class="leancloud_visitors" data-flag-title="Swiper用法小总结🌸">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
 
           
-
-          
-
         </div>
       </header>
     
@@ -333,16 +284,86 @@
       
         
           
-          最近在研究swiper。在使用的过程中对swiper有个更具体的了解。下面就让我们来看看swiper吧~
-关于swiper Swiper 是一款免费以及轻量级的移动设备触控滑块的js框架,使用硬件加速过渡（如果该设备支持的话）。主要使用于移动端的网站、移动web apps,native apps和h
-          ...
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/25/8/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h3 id="最近在研究swiper。在使用的过程中对swiper有个更具体的了解。下面就让我们来看看swiper吧"><a href="#最近在研究swiper。在使用的过程中对swiper有个更具体的了解。下面就让我们来看看swiper吧" class="headerlink" title="最近在研究swiper。在使用的过程中对swiper有个更具体的了解。下面就让我们来看看swiper吧~"></a>最近在研究swiper。在使用的过程中对swiper有个更具体的了解。下面就让我们来看看swiper吧~</h3><hr>
+<h4 id="关于swiper"><a href="#关于swiper" class="headerlink" title="关于swiper"></a>关于swiper</h4><p> Swiper 是一款免费以及轻量级的移动设备触控滑块的js框架,使用硬件加速过渡（如果该设备支持的话）。主要使用于移动端的网站、移动web apps,native apps和hybrid apps。主要是为IOS而设计的,同时,在Android、WP8系统也有着良好的用户体验,Swiper从3.0开始不再全面支持PC端。因此,如需在PC上兼容更多的浏览器,可以选择Swiper2.x（甚至支持IE7）。(转自官网)</p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><h5 id="1-大家可以在-http-www-swiper-com-cn-官方文档中查看swiper的用法和下载swiper文件。"><a href="#1-大家可以在-http-www-swiper-com-cn-官方文档中查看swiper的用法和下载swiper文件。" class="headerlink" title="1.大家可以在 http://www.swiper.com.cn 官方文档中查看swiper的用法和下载swiper文件。"></a>1.大家可以在 <code>http://www.swiper.com.cn</code> 官方文档中查看swiper的用法和下载swiper文件。</h5><h5 id="2-Swiper使用"><a href="#2-Swiper使用" class="headerlink" title="2.Swiper使用"></a>2.Swiper使用</h5><h6 id="2-1-加载swiper插件"><a href="#2-1-加载swiper插件" class="headerlink" title="2.1 加载swiper插件"></a>2.1 加载swiper插件</h6><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    ...
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/swiper.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    ...
+    &lt;script src=&quot;path/to/swiper.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h6 id="2-2-html内容"><a href="#2-2-html内容" class="headerlink" title="2.2 html内容"></a>2.2 html内容</h6><pre><code>&lt;div class=&quot;swiper-container&quot;&gt;
+    &lt;div class=&quot;swiper-wrapper&quot;&gt;
+        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 1&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 2&lt;/div&gt;
+        &lt;div class=&quot;swiper-slide&quot;&gt;Slide 3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- 如果需要分页器 --&gt;
+    &lt;div class=&quot;swiper-pagination&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- 如果需要导航按钮 --&gt;
+    &lt;div class=&quot;swiper-button-prev&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;swiper-button-next&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- 如果需要滚动条 --&gt;
+    &lt;div class=&quot;swiper-scrollbar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+导航等组件可以放在container之外
+</code></pre><h6 id="2-3-swiper初始化"><a href="#2-3-swiper初始化" class="headerlink" title="2.3 swiper初始化"></a>2.3 swiper初始化</h6><pre><code>&lt;script&gt;        
+  var mySwiper = new Swiper (&apos;.swiper-container&apos;, {
+    direction: &apos;vertical&apos;,
+    loop: true,
+
+    // 如果需要分页器
+    pagination: &apos;.swiper-pagination&apos;,
+
+    // 如果需要前进后退按钮
+    nextButton: &apos;.swiper-button-next&apos;,
+    prevButton: &apos;.swiper-button-prev&apos;,
+
+    // 如果需要滚动条
+    scrollbar: &apos;.swiper-scrollbar&apos;,
+  })        
+  &lt;/script&gt;
+</code></pre><h5 id="3-Swiper-Animate使用方法"><a href="#3-Swiper-Animate使用方法" class="headerlink" title="3.Swiper Animate使用方法"></a>3.Swiper Animate使用方法</h5><h6 id="3-1-使用Swiper-Animate需要加载swiper-animate-min-js和animate-min-css-初始化代码如下"><a href="#3-1-使用Swiper-Animate需要加载swiper-animate-min-js和animate-min-css-初始化代码如下" class="headerlink" title="3.1 使用Swiper Animate需要加载swiper.animate.min.js和animate.min.css,初始化代码如下"></a>3.1 使用Swiper Animate需要加载swiper.animate.min.js和animate.min.css,初始化代码如下</h6><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    ...
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/swiper.min.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/animate.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    ...
+    &lt;script src=&quot;path/to/swiper.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;path/to/swiper.animate.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h6 id="3-2-初始化时隐藏元素并在需要开始的时刻开始动画"><a href="#3-2-初始化时隐藏元素并在需要开始的时刻开始动画" class="headerlink" title="3.2 初始化时隐藏元素并在需要开始的时刻开始动画"></a>3.2 初始化时隐藏元素并在需要开始的时刻开始动画</h6><pre><code>&lt;script&gt;        
+  var mySwiper = new Swiper (&apos;.swiper-container&apos;, {
+  onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+    swiperAnimateCache(swiper); //隐藏动画元素 
+    swiperAnimate(swiper); //初始化完成开始动画
+  }, 
+  onSlideChangeEnd: function(swiper){ 
+    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+  } 
+  })        
+ &lt;/script&gt;
+</code></pre><h6 id="3-3-在需要运动的元素上面增加类名ani-Swiper-Animate需要指定几个参数："><a href="#3-3-在需要运动的元素上面增加类名ani-Swiper-Animate需要指定几个参数：" class="headerlink" title="3.3 在需要运动的元素上面增加类名ani,Swiper Animate需要指定几个参数："></a>3.3 在需要运动的元素上面增加类名ani,Swiper Animate需要指定几个参数：</h6><p>swiper-animate-effect：切换效果,例如 fadeInUp </p>
+<p>swiper-animate-duration：可选,动画持续时间（单位秒）,例如 0.5s</p>
+<p>swiper-animate-delay：可选,动画延迟时间（单位秒）,例如 0.3s</p>
+<pre><code>&lt;div class=&quot;swiper-slide&quot;&gt;
+    &lt;p class=&quot;ani&quot; swiper-animate-effect=&quot;fadeInUp&quot; swiper-animate-duration=&quot;0.5s&quot; swiper-animate-delay=&quot;0.3s&quot;&gt;内容&lt;/p&gt;
+&lt;/div&gt; 
+</code></pre><h6 id="3-4-动画效果可参考Animate-css-如果里面的效果都不是我们想要的-我们可以仿照Animate-css的格式仿写其他效果-我在做这个项目的时候就是自己写了些动画进去"><a href="#3-4-动画效果可参考Animate-css-如果里面的效果都不是我们想要的-我们可以仿照Animate-css的格式仿写其他效果-我在做这个项目的时候就是自己写了些动画进去" class="headerlink" title="3.4 动画效果可参考Animate.css,如果里面的效果都不是我们想要的,我们可以仿照Animate.css的格式仿写其他效果,我在做这个项目的时候就是自己写了些动画进去"></a>3.4 动画效果可参考Animate.css,如果里面的效果都不是我们想要的,我们可以仿照Animate.css的格式仿写其他效果,我在做这个项目的时候就是自己写了些动画进去</h6><p><br></p>
+<h3 id="下面就项目中遇到的小技巧-自己稍微总结一下"><a href="#下面就项目中遇到的小技巧-自己稍微总结一下" class="headerlink" title="下面就项目中遇到的小技巧,自己稍微总结一下~"></a>下面就项目中遇到的小技巧,自己稍微总结一下~</h3><p><br></p>
+<h4 id="1-swiper中-如果设置为loop时-控制前后的按钮中index值就不好用-因为循环找不到开始和结束-如果设置为loop-前后按钮就没有颜色的变化。"><a href="#1-swiper中-如果设置为loop时-控制前后的按钮中index值就不好用-因为循环找不到开始和结束-如果设置为loop-前后按钮就没有颜色的变化。" class="headerlink" title="1.swiper中,如果设置为loop时,控制前后的按钮中index值就不好用,因为循环找不到开始和结束,如果设置为loop,前后按钮就没有颜色的变化。"></a>1.swiper中,如果设置为loop时,控制前后的按钮中index值就不好用,因为循环找不到开始和结束,如果设置为loop,前后按钮就没有颜色的变化。</h4><h4 id="2-使用swiper插件的时候-如果想要对一个元素进行多个动画-则可以加多个父级div等-对div进行动画的添加-从而达到想要实现的动画效果。"><a href="#2-使用swiper插件的时候-如果想要对一个元素进行多个动画-则可以加多个父级div等-对div进行动画的添加-从而达到想要实现的动画效果。" class="headerlink" title="2.使用swiper插件的时候,如果想要对一个元素进行多个动画,则可以加多个父级div等,对div进行动画的添加,从而达到想要实现的动画效果。"></a>2.使用swiper插件的时候,如果想要对一个元素进行多个动画,则可以加多个父级div等,对div进行动画的添加,从而达到想要实现的动画效果。</h4><h4 id="3-嵌套swiper的时候如果到添加的swiper出现-原来的swiper不能滑动-则在添加swiper上加swiper-no-swiping-noSwiping-false-原来的swiper-的-js里面添加noSwiping-true-属性。"><a href="#3-嵌套swiper的时候如果到添加的swiper出现-原来的swiper不能滑动-则在添加swiper上加swiper-no-swiping-noSwiping-false-原来的swiper-的-js里面添加noSwiping-true-属性。" class="headerlink" title="3.嵌套swiper的时候如果到添加的swiper出现,原来的swiper不能滑动,则在添加swiper上加swiper-no-swiping,noSwiping:false, 原来的swiper,的,js里面添加noSwiping:true,属性。"></a>3.嵌套swiper的时候如果到添加的swiper出现,原来的swiper不能滑动,则在添加swiper上加swiper-no-swiping,noSwiping:false, 原来的swiper,的,js里面添加noSwiping:true,属性。</h4><h4 id="4-swiper1-slideTo-index-swiper滑动到第index页的函数。"><a href="#4-swiper1-slideTo-index-swiper滑动到第index页的函数。" class="headerlink" title="4.swiper1._slideTo(index);swiper滑动到第index页的函数。"></a>4.swiper1._slideTo(index);swiper滑动到第index页的函数。</h4>
+          
         
       
     </div>
@@ -354,7 +375,6 @@
     <div>
       
     </div>
-
 
     <footer class="post-footer">
       
@@ -373,26 +393,13 @@
       
 
   
+  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/02/18/7/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="menggeNIU">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NNNの博客">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
-    </span>
-  </span>
 
     
       <header class="post-header">
@@ -414,19 +421,13 @@
 
         <div class="post-meta">
           <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-18T22:00:26+08:00">
-                2016-02-18
-              </time>
-            
-
-            
-
-            
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-18T22:00:26+08:00" content="2016-02-18">
+              2016-02-18
+            </time>
           </span>
 
           
@@ -434,9 +435,9 @@
           
             
               <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
+                &nbsp; | &nbsp;
                 <a href="/2016/02/18/7/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/7/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/7/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -446,20 +447,8 @@
 
           
           
-             <span id="/2016/02/18/7/" class="leancloud_visitors" data-flag-title="使用GitHub来搭建Hexo博客">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
 
           
-
-          
-
         </div>
       </header>
     
@@ -473,18 +462,63 @@
       
         
           
-          最近总算是使用GitHub搭建了自己的博客，趁热乎赶紧来记录下搭建过程~
-初步搭建过程
-1. 你需要有一个Github的账号，如果没有可以注册，很简单的~
-2. 进到Github新建一个项目，项目的名字是自己的用户名+.github.io，比如我建的项目仓库的名字就是’menggeNiu.githu
-          ...
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/18/7/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h2 id="最近总算是使用GitHub搭建了自己的博客，趁热乎赶紧来记录下搭建过程"><a href="#最近总算是使用GitHub搭建了自己的博客，趁热乎赶紧来记录下搭建过程" class="headerlink" title="最近总算是使用GitHub搭建了自己的博客，趁热乎赶紧来记录下搭建过程~"></a>最近总算是使用GitHub搭建了自己的博客，趁热乎赶紧来记录下搭建过程~</h2><p><br></p>
+<h3 id="初步搭建过程"><a href="#初步搭建过程" class="headerlink" title="初步搭建过程"></a>初步搭建过程</h3><p><br></p>
+<h4 id="1-你需要有一个Github的账号，如果没有可以注册，很简单的"><a href="#1-你需要有一个Github的账号，如果没有可以注册，很简单的" class="headerlink" title="1. 你需要有一个Github的账号，如果没有可以注册，很简单的~"></a>1. 你需要有一个Github的账号，如果没有可以注册，很简单的~</h4><p><br></p>
+<h4 id="2-进到Github新建一个项目，项目的名字是自己的用户名-github-io，比如我建的项目仓库的名字就是’menggeNiu-github-io’，然后把这个项目仓库克隆到本地，这个操作除了通过终端来进行，还可以使用GitHub-Desktop，我觉得后者更加方便。"><a href="#2-进到Github新建一个项目，项目的名字是自己的用户名-github-io，比如我建的项目仓库的名字就是’menggeNiu-github-io’，然后把这个项目仓库克隆到本地，这个操作除了通过终端来进行，还可以使用GitHub-Desktop，我觉得后者更加方便。" class="headerlink" title="2. 进到Github新建一个项目，项目的名字是自己的用户名+.github.io，比如我建的项目仓库的名字就是’menggeNiu.github.io’，然后把这个项目仓库克隆到本地，这个操作除了通过终端来进行，还可以使用GitHub Desktop，我觉得后者更加方便。"></a>2. 进到Github新建一个项目，项目的名字是自己的用户名+<code>.github.io</code>，比如我建的项目仓库的名字就是’menggeNiu.github.io’，然后把这个项目仓库克隆到本地，这个操作除了通过终端来进行，还可以使用GitHub Desktop，我觉得后者更加方便。</h4><p><br></p>
+<h4 id="3-接下来就是打开克隆到本地的文件夹，我习惯再在里面建一个文件夹，如blog，进入建的文件夹，我们就可以开始安装hexo了。"><a href="#3-接下来就是打开克隆到本地的文件夹，我习惯再在里面建一个文件夹，如blog，进入建的文件夹，我们就可以开始安装hexo了。" class="headerlink" title="3. 接下来就是打开克隆到本地的文件夹，我习惯再在里面建一个文件夹，如blog，进入建的文件夹，我们就可以开始安装hexo了。"></a>3. 接下来就是打开克隆到本地的文件夹，我习惯再在里面建一个文件夹，如blog，进入建的文件夹，我们就可以开始安装hexo了。</h4><p><br></p>
+<h4 id="4-现在我们开始安装hexo。hexo是在node支持下运行的，如果没有node可以去官网下载。"><a href="#4-现在我们开始安装hexo。hexo是在node支持下运行的，如果没有node可以去官网下载。" class="headerlink" title="4. 现在我们开始安装hexo。hexo是在node支持下运行的，如果没有node可以去官网下载。"></a>4. 现在我们开始安装hexo。hexo是在node支持下运行的，如果没有<code>node</code>可以去官网下载。</h4><h4 id="安装hexo，命令如下，安装结束之后可以执行hexo-v来检查是否安装成功。"><a href="#安装hexo，命令如下，安装结束之后可以执行hexo-v来检查是否安装成功。" class="headerlink" title="安装hexo，命令如下，安装结束之后可以执行hexo -v来检查是否安装成功。"></a>安装hexo，命令如下，安装结束之后可以执行<code>hexo -v</code>来检查是否安装成功。</h4><pre><code>sudo npm install hero -g
+</code></pre><h4 id="5-hexo初始化，，命令如下，然后会在文件夹里自动生成文件"><a href="#5-hexo初始化，，命令如下，然后会在文件夹里自动生成文件" class="headerlink" title="5. hexo初始化，，命令如下，然后会在文件夹里自动生成文件"></a>5. hexo初始化，，命令如下，然后会在文件夹里自动生成文件</h4><pre><code>hexo init
+</code></pre><h4 id="6-config-yml文件配置：deploy字段下面添加"><a href="#6-config-yml文件配置：deploy字段下面添加" class="headerlink" title="6.config.yml文件配置：deploy字段下面添加"></a>6.config.yml文件配置：deploy字段下面添加</h4><pre><code>type: git 
+repo: 域名仓库的https地址
+</code></pre><h4 id="6-启动本地文件，命令如下，执行之后，终端里会有输出http-localhost-4000-，在浏览器输入网址，就可以看到在本地跑起来的自己的博客了，当然此时的主题是默认的主题。我感觉也还不错，哈哈"><a href="#6-启动本地文件，命令如下，执行之后，终端里会有输出http-localhost-4000-，在浏览器输入网址，就可以看到在本地跑起来的自己的博客了，当然此时的主题是默认的主题。我感觉也还不错，哈哈" class="headerlink" title="6. 启动本地文件，命令如下，执行之后，终端里会有输出http://localhost:4000/，在浏览器输入网址，就可以看到在本地跑起来的自己的博客了，当然此时的主题是默认的主题。我感觉也还不错，哈哈~"></a>6. 启动本地文件，命令如下，执行之后，终端里会有输出<code>http://localhost:4000/</code>，在浏览器输入网址，就可以看到在本地跑起来的自己的博客了，当然此时的主题是默认的主题。我感觉也还不错，哈哈~</h4><pre><code>hexo server
+</code></pre><h4 id="7-发布"><a href="#7-发布" class="headerlink" title="7.发布"></a>7.发布</h4><h5 id="7-1-首先安装git，输入如下命令"><a href="#7-1-首先安装git，输入如下命令" class="headerlink" title="7.1 首先安装git，输入如下命令"></a>7.1 首先安装git，输入如下命令</h5><pre><code>npm install hexo-deployer-git --save
+</code></pre><h5 id="7-2-再输入如下命令，就文成博客发布了，现在我们可以输入博客域名来看我们自己的博客了"><a href="#7-2-再输入如下命令，就文成博客发布了，现在我们可以输入博客域名来看我们自己的博客了" class="headerlink" title="7.2 再输入如下命令，就文成博客发布了，现在我们可以输入博客域名来看我们自己的博客了~"></a>7.2 再输入如下命令，就文成博客发布了，现在我们可以输入博客域名来看我们自己的博客了~</h5><pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d
+</code></pre><h3 id="创建新的博客文章"><a href="#创建新的博客文章" class="headerlink" title="创建新的博客文章"></a>创建新的博客文章</h3><p><br></p>
+<h4 id="1-进入项目所在文件夹，输入下面的命令，执行过后会在source-posts文件夹里产生刚才创建的文件，后缀为md。"><a href="#1-进入项目所在文件夹，输入下面的命令，执行过后会在source-posts文件夹里产生刚才创建的文件，后缀为md。" class="headerlink" title="1.进入项目所在文件夹，输入下面的命令，执行过后会在source/_posts文件夹里产生刚才创建的文件，后缀为md。"></a>1.进入项目所在文件夹，输入下面的命令，执行过后会在<code>source/_posts</code>文件夹里产生刚才创建的文件，后缀为md。</h4><pre><code>hexo new 此处为文章的名字
+</code></pre><p><br></p>
+<h4 id="2-写md文件，可以使用Mou，我用下来感觉还是蛮好用的。"><a href="#2-写md文件，可以使用Mou，我用下来感觉还是蛮好用的。" class="headerlink" title="2.写md文件，可以使用Mou，我用下来感觉还是蛮好用的。"></a>2.写md文件，可以使用Mou，我用下来感觉还是蛮好用的。</h4><p><br></p>
+<h4 id="3-如果使用Mou写的话，将写完的内容直接复制粘贴到新创建的文件夹中，然后执行命令："><a href="#3-如果使用Mou写的话，将写完的内容直接复制粘贴到新创建的文件夹中，然后执行命令：" class="headerlink" title="3.如果使用Mou写的话，将写完的内容直接复制粘贴到新创建的文件夹中，然后执行命令："></a>3.如果使用Mou写的话，将写完的内容直接复制粘贴到新创建的文件夹中，然后执行命令：</h4><pre><code>//转义命令
+hexo g
+</code></pre><h4 id="4-如果想在本地看效果，再执行命令："><a href="#4-如果想在本地看效果，再执行命令：" class="headerlink" title="4.如果想在本地看效果，再执行命令："></a>4.如果想在本地看效果，再执行命令：</h4><pre><code>//服务器跑起来
+hexo server
+</code></pre><h4 id="5-最后发布，发布命令："><a href="#5-最后发布，发布命令：" class="headerlink" title="5.最后发布，发布命令："></a>5.最后发布，发布命令：</h4><pre><code>//发布命令
+hexo d
+</code></pre><h4 id="6-这样就发布了一篇你的新博客了-怎么样，是不是好开心-有了自己的博客，我是好开心的，哈哈哈"><a href="#6-这样就发布了一篇你的新博客了-怎么样，是不是好开心-有了自己的博客，我是好开心的，哈哈哈" class="headerlink" title="6.这样就发布了一篇你的新博客了~怎么样，是不是好开心~有了自己的博客，我是好开心的，哈哈哈~"></a>6.这样就发布了一篇你的新博客了~怎么样，是不是好开心~有了自己的博客，我是好开心的，哈哈哈~</h4><p><br></p>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p><br></p>
+<h4 id="1-首先在github上找到你喜欢的主题。"><a href="#1-首先在github上找到你喜欢的主题。" class="headerlink" title="1.首先在github上找到你喜欢的主题。"></a>1.首先在github上找到你喜欢的主题。</h4><p><br></p>
+<h4 id="2-进入到theme文件夹，执行命令："><a href="#2-进入到theme文件夹，执行命令：" class="headerlink" title="2.进入到theme文件夹，执行命令："></a>2.进入到theme文件夹，执行命令：</h4><pre><code>git clone https://github.com/iissnan/hexo-theme-next
+</code></pre><p><br></p>
+<h4 id="3-执行上列命令之后，下载的主题包就会出现在theme文件夹中，这时，在根目录下的-config-yml文件中，将theme后面的字段替换为想要更换主题的字段，然后再hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d就可以换起新主题啦-当然，有关主题的设置，可以进入到对应主题文件夹根目录下的-config-yml文件中进行更改，其他样式什么的也可以更改，我暂时还没有改，如果想改的小伙伴可以去对应的css文件或者其他文件进行更改哦"><a href="#3-执行上列命令之后，下载的主题包就会出现在theme文件夹中，这时，在根目录下的-config-yml文件中，将theme后面的字段替换为想要更换主题的字段，然后再hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d就可以换起新主题啦-当然，有关主题的设置，可以进入到对应主题文件夹根目录下的-config-yml文件中进行更改，其他样式什么的也可以更改，我暂时还没有改，如果想改的小伙伴可以去对应的css文件或者其他文件进行更改哦" class="headerlink" title="3.执行上列命令之后，下载的主题包就会出现在theme文件夹中，这时，在根目录下的_config.yml文件中，将theme后面的字段替换为想要更换主题的字段，然后再hexo clean &amp;&amp; hexo g &amp;&amp; hexo d就可以换起新主题啦~当然，有关主题的设置，可以进入到对应主题文件夹根目录下的_config.yml文件中进行更改，其他样式什么的也可以更改，我暂时还没有改，如果想改的小伙伴可以去对应的css文件或者其他文件进行更改哦~"></a>3.执行上列命令之后，下载的主题包就会出现在theme文件夹中，这时，在根目录下的<code>_config.yml</code>文件中，将<code>theme</code>后面的字段替换为想要更换主题的字段，然后再<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>就可以换起新主题啦~当然，有关主题的设置，可以进入到对应主题文件夹根目录下的<code>_config.yml</code>文件中进行更改，其他样式什么的也可以更改，我暂时还没有改，如果想改的小伙伴可以去对应的<code>css</code>文件或者其他文件进行更改哦~</h4><p><br></p>
+<h3 id="添加评论"><a href="#添加评论" class="headerlink" title="添加评论"></a>添加评论</h3><p><br></p>
+<h4 id="1-评论系统可以使用duoshuo。"><a href="#1-评论系统可以使用duoshuo。" class="headerlink" title="1.评论系统可以使用duoshuo。"></a>1.评论系统可以使用<code>duoshuo</code>。</h4><p><br></p>
+<h4 id="2-http-duoshuo-com-进入多说官网，注册，按照步骤逐步完成域名绑定等。"><a href="#2-http-duoshuo-com-进入多说官网，注册，按照步骤逐步完成域名绑定等。" class="headerlink" title="2.http://duoshuo.com/进入多说官网，注册，按照步骤逐步完成域名绑定等。"></a>2.<code>http://duoshuo.com/</code>进入多说官网，注册，按照步骤逐步完成域名绑定等。</h4><p><br></p>
+<h4 id="3-绑定成功之后，你的博客的站点会出现在右上角，最左边的选项中，点进去。"><a href="#3-绑定成功之后，你的博客的站点会出现在右上角，最左边的选项中，点进去。" class="headerlink" title="3.绑定成功之后，你的博客的站点会出现在右上角，最左边的选项中，点进去。"></a>3.绑定成功之后，你的博客的站点会出现在右上角，最左边的选项中，点进去。</h4><p><br></p>
+<h4 id="4-点击设置，记住域名中的二级域名，即-duoshuo-com之前的字符串。"><a href="#4-点击设置，记住域名中的二级域名，即-duoshuo-com之前的字符串。" class="headerlink" title="4.点击设置，记住域名中的二级域名，即.duoshuo.com之前的字符串。"></a>4.点击设置，记住域名中的二级域名，即<code>.duoshuo.com</code>之前的字符串。</h4><p><br></p>
+<h4 id="5-再回到我们的本地博客文件中，这个评论的设置由于主题的不同而不同，大致的思路就是，在-config-yml文件中如果没有duoshuo-shortname的填上这个字段，并把刚才记下的二级域名的名字写上，如果主题中有duoshuo字段的，直接在主题的-config-yml文件中添加刚才的字段，然后把主题-layout-下面的comments-ejs里面的代码替换为duoshuo的默认代码，代码如下："><a href="#5-再回到我们的本地博客文件中，这个评论的设置由于主题的不同而不同，大致的思路就是，在-config-yml文件中如果没有duoshuo-shortname的填上这个字段，并把刚才记下的二级域名的名字写上，如果主题中有duoshuo字段的，直接在主题的-config-yml文件中添加刚才的字段，然后把主题-layout-下面的comments-ejs里面的代码替换为duoshuo的默认代码，代码如下：" class="headerlink" title="5.再回到我们的本地博客文件中，这个评论的设置由于主题的不同而不同，大致的思路就是，在_config.yml文件中如果没有duoshuo_shortname的填上这个字段，并把刚才记下的二级域名的名字写上，如果主题中有duoshuo字段的，直接在主题的_config.yml文件中添加刚才的字段，然后把主题/layout/下面的comments.ejs里面的代码替换为duoshuo的默认代码，代码如下："></a>5.再回到我们的本地博客文件中，这个评论的设置由于主题的不同而不同，大致的思路就是，在<code>_config.yml</code>文件中如果没有duoshuo_shortname的填上这个字段，并把刚才记下的二级域名的名字写上，如果主题中有<code>duoshuo</code>字段的，直接在主题的<code>_config.yml</code>文件中添加刚才的字段，然后把主题/layout/下面的comments.ejs里面的代码替换为duoshuo的默认代码，代码如下：</h4><pre><code>&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.duoshuo_shortname){ %&gt;
+  &lt;section id=&quot;comments&quot;&gt;
+    &lt;!-- 多说评论框 start --&gt;
+    &lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;&quot; data-title=&quot;&lt;%= post.title %&gt;&quot; data-url=&quot;&lt;%= page.permalink %&gt;&quot;&gt;&lt;/div&gt;
+    &lt;!-- 多说评论框 end --&gt;
+    &lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    var duoshuoQuery = {short_name:&apos;&lt;%= config.duoshuo_shortname %&gt;&apos;};
+      (function() {
+        var ds = document.createElement(&apos;script&apos;);
+        ds.type = &apos;text/javascript&apos;;ds.async = true;
+        ds.src = (document.location.protocol == &apos;https:&apos; ? &apos;https:&apos; : &apos;http:&apos;) + &apos;//static.duoshuo.com/embed.js&apos;;
+        ds.charset = &apos;UTF-8&apos;;
+        (document.getElementsByTagName(&apos;head&apos;)[0] 
+         || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(ds);
+      })();
+      &lt;/script&gt;
+    &lt;!-- 多说公共JS代码 end --&gt;
+  &lt;/section&gt;
+  &lt;% } %&gt;
+</code></pre><h4 id="6-完成之后，再执行如下命令，稍等片刻，我们就可以在自己的博客看到评论功能已经添加进去了"><a href="#6-完成之后，再执行如下命令，稍等片刻，我们就可以在自己的博客看到评论功能已经添加进去了" class="headerlink" title="6.完成之后，再执行如下命令，稍等片刻，我们就可以在自己的博客看到评论功能已经添加进去了~"></a>6.完成之后，再执行如下命令，稍等片刻，我们就可以在自己的博客看到评论功能已经添加进去了~</h4><pre><code>`hexo clean &amp;&amp; hexo g &amp;&amp; hexo d`
+</code></pre><p><br><br><br></p>
+<h3 id="以上就是我初步的搭建过程，还有很多不足，很多模块还没有添加进去，希望小伙伴们多多交流，一起完善哦"><a href="#以上就是我初步的搭建过程，还有很多不足，很多模块还没有添加进去，希望小伙伴们多多交流，一起完善哦" class="headerlink" title="以上就是我初步的搭建过程，还有很多不足，很多模块还没有添加进去，希望小伙伴们多多交流，一起完善哦~"></a>以上就是我初步的搭建过程，还有很多不足，很多模块还没有添加进去，希望小伙伴们多多交流，一起完善哦~</h3><h2 id="亲们一定要在网好的情况下转义和发布！我就被坑了"><a href="#亲们一定要在网好的情况下转义和发布！我就被坑了" class="headerlink" title="亲们一定要在网好的情况下转义和发布！我就被坑了~~"></a>亲们一定要在网好的情况下转义和发布！我就被坑了~~</h2>
+          
         
       
     </div>
@@ -496,7 +530,6 @@
     <div>
       
     </div>
-
 
     <footer class="post-footer">
       
@@ -515,26 +548,13 @@
       
 
   
+  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/02/11/6/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="menggeNIU">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NNNの博客">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
-    </span>
-  </span>
 
     
       <header class="post-header">
@@ -556,19 +576,13 @@
 
         <div class="post-meta">
           <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-11T21:14:40+08:00">
-                2016-02-11
-              </time>
-            
-
-            
-
-            
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-11T21:14:40+08:00" content="2016-02-11">
+              2016-02-11
+            </time>
           </span>
 
           
@@ -576,9 +590,9 @@
           
             
               <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
+                &nbsp; | &nbsp;
                 <a href="/2016/02/11/6/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/11/6/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/11/6/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -588,20 +602,8 @@
 
           
           
-             <span id="/2016/02/11/6/" class="leancloud_visitors" data-flag-title="加载旋转二">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
 
           
-
-          
-
         </div>
       </header>
     
@@ -615,17 +617,41 @@
       
         
           
-          今天也是用css动画来完成一个加载转圈效果哦~感觉比上次加载旋转的效果棒多了，哈哈，body颜色也是喜欢的颜色~不多说，下面上css代码，就是用css动画来完成的~&lt;style style=&quot;text/css&quot;&gt;
+            <h4 id="今天也是用css动画来完成一个加载转圈效果哦-感觉比上次加载旋转的效果棒多了，哈哈，body颜色也是喜欢的颜色-不多说，下面上css代码，就是用css动画来完成的"><a href="#今天也是用css动画来完成一个加载转圈效果哦-感觉比上次加载旋转的效果棒多了，哈哈，body颜色也是喜欢的颜色-不多说，下面上css代码，就是用css动画来完成的" class="headerlink" title="今天也是用css动画来完成一个加载转圈效果哦~感觉比上次加载旋转的效果棒多了，哈哈，body颜色也是喜欢的颜色~不多说，下面上css代码，就是用css动画来完成的~"></a>今天也是用css动画来完成一个加载转圈效果哦~感觉比上次加载旋转的效果棒多了，哈哈，body颜色也是喜欢的颜色~不多说，下面上css代码，就是用css动画来完成的~</h4><pre><code>&lt;style style=&quot;text/css&quot;&gt;
     body{
-        margin: 0
-          ...
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/11/6/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+        margin: 0;
+        background:rgb(13,206,203)
+    }
+    div{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color:transparent;
+        margin: 200px auto;
+        animation-name: turn;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;      
+    }
+    @keyframes turn{
+        0%,100%{box-shadow: 0 -50px 0 rgb(215,246,246),35.25px -35.25px rgb(167,237,236),rgb(61,214,212),
+        -50px 0 rgb(61,214,212), -35.25px -35.25px rgb(167,237,236);            }
+        12.5%{box-shadow: 0 -50px rgb(167,237,236),35.25px -35.25px rgb(215,246,246),50px 0 rgb(167,237,236),                35.25px 35.25px rgb(61,214,212),0 50px rgb(61,214,212),-35.250px 35.250px rgb(61,214,212),-50px 0                 rgb(61,214,212),-35.25px -35.25px rgb(61,214,212);}
+        25%{box-shadow: 0 -50px rgb(61,214,212),35.25px -35.25px rgb(167,237,236),50px 0 rgb(215,246,246),                35.25px 35.25px rgb(167,237,236),0 50px rgb(61,214,212),-35.250px 35.250px rgb(61,214,212),
+            -50px 0 rgb(61,214,212),-35.25px -35.25px rgb(61,214,212);}
+        37.5%{box-shadow: 0 -50px rgb(61,214,212),35.25px -35.25px rgb(61,214,212),50px 0 rgb(167,237,236),                35.25px 35.25px rgb(215,246,246),0 50px rgb(167,237,236),-35.250px 35.250px rgb(61,214,212),
+            -50px 0 rgb(61,214,212),-35.25px -35.25px rgb(61,214,212);}
+        50%{box-shadow: 0 -50px rgb(61,214,212),35.25px -35.25px rgb(61,214,212),50px 0 rgb(61,214,212),35.25px                 35.25px rgb(167,237,236),0 50px rgb(215,246,246),-35.250px 35.250px rgb(167,237,236),
+            -50px 0 rgb(61,214,212),-35.25px -35.25px rgb(61,214,212);}
+        62.5%{box-shadow: 0 -50px rgb(61,214,212),35.25px -35.25px rgb(61,214,212),50px 0 rgb(61,214,212),                35.25px 35.25px rgb(61,214,212),0 50px rgb(167,237,236),-35.250px 35.250px rgb(215,246,246),
+            -50px 0 rgb(167,237,236),-35.25px -35.25px rgb(61,214,212);}
+        75%{box-shadow: 0 -50px rgb(61,214,212),35.25px -35.25px rgb(61,214,212),50px 0 rgb(61,214,212),35.25px                 35.25px rgb(61,214,212),0 50px rgb(61,214,212),-35.250px 35.250px rgb(167,237,236),
+            -50px 0 rgb(215,246,246),-35.25px -35.25px rgb(167,237,236);}
+        87.5%{box-shadow: 0 -50px rgb(167,237,236),35.25px -35.25px rgb(61,214,212),50px 0 rgb(61,214,212),                    35.25px 35.25px rgb(61,214,212),0 50px rgb(61,214,212),-35.250px 35.250px rgb(61,214,212),
+            -50px 0 rgb(167,237,236),-35.25px -35.25px rgb(215,246,246);}
+    &lt;/style&gt;
+</code></pre><h4 id="神奇的css，哈哈"><a href="#神奇的css，哈哈" class="headerlink" title="神奇的css，哈哈~"></a>神奇的css，哈哈~</h4>
+          
         
       
     </div>
@@ -637,7 +663,6 @@
     <div>
       
     </div>
-
 
     <footer class="post-footer">
       
@@ -656,26 +681,13 @@
       
 
   
+  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/02/05/5/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="menggeNIU">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NNNの博客">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
-    </span>
-  </span>
 
     
       <header class="post-header">
@@ -697,19 +709,13 @@
 
         <div class="post-meta">
           <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-05T21:20:27+08:00">
-                2016-02-05
-              </time>
-            
-
-            
-
-            
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-05T21:20:27+08:00" content="2016-02-05">
+              2016-02-05
+            </time>
           </span>
 
           
@@ -717,9 +723,9 @@
           
             
               <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
+                &nbsp; | &nbsp;
                 <a href="/2016/02/05/5/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/05/5/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/05/5/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -729,20 +735,8 @@
 
           
           
-             <span id="/2016/02/05/5/" class="leancloud_visitors" data-flag-title="加载旋转">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
 
           
-
-          
-
         </div>
       </header>
     
@@ -756,18 +750,93 @@
       
         
           
-          今天准备用一个div，和before，after伪类，通过css动画完成加载旋转的效果。@-webkit-keyframes load2 {
+            <h6 id="今天准备用一个div，和before，after伪类，通过css动画完成加载旋转的效果。"><a href="#今天准备用一个div，和before，after伪类，通过css动画完成加载旋转的效果。" class="headerlink" title="今天准备用一个div，和before，after伪类，通过css动画完成加载旋转的效果。"></a>今天准备用一个div，和before，after伪类，通过css动画完成加载旋转的效果。</h6><pre><code>@-webkit-keyframes load2 {
   0% { -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
-      
-          ...
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/05/5/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+      }
+  100% {-webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+      }
+}
+
+@keyframes load2 {
+      0% {-webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {-webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+}
+</code></pre><h6 id="以上就是动画的代码，原理就是让div的before和after伪类进行上述动画，并让其中一个延迟动画几s，变会出现两个圆交替旋转的现象，怎么样，很简单吧-下面上css代码。"><a href="#以上就是动画的代码，原理就是让div的before和after伪类进行上述动画，并让其中一个延迟动画几s，变会出现两个圆交替旋转的现象，怎么样，很简单吧-下面上css代码。" class="headerlink" title="以上就是动画的代码，原理就是让div的before和after伪类进行上述动画，并让其中一个延迟动画几s，变会出现两个圆交替旋转的现象，怎么样，很简单吧~下面上css代码。"></a>以上就是动画的代码，原理就是让div的before和after伪类进行上述动画，并让其中一个延迟动画几s，变会出现两个圆交替旋转的现象，怎么样，很简单吧~下面上css代码。</h6><pre><code>&lt;style&gt;
+    /*body{
+    background-color: #0dcecb;
+    }*/
+    .loader,
+    .loader:before,
+    .loader:after {
+          border-radius: 50%;
+    }
+    .loader:before,
+    .loader:after {
+          position: absolute;
+          content: &apos;&apos;;
+    }
+    .loader:before {
+          width: 5.2em;
+          height: 10.2em;
+          background: #0dcecb;
+          border-radius: 10.2em 0 0 10.2em;
+          top: -0.1em;
+          left: -0.1em;
+          -webkit-transform-origin: 5.2em 5.1em;
+          transform-origin: 5.2em 5.1em;
+          -webkit-animation: load2 2s infinite ease 1.5s;
+          animation: load2 2s infinite ease 1.5s;
+    }
+    .loader {
+         font-size: 11px;
+          text-indent: -99999em;
+          margin: 30% auto;
+         position: relative;
+          width: 10em;
+          height: 10em;
+          box-shadow: inset 0 0 0 1em yellow;
+    }
+    .loader:after {
+          width: 5.2em;
+          height: 10.2em;
+          background: red;
+          border-radius: 0 10.2em 10.2em 0;
+          top: -0.1em;
+          left: 5.1em;
+          -webkit-transform-origin: 0px 5.1em;
+          transform-origin: 0px 5.1em;
+          -webkit-animation: load2 2s infinite ease;
+          animation: load2 2s infinite ease;
+    }
+    @-webkit-keyframes load2 {
+          0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+               transform: rotate(360deg);
+          }
+    }
+    @keyframes load2 {
+          0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+    }
+&lt;/style&gt;
+</code></pre><h6 id="以上就是今天的加载旋转小分享，等有时间再和大家分享另一种加载旋转效果"><a href="#以上就是今天的加载旋转小分享，等有时间再和大家分享另一种加载旋转效果" class="headerlink" title="以上就是今天的加载旋转小分享，等有时间再和大家分享另一种加载旋转效果~"></a>以上就是今天的加载旋转小分享，等有时间再和大家分享另一种加载旋转效果~</h6>
+          
         
       
     </div>
@@ -779,7 +848,6 @@
     <div>
       
     </div>
-
 
     <footer class="post-footer">
       
@@ -798,26 +866,13 @@
       
 
   
+  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/01/20/4/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="menggeNIU">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NNNの博客">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
-    </span>
-  </span>
 
     
       <header class="post-header">
@@ -839,19 +894,13 @@
 
         <div class="post-meta">
           <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-20T11:08:40+08:00">
-                2016-01-20
-              </time>
-            
-
-            
-
-            
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-20T11:08:40+08:00" content="2016-01-20">
+              2016-01-20
+            </time>
           </span>
 
           
@@ -859,9 +908,9 @@
           
             
               <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
+                &nbsp; | &nbsp;
                 <a href="/2016/01/20/4/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/20/4/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/20/4/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -871,20 +920,8 @@
 
           
           
-             <span id="/2016/01/20/4/" class="leancloud_visitors" data-flag-title="JS中各种size总结">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
 
           
-
-          
-
         </div>
       </header>
     
@@ -898,17 +935,45 @@
       
         
           
-          最近在做项目中，涉及到获取浏览器和元素的高宽以及相关size。用的时候有些会有混淆，所以今天就来总结一下~
+            <p>最近在做项目中，涉及到获取浏览器和元素的高宽以及相关size。用的时候有些会有混淆，所以今天就来总结一下~</p>
+<hr>
+<h2 id="一-window对象"><a href="#一-window对象" class="headerlink" title="一.    window对象"></a>一.    window对象</h2><p>window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth 浏览器视口宽度（不包括工具栏和滚动条）</p>
+<p>window.inneHeight || document.documentElement.clientHeight || document.body.clientHeight 浏览器视口高度（不包括工具栏和滚动条）</p>
+<p>window.outerWidth  浏览器窗口的宽度(包含地址栏工具栏)(IE没有提供取得当前浏览器窗口尺寸的属性)</p>
+<p>window.outerHeight 浏览器窗口的高度 (包含地址栏工具栏)(IE没有提供取得当前浏览器窗口尺寸的属性)</p>
+<p>screen.width 显示屏幕的宽度</p>
+<p>screen.height 显示屏幕的高度</p>
+<p>screen.availHeight 返回显示屏幕的高度 (除 Windows 任务栏之外)</p>
+<p>screen.availWidth 返回显示屏幕的宽度 (除 Windows 任务栏之外)</p>
+<p>[转]<br>页可见区域宽： document.body.clientWidth;</p>
+<p>网页可见区域高： document.body.clientHeight;</p>
+<p>网页可见区域宽： document.body.offsetWidth   （包含边线的宽）;</p>
+<p>网页可见区域高： document.body.offsetHeight （包含边线的宽）;</p>
+<p>网页正文全文宽： document.body.scrollWidth;</p>
+<p>网页正文全文高： document.body.scrollHeight;</p>
+<p>网页被卷去的高： document.body.scrollTop;</p>
+<p>网页被卷去的左： document.body.scrollLeft;</p>
+<p>网页正文项目组上： window.screenTop;</p>
+<p>网页正文项目组左： window.screenLeft;</p>
+<p>屏幕辨别率的高： window.screen.height;</p>
+<p>屏幕辨别率的宽： window.screen.width;</p>
+<p>屏幕可用工作区高度： window.screen.availHeight;</p><p></p>
+<hr>
+<h2 id="二-元素"><a href="#二-元素" class="headerlink" title="二.  元素"></a>二.  元素</h2><p><img src="http://a3.qpic.cn/psb?/V12O5OuB1fjn3R/L3znwnldi4Bjj*5zpOqyLFePGlGTPeAZABCkU8MSZ1M!/b/dOMAAAAAAAAA&amp;bo=YQJaAgAAAAABBxs!&amp;rf=viewer_4" alt=""><br>在网上找到这个图。</p>
+<p>event.clientX 相对文档的水平座标</p>
+<p>event.clientY 相对文档的垂直座标</p>
+<p>event.offsetX 相对容器的水平坐标</p>
+<p>event.offsetY 相对容器的垂直坐标</p>
+<p>element.offsetWidth,element.offsetHeight: box 的总大小。包括 border, padding, content。不包括 margin</p>
+<p>element.clientWidth,element.clientHeight: box 中内容区域的大小。包括 padding, content不包括 margin, border</p>
+<p>scrollTop：已滚动过去的高度</p>
+<p>scrollHeight：可滚动内容的总高度</p>
+<p>offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置</p>
+<p>offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置</p>
+<hr>
+<p>错误之处，还请大家多多指教~~</p>
 
-一.    window对象window.innerWidth || document.documentElement.clientWidth || document.body.client
-          ...
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/20/4/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
         
       
     </div>
@@ -920,7 +985,6 @@
     <div>
       
     </div>
-
 
     <footer class="post-footer">
       
@@ -939,26 +1003,13 @@
       
 
   
+  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/01/18/3/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="menggeNIU">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NNNの博客">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
-    </span>
-  </span>
 
     
       <header class="post-header">
@@ -980,19 +1031,13 @@
 
         <div class="post-meta">
           <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-18T20:51:36+08:00">
-                2016-01-18
-              </time>
-            
-
-            
-
-            
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-18T20:51:36+08:00" content="2016-01-18">
+              2016-01-18
+            </time>
           </span>
 
           
@@ -1000,9 +1045,9 @@
           
             
               <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
+                &nbsp; | &nbsp;
                 <a href="/2016/01/18/3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/18/3/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/18/3/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1012,20 +1057,8 @@
 
           
           
-             <span id="/2016/01/18/3/" class="leancloud_visitors" data-flag-title="总结第二弹-光标形状">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
 
           
-
-          
-
         </div>
       </header>
     
@@ -1039,20 +1072,32 @@
       
         
           
-          小总结第二弹，今天来对光标形状进行下总结，光标形状有如下，上代码~~
-&lt;!DOCTYPE html&gt;
+            <h2 id="小总结第二弹，今天来对光标形状进行下总结，光标形状有如下，上代码"><a href="#小总结第二弹，今天来对光标形状进行下总结，光标形状有如下，上代码" class="headerlink" title="小总结第二弹，今天来对光标形状进行下总结，光标形状有如下，上代码~~"></a>小总结第二弹，今天来对光标形状进行下总结，光标形状有如下，上代码~~</h2><hr>
+<pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
     &lt;p&gt;Mouse over the words to change the cursor.&lt;/p&gt;
- 
-          ...
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/18/3/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+    &lt;span style=&quot;cursor:auto&quot;&gt;auto&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:crosshair&quot;&gt;crosshair&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:default&quot;&gt;default&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:e-resize&quot;&gt;e-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:help&quot;&gt;help&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:move&quot;&gt;move&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:n-resize&quot;&gt;n-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:ne-resize&quot;&gt;ne-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:nw-resize&quot;&gt;nw-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:pointer&quot;&gt;pointer&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:progress&quot;&gt;progress&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:s-resize&quot;&gt;s-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:se-resize&quot;&gt;se-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:sw-resize&quot;&gt;sw-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:text&quot;&gt;text&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:w-resize&quot;&gt;w-resize&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;cursor:wait&quot;&gt;wait&lt;/span&gt;&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="小伙伴们可以直接还是可以直接粘去看效果的-今天的总结就这么多啦"><a href="#小伙伴们可以直接还是可以直接粘去看效果的-今天的总结就这么多啦" class="headerlink" title="小伙伴们可以直接还是可以直接粘去看效果的~~~今天的总结就这么多啦"></a>小伙伴们可以直接还是可以直接粘去看效果的~~~今天的总结就这么多啦</h3>
+          
         
       
     </div>
@@ -1064,7 +1109,6 @@
     <div>
       
     </div>
-
 
     <footer class="post-footer">
       
@@ -1083,26 +1127,13 @@
       
 
   
+  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/01/15/2/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="menggeNIU">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NNNの博客">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
-    </span>
-  </span>
 
     
       <header class="post-header">
@@ -1124,19 +1155,13 @@
 
         <div class="post-meta">
           <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-15T19:31:09+08:00">
-                2016-01-15
-              </time>
-            
-
-            
-
-            
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-15T19:31:09+08:00" content="2016-01-15">
+              2016-01-15
+            </time>
           </span>
 
           
@@ -1144,9 +1169,9 @@
           
             
               <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
+                &nbsp; | &nbsp;
                 <a href="/2016/01/15/2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/15/2/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/15/2/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1156,20 +1181,8 @@
 
           
           
-             <span id="/2016/01/15/2/" class="leancloud_visitors" data-flag-title="列表样式总结">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
 
           
-
-          
-
         </div>
       </header>
     
@@ -1183,20 +1196,150 @@
       
         
           
-          今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考~以后不用再找啦~
-&lt;!DOCTYPE html&gt;
+            <h2 id="今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考-以后不用再找啦"><a href="#今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考-以后不用再找啦" class="headerlink" title="今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考~以后不用再找啦~"></a>今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考~以后不用再找啦~</h2><hr>
+<pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;style&gt;
-    ul.a {list-style-type:circl
-          ...
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/15/2/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+    ul.a {list-style-type:circle;}
+    ul.b {list-style-type:disc;}
+    ul.c {list-style-type:square;}
+    ol.d {list-style-type:armenian;}
+    ol.e {list-style-type:cjk-ideographic;}
+    ol.f {list-style-type:decimal;}
+    ol.g {list-style-type:decimal-leading-zero;}
+    ol.h {list-style-type:georgian;}
+    ol.i {list-style-type:hebrew;}
+    ol.j {list-style-type:hiragana;}
+    ol.k {list-style-type:hiragana-iroha;}
+    ol.l {list-style-type:katakana;}
+    ol.m {list-style-type:katagana-iroha;}
+    ol.n {list-style-type:lower-alpha;}
+    ol.o {list-style-type:lower-greek;}
+    ol.p {list-style-type:lower-latin;}
+    ol.q {list-style-type:lower-roman;}
+    ol.r {list-style-type:upper-alpha;}
+    ol.s {list-style-type:upper-latin;}
+    ol.t {list-style-type:upper-roman;}
+    ol.u {list-style-type:none;}
+    ol.v {list-style-type:inherit;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul class=&quot;a&quot;&gt;
+        &lt;li&gt;Circle type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;b&quot;&gt;
+        &lt;li&gt;Disc type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;c&quot;&gt;
+        &lt;li&gt;Square type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ol class=&quot;d&quot;&gt;
+        &lt;li&gt;Armenian type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;e&quot;&gt;
+        &lt;li&gt;Cjk-ideographic type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;f&quot;&gt;
+        &lt;li&gt;Decimal type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;g&quot;&gt;
+        &lt;li&gt;Decimal-leading-zero type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;h&quot;&gt;
+        &lt;li&gt;Georgian type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;i&quot;&gt;
+        &lt;li&gt;Hebrew type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+        &lt;/ol&gt;    
+    &lt;ol class=&quot;j&quot;&gt;
+        &lt;li&gt;Hiragana type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;k&quot;&gt;
+        &lt;li&gt;Hiragana-iroha type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;l&quot;&gt;
+        &lt;li&gt;Katakana type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;m&quot;&gt;
+        &lt;li&gt;Katakana-iroha type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;n&quot;&gt;
+        &lt;li&gt;Lower-alpha type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;o&quot;&gt;
+        &lt;li&gt;Lower-greek type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;p&quot;&gt;
+        &lt;li&gt;Lower-latin type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;q&quot;&gt;
+        &lt;li&gt;Lower-roman type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;r&quot;&gt;
+        &lt;li&gt;Upper-alpha type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;s&quot;&gt;
+        &lt;li&gt;Upper-latin type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;t&quot;&gt;
+        &lt;li&gt;Upper-roman type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;u&quot;&gt;
+        &lt;li&gt;None type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;ol class=&quot;v&quot;&gt;
+        &lt;li&gt;inherit type&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Coca Cola&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h4 id="大家可以直接把代码粘过去看效果"><a href="#大家可以直接把代码粘过去看效果" class="headerlink" title="大家可以直接把代码粘过去看效果~~"></a>大家可以直接把代码粘过去看效果~~</h4>
+          
         
       
     </div>
@@ -1208,7 +1351,6 @@
     <div>
       
     </div>
-
 
     <footer class="post-footer">
       
@@ -1227,26 +1369,13 @@
       
 
   
+  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/01/07/1/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="menggeNIU">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NNNの博客">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
-    </span>
-  </span>
 
     
       <header class="post-header">
@@ -1268,19 +1397,13 @@
 
         <div class="post-meta">
           <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-07T18:53:41+08:00">
-                2016-01-07
-              </time>
-            
-
-            
-
-            
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-07T18:53:41+08:00" content="2016-01-07">
+              2016-01-07
+            </time>
           </span>
 
           
@@ -1288,9 +1411,9 @@
           
             
               <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
+                &nbsp; | &nbsp;
                 <a href="/2016/01/07/1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/07/1/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/07/1/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1300,20 +1423,8 @@
 
           
           
-             <span id="/2016/01/07/1/" class="leancloud_visitors" data-flag-title="css样式命名整理">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
 
           
-
-          
-
         </div>
       </header>
     
@@ -1327,20 +1438,171 @@
       
         
           
-          在做项目的过程中，经常会为命名的事情头疼。有时候标签多了，都不知道怎么命名，有经意就会有重复命名情况发生。所以抽空整理了命名例子出来。下面就来说一下自己总结的命名。
-###页面结构容器: container/wrap
-整体宽度：wrapper
-页头：header
-内容：content
-页面主体：ma
-          ...
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/07/1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+            <h2 id="在做项目的过程中，经常会为命名的事情头疼。有时候标签多了，都不知道怎么命名，有经意就会有重复命名情况发生。所以抽空整理了命名例子出来。下面就来说一下自己总结的命名。"><a href="#在做项目的过程中，经常会为命名的事情头疼。有时候标签多了，都不知道怎么命名，有经意就会有重复命名情况发生。所以抽空整理了命名例子出来。下面就来说一下自己总结的命名。" class="headerlink" title="在做项目的过程中，经常会为命名的事情头疼。有时候标签多了，都不知道怎么命名，有经意就会有重复命名情况发生。所以抽空整理了命名例子出来。下面就来说一下自己总结的命名。"></a>在做项目的过程中，经常会为命名的事情头疼。有时候标签多了，都不知道怎么命名，有经意就会有重复命名情况发生。所以抽空整理了命名例子出来。下面就来说一下自己总结的命名。</h2><hr>
+<p>###页面结构<br>容器: container/wrap</p>
+<p>整体宽度：wrapper</p>
+<p>页头：header</p>
+<p>内容：content</p>
+<p>页面主体：main</p>
+<p>页尾：footer</p>
+<p>导航：nav</p>
+<p>侧栏：sidebar</p>
+<p>栏目：column</p>
+<p>中间内容：center</p>
+<p>###导航<br>导航：nav</p>
+<p>导航：mainbav/globalnav</p>
+<p>子导航：subnav</p>
+<p>顶导航：topnav</p>
+<p>边导航：sidebar</p>
+<p>左导航：leftsidebar</p>
+<p>右导航：rightsidebar</p>
+<p>边导航图标：sidebarIcon</p>
+<p>菜单：menu</p>
+<p>子菜单：submenu</p>
+<p>标题: title</p>
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><p>标志：logo</p>
+<p>登陆：login</p>
+<p>登录条：loginbar</p>
+<p>注册：regsiter</p>
+<p>产品：products</p>
+<p>产品价格：productsPrices</p>
+<p>产品评论：productsReview</p>
+<p>编辑评论：editor-review</p>
+<p>最新产品：news-release</p>
+<p>广告/标语：banner</p>
+<p>摘要:summary</p>
+<p>生产商：publisher</p>
+<p>缩略图：screenshot</p>
+<p>常见问题：faqs</p>
+<p>关键词：keyword</p>
+<p>博客：blog</p>
+<p>论坛：forum</p>
+<p>搜索：search</p>
+<p>搜索输入框：search-input</p>
+<p>搜索输出：search-output</p>
+<p>搜索结果：search-results</p>
+<p>加入我们：joinus</p>
+<p>状态：status</p>
+<p>按钮：btn</p>
+<p>滚动：scroll</p>
+<p>标签页：tab</p>
+<p>文章列表：list</p>
+<p>提示信息：msg/message</p>
+<p>当前的: current</p>
+<p>小技巧：tips</p>
+<p>皮肤：skin</p>
+<p>充值：pay</p>
+<p>活动：activities</p>
+<p>推广：promotion</p>
+<p>公告：announcement</p>
+<p>排行：ranking</p>
+<p>公司简介：companyProfile</p>
+<p>公司设备：equipment</p>
+<p>公司荣誉：glories</p>
+<p>企业文化：culture</p>
+<p>企业规模：scaleScale</p>
+<p>营销网络：salesNetwork</p>
+<p>组织机构：organization</p>
+<p>技术力量：technology</p>
+<p>分支机构：branches</p>
+<p>企业资质：EnterpriseQualification</p>
+<p>公司实力：strengthStrength</p>
+<p>经营理念：operationPrinciple</p>
+<p>经理致辞：manager_oration</p>
+<p>发展历程：developmentHistory</p>
+<p>工程案例：EngineeringProjects</p>
+<p>分类浏览：browseByCategory</p>
+<p>应用领域：applicationFields</p>
+<p>人力资源：humanResourceHr</p>
+<p>领导致辞： leader_oration</p>
+<p>客户留言：customerMessage</p>
+<p>客户服务：customerService</p>
+<p>您的要求：yourRequirements</p>
+<p>销售信息：salesInformation</p>
+<p>招商：EnterpriseEstablishing</p>
+<p>教育培训：EducationTraining</p>
+<p>在线交流：onlineCommunication</p>
+<p>质量认证：qualityCertification</p>
+<p>合作加盟：joinInCooperation</p>
+<p>产品描述：productsDescription</p>
+<p>业务范围：businessScope</p>
+<p>产品销售：salesSales</p>
+<p>联系我们：contactUs</p>
+<p>信息发布：Information</p>
+<p>返回首页：homepage</p>
+<p>产品定购：order</p>
+<p>电子商务：E-business</p>
+<p>版权所有：copy Right</p>
+<p>友情连结：hot Link</p>
+<p>行业新闻：tradeNews</p>
+<p>行业动态：trends</p>
+<p>邮编：postalCodeZipcode</p>
+<p>新闻动态：newsTrends</p>
+<p>公司名称：companyName</p>
+<p>销售热线：salesHot_Line</p>
+<p>联系人：contactPerson</p>
+<p>建设中：InConstruction</p>
+<p>证书：certificate</p>
+<p>地址：ADD/Add</p>
+<p>电话：TEL/Tel</p>
+<p>传真：FAX/Fax</p>
+<p>产品名称：productName</p>
+<p>产品说明：description</p>
+<p>价格：price</p>
+<p>品牌：brand</p>
+<p>规格：specification</p>
+<p>尺寸：size</p>
+<p>生产厂家：manufacuturer</p>
+<p>型号：model</p>
+<p>产品标号：Item No</p>
+<p>技术指标：techniqueData</p>
+<p>产品描述：description</p>
+<p>产地：productionPlace</p>
+<p>用途：application</p>
+<p>论坛：Forum</p>
+<p>在线订购：on_lineOrder</p>
+<p>招标：bidInviting</p>
+<p>综述：general</p>
+<p>业绩：achievements</p>
+<p>大事：greatEvent</p>
+<p>动态：trends</p>
+<p>服务：service</p>
+<p>投资：Investment</p>
+<p>行业：Industry</p>
+<p>规划：programming</p>
+<p>环境：environment</p>
+<p>发送：delivery</p>
+<p>提交：submit</p>
+<p>重写：reset</p>
+<p>社区：community</p>
+<p>业务：business</p>
+<p>在线调查：onlineInquiry</p>
+<p>下载中心：download</p>
+<p>意见反馈：feedback</p>
+<p>常见问题：FAQ</p>
+<p>中心概况：generalProfile</p>
+<p>游乐园：amusementPark</p>
+<p>专题报道：specialReport</p>
+<p>图标: icon</p>
+<p>注释：note</p>
+<p>指南：guild</p>
+<p>服务：service</p>
+<p>热点：hot</p>
+<p>新闻：news</p>
+<p>下载：download</p>
+<p>投票：vote</p>
+<p>商标：label/branding</p>
+<p>当前位置：breadcrumb/loc</p>
+<p>购物车：shop</p>
+<p>标签：tag</p>
+<p>信誉：siteinfo-credits</p>
+<p>网站信息：siteinfo</p>
+<p>法律声明：siteinfo-legal</p>
+<p>合作伙伴：partner</p>
+<p>友情链接：friendlink</p>
+<p>版权：copyright</p>
+
+          
         
       
     </div>
@@ -1352,7 +1614,6 @@
     <div>
       
     </div>
-
 
     <footer class="post-footer">
       
@@ -1402,7 +1663,7 @@
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -1481,9 +1742,6 @@
           </div>
         
 
-        
-
-
       </section>
 
       
@@ -1508,18 +1766,16 @@
   <span class="author" itemprop="copyrightHolder">menggeNIU</span>
 </div>
 
-
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Muse
   </a>
 </div>
-
 
         
 
@@ -1553,49 +1809,42 @@
 
 
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
+  
 
   
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
 
 
 
@@ -1620,13 +1869,7 @@
 
   
     
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
   
-
-
-
 
 
 
@@ -1634,122 +1877,11 @@
 
   
   
-
   
 
   
 
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("elhh73EjPvJjogo27rOTNyxB-gzGzoHsz", "ICYhjaCGuWcsPbm8nPit7Gkh");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-
-  
-
 
 </body>
 </html>

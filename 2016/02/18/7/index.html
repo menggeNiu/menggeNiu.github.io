@@ -5,10 +5,10 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
@@ -29,7 +29,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -63,9 +63,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="HEXO," />
@@ -77,7 +77,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -106,35 +106,19 @@
 
 
 
-<script type="text/javascript" id="hexo.configurations">
+<script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
+    scheme: 'Muse',
     sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: 0,
       author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
-
-
-
-  <link rel="canonical" href="https://menggeniu.github.io/2016/02/18/7/"/>
-
-
-
-
 
   <title> 使用GitHub来搭建Hexo博客 | NNNの博客 </title>
 </head>
@@ -226,8 +210,6 @@
   
 </nav>
 
-
-
  </div>
     </header>
 
@@ -241,26 +223,13 @@
     
 
   
+  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/02/18/7/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="menggeNIU">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="NNNの博客">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
-    </span>
-  </span>
 
     
       <header class="post-header">
@@ -279,19 +248,13 @@
 
         <div class="post-meta">
           <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-02-18T22:00:26+08:00">
-                2016-02-18
-              </time>
-            
-
-            
-
-            
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-18T22:00:26+08:00" content="2016-02-18">
+              2016-02-18
+            </time>
           </span>
 
           
@@ -299,9 +262,9 @@
           
             
               <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
+                &nbsp; | &nbsp;
                 <a href="/2016/02/18/7/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/7/" itemprop="commentCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/18/7/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -311,20 +274,8 @@
 
           
           
-             <span id="/2016/02/18/7/" class="leancloud_visitors" data-flag-title="使用GitHub来搭建Hexo博客">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
 
           
-
-          
-
         </div>
       </header>
     
@@ -398,7 +349,6 @@ hexo d
     <div>
       
         
-
       
     </div>
 
@@ -409,12 +359,11 @@ hexo d
       
     </div>
 
-
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/HEXO/" rel="tag"># HEXO</a>
+            <a href="/tags/HEXO/" rel="tag">#HEXO</a>
           
         </div>
       
@@ -428,8 +377,6 @@ hexo d
               </a>
             
           </div>
-
-          <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
@@ -496,7 +443,7 @@ hexo d
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -575,27 +522,19 @@ hexo d
           </div>
         
 
-        
-
-
       </section>
 
       
-      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
-
             
               
             
-
             
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#最近总算是使用GitHub搭建了自己的博客，趁热乎赶紧来记录下搭建过程"><span class="nav-number">1.</span> <span class="nav-text">最近总算是使用GitHub搭建了自己的博客，趁热乎赶紧来记录下搭建过程~</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初步搭建过程"><span class="nav-number">1.1.</span> <span class="nav-text">初步搭建过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-你需要有一个Github的账号，如果没有可以注册，很简单的"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 你需要有一个Github的账号，如果没有可以注册，很简单的~</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-进到Github新建一个项目，项目的名字是自己的用户名-github-io，比如我建的项目仓库的名字就是’menggeNiu-github-io’，然后把这个项目仓库克隆到本地，这个操作除了通过终端来进行，还可以使用GitHub-Desktop，我觉得后者更加方便。"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 进到Github新建一个项目，项目的名字是自己的用户名+.github.io，比如我建的项目仓库的名字就是’menggeNiu.github.io’，然后把这个项目仓库克隆到本地，这个操作除了通过终端来进行，还可以使用GitHub Desktop，我觉得后者更加方便。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-接下来就是打开克隆到本地的文件夹，我习惯再在里面建一个文件夹，如blog，进入建的文件夹，我们就可以开始安装hexo了。"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 接下来就是打开克隆到本地的文件夹，我习惯再在里面建一个文件夹，如blog，进入建的文件夹，我们就可以开始安装hexo了。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-现在我们开始安装hexo。hexo是在node支持下运行的，如果没有node可以去官网下载。"><span class="nav-number">1.1.4.</span> <span class="nav-text">4. 现在我们开始安装hexo。hexo是在node支持下运行的，如果没有node可以去官网下载。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo，命令如下，安装结束之后可以执行hexo-v来检查是否安装成功。"><span class="nav-number">1.1.5.</span> <span class="nav-text">安装hexo，命令如下，安装结束之后可以执行hexo -v来检查是否安装成功。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-hexo初始化，，命令如下，然后会在文件夹里自动生成文件"><span class="nav-number">1.1.6.</span> <span class="nav-text">5. hexo初始化，，命令如下，然后会在文件夹里自动生成文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-config-yml文件配置：deploy字段下面添加"><span class="nav-number">1.1.7.</span> <span class="nav-text">6.config.yml文件配置：deploy字段下面添加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-启动本地文件，命令如下，执行之后，终端里会有输出http-localhost-4000-，在浏览器输入网址，就可以看到在本地跑起来的自己的博客了，当然此时的主题是默认的主题。我感觉也还不错，哈哈"><span class="nav-number">1.1.8.</span> <span class="nav-text">6. 启动本地文件，命令如下，执行之后，终端里会有输出http://localhost:4000/，在浏览器输入网址，就可以看到在本地跑起来的自己的博客了，当然此时的主题是默认的主题。我感觉也还不错，哈哈~</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-发布"><span class="nav-number">1.1.9.</span> <span class="nav-text">7.发布</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#7-1-首先安装git，输入如下命令"><span class="nav-number">1.1.9.1.</span> <span class="nav-text">7.1 首先安装git，输入如下命令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-2-再输入如下命令，就文成博客发布了，现在我们可以输入博客域名来看我们自己的博客了"><span class="nav-number">1.1.9.2.</span> <span class="nav-text">7.2 再输入如下命令，就文成博客发布了，现在我们可以输入博客域名来看我们自己的博客了~</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建新的博客文章"><span class="nav-number">1.2.</span> <span class="nav-text">创建新的博客文章</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-进入项目所在文件夹，输入下面的命令，执行过后会在source-posts文件夹里产生刚才创建的文件，后缀为md。"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.进入项目所在文件夹，输入下面的命令，执行过后会在source/_posts文件夹里产生刚才创建的文件，后缀为md。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-写md文件，可以使用Mou，我用下来感觉还是蛮好用的。"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.写md文件，可以使用Mou，我用下来感觉还是蛮好用的。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-如果使用Mou写的话，将写完的内容直接复制粘贴到新创建的文件夹中，然后执行命令："><span class="nav-number">1.2.3.</span> <span class="nav-text">3.如果使用Mou写的话，将写完的内容直接复制粘贴到新创建的文件夹中，然后执行命令：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-如果想在本地看效果，再执行命令："><span class="nav-number">1.2.4.</span> <span class="nav-text">4.如果想在本地看效果，再执行命令：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-最后发布，发布命令："><span class="nav-number">1.2.5.</span> <span class="nav-text">5.最后发布，发布命令：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-这样就发布了一篇你的新博客了-怎么样，是不是好开心-有了自己的博客，我是好开心的，哈哈哈"><span class="nav-number">1.2.6.</span> <span class="nav-text">6.这样就发布了一篇你的新博客了~怎么样，是不是好开心~有了自己的博客，我是好开心的，哈哈哈~</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更换主题"><span class="nav-number">1.3.</span> <span class="nav-text">更换主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-首先在github上找到你喜欢的主题。"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.首先在github上找到你喜欢的主题。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-进入到theme文件夹，执行命令："><span class="nav-number">1.3.2.</span> <span class="nav-text">2.进入到theme文件夹，执行命令：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-执行上列命令之后，下载的主题包就会出现在theme文件夹中，这时，在根目录下的-config-yml文件中，将theme后面的字段替换为想要更换主题的字段，然后再hexo-clean-amp-amp-hexo-g-amp-amp-hexo-d就可以换起新主题啦-当然，有关主题的设置，可以进入到对应主题文件夹根目录下的-config-yml文件中进行更改，其他样式什么的也可以更改，我暂时还没有改，如果想改的小伙伴可以去对应的css文件或者其他文件进行更改哦"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.执行上列命令之后，下载的主题包就会出现在theme文件夹中，这时，在根目录下的_config.yml文件中，将theme后面的字段替换为想要更换主题的字段，然后再hexo clean && hexo g && hexo d就可以换起新主题啦~当然，有关主题的设置，可以进入到对应主题文件夹根目录下的_config.yml文件中进行更改，其他样式什么的也可以更改，我暂时还没有改，如果想改的小伙伴可以去对应的css文件或者其他文件进行更改哦~</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加评论"><span class="nav-number">1.4.</span> <span class="nav-text">添加评论</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-评论系统可以使用duoshuo。"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.评论系统可以使用duoshuo。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-http-duoshuo-com-进入多说官网，注册，按照步骤逐步完成域名绑定等。"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.http://duoshuo.com/进入多说官网，注册，按照步骤逐步完成域名绑定等。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-绑定成功之后，你的博客的站点会出现在右上角，最左边的选项中，点进去。"><span class="nav-number">1.4.3.</span> <span class="nav-text">3.绑定成功之后，你的博客的站点会出现在右上角，最左边的选项中，点进去。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-点击设置，记住域名中的二级域名，即-duoshuo-com之前的字符串。"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.点击设置，记住域名中的二级域名，即.duoshuo.com之前的字符串。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-再回到我们的本地博客文件中，这个评论的设置由于主题的不同而不同，大致的思路就是，在-config-yml文件中如果没有duoshuo-shortname的填上这个字段，并把刚才记下的二级域名的名字写上，如果主题中有duoshuo字段的，直接在主题的-config-yml文件中添加刚才的字段，然后把主题-layout-下面的comments-ejs里面的代码替换为duoshuo的默认代码，代码如下："><span class="nav-number">1.4.5.</span> <span class="nav-text">5.再回到我们的本地博客文件中，这个评论的设置由于主题的不同而不同，大致的思路就是，在_config.yml文件中如果没有duoshuo_shortname的填上这个字段，并把刚才记下的二级域名的名字写上，如果主题中有duoshuo字段的，直接在主题的_config.yml文件中添加刚才的字段，然后把主题/layout/下面的comments.ejs里面的代码替换为duoshuo的默认代码，代码如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-完成之后，再执行如下命令，稍等片刻，我们就可以在自己的博客看到评论功能已经添加进去了"><span class="nav-number">1.4.6.</span> <span class="nav-text">6.完成之后，再执行如下命令，稍等片刻，我们就可以在自己的博客看到评论功能已经添加进去了~</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#以上就是我初步的搭建过程，还有很多不足，很多模块还没有添加进去，希望小伙伴们多多交流，一起完善哦"><span class="nav-number">1.5.</span> <span class="nav-text">以上就是我初步的搭建过程，还有很多不足，很多模块还没有添加进去，希望小伙伴们多多交流，一起完善哦~</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#亲们一定要在网好的情况下转义和发布！我就被坑了"><span class="nav-number">2.</span> <span class="nav-text">亲们一定要在网好的情况下转义和发布！我就被坑了~~</span></a></li></ol></div>
             
-
           </div>
         </section>
-      <!--/noindex-->
       
 
     </div>
@@ -618,18 +557,16 @@ hexo d
   <span class="author" itemprop="copyrightHolder">menggeNIU</span>
 </div>
 
-
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Muse
   </a>
 </div>
-
 
         
 
@@ -663,53 +600,46 @@ hexo d
 
 
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
-  
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
 
 
 
@@ -734,13 +664,7 @@ hexo d
 
   
     
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
   
-
-
-
 
 
 
@@ -748,122 +672,11 @@ hexo d
 
   
   
-
   
 
   
 
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("elhh73EjPvJjogo27rOTNyxB-gzGzoHsz", "ICYhjaCGuWcsPbm8nPit7Gkh");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-
-  
-
 
 </body>
 </html>
