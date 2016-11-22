@@ -1,0 +1,883 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="PHP," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="PHP（Hypertext Preprocessor,超文本预处理器）。
+一、PHP入门1、指令分隔符“分号”语义分为两种：一种是在程序中使用结构定义语句，例如流程控制、函数定义、类的定义等，用来定义程序结构使用的语句。在结构语句后面不能使用分号作为结束；另一种是在程序中使用功能执行语句，例如变量的声明、内容的输出、函数的调用等，是用来在程序中执行某些特定功能的语句，这种语句也可以成为指令，php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP基本语法🍄">
+<meta property="og:url" content="https://menggeniu.github.io/2016/07/16/50/index.html">
+<meta property="og:site_name" content="NNNの博客">
+<meta property="og:description" content="PHP（Hypertext Preprocessor,超文本预处理器）。
+一、PHP入门1、指令分隔符“分号”语义分为两种：一种是在程序中使用结构定义语句，例如流程控制、函数定义、类的定义等，用来定义程序结构使用的语句。在结构语句后面不能使用分号作为结束；另一种是在程序中使用功能执行语句，例如变量的声明、内容的输出、函数的调用等，是用来在程序中执行某些特定功能的语句，这种语句也可以成为指令，php">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/712855/201601/712855-20160119161020468-1536530589.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/712855/201601/712855-20160119161021218-422891999.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/712855/201601/712855-20160119161021797-476672745.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/712855/201601/712855-20160119161022140-196576463.png">
+<meta property="og:updated_time" content="2016-11-22T09:22:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP基本语法🍄">
+<meta name="twitter:description" content="PHP（Hypertext Preprocessor,超文本预处理器）。
+一、PHP入门1、指令分隔符“分号”语义分为两种：一种是在程序中使用结构定义语句，例如流程控制、函数定义、类的定义等，用来定义程序结构使用的语句。在结构语句后面不能使用分号作为结束；另一种是在程序中使用功能执行语句，例如变量的声明、内容的输出、函数的调用等，是用来在程序中执行某些特定功能的语句，这种语句也可以成为指令，php">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/712855/201601/712855-20160119161020468-1536530589.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://menggeniu.github.io/2016/07/16/50/"/>
+
+
+
+
+
+  <title> PHP基本语法🍄 | NNNの博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NNNの博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">世上所有的相遇都是久别重逢</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/07/16/50/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="menggeNIU">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="NNNの博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                PHP基本语法🍄
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-16T22:10:17+08:00">
+                2016-07-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2016/07/16/50/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/16/50/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/16/50/" class="leancloud_visitors" data-flag-title="PHP基本语法🍄">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>PHP（Hypertext Preprocessor,超文本预处理器）。<br></p>
+<h3 id="一、PHP入门"><a href="#一、PHP入门" class="headerlink" title="一、PHP入门"></a>一、PHP入门</h3><h4 id="1、指令分隔符“分号”"><a href="#1、指令分隔符“分号”" class="headerlink" title="1、指令分隔符“分号”"></a>1、指令分隔符“分号”</h4><p>语义分为两种：一种是在程序中使用结构定义语句，例如流程控制、函数定义、类的定义等，用来定义程序结构使用的语句。在结构语句后面不能使用分号作为结束；<br><br>另一种是在程序中使用功能执行语句，例如变量的声明、内容的输出、函数的调用等，是用来在程序中执行某些特定功能的语句，这种语句也可以成为指令，php需要在每个指令后用分号结束。<br></p>
+<h4 id="2、程序注释"><a href="#2、程序注释" class="headerlink" title="2、程序注释"></a>2、程序注释</h4><p>php注释的三种形式：<br><br>以“/<em> ”和“</em>/”闭合多行注释符，<br><br>“//”和”#”开始的单行注释符 <br></p>
+<h4 id="3、在程序中使用空白的处理"><a href="#3、在程序中使用空白的处理" class="headerlink" title="3、在程序中使用空白的处理"></a>3、在程序中使用空白的处理</h4><p><strong>下列情况应该总是使用两个空行：</strong><br><br>一个源文件的两个代码片段之间。<br><br>两个类的声明之间。<br><br><strong>下列情况应该总是使用一个空行：</strong><br><br>两个函数声明之间。<br><br>函数内的局部变量和函数的第一条语句之间。<br><br>块注释或单行注释之前。<br><br>一个函数内的两个逻辑代码段之间，用以提高可读性。<br><br><strong>空格的应用规则：</strong><br><br>一般用于关键字和括号之间，函数名与左括号间不应使用空格。<br>一般函数的参数列表中的逗号后面添加空格。<br><br>数学算式的操作数与运算符之间应该添加空格(二进制元算与医院元算除外)。<br><br>for语句中表达式应该用逗号分开，后面添加空格。<br></p>
+<h3 id="二、变量"><a href="#二、变量" class="headerlink" title="二、变量"></a>二、变量</h3><p>第一次赋值，就创建了变量。必须使用”$”后跟变量名表示。再次给该变量赋值会覆盖之前的变量。<br><br>php变量声明以后有一定的范围，变量的范围即它定义的上下文背景(也就是它生效范围)。大部分的php变量如果不是在函数里面声明的，只有在声明处到文件结束的一个单独范围内使用。这个单独的范围跨度不仅是&lt;?php  标记开始处到?&gt;结束标记处使用，可以在一个页面的所有开启的PHP模式下使用，也包含了include和require引入的文件。如果使用COOKIE或SESSION还可以在多个页面中应用。<br><br>在变量的使用范围周期内，我们可以借助unset()函数释放指定的变量，使用isset()函数检测变量是否设置和使用empty()函数检测一个变脸是否为空。<br><br><strong>empty()与isset()的区别：</strong><br><br>如果empty()函数的参数是非空或非零的值，则empty()返回false。””、0、“0”、null、false、array()、var $var、以及没有任何属性的对象都将被认为是空的。如果参数为空，则返回true。<br><br>如果函数isset()参数存在，则返回true。若使用isset()检测一个被设置成null的变量或使用unset()释放了一个变量，都将返回false。<br><br>注意：字节NULL(“\0”)并不等同于null常数。<br><br>建议：使用!empty($var)判断变量存在且不能为空。<br></p>
+<h4 id="1、变量的命名"><a href="#1、变量的命名" class="headerlink" title="1、变量的命名"></a>1、变量的命名</h4><p>变量名区分大小写。但内置结构和关键字以及用户自定义的类名和函数名都是不区分大小写的。<br><br><img src="http://images2015.cnblogs.com/blog/712855/201601/712855-20160119161020468-1536530589.png" alt=""><br><br> 驼峰命名法。如：$aaaBBBccc。<br></p>
+<h4 id="2、可变变量"><a href="#2、可变变量" class="headerlink" title="2、可变变量"></a>2、可变变量</h4><p>可变变量可使用一个普通变量的值作为这个可变变量的变量名。<br></p>
+<h4 id="3、变量的引用赋值"><a href="#3、变量的引用赋值" class="headerlink" title="3、变量的引用赋值"></a>3、变量的引用赋值</h4><p>变量总是传值赋值。也就是说，当将一个表达式的值赋予一个变量时，整个原始表达式的值被赋值到目标变量。改变其中一个变量的值，将不会影响到另一个变量。<br><br>引用赋值，将“&amp;”加到变量前。将变量的引用方式复制给新的变量，指向共同的引用，改变任何一个变量的值，都会影响另一个变量。<code>只有有名字的变量才可以引用赋值。不会将引用赋值的两个变量在内存上同体，</code>只是把各自的值相关联起来，基于这一点，unset()不会导致另一个变量消失。<br> </p>
+<h4 id="4、变量的类型"><a href="#4、变量的类型" class="headerlink" title="4、变量的类型"></a>4、变量的类型</h4><p>4种标量类型：boolean(布尔型)、integer(整型)、float(浮点型)、string(字符串)<br><br>2种复合类型：array(数组)、object(对象)<br><br>2种特殊类型：resource(资源)、NULL<br><br>如果想看某个表达式的值和类型，可以使用函数var_dump()。<br></p>
+<h5 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h5><p>以下值被认为是false<br><br>1）布尔值false。<br><br>2）整型值0(零)为假，-1和其他非零值(不论正负)一样，被认为是true。<br><br>3）浮点型值0.0（零）。<br><br>4）空白字符串和字符串“0”<br><br>5）没有成员变量的数组。<br><br>6）特殊类型NULL<br></p>
+<h5 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h5><p>有最大范围2 147 483 647 。PHP不支持无符号整数，如果给定的数超出最大范围，将会被解释为float。<br></p>
+<h5 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h5><p>永远不要比较两个浮点数是否相等。<br><br>如果需要更高的精度，应该使用任意精度数学函数或gmp()函数。<br></p>
+<h5 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h5><p>单引号字符串：<br></p>
+<ul>
+<li>如果要在单引号中引用单引号，需要使用反斜杠()转义。</li>
+<li>如果在单引号之前或字符串结尾需要出现一个反斜线，需要用两个反斜线表示。</li>
+<li>其中出现的变量不会被变量的值替代。即php不会解析单引号中的变量，而是将变量名原样输出。定义简单字符串时，单引号字符串效率更高。</li>
+</ul>
+<p>双引号字符串：其中的变量会被解析。<br><br><img src="http://images2015.cnblogs.com/blog/712855/201601/712855-20160119161021218-422891999.png" alt=""><br><br>定界符字符串：<br><br>使用定界符&lt;&lt;&lt;开始，之后提供一个标识符，然后是包含的字符串，最后是同样顶格书写的标识符。<br><br>定界符文本处理不能初始化类成员以外，表现的就和双引号字符串一样，只是没有双引号。这意味着在定界符文本中不需要转义引号，不过仍然可以用以上列出来的在双引号中可以使用的转义符号。而且定界符中的变量也会被解析，但当在定界符文本中表达复杂变量时和字符串一样同样也需要注意。所以能够很容易地使用定界符定义较长的字符串，通常用于从文本或者数据库中打断地输出文档。<br></p>
+<h5 id="数组-Array"><a href="#数组-Array" class="headerlink" title="数组(Array)"></a>数组(Array)</h5><p>使用print_r()函数查看数组中的全部内容。<br></p>
+<h5 id="对象-Object"><a href="#对象-Object" class="headerlink" title="对象(Object)"></a>对象(Object)</h5><pre><code>&lt;?php
+class Person{
+    var $name;
+    function say(){
+        echo &quot;Doing foo&quot;;
+    }
+}
+$p=new Person();
+$p-&gt;name=&quot;staven&quot;;
+$p-&gt;say();
+?&gt;
+</code></pre><p>-&gt;：表示对象属性、方法的引用<br></p>
+<h5 id="资源类型-Resource"><a href="#资源类型-Resource" class="headerlink" title="资源类型(Resource)"></a>资源类型(Resource)</h5><h5 id="NULL类型"><a href="#NULL类型" class="headerlink" title="NULL类型"></a>NULL类型</h5><p>特殊的NULL值表示一个变量没有值，NULL类型唯一可能的值就是NULL。NULL不表示空格，也不表示零，也不是空字符串，而是表示一个变量的值为空。NULL不区分大小写，在下列情况下一个变量被认为是NULL。<br><br>a）将变量直接赋值为NULL。<br><br>b）声明的变量尚未被赋值。<br><br>c）被unset()函数销毁的变量。<br></p>
+<h5 id="伪类型"><a href="#伪类型" class="headerlink" title="伪类型"></a>伪类型</h5><ul>
+<li>mixed：说明一个参数可以接受多种不同的(但并不必须是所有的)类型。例如getype()可以接受所有的php类型，str_replace()可以接受字符串和数组。</li>
+<li>number：说明一个参数可以是integer或者float。</li>
+<li>callback：有些诸如call_user_function()或usort()的函数接受用户自定义的函数作为一个参数。callback函数不仅可以是一个简单的函数，他还可以是一个对象的方法，包括静态类的方法。一个php函数用函数名字符串来传递。可以传递任何内置的或者用户自定义的函数，除了array()，echo()，empty()，eval()，exit()，isset()，list()，print()和unset()。<br>数据类型之间相互转换</li>
+</ul>
+<p>自动转换通常发生在不同数据类型的变量混合运算时，若参加元算量的类型不同，则显转换成同一类型，然后在进行运算。通常只有四种标量类型(integer、float、string、boolean)才使用自动类型转换。这并没有改变这些运算书本身的类型，改变的近视这些运算数如何被求值。自动类型转换虽然石油系统自动完成的，但在混合运算时，自动转换要遵循转换按数据长度增加的方向进行，以保证精度不降低。<br><br><img src="http://images2015.cnblogs.com/blog/712855/201601/712855-20160119161021797-476672745.png" alt=""><br><br>有布尔型值参与运算时，true将转化为整型1，flase将转化为整型0后再参与运算。<br><br>有NULL值参与运算时，NULL值转化为整型0在进行运算。<br><br>有integer型和float型参与运算时，先把integer型变量转换成float类型后在进行运算。<br><br>有字符串和数字型(integer、float)数据参与运算时，字符串先转换为数字，在参与运算。转化后的数字是从字符串开始的数值字符串，如果在字符串开始的数值型字符串不带小数点则转换为integer类型数字。如果带有小数点则转换为float类型数字。<br></p>
+<h5 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h5><p>再要转换的变量之前加上用括号括起来的目标类型，也可以使用具体的转换函数，即intval()、floatval()、strval()或者用setType()函数转换类型。<br><br><code>intval()</code>、<code>floatval()</code>、<code>strval()</code>强制类型转换没有改变变量本身的类型，而是通过转换将得到的新类型的数据赋值给新的变量，原变量的类型和值不变。如果需要改变自身的类型与值，可以使用<code>setType()</code>函数来设置变量的类型。<br><br>变量类型的测试函数<br></p>
+<ul>
+<li>is_bool()：判断是否是布尔型。</li>
+<li>is_int()、is_integer()和is_long()：判断是否是整型。</li>
+<li>is_float()、is_double()和is_real()：判断是否是浮点数。</li>
+<li>is_string()：判断是否是字符串。</li>
+<li>is_array()：判断是否是数组。</li>
+<li>is_object()：判断是否是对象。</li>
+<li>is_resource()：判断是否是资源类型。</li>
+<li>is_null()：判断是否为空。</li>
+<li>is_scalar()：判断是否是标量，也就是一个整数、浮点数、布尔型或字符串。</li>
+<li>is_numberic()：判断是否是任何类型的数字或数字字符串。</li>
+<li>is_callable()：判断是否是有效的函数名。</li>
+</ul>
+<h3 id="三、常量"><a href="#三、常量" class="headerlink" title="三、常量"></a>三、常量</h3><p>常量只能包含四种标量数据。<br><br>常量的定义<br></p>
+<pre><code>define(string name，mixed value[,bool case_insensitive]);
+</code></pre><p>第一个参数为常量名，第二个参数为常量的值或表达式，第三个参数是可选的，如果把case_insensitive设为true，则常数将会定义成不区分大小写。如果只想检测是否定义了某常量，用defined()函数。<br><br>预定义常量<br><br><img src="http://images2015.cnblogs.com/blog/712855/201601/712855-20160119161022140-196576463.png" alt=""><br></p>
+<h4 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h4><h5 id="break"><a href="#break" class="headerlink" title="break"></a>break</h5><p> 在循环语句中中断循环语句，也就是结束循环语句的执行。<br><br>  break语句可以将深埋在嵌套循环中的语句退出指定层数或直接退出最外层，break是接受一个可选的数字参数来决定跳出几重语句。break可以跳出几重循环语句或是几重switch语句。<br></p>
+<h5 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h5><p>continue 语句只能使用在循环语句内部，功能是跳过该次循环，继续执行下一次循环结构。在while和do-while语句中continue语句跳转到循环条件处开始继续执行，对于for循环随后的动作是变量更新。<br><br>接受一个可选数字参数来决定条出多重语句。<br><br>在循环中遇到continue语句后，就不会执行该循环中位于是continue后的任何语句。<br><br>continue语句用于结束循环，继续下一次循环。<br></p>
+<h5 id="exit"><a href="#exit" class="headerlink" title="exit"></a>exit</h5><p> 当前脚本只要执行到exit语句，而不管它在那个结构中都会直接退出当前脚本。exit()是一个函数，die(）函数就是exit()函数的别名，可以带有一个参数输出一条信息，并退出当前脚本。<br></p>
+<h5 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h5><p><a href="https://note.wiz.cn/login?p=reg&amp;icode=520846f0" target="_blank" rel="external">来自为知笔记(Wiz)</a><br></p>
+<p>转自：<a href="http://www.cnblogs.com/staven/p/5142509.html" target="_blank" rel="external">http://www.cnblogs.com/staven/p/5142509.html</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/15/49/" rel="next" title="面向对象封装、重载，继承、多态（面向对象三大特性之一）🍑">
+                <i class="fa fa-chevron-left"></i> 面向对象封装、重载，继承、多态（面向对象三大特性之一）🍑
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+    <!-- 多说评论框 start -->  
+        <div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>  
+<!-- 多说评论框 end -->    
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->  
+<script type="text/javascript">  
+var duoshuoQuery = {short_name:"yuzhiyun"};  
+    (function() {  
+        var ds = document.createElement('script');  
+        ds.type = 'text/javascript';ds.async = true;  
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';  
+        ds.charset = 'UTF-8';  
+        (document.getElementsByTagName('head')[0]   
+         || document.getElementsByTagName('body')[0]).appendChild(ds);  
+    })();  
+    </script>  
+<!-- 多说公共JS代码 end -->  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="menggeNIU" />
+          <p class="site-author-name" itemprop="name">menggeNIU</p>
+          <p class="site-description motion-element" itemprop="description">个人收藏</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">50</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/menggeNiu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1967072037" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zjflove.github.io" title="zjf" target="_blank">zjf</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.901web.com" title="pybyongbo" target="_blank">pybyongbo</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、PHP入门"><span class="nav-number">1.</span> <span class="nav-text">一、PHP入门</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、指令分隔符“分号”"><span class="nav-number">1.1.</span> <span class="nav-text">1、指令分隔符“分号”</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、程序注释"><span class="nav-number">1.2.</span> <span class="nav-text">2、程序注释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、在程序中使用空白的处理"><span class="nav-number">1.3.</span> <span class="nav-text">3、在程序中使用空白的处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、变量"><span class="nav-number">2.</span> <span class="nav-text">二、变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、变量的命名"><span class="nav-number">2.1.</span> <span class="nav-text">1、变量的命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、可变变量"><span class="nav-number">2.2.</span> <span class="nav-text">2、可变变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、变量的引用赋值"><span class="nav-number">2.3.</span> <span class="nav-text">3、变量的引用赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、变量的类型"><span class="nav-number">2.4.</span> <span class="nav-text">4、变量的类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#布尔类型"><span class="nav-number">2.4.1.</span> <span class="nav-text">布尔类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#整型"><span class="nav-number">2.4.2.</span> <span class="nav-text">整型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#浮点型"><span class="nav-number">2.4.3.</span> <span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#字符串"><span class="nav-number">2.4.4.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数组-Array"><span class="nav-number">2.4.5.</span> <span class="nav-text">数组(Array)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#对象-Object"><span class="nav-number">2.4.6.</span> <span class="nav-text">对象(Object)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#资源类型-Resource"><span class="nav-number">2.4.7.</span> <span class="nav-text">资源类型(Resource)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NULL类型"><span class="nav-number">2.4.8.</span> <span class="nav-text">NULL类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#伪类型"><span class="nav-number">2.4.9.</span> <span class="nav-text">伪类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#强制类型转换"><span class="nav-number">2.4.10.</span> <span class="nav-text">强制类型转换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、常量"><span class="nav-number">3.</span> <span class="nav-text">三、常量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#循环语句"><span class="nav-number">3.1.</span> <span class="nav-text">循环语句</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#break"><span class="nav-number">3.1.1.</span> <span class="nav-text">break</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#continue"><span class="nav-number">3.1.2.</span> <span class="nav-text">continue</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#exit"><span class="nav-number">3.1.3.</span> <span class="nav-text">exit</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#函数"><span class="nav-number">3.1.4.</span> <span class="nav-text">函数</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">menggeNIU</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"nnnmg"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("elhh73EjPvJjogo27rOTNyxB-gzGzoHsz", "ICYhjaCGuWcsPbm8nPit7Gkh");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+</body>
+</html>
