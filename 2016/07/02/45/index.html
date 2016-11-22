@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="React Native," />
+  <meta name="keywords" content="Node," />
 
 
 
@@ -84,24 +84,39 @@
 
 
 
-<meta name="description" content="之前的文章讲述了在RN项目中如何使用NavigationBar，如何调用原生模块，以及集成下拉刷新和上拉加载更多的功能，今天介绍一个第三方插件react-native-tab-navigator，讲述我是如何使用它在RN项目中使用TabBar项目源码在这里
-1.安装插件npm install react-native-tab-navigator --save
-2.使用就我的demo来说：Demo中">
+<meta name="description" content="Stream 是一个抽象接口，Node 中有很多对象实现了这个接口。例如，对http 服务器发起请求的request 对象就是一个 Stream，还有stdout（标准输出）。Node.js，Stream 有四种流类型：
+
+Readable - 可读操作。
+Writable - 可写操作。
+Duplex - 可读可写操作。
+Transform - 操作被写入数据，然后读出结果。
+
+所有的 Stre">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React-Native项目中使用TabBar 🍰">
-<meta property="og:url" content="https://menggeniu.github.io/2016/05/19/30/index.html">
+<meta property="og:title" content="Node.js Stream(流)🍅">
+<meta property="og:url" content="https://menggeniu.github.io/2016/07/02/45/index.html">
 <meta property="og:site_name" content="NNNの博客">
-<meta property="og:description" content="之前的文章讲述了在RN项目中如何使用NavigationBar，如何调用原生模块，以及集成下拉刷新和上拉加载更多的功能，今天介绍一个第三方插件react-native-tab-navigator，讲述我是如何使用它在RN项目中使用TabBar项目源码在这里
-1.安装插件npm install react-native-tab-navigator --save
-2.使用就我的demo来说：Demo中">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/321232-7d52bf6e83cb0b39.gif?imageMogr2/auto-orient/strip">
-<meta property="og:updated_time" content="2016-11-19T07:35:31.000Z">
+<meta property="og:description" content="Stream 是一个抽象接口，Node 中有很多对象实现了这个接口。例如，对http 服务器发起请求的request 对象就是一个 Stream，还有stdout（标准输出）。Node.js，Stream 有四种流类型：
+
+Readable - 可读操作。
+Writable - 可写操作。
+Duplex - 可读可写操作。
+Transform - 操作被写入数据，然后读出结果。
+
+所有的 Stre">
+<meta property="og:image" content="http://www.runoob.com/wp-content/uploads/2015/09/bVcla61">
+<meta property="og:updated_time" content="2016-11-22T02:40:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React-Native项目中使用TabBar 🍰">
-<meta name="twitter:description" content="之前的文章讲述了在RN项目中如何使用NavigationBar，如何调用原生模块，以及集成下拉刷新和上拉加载更多的功能，今天介绍一个第三方插件react-native-tab-navigator，讲述我是如何使用它在RN项目中使用TabBar项目源码在这里
-1.安装插件npm install react-native-tab-navigator --save
-2.使用就我的demo来说：Demo中">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/321232-7d52bf6e83cb0b39.gif?imageMogr2/auto-orient/strip">
+<meta name="twitter:title" content="Node.js Stream(流)🍅">
+<meta name="twitter:description" content="Stream 是一个抽象接口，Node 中有很多对象实现了这个接口。例如，对http 服务器发起请求的request 对象就是一个 Stream，还有stdout（标准输出）。Node.js，Stream 有四种流类型：
+
+Readable - 可读操作。
+Writable - 可写操作。
+Duplex - 可读可写操作。
+Transform - 操作被写入数据，然后读出结果。
+
+所有的 Stre">
+<meta name="twitter:image" content="http://www.runoob.com/wp-content/uploads/2015/09/bVcla61">
 
 
 
@@ -129,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="https://menggeniu.github.io/2016/05/19/30/"/>
+  <link rel="canonical" href="https://menggeniu.github.io/2016/07/02/45/"/>
 
 
 
 
 
-  <title> React-Native项目中使用TabBar 🍰 | NNNの博客 </title>
+  <title> Node.js Stream(流)🍅 | NNNの博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -246,7 +261,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/05/19/30/">
+  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/07/02/45/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="menggeNIU">
@@ -270,7 +285,7 @@
             
             
               
-                React-Native项目中使用TabBar 🍰
+                Node.js Stream(流)🍅
               
             
           </h1>
@@ -283,8 +298,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-05-19T20:23:27+08:00">
-                2016-05-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-02T21:34:11+08:00">
+                2016-07-02
               </time>
             
 
@@ -299,8 +314,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/05/19/30/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/19/30/" itemprop="commentCount"></span>
+                <a href="/2016/07/02/45/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/02/45/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -310,7 +325,7 @@
 
           
           
-             <span id="/2016/05/19/30/" class="leancloud_visitors" data-flag-title="React-Native项目中使用TabBar 🍰">
+             <span id="/2016/07/02/45/" class="leancloud_visitors" data-flag-title="Node.js Stream(流)🍅">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -335,73 +350,135 @@
       
 
       
-        <p><a href="http://www.jianshu.com/p/34eefd41ed94" target="_blank" rel="external">之前的文章</a>讲述了在RN项目中如何使用NavigationBar，如何调用原生模块，以及集成下拉刷新和上拉加载更多的功能，今天介绍一个第三方插件<a href="https://github.com/exponentjs/react-native-tab-navigator" target="_blank" rel="external">react-native-tab-navigator</a>，讲述我是如何使用它在RN项目中使用TabBar<br><a href="https://github.com/yongqianvip/RN-ListViewLoadMore" target="_blank" rel="external">项目源码在这里</a><br></p>
-<h4 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1.安装插件"></a>1.安装插件</h4><pre><code>npm install react-native-tab-navigator --save
-</code></pre><h4 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h4><p>就我的demo来说：<br><br>Demo中包含了Navigator管理的一系列视图，我尝试过使用一个<code>Tab</code>管理多个由<code>Navigator</code>管理的一系列视图<br><br>(这跟我之前的iOS开发经验有关，在iOS中<code>Application</code>的根视图是<code>TabBarController</code>，这个<code>TabBarController</code>管理多个由<code>NavigationController</code>管理的一系列ViewController） <br><br><strong>但是这有一个问题：</strong><br><br>场景切换的时候可能有隐藏TabBar的需求，按照刚才说的方法，我需要set一个值来控制tabbar的<code>height</code>和<code>overflow</code>，又由于<code>component</code>的生命周期函数中没有类似于iOS中<code>-（void)viewWillAppear;</code>的方法，所以没有很好的方法把隐藏的tabbar再显示出来（如果你有解决这个问题的方法，请告诉我）。 <br><br><strong>那么换一种思路：</strong><br><br>把管理一系列视图的<code>Tab</code>交由一个<code>Navigator</code>管理，虽然这样违背了iOS开发的普通思路，但是就目前在RN项目中，没有发现太大的问题（有一个问题是只有一级页面显示TabBar，所有二级页面全部不显示，不过就国内大多数应用设计风格来看，这个问题也不算是问题）。<br></p>
-<h4 id="3-react-native-vector-icons"><a href="#3-react-native-vector-icons" class="headerlink" title="3.react-native-vector-icons"></a>3.react-native-vector-icons</h4><p>这是一个图标库，有兴趣话可以<a href="https://github.com/oblador/react-native-vector-icons" target="_blank" rel="external">去这里</a>深入了解，简单使用请执行下边两条命令即可 <br></p>
-<pre><code>$ npm install react-native-vector-icons --save
-$ rnpm link
-</code></pre><p>使用：<br></p>
-<pre><code>import Icon from &apos;react-native-vector-icons/Ionicons&apos;;
-&lt;Icon name={ &apos;ios-home&apos; }
-</code></pre><h4 id="4-关键部分代码"><a href="#4-关键部分代码" class="headerlink" title="4.关键部分代码"></a>4.关键部分代码</h4><pre><code>//root.js
- import React from &apos;react&apos;
- import {
-     Navigator
- } from &apos;react-native&apos;;
- import { Provider } from &apos;react-redux&apos;
- import configureStore from &apos;./store/store.js&apos;
- import App from &apos;./containers/app.js&apos;
- const store = configureStore();
+        <p>Stream 是一个抽象接口，Node 中有很多对象实现了这个接口。例如，对http 服务器发起请求的request 对象就是一个 Stream，还有stdout（标准输出）。<br><br>Node.js，Stream 有四种流类型：<br></p>
+<ul>
+<li>Readable - 可读操作。</li>
+<li>Writable - 可写操作。</li>
+<li>Duplex - 可读可写操作。</li>
+<li>Transform - 操作被写入数据，然后读出结果。</li>
+</ul>
+<p>所有的 Stream 对象都是 EventEmitter 的实例。常用的事件有：<br></p>
+<ul>
+<li>data - 当有数据可读时触发。</li>
+<li>end - 没有更多的数据可读时触发。</li>
+<li>error - 在接收和写入过程中发生错误时触发。</li>
+<li>finish - 所有数据已被写入到底层系统时触发。</li>
+</ul>
+<p>本教程会为大家介绍常用的流操作。<br></p>
+<hr>
+<h4 id="从流中读取数据"><a href="#从流中读取数据" class="headerlink" title="从流中读取数据"></a>从流中读取数据</h4><p>创建 input.txt 文件，内容如下：<br></p>
+<pre><code>菜鸟教程官网地址：www.runoob.com
+</code></pre><p>创建 main.js 文件, 代码如下：<br></p>
+<pre><code>var fs = require(&quot;fs&quot;);
+var data = &apos;&apos;;
 
- class Root extends React.Component {
-     render() {
-         return (
-             &lt;Provider store={ store }&gt;
-                 //在原来&lt;App /&gt;的基础上添加Navigator
-                 &lt;Navigator 
-                     initialRoute={{ component: App }}
-                     configureScene={(route) =&gt; {
-                         return Navigator.SceneConfigs.FloatFromRight;
-                     }}
-                     renderScene={(route, navigator) =&gt; {
-                         let Component = route.component;
-                         return &lt;Component {...route.params} navigator={navigator} /&gt;
-                     }} /&gt;
-             &lt;/Provider&gt;
-         );
-     }
- }
- export default Root;
+// 创建可读流
+var readerStream = fs.createReadStream(&apos;input.txt&apos;);
 
- //----------------------
- //app.js  ( render(){} ) 
+// 设置编码为 utf8。
+readerStream.setEncoding(&apos;UTF8&apos;);
 
- render() {
-     const { reducer } = this.props;
-     console.log(&quot;============&quot;,reducer.tabbarHeight);
-     return (
-         &lt;TabNavigator tabBarStyle={{ backgroundColor:'white' }} style={{backgroundColor: 'white'}}&gt;
-                &lt;TabNavigator.Item
-                 title=&quot;主页&quot;
-                 selected={this.state.selectedTab === &apos;home&apos;}
-                 renderIcon={() =&gt; &lt;Icon name={ &apos;ios-home&apos; } size={30} color={&apos;gray&apos;}/&gt;}
-                 renderSelectedIcon={() =&gt; &lt;Icon name={ &apos;ios-home&apos; } size={30} color={&apos;#4E78E7&apos;}/&gt;}
-                 onPress={() =&gt; this.setState({ selectedTab: &apos;home&apos; })}&gt;
-                 &lt;ProductListContainer {...this.props} /&gt;
-             &lt;/TabNavigator.Item&gt;
-             &lt;TabNavigator.Item
-                 title=&quot;其他&quot;
-                 selected={this.state.selectedTab === &apos;other&apos;}
-                 renderIcon={() =&gt; &lt;Icon name={ &apos;ios-more&apos; } size={30} color={&apos;gray&apos;}/&gt;}
-                 renderSelectedIcon={() =&gt; &lt;Icon name={ &apos;ios-more&apos; } size={30} color={&apos;#4E78E7&apos;}/&gt;}
-                 onPress={() =&gt; this.setState({ selectedTab: &apos;other&apos; })}&gt;
-                 &lt;OtherContainer {...this.props}/&gt;
-             &lt;/TabNavigator.Item&gt;
-         &lt;/TabNavigator&gt;
-     );
- }
-</code></pre><h4 id="5-效果图"><a href="#5-效果图" class="headerlink" title="5.效果图"></a>5.效果图</h4><p><img src="http://upload-images.jianshu.io/upload_images/321232-7d52bf6e83cb0b39.gif?imageMogr2/auto-orient/strip" alt=""><br><br>转自：<a href="http://www.jianshu.com/p/7a4899bde137" target="_blank" rel="external">http://www.jianshu.com/p/7a4899bde137</a></p>
+// 处理流事件 --&gt; data, end, and error
+readerStream.on(&apos;data&apos;, function(chunk) {
+   data += chunk;
+});
+
+readerStream.on(&apos;end&apos;,function(){
+   console.log(data);
+});
+
+readerStream.on(&apos;error&apos;, function(err){
+   console.log(err.stack);
+});
+
+console.log(&quot;程序执行完毕&quot;);
+</code></pre><p>以上代码执行结果如下：<br></p>
+<pre><code>程序执行完毕
+菜鸟教程官网地址：www.runoob.com
+</code></pre><hr>
+<h4 id="写入流"><a href="#写入流" class="headerlink" title="写入流"></a>写入流</h4><p>创建 main.js 文件, 代码如下：<br></p>
+<pre><code>var fs = require(&quot;fs&quot;);
+var data = &apos;菜鸟教程官网地址：www.runoob.com&apos;;
+
+// 创建一个可以写入的流，写入到文件 output.txt 中
+var writerStream = fs.createWriteStream(&apos;output.txt&apos;);
+
+// 使用 utf8 编码写入数据
+writerStream.write(data,&apos;UTF8&apos;);
+
+// 标记文件末尾
+writerStream.end();
+
+// 处理流事件 --&gt; data, end, and error
+writerStream.on(&apos;finish&apos;, function() {
+    console.log(&quot;写入完成。&quot;);
+});
+
+writerStream.on(&apos;error&apos;, function(err){
+   console.log(err.stack);
+});
+
+console.log(&quot;程序执行完毕&quot;);
+</code></pre><p>以上程序会将 data 变量的数据写入到 output.txt 文件中。代码执行结果如下：<br></p>
+<pre><code>$ node main.js 
+程序执行完毕
+写入完成。
+</code></pre><p>查看 output.txt 文件的内容：<br></p>
+<pre><code>$ cat output.txt 
+菜鸟教程官网地址：www.runoob.com
+</code></pre><hr>
+<h4 id="管道流"><a href="#管道流" class="headerlink" title="管道流"></a>管道流</h4><p>管道提供了一个输出流到输入流的机制。通常我们用于从一个流中获取数据并将数据传递到另外一个流中。<br><br><img src="http://www.runoob.com/wp-content/uploads/2015/09/bVcla61" alt=""><br><br>如上面的图片所示，我们把文件比作装水的桶，而水就是文件里的内容，我们用一根管子(pipe)连接两个桶使得水从一个桶流入另一个桶，这样就慢慢的实现了大文件的复制过程。<br><br>以下实例我们通过读取一个文件内容并将内容写入到另外一个文件中。<br><br>设置 input.txt 文件内容如下：<br></p>
+<pre><code>菜鸟教程官网地址：www.runoob.com
+管道流操作实例
+</code></pre><p>创建 main.js 文件, 代码如下：<br></p>
+<pre><code>var fs = require(&quot;fs&quot;);
+
+// 创建一个可读流
+var readerStream = fs.createReadStream(&apos;input.txt&apos;);
+
+// 创建一个可写流
+var writerStream = fs.createWriteStream(&apos;output.txt&apos;);
+
+// 管道读写操作
+// 读取 input.txt 文件内容，并将内容写入到 output.txt 文件中
+readerStream.pipe(writerStream);
+
+console.log(&quot;程序执行完毕&quot;);
+</code></pre><p>代码执行结果如下：<br></p>
+<pre><code>$ node main.js 
+程序执行完毕
+</code></pre><p>查看 output.txt 文件的内容：<br></p>
+<pre><code>$ cat output.txt 
+菜鸟教程官网地址：www.runoob.com
+管道流操作实例
+</code></pre><hr>
+<h4 id="链式流"><a href="#链式流" class="headerlink" title="链式流"></a>链式流</h4><p>链式是通过连接输出流到另外一个流并创建多个对个流操作链的机制。链式流一般用于管道操作。<br><br>接下来我们就是用管道和链式来压缩和解压文件。<br><br>创建 compress.js 文件, 代码如下：<br></p>
+<pre><code>var fs = require(&quot;fs&quot;);
+var zlib = require(&apos;zlib&apos;);
+
+// 压缩 input.txt 文件为 input.txt.gz
+fs.createReadStream(&apos;input.txt&apos;)
+  .pipe(zlib.createGzip())
+  .pipe(fs.createWriteStream(&apos;input.txt.gz&apos;));
+
+console.log(&quot;文件压缩完成。&quot;);
+</code></pre><p>代码执行结果如下：<br></p>
+<pre><code>$ node compress.js 
+文件压缩完成。
+</code></pre><p>执行完以上操作后，我们可以看到当前目录下生成了 input.txt 的压缩文件 input.txt.gz。<br><br>接下来，让我们来解压该文件，创建 decompress.js 文件，代码如下：<br></p>
+<pre><code>var fs = require(&quot;fs&quot;);
+var zlib = require(&apos;zlib&apos;);
+
+// 解压 input.txt.gz 文件为 input.txt
+fs.createReadStream(&apos;input.txt.gz&apos;)
+  .pipe(zlib.createGunzip())
+  .pipe(fs.createWriteStream(&apos;input.txt&apos;));
+
+console.log(&quot;文件解压完成。&quot;);
+</code></pre><p>代码执行结果如下：<br></p>
+<pre><code>$ node decompress.js 
+文件解压完成。
+</code></pre><p>转自：<a href="http://www.runoob.com/nodejs/nodejs-stream.html" target="_blank" rel="external">菜鸟教程</a></p>
 
       
     </div>
@@ -425,7 +502,7 @@ $ rnpm link
       
         <div class="post-tags">
           
-            <a href="/tags/React-Native/" rel="tag"># React Native</a>
+            <a href="/tags/Node/" rel="tag"># Node</a>
           
         </div>
       
@@ -434,8 +511,8 @@ $ rnpm link
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/15/29/" rel="next" title="React Native 的 Navigator 组件使用方法">
-                <i class="fa fa-chevron-left"></i> React Native 的 Navigator 组件使用方法
+              <a href="/2016/06/28/44/" rel="next" title="IE6双边距bug及其解决办法🎄">
+                <i class="fa fa-chevron-left"></i> IE6双边距bug及其解决办法🎄
               </a>
             
           </div>
@@ -443,10 +520,6 @@ $ rnpm link
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/23/31/" rel="prev" title="谈响应式web设计代码实现🍨">
-                谈响应式web设计代码实现🍨 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -610,7 +683,7 @@ var duoshuoQuery = {short_name:"yuzhiyun"};
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-安装插件"><span class="nav-number">1.</span> <span class="nav-text">1.安装插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-使用"><span class="nav-number">2.</span> <span class="nav-text">2.使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-react-native-vector-icons"><span class="nav-number">3.</span> <span class="nav-text">3.react-native-vector-icons</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-关键部分代码"><span class="nav-number">4.</span> <span class="nav-text">4.关键部分代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-效果图"><span class="nav-number">5.</span> <span class="nav-text">5.效果图</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#从流中读取数据"><span class="nav-number">1.</span> <span class="nav-text">从流中读取数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写入流"><span class="nav-number">2.</span> <span class="nav-text">写入流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#管道流"><span class="nav-number">3.</span> <span class="nav-text">管道流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链式流"><span class="nav-number">4.</span> <span class="nav-text">链式流</span></a></li></ol></div>
             
 
           </div>
