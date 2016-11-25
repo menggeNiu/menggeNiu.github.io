@@ -1,0 +1,1098 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="1 同源策略所谓同源策略，指的是浏览器对不同源的脚本或者文本的访问方式进行的限制。比如源a的js不能读取或设置引入的源b的元素属性。那么先定义下什么是同源，所谓同源，就是指两个页面具有相同的协议，主机（也常说域名），端口，三个要素缺一不可。可以看下面的几个示例来更加清楚的了解一下同源的概念：
+
+
+
+URL1
+URL2
+说明
+是否允许通信
+
+
+
+
+http://www.foo.com/js/a.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="也谈谈同源策略和跨域问题👗">
+<meta property="og:url" content="https://menggeniu.github.io/2016/07/17/51/index.html">
+<meta property="og:site_name" content="NNNの博客">
+<meta property="og:description" content="1 同源策略所谓同源策略，指的是浏览器对不同源的脚本或者文本的访问方式进行的限制。比如源a的js不能读取或设置引入的源b的元素属性。那么先定义下什么是同源，所谓同源，就是指两个页面具有相同的协议，主机（也常说域名），端口，三个要素缺一不可。可以看下面的几个示例来更加清楚的了解一下同源的概念：
+
+
+
+URL1
+URL2
+说明
+是否允许通信
+
+
+
+
+http://www.foo.com/js/a.js">
+<meta property="og:updated_time" content="2016-11-25T12:28:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="也谈谈同源策略和跨域问题👗">
+<meta name="twitter:description" content="1 同源策略所谓同源策略，指的是浏览器对不同源的脚本或者文本的访问方式进行的限制。比如源a的js不能读取或设置引入的源b的元素属性。那么先定义下什么是同源，所谓同源，就是指两个页面具有相同的协议，主机（也常说域名），端口，三个要素缺一不可。可以看下面的几个示例来更加清楚的了解一下同源的概念：
+
+
+
+URL1
+URL2
+说明
+是否允许通信
+
+
+
+
+http://www.foo.com/js/a.js">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://menggeniu.github.io/2016/07/17/51/"/>
+
+
+
+
+
+  <title> 也谈谈同源策略和跨域问题👗 | NNNの博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NNNの博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">世上所有的相遇都是久别重逢</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/07/17/51/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="menggeNIU">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="NNNの博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                也谈谈同源策略和跨域问题👗
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-17T20:15:21+08:00">
+                2016-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2016/07/17/51/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/17/51/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/17/51/" class="leancloud_visitors" data-flag-title="也谈谈同源策略和跨域问题👗">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1-同源策略"><a href="#1-同源策略" class="headerlink" title="1 同源策略"></a>1 同源策略</h3><p>所谓同源策略，指的是浏览器对不同源的脚本或者文本的访问方式进行的限制。比如源a的js不能读取或设置引入的源b的元素属性。<br><br>那么先定义下什么是同源，所谓同源，就是指两个页面具有相同的协议，主机（也常说域名），端口，三个要素缺一不可。<br><br>可以看下面的几个示例来更加清楚的了解一下同源的概念：<br></p>
+<table>
+<thead>
+<tr>
+<th>URL1</th>
+<th>URL2</th>
+<th>说明</th>
+<th>是否允许通信</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.foo.com/js/a.js" target="_blank" rel="external">http://www.foo.com/js/a.js</a></td>
+<td><a href="http://www.foo.com/js/b.js" target="_blank" rel="external">http://www.foo.com/js/b.js</a></td>
+<td>协议、域名、端口都相同</td>
+<td>允许</td>
+</tr>
+<tr>
+<td><a href="http://www.foo.com/js/a.js" target="_blank" rel="external">http://www.foo.com/js/a.js</a></td>
+<td><a href="http://www.foo.com:8888/js/b.js" target="_blank" rel="external">http://www.foo.com:8888/js/b.js</a></td>
+<td>协议、域名相同，端口不同</td>
+<td>不允许</td>
+</tr>
+<tr>
+<td><a href="https://www.foo.com/js/a.js" target="_blank" rel="external">https://www.foo.com/js/a.js</a></td>
+<td><a href="http://www.foo.com/js/b.js" target="_blank" rel="external">http://www.foo.com/js/b.js</a></td>
+<td>主机、域名相同，协议不同</td>
+<td>不允许</td>
+</tr>
+<tr>
+<td><a href="http://www.foo.com/js/a.js" target="_blank" rel="external">http://www.foo.com/js/a.js</a></td>
+<td><a href="http://www.bar.com/js/b.js" target="_blank" rel="external">http://www.bar.com/js/b.js</a></td>
+<td>协议、端口相同，域名不同</td>
+<td>不允许</td>
+</tr>
+<tr>
+<td><a href="http://www.foo.com/js/a.js" target="_blank" rel="external">http://www.foo.com/js/a.js</a></td>
+<td><a href="http://foo.com/js/b.js" target="_blank" rel="external">http://foo.com/js/b.js</a></td>
+<td>协议、端口相同，主域名相同，子域名不同</td>
+<td>不允许</td>
+</tr>
+</tbody>
+</table>
+<p>同源策略限制了不同源之间的交互，但是有人也许会有疑问，我们以前在写代码的时候也常常会引用其他域名的js文件，样式文件，图片文件什么的，没看到限制啊，这个定义是不是错了。<strong>其实不然，同源策略限制的不同源之间的交互主要针对的是js中的XMLHttpRequest等请求，下面这些情况是完全不受同源策略限制的</strong>。<br></p>
+<ul>
+<li>页面中的链接，重定向以及表单提交是不会受到同源策略限制的。链接就不用说了，导航网站上的链接都是链接到其他站点的。而你在域名www.foo.com下面提交一个表单到www.bar.com是完全可以的。</li>
+<li>跨域资源嵌入是允许的，当然，浏览器限制了<strong>Javascript</strong>不能读写加载的内容。如前面提到的嵌入的&lt; script src=”…” &gt;&lt;/ script &gt;，&lt; img &gt;，&lt; link &gt;，&lt; iframe &gt;等。当然，如果要阻止iframe嵌入我们网站的资源(页面或者js等)，我们可以在web服务器加上一个X-Frame-Options DENY头部来限制。nginx就可以这样设置add_header X-Frame-Options DENY;。</li>
+</ul>
+<p>既然有这么多的情况是没有同源策略限制的，那么通常的跨域问题从何而来呢？转到下一节跨域问题。<br></p>
+<h3 id="2-跨域问题"><a href="#2-跨域问题" class="headerlink" title="2 跨域问题"></a>2 跨域问题</h3><p>这一节来讨论下跨域问题，当然前置条件是我们在WEB服务器或者服务端脚本中设置ACCESS-CONTROL-ALLOW-ORIGIN头部，如果设置了这些头部并允许某些域名跨域访问，则浏览器就会跳过同源策略的限制返回对应的内容。此外，如果你不是通过浏览器去获取资源，比如你通过一个python脚本去调用接口或者获取js文件，也不在这个限制之内。<br></p>
+<h4 id="2-1-Ajax跨域"><a href="#2-1-Ajax跨域" class="headerlink" title="2.1 Ajax跨域"></a>2.1 Ajax跨域</h4><p>通过ajax调用其他域的接口会有跨域问题。比如下面的例子，我在<a href="http://www.foo.com/index.html中通过ajax调用请求http://www.bar.com/js/test.js页面，此时是会报错的。" target="_blank" rel="external">http://www.foo.com/index.html中通过ajax调用请求http://www.bar.com/js/test.js页面，此时是会报错的。</a><br><br>XMLHttpRequest cannot load <a href="http://www.bar.com/js/test.js" target="_blank" rel="external">http://www.bar.com/js/test.js</a>. <br><br>No ‘Access-Control-Allow-Origin’ header is present on the requested resource. <br><br>Origin ‘<a href="http://www.foo.com" target="_blank" rel="external">http://www.foo.com</a>‘ is therefore not allowed access.<br><br>这是因为我们的WEB服务器没有设置ACCESS-CONTROL-ALLOW-ORIGIN头部，默认情况下是禁止跨域引用资源的。当然这里有一点要注意，其实这个跨域请求是发送成功了的，服务器也有返回test.js内容，只是浏览器禁止Javascript去取response的数据而已。如果要设置ACCESS-CONTROL-ALLOW-ORIGIN头部，nginx可以使用下面的代码<br></p>
+<pre><code>add_header &apos;Access-Control-Allow-Origin&apos; &apos;http://www.foo.com&apos;;
+add_header &apos;Access-Control-Allow-Credentials&apos; &apos;true&apos;;
+add_header &apos;Access-Control-Allow-Methods&apos; &apos;GET,POST&apos;;
+</code></pre><p>另外，我们看到直接通过Javascript去取iframe中的元素也是会报错的，因为域名不同。报错如下所示<br></p>
+<pre><code>Uncaught SecurityError: Failed to read the &apos;contentDocument&apos; property from &apos;HTMLIFrameElement&apos;: Blocked a frame with origin &quot;http://www.foo.com&quot; from accessing a frame with origin &quot;http://foo.com&quot;. 
+The frame being accessed set &quot;document.domain&quot; to &quot;foo.com&quot;, but the frame requesting access did not. Both must set &quot;document.domain&quot; to the same value to allow access.
+</code></pre><p>这时因为我们的主域名相同，因此可以在index.html和test.html中设置document.domain=’foo.com’来访问iframe中的元素。注意，是两个域名下面的文件都要设置，即便是同样的主域名。当然这是特例，如果是两个完全不同的域名，是没有办法的，你不能把www.foo.com的domain设置成www.163.com。<br><br>此外，在index.html里面也可以看到通过<script>,<iframe>等标签都是可以跨域内嵌资源的。<br></p>
+<pre><code># index.html
+&lt;!DOCTYPE html&gt;
+&lt; html &gt;
+&lt;head&gt;
+&lt; title &gt;test cross domain&lt;/title&gt;
+&lt; script src= &quot;/js/jquery.js&quot;&gt;&lt;/s cript&gt;
+&lt;script src=&quot;http://www.bar.com/js/test.js&quot;&gt;&lt;/s cript&gt;
+&lt;script&gt;
+$(function(){
+document.domain = &apos;foo.com&apos;; //1 注释掉则会报错 
+var ifr = document.getElementById(&quot;testframe&quot;);
+ifr.onload = function(){
+    var doc = ifr.contentDocument || ifr.contentWindow.document;
+    alert(doc.getElementsByTagName(&quot;h1&quot;)[0].childNodes[0].nodeValue);
+}
+});
+$.ajax(&quot;http://www.bar.com/js/test.js&quot;); //2 报错
+&lt;/s cript&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Test Cross Domain&lt;/h1&gt;
+&lt;iframe id=&quot;testframe&quot; src=&quot;http://foo.com/test.html&quot;&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>当然还可以通过iframe，location.hash，window.name，HTML5的postMessage等方法来实现跨域资源访问，更多内容参见Rain Man的这篇文章 <a href="http://www.cnblogs.com/rainman/archive/2011/02/20/1959325.html">JavaScript跨域总结和解决办法</a>。<br></p>
+<h4 id="2-2-JSONP跨域访问"><a href="#2-2-JSONP跨域访问" class="headerlink" title="2.2 JSONP跨域访问"></a>2.2 JSONP跨域访问</h4><p>SONP也是开发中常见到的内容，在jquery中就有封装，通过ajax请求多带上一个jsonp的参数即可。JSONP也能够实现跨域访问资源，但是它的实现原理其实跟ajax没有多少关系，它是通过动态插入<script>标签来实现跨域资源访问的，因为根据前面内容我们已经知道，嵌入跨域资源浏览器是允许的。<br><br>下面通过一个简单的例子来说明JSONP的原理。<br><br>两个文件，第一个是<a href="http://www.foo.com/jsonp.html，通过动态创建script标签加载了http://www.bar.com/js/outer.js文件，然后outer.js文件返回的内容正好是一个函数调用，如此，实现了数据传递和回调过程。当然，实际的jsonp接口中，会让你传一个函数名过去，然后返回的数据中回调函数名就是你传的函数名，回调函数的参数则是封装的json格式。jQuery中的jsonp实现原理基本就是这样，更详细的jsonp原理可以参见这篇大作`深入浅出JSONP`。">http://www.foo.com/jsonp.html，通过动态创建script标签加载了http://www.bar.com/js/outer.js文件，然后outer.js文件返回的内容正好是一个函数调用，如此，实现了数据传递和回调过程。当然，实际的jsonp接口中，会让你传一个函数名过去，然后返回的数据中回调函数名就是你传的函数名，回调函数的参数则是封装的json格式。jQuery中的jsonp实现原理基本就是这样，更详细的jsonp原理可以参见这篇大作`深入浅出JSONP`。</a><br></p>
+<pre><code># jsonp.html
+&lt;script type=&quot;text/javascript&quot;&gt;
+function callback(data) {
+    alert(data.message);
+}
+function addScriptTag(src){
+var script = document.createElement(&apos;script&apos;);
+    script.src = src;
+    document.body.appendChild(script);
+}
+
+window.onload = function(){
+    addScriptTag(&quot;http://www.foo.com/js/outer.js&quot;);
+}&lt;/sc ript&gt;
+# outer.js
+callback({message:&quot;success&quot;});
+</code></pre><p>转自：<a href="http://www.cnblogs.com/chaoyuehedy/p/5556557.html">http://www.cnblogs.com/chaoyuehedy/p/5556557.html</a> </p>
+</script></p>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag"># JS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/16/50/" rel="next" title="PHP基本语法🍄">
+                <i class="fa fa-chevron-left"></i> PHP基本语法🍄
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+    <!-- 多说评论框 start -->  
+        <div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>  
+<!-- 多说评论框 end -->    
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->  
+<script type="text/javascript">  
+var duoshuoQuery = {short_name:"yuzhiyun"};  
+    (function() {  
+        var ds = document.createElement('script');  
+        ds.type = 'text/javascript';ds.async = true;  
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';  
+        ds.charset = 'UTF-8';  
+        (document.getElementsByTagName('head')[0]   
+         || document.getElementsByTagName('body')[0]).appendChild(ds);  
+    })();  
+    </script>  
+<!-- 多说公共JS代码 end -->  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="menggeNIU" />
+          <p class="site-author-name" itemprop="name">menggeNIU</p>
+          <p class="site-description motion-element" itemprop="description">个人收藏</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">51</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/menggeNiu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1967072037" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zjflove.github.io" title="zjf" target="_blank">zjf</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.901web.com" title="pybyongbo" target="_blank">pybyongbo</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-同源策略"><span class="nav-number">1.</span> <span class="nav-text">1 同源策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-跨域问题"><span class="nav-number">2.</span> <span class="nav-text">2 跨域问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-Ajax跨域"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 Ajax跨域</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">menggeNIU</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"nnnmg"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("elhh73EjPvJjogo27rOTNyxB-gzGzoHsz", "ICYhjaCGuWcsPbm8nPit7Gkh");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+</body>
+</html>
