@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HTML5," />
+  <meta name="keywords" content="ALL," />
 
 
 
@@ -84,37 +84,40 @@
 
 
 
-<meta name="description" content="今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考~以后不用再找啦~
-&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-&amp;lt;style&amp;gt;
-    ul.a {list-style-type:circle;}
-    ul.b {list-style-type:disc;}
-    ul.c {lis">
+<meta name="description" content="要了解CDN的实现原理，首先让我们来回顾一下网站传统的访问过程，以便理解其与CDN访问方式之间的差别：由上图可见，传统的网站访问过程为:
+
+用户在浏览器中输入要访问的域名；
+浏览器向域名解析服务器发出解析请求，获得此域名对应的IP地址；
+浏览器利用所得到的IP地址，向该IP对应的服务器发出访问请求；
+服务器对此响应，将数据回传至用户浏览器端显示出来。
+
+与传统访问方式不同，CDN网络则是在用户和服">
 <meta property="og:type" content="article">
-<meta property="og:title" content="列表样式总结">
-<meta property="og:url" content="https://menggeniu.github.io/2016/01/15/2/index.html">
+<meta property="og:title" content="CDN技术原理💕">
+<meta property="og:url" content="https://menggeniu.github.io/2016/07/26/54/index.html">
 <meta property="og:site_name" content="NNNの博客">
-<meta property="og:description" content="今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考~以后不用再找啦~
-&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-&amp;lt;style&amp;gt;
-    ul.a {list-style-type:circle;}
-    ul.b {list-style-type:disc;}
-    ul.c {lis">
-<meta property="og:updated_time" content="2016-11-19T03:03:00.000Z">
+<meta property="og:description" content="要了解CDN的实现原理，首先让我们来回顾一下网站传统的访问过程，以便理解其与CDN访问方式之间的差别：由上图可见，传统的网站访问过程为:
+
+用户在浏览器中输入要访问的域名；
+浏览器向域名解析服务器发出解析请求，获得此域名对应的IP地址；
+浏览器利用所得到的IP地址，向该IP对应的服务器发出访问请求；
+服务器对此响应，将数据回传至用户浏览器端显示出来。
+
+与传统访问方式不同，CDN网络则是在用户和服">
+<meta property="og:image" content="http://network.51cto.com/files/uploadimg/20070416/1554200.gif?_=4331784">
+<meta property="og:image" content="http://network.51cto.com/files/uploadimg/20070416/1554201.gif?_=4331784">
+<meta property="og:updated_time" content="2016-11-29T13:39:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="列表样式总结">
-<meta name="twitter:description" content="今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考~以后不用再找啦~
-&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-&amp;lt;style&amp;gt;
-    ul.a {list-style-type:circle;}
-    ul.b {list-style-type:disc;}
-    ul.c {lis">
+<meta name="twitter:title" content="CDN技术原理💕">
+<meta name="twitter:description" content="要了解CDN的实现原理，首先让我们来回顾一下网站传统的访问过程，以便理解其与CDN访问方式之间的差别：由上图可见，传统的网站访问过程为:
+
+用户在浏览器中输入要访问的域名；
+浏览器向域名解析服务器发出解析请求，获得此域名对应的IP地址；
+浏览器利用所得到的IP地址，向该IP对应的服务器发出访问请求；
+服务器对此响应，将数据回传至用户浏览器端显示出来。
+
+与传统访问方式不同，CDN网络则是在用户和服">
+<meta name="twitter:image" content="http://network.51cto.com/files/uploadimg/20070416/1554200.gif?_=4331784">
 
 
 
@@ -142,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="https://menggeniu.github.io/2016/01/15/2/"/>
+  <link rel="canonical" href="https://menggeniu.github.io/2016/07/26/54/"/>
 
 
 
 
 
-  <title> 列表样式总结 | NNNの博客 </title>
+  <title> CDN技术原理💕 | NNNの博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -282,7 +285,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/01/15/2/">
+  <link itemprop="mainEntityOfPage" href="https://menggeniu.github.io/2016/07/26/54/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="menggeNIU">
@@ -306,7 +309,7 @@
             
             
               
-                列表样式总结
+                CDN技术原理💕
               
             
           </h1>
@@ -319,8 +322,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-15T19:31:09+08:00">
-                2016-01-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-26T21:55:48+08:00">
+                2016-07-26
               </time>
             
 
@@ -335,8 +338,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/01/15/2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/15/2/" itemprop="commentCount"></span>
+                <a href="/2016/07/26/54/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/26/54/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -346,7 +349,7 @@
 
           
           
-             <span id="/2016/01/15/2/" class="leancloud_visitors" data-flag-title="列表样式总结">
+             <span id="/2016/07/26/54/" class="leancloud_visitors" data-flag-title="CDN技术原理💕">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -371,149 +374,79 @@
       
 
       
-        <h2 id="今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考-以后不用再找啦"><a href="#今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考-以后不用再找啦" class="headerlink" title="今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考~以后不用再找啦~"></a>今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考~以后不用再找啦~</h2><hr>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;style&gt;
-    ul.a {list-style-type:circle;}
-    ul.b {list-style-type:disc;}
-    ul.c {list-style-type:square;}
-    ol.d {list-style-type:armenian;}
-    ol.e {list-style-type:cjk-ideographic;}
-    ol.f {list-style-type:decimal;}
-    ol.g {list-style-type:decimal-leading-zero;}
-    ol.h {list-style-type:georgian;}
-    ol.i {list-style-type:hebrew;}
-    ol.j {list-style-type:hiragana;}
-    ol.k {list-style-type:hiragana-iroha;}
-    ol.l {list-style-type:katakana;}
-    ol.m {list-style-type:katagana-iroha;}
-    ol.n {list-style-type:lower-alpha;}
-    ol.o {list-style-type:lower-greek;}
-    ol.p {list-style-type:lower-latin;}
-    ol.q {list-style-type:lower-roman;}
-    ol.r {list-style-type:upper-alpha;}
-    ol.s {list-style-type:upper-latin;}
-    ol.t {list-style-type:upper-roman;}
-    ol.u {list-style-type:none;}
-    ol.v {list-style-type:inherit;}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;ul class=&quot;a&quot;&gt;
-        &lt;li&gt;Circle type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;ul class=&quot;b&quot;&gt;
-        &lt;li&gt;Disc type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;ul class=&quot;c&quot;&gt;
-        &lt;li&gt;Square type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;ol class=&quot;d&quot;&gt;
-        &lt;li&gt;Armenian type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;e&quot;&gt;
-        &lt;li&gt;Cjk-ideographic type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;f&quot;&gt;
-        &lt;li&gt;Decimal type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;g&quot;&gt;
-        &lt;li&gt;Decimal-leading-zero type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;h&quot;&gt;
-        &lt;li&gt;Georgian type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;i&quot;&gt;
-        &lt;li&gt;Hebrew type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-        &lt;/ol&gt;    
-    &lt;ol class=&quot;j&quot;&gt;
-        &lt;li&gt;Hiragana type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;k&quot;&gt;
-        &lt;li&gt;Hiragana-iroha type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;l&quot;&gt;
-        &lt;li&gt;Katakana type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;m&quot;&gt;
-        &lt;li&gt;Katakana-iroha type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;n&quot;&gt;
-        &lt;li&gt;Lower-alpha type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;o&quot;&gt;
-        &lt;li&gt;Lower-greek type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;p&quot;&gt;
-        &lt;li&gt;Lower-latin type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;q&quot;&gt;
-        &lt;li&gt;Lower-roman type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;r&quot;&gt;
-        &lt;li&gt;Upper-alpha type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;s&quot;&gt;
-        &lt;li&gt;Upper-latin type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;t&quot;&gt;
-        &lt;li&gt;Upper-roman type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;u&quot;&gt;
-        &lt;li&gt;None type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;ol class=&quot;v&quot;&gt;
-        &lt;li&gt;inherit type&lt;/li&gt;
-        &lt;li&gt;Tea&lt;/li&gt;
-        &lt;li&gt;Coca Cola&lt;/li&gt;
-    &lt;/ol&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h4 id="大家可以直接把代码粘过去看效果"><a href="#大家可以直接把代码粘过去看效果" class="headerlink" title="大家可以直接把代码粘过去看效果~~"></a>大家可以直接把代码粘过去看效果~~</h4>
+        <p>要了解CDN的实现原理，首先让我们来回顾一下网站传统的访问过程，以便理解其与CDN访问方式之间的差别：<br><br><img src="http://network.51cto.com/files/uploadimg/20070416/1554200.gif?_=4331784" alt=""><br><br>由上图可见，传统的网站访问过程为:<br></p>
+<ol>
+<li>用户在浏览器中输入要访问的域名；</li>
+<li>浏览器向域名解析服务器发出解析请求，获得此域名对应的IP地址；</li>
+<li>浏览器利用所得到的IP地址，向该IP对应的服务器发出访问请求；</li>
+<li>服务器对此响应，将数据回传至用户浏览器端显示出来。</li>
+</ol>
+<p>与传统访问方式不同，CDN网络则是在用户和服务器之间增加Cache层，将用户的访问请求引导到Cache节点而不是服务器源站点，要实现这一目的，主要是通过接管DNS实现，下图为使用CDN缓存后的网站访问过程：<br><br><img src="http://network.51cto.com/files/uploadimg/20070416/1554201.gif?_=4331784" alt=""><br><br>由上图可见，使用CDN缓存后的网站访问过程演变为：<br></p>
+<ol>
+<li>用户在浏览器中输入要访问的域名； </li>
+<li>浏览器向域名解析服务器发出解析请求，由于CDN对域名解析过程进行了调整，所以用户端一般得到的是该域名对应的CNAME记录，此时浏览器需要再次对获得的CNAME域名进行解析才能得到缓存服务器实际的IP地址。<br>注：在此过程中，全局负载均衡DNS解析服务器会根据用户端的源IP地址，如地理位置（深圳还是上海）、接入网类型（电信还是网通）将用户的访问请求定位到离用户路由最短、位置最近、负载最轻的Cache节点（缓存服务器）上，实现就近定位。定位优先原则可按位置、可按路由、也可按负载等。 </li>
+<li>再次解析后浏览器得到该域名CDN缓存服务器的实际IP地址，向缓存服务器发出访问请求； </li>
+<li>缓存服务器根据浏览器提供的域名，通过Cache内部专用DNS解析得到此域名源服务器的真实IP地址，再由缓存服务器向此真实IP地址提交访问请求； </li>
+<li>缓存服务器从真实IP地址得到内容后，一方面在本地进行保存，以备以后使用，同时把得到的数据发送到客户端浏览器，完成访问的响应过程； </li>
+<li>用户端得到由缓存服务器传回的数据后显示出来，至此完成整个域名访问过程。</li>
+</ol>
+<p>通过以上分析可以看到，不论是否使用CDN网络，普通用户客户端设置不需做任何改变，直接使用被加速网站原有域名访问即可。对于要加速的网站，只需修改整个访问过程中的域名解析部分，便能实现透明的网络加速服务。<br></p>
+<h4 id="Linux-系统-Squid集群做CDN全网加速"><a href="#Linux-系统-Squid集群做CDN全网加速" class="headerlink" title="Linux 系统 Squid集群做CDN全网加速"></a>Linux 系统 Squid集群做CDN全网加速</h4><p>内容分发网络(CDN)是一种新型网络内容服务体系，其基于IP网络而构建，基于内容访问与应用的效率要求、质量要求和内容秩序而提供内容的分发和服务。而从广义的角度，CDN代表了一种基于网络而构建的高质量、高效率、具有鲜明网络秩序的网络应用服务模式。<br><br>简单地说，内容分发网络(CDN)是一个经策略性部署的整体系统，包括分布式存储、负载均衡、网络请求的重定向和内容管理4个要件，而内容管理和全局的网络流量管理(Traffic Management)是CDN的核心所在。通过用户就近性和服务器负载的判断，CDN确保内容以一种极为高效的方式为用户的请求提供服务。<br><br>总的来说，内容服务基于缓存服务器，也称作代理缓存(Surrogate)，它位于网络的边缘，距用户仅有”一跳”(Single Hop)之遥。同时，代理缓存是内容提供商源服务器（通常位于CDN服务提供商的数据中心）的一个透明镜像。这样的架构使得CDN服务提供商能够代表他们客户，即内容供应商，向最终用户提供尽可能好的体验，而这些用户是不能容忍请求响应时间有任何延迟的。<br><br>CDN的通俗理解就是网站加速，可以解决跨运营商，跨地区，服务器负载能力过低，带宽过少等带来的网站打开速度慢等问题。<br><br>比如：<br></p>
+<ol>
+<li>一个企业的网站服务器在北京，运营商是电信，在广东的联通用户访问企业网站时，因为跨地区，跨运营商的原因，网站打开速度就会比北京当地的电信客户访问速度慢很多，很容易造成这个企业的客户流失</li>
+<li>一个网站的服务器性能比较差，承载能力有限，有时面临突发流量，招架不住，直接导致服务器崩溃，网站打不开，尤其是电商网站在节日期间，因为这种情况网站打不开，销售额白白流失的占比都高涨至60%</li>
+<li>再比如一些中小企业租用的虚拟主机，因为跟好几个网站共用一台服务器，每个网站所分带宽有限，带宽过小经常导致流量稍微一多，网站打开速度就很慢，甚至打不开</li>
+</ol>
+<p>以上只是几个简单举例，都可以通过CDN来解决，大家可以参考下。<br><br>使用CDN的好处？<br></p>
+<ol>
+<li>不用担心自己网站访客，在任何时间，任何地点，任何网络运营商，都能快速打开网站。</li>
+<li>各种服务器虚拟主机带宽等采购成本，包括后期运维成本都会大大减少。</li>
+<li><p>给网站直接带来的好处就是：流量，咨询量，客户量，成单量，都会得到大幅度提升。</p>
+<h4 id="CDN的价格？"><a href="#CDN的价格？" class="headerlink" title="CDN的价格？"></a>CDN的价格？<br></h4><p>大家提起CDN,都会望而却步，因为CDN太贵，都是大企业才能用得起的贵族式服务，而如今面对中小企业的CDN技术开发已经实现，并进入市场开始运营。<br><br>现在市面上CDN提供商计费方式多样，有按每月最低消费的，有按带宽收费的，有按请求数收费的，有包月包季包年限制的，还有些大多人看不懂的技术指标收费的，总之比较复杂，CDN服务在所有计费方式中，中小企业一至认为按流量收费最为合理，另外大多按流量计费方式中会有时间限制，规定时间内用不完就会全部作废，对于流量把握不好的中小企业，存在相当一部分浪费。<br></p>
+<h4 id="CDN选择的标准？"><a href="#CDN选择的标准？" class="headerlink" title="CDN选择的标准？"></a>CDN选择的标准？</h4><p>因为CDN技术牵涉到技术研发，以及售后问题解决的是否快捷，所以在选择cdn服务商时，一定选择技术研发实力强专业的公司，以保证在售后出现问题时能得到及时的解决，而不能仅仅图便宜，当时是便宜了，可事后会用更大的金钱代价来弥补，所以请选择CDN服务的企业网站，一定要慎重了，尤其是中小企业，更经不起折腾。由于cdn市场很混乱，付完钱，出问题售后跟不上的案例太多了，大家在选择时还是选择专业的CDN服务商为上策，不要只图便宜，对于专业的CDN提供商已经很便宜了。<br><br>在CDN业界国内可供中小企业选择的CDN专业提供商有：Webluker,盛大云，叁加伍,加速乐等，大家可以在网上搜搜，到他们官网看看，按照上面的标准进行选择，应该没什么问题。<br><br>首先简单表述一下传统的动态系统的访问方法：<br><br>表述的是用户的请求过程，用户经过网络中的路由A、B的传输，最终将发送的请求交于动态系统来处理，但是由于IP网络本身的“尽力而为的原则”、网络链路中复杂的环境及硬件的不可靠性的确实存在，致使用户要出现重复发送的请求的现状，所以最终导致用户的请求在提交的过程中出现等待、数据加载时间过长的一些现象的普遍存在，这些在线提交式系统的缓慢直接地影响到办公人员的工作效率，这也是制约着很多大型企业在协同办公OA、ERP、SAP等信息化建设中，出现最多的问题。<br><br>而CDN分发解决方案解决了与静态网站相关的性能和可靠性问题，而在当今在线业务体验中，与分发静态和动态元素和应用相关的独特挑战，则由速网的动态网站加速（动态网站加速）来解决<br></p>
+<h4 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h4><p>在描述CDN的实现原理，让我们先看传统的未加缓存服务的访问过程，以便了解CDN缓存访问方式与未加缓存访问方式的差别：[3]<br><br>由上图可见，用户访问未使用CDN缓存网站的过程为:<br></p>
+</li>
+<li><p>用户向浏览器提供要访问的域名；</p>
+</li>
+<li>浏览器调用域名解析函数库对域名进行解析，以得到此域名对应的IP地址；</li>
+<li>浏览器使用所得到的IP地址，域名的服务主机发出数据访问请求；</li>
+<li>浏览器根据域名主机返回的数据显示网页的内容。</li>
+</ol>
+<p>通过以上四个步骤，浏览器完成从用户处接收用户要访问的域名到从域名服务主机处获取数据的整个过程。CDN网络是在用户和服务器之间增加Cache层，如何将用户的请求引导到Cache上获得源服务器的数据，主要是通过接管DNS实现，下面让我们看看访问使用CDN缓存后的网站的过程：流程图<br><br>通过上图，我们可以了解到，使用了CDN缓存后的网站的访问过程变为：<br></p>
+<ol>
+<li>用户向浏览器提供要访问的域名；</li>
+<li>浏览器调用域名解析库对域名进行解析，由于CDN对域名解析过程进行了调整，所以解析函数库一般得到的是该域名对应的CNAME记录，为了得到实际IP地址，浏览器需要再次对获得的CNAME域名进行解析以得到实际的IP地址；在此过程中，使用的全局负载均衡DNS解析，如根据地理位置信息解析对应的IP地址，使得用户能就近访问。</li>
+<li>此次解析得到CDN缓存服务器的IP地址，浏览器在得到实际的IP地址以后，向缓存服务器发出访问请求；</li>
+<li>缓存服务器根据浏览器提供的要访问的域名，通过Cache内部专用DNS解析得到此域名的实际IP地址，再由缓存服务器向此实际IP地址提交访问请求；</li>
+<li>缓存服务器从实际IP地址得得到内容以后，一方面在本地进行保存，以备以后使用，二方面把获取的数据返回给客户端，完成数据服务过程；</li>
+<li>客户端得到由缓存服务器返回的数据以后显示出来并完成整个浏览的数据请求过程。</li>
+</ol>
+<p>通过以上的分析我们可以得到，为了实现既要对普通用户透明(即加入缓存以后用户客户端无需进行任何设置，直接使用被加速网站原有的域名即可访问)，又要在为指定的网站提供加速服务的同时降低对ICP的影响，只要修改整个访问过程中的域名解析部分，以实现透明的加速服务，下面是CDN网络实现的具体操作过程。<br></p>
+<ol>
+<li>作为ICP，只需要把域名解释权交给CDN运营商，其他方面不需要进行任何的修改；操作时，ICP修改自己域名的解析记录，一般用cname方式指向CDN网络Cache服务器的地址。</li>
+<li>作为CDN运营商，首先需要为ICP的域名提供公开的解析，为了实现sortlist，一般是把ICP的域名解释结果指向一个CNAME记录；</li>
+<li>当需要进行sorlist时，CDN运营商可以利用DNS对CNAME指向的域名解析过程进行特殊处理，使DNS服务器在接收到客户端请求时可以根据客户端的IP地址，返回相同域名的不同IP地址；</li>
+<li>由于从cname获得的IP地址，并且带有hostname信息，请求到达Cache之后，Cache必须知道源服务器的IP地址，所以在CDN运营商内部维护一个内部DNS服务器，用于解释用户所访问的域名的真实IP地址；</li>
+<li>在维护内部DNS服务器时，还需要维护一台授权服务器，控制哪些域名可以进行缓存，而哪些又不进行缓存，以免发生开放代理的情况。</li>
+</ol>
+<p>在国内访问量较高的大型网站如新浪、网易等，均使用CDN网络加速技术，虽然网站的访问巨大，但无论在什么地方访问都会感觉速度很快。而一般的网站如果服务器在网通，电信用户访问很慢，如果服务器在电信，网通用户访问又很慢。<br><br>它采取了分布式网络缓存结构（即国际上流行的web cache技术），通过在现有的Internet中增加一层新的网络架构，将网站的内容发布到最接近用户的cache服务器内，通过DNS负载均衡的技术，判断用户来源就近访问cache服务器取得所需的内容，解决Internet网络拥塞状况，提高用户访问网站的响应速度，如同提供了多个分布在各地的加速器，以达到快速、可冗余的为多个网站加速的目的。<br><br>CDN服务最初用于确保快速可靠地分发静态内容，这些内容可以缓存，最适合在网速庞大的网络中存储和分发，该网络在几十多个国家的十几个网络中的覆盖CDN网络服务器。<br><br>由于动态内容必须通过互联网来传输，因此要提供快速的网络体验，以满足当今用户的要求，只能通过对互联网流量的独特视角来达到。必须使用先进技术来了解通过互联网的最佳路由，充分利用这些最佳路由，加速通过互联网协议的数据通讯,以改善用户的网络体验。<br></p>
+<ol>
+<li>本地Cache加速 提高了企业站点（尤其含有大量图片和静态页面站点）的访问速度，并大大提高以上性质站点的稳定性</li>
+<li>镜像服务 消除了不同运营商之间互联的瓶颈造成的影响，实现了跨运营商的网络加速，保证不同网络中的用户都能得到良好的访问质量。</li>
+<li>远程加速远程访问用户根据DNS负载均衡技术智能自动选择Cache服务器，选择最快的Cache服务器，加快远程访问的速度</li>
+<li>带宽优化 自动生成服务器的远程Mirror（镜像）cache服务器，远程用户访问时从cache服务器上读取数据，减少远程访问的带宽、分担网络流量、减轻原站点WEB服务器负载等功能。</li>
+<li>集群抗攻击 广泛分布的CDN节点加上节点之间的智能冗余机制，可以有效地预防黑客入侵以及降低各种D.D.o.S攻击对网站的影响，同时保证较好的服务质量 。</li>
+</ol>
+<p>关键技术<br></p>
+<ol>
+<li>内容发布：它借助于建立索引、缓存、流分裂、组播（Multicast）等技术，将内容发布或投递到距离用户最近的远程服务点（POP）处；</li>
+<li>内容路由：它是整体性的网络负载均衡技术，通过内容路由器中的重定向（DNS）机制，在多个远程POP上均衡用户的请求，使得用户请求得到最快内容源的响应；</li>
+<li>内容交换：它根据内容的可用性、服务器的可用性以及用户的背景，在POP的缓存服务器上，利用应用层交换、流分裂、重定向（ICP、WCCP）等技术，智能地平衡负载流量；</li>
+<li>性能管理：它通过内部和外部监控系统，获取网络部件的状况信息，测量内容发布的端到端性能（如包丢失、延时、平均带宽、启动时间、帧速率等），保证网络处于最佳的运行状态。</li>
+</ol>
+<p>CDN能几乎涵盖国内所有线路。而在可靠性上， CDN 在结构上实现了多点的冗余，即使某一个节点由于意外发生故障，对网站的访问能够被自动导向其他的健康节点进行响应。CDN能轻松实现网站的全国铺设，不必考虑服务器的投入与托管、不必考虑新增带宽的成本、不必考虑多台服务器的镜像同步、不必考虑更多的管理维护技术人员。<br><br>加速乐免费CDN是由加速乐推出的免费CDN平台，通过加速乐免费CDN可以有效提高网站访问速度200%以上，提高网站访问量19%以上，保护网站安全。加速乐已经在全国各地区布设了数台加速节点，用户网站在使用加速后，在有访客访问时，加速乐智能DNS将优先选择最快最优的节点分配给用户，直接从加速乐节点海量数据库缓存将数据返回给用户，通过使用加速乐，83%以上的网页可以在1秒以内打开，99%以上网站可以在8秒以内打开。<br></p>
+<p>转自：<a href="http://www.cnblogs.com/flymolgee/articles/4331784.html" target="_blank" rel="external">http://www.cnblogs.com/flymolgee/articles/4331784.html</a></p>
+
       
     </div>
 
@@ -536,7 +469,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/HTML5/" rel="tag"># HTML5</a>
+            <a href="/tags/ALL/" rel="tag"># ALL</a>
           
         </div>
       
@@ -545,8 +478,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/07/1/" rel="next" title="css样式命名整理">
-                <i class="fa fa-chevron-left"></i> css样式命名整理
+              <a href="/2016/07/25/53/" rel="next" title="关于Png格式图片你了解多少😃">
+                <i class="fa fa-chevron-left"></i> 关于Png格式图片你了解多少😃
               </a>
             
           </div>
@@ -554,10 +487,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/18/3/" rel="prev" title="总结第二弹-光标形状">
-                总结第二弹-光标形状 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -721,7 +650,7 @@ var duoshuoQuery = {short_name:"yuzhiyun"};
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考-以后不用再找啦"><span class="nav-number">1.</span> <span class="nav-text">今天在做项目的时候，用到了li的样式，然后就查了下li列表的样式有哪些。写出来，给大家做个参考~以后不用再找啦~</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#大家可以直接把代码粘过去看效果"><span class="nav-number">1.0.1.</span> <span class="nav-text">大家可以直接把代码粘过去看效果~~</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux-系统-Squid集群做CDN全网加速"><span class="nav-number">1.</span> <span class="nav-text">Linux 系统 Squid集群做CDN全网加速</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CDN的价格？"><span class="nav-number">2.</span> <span class="nav-text">CDN的价格？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CDN选择的标准？"><span class="nav-number">3.</span> <span class="nav-text">CDN选择的标准？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#工作原理"><span class="nav-number">4.</span> <span class="nav-text">工作原理</span></a></li></ol></div>
             
 
           </div>
